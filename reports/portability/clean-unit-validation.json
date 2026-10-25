@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "tests": 85,
+  "fresh_host_environment": true,
+  "fresh_notebook_environment": true,
+  "wheel_cache_disabled": true,
+  "old_project_and_private_sibling_reads_denied": true,
+  "outbound_network_denied": true,
+  "model_requests": 0,
+  "log_sha256": "21e6177013fb0a16e446e5a9dfda867aa14e98dec831094b6ed2f2ee5313f17e"
+}

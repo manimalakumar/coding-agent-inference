@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "model_requests": 0,
+  "acceptance_suite_hashes": {
+    "LC-ASYNC-TOOLS-001": "1cfa4811b28688129f388f8a0823e7d2c38d5b53b97e5a335f6f96be187de8de",
+    "LC-SUMMARY-OVERFLOW-001": "3b3d2be920170411299d92aee81f7ecaeadbf57a1ae45bbbf15e42dd8695d72f",
+    "LC-FIREWORKS-RERANK-001": "02d0e38f951abab3308c23171fdaa4eacc3df9b8209be0bbd16ff81d37e19c97",
+    "LC-HF-ACCELERATOR-001": "ec9e2e43e64d5f4c85e991307e2ccb758208b466da669306e004f74d9b8c00e0",
+    "LC-JSON-INPUT-001": "3ac0b6743a64bafbaca1247a350c5067dc56dbd6a938580300d8d066f90c114c"
+  },
+  "effective_template_configurations_unchanged": 11,
+  "effective_json_configurations_unchanged": 146,
+  "historical_numeric_and_boolean_leaves_preserved": 1885,
+  "historical_result_and_chart_files_unchanged": 97,
+  "historical_first_response_unchanged": true,
+  "notebook_cells": 37,
+  "private_snapshot_ignored": true,
+  "private_sibling_changes": 0,
+  "historical_verdict_changes": 0
+}

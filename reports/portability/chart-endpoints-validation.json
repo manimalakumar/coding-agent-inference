@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "model_requests": 0,
+  "charts": {
+    "matched-context.svg": {
+      "legend": [
+        "MiniMax M2.5",
+        "GLM-5"
+      ],
+      "endpoint_annotations": [
+        "22,046 tokens \u2014 final patch failed required checks",
+        "11,645 tokens \u2014 final patch passed all required checks"
+      ],
+      "caption": "Input context varied with each request. The final evaluation outcome is shown at each line\u2019s endpoint.",
+      "sha256": "8b18fa9bc92359a13fd4c4cdd6912255cac237789948a67f24c6cf0da0ff3d92",
+      "saved_notebook_svg_matches": true
+    },
+    "matched-cost.svg": {
+      "legend": [
+        "MiniMax M2.5",
+        "GLM-5"
+      ],
+      "endpoint_annotations": [
+        "$0.035 \u2014 final patch failed required checks",
+        "$0.071 \u2014 final patch passed all required checks"
+      ],
+      "caption": "Spending accumulated with each request. The final evaluation outcome is shown at each line\u2019s endpoint.",
+      "sha256": "beec6218360faffa2a5f3187f6396bd5e1f92a89c3adbf34c9fd358677890a93",
+      "saved_notebook_svg_matches": true
+    }
+  },
+  "notebook_changed_cells": [
+    30,
+    31
+  ],
+  "notebook_structure_unchanged": true,
+  "all_other_notebook_cells_unchanged": true,
+  "first_invocation_code_and_result_unchanged": true,
+  "historical_data_and_evaluator_files_unchanged": 474,
+  "other_notebook_charts_unchanged": true,
+  "chart_data_unchanged": true,
+  "offline_tests": 213,
+  "saved_notebook_sha256": "ffb9eb2351936d35827f60b7fc28bd6c0c86558c9beec7dddd152200dcad48ea",
+  "visual_review": "Cost and context PNG previews reviewed for readable legends, endpoint annotations, captions and unclipped labels.",
+  "ready_tasks": 13,
+  "unchanged_execution_input_bindings_verified": 499,
+  "replay_code_cells": 19
+}

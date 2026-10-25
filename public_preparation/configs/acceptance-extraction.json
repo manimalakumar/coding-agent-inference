@@ -1,0 +1,296 @@
+{
+  "version": 1,
+  "tasks": {
+    "LC-ASYNC-TOOLS-001": {
+      "repository": "https://github.com/langchain-ai/langchain.git",
+      "commit": "3f212e7a88d2acd0d26ac4b5755f5c76c6a88e37",
+      "source_sha256": {
+        "libs/core/tests/unit_tests/messages/block_translators/test_openai.py": "db3def212435d21000bfbc7d38fe85321d77e55135434f923ed46e761fc04c5b",
+        "libs/partners/openai/tests/unit_tests/chat_models/test_base.py": "4ba2f739cc621b15e99e44f0fc26a4c7c1f16b255ff38d2a1db5285ecd29647f"
+      },
+      "chunks": [
+        {
+          "project_text": "from typing import Any, cast\nimport pytest\nfrom langchain_core.messages import AIMessage, HumanMessage, AIMessageChunk\nfrom langchain_core.messages import content as types\nfrom langchain_openai import ChatOpenAI\nfrom langchain_openai.chat_models.base import _construct_lc_result_from_responses_api, _convert_responses_chunk_to_generation_chunk\nfrom openai.types.responses.response import Response\nfrom openai.types.responses.response_function_tool_call import ResponseFunctionToolCall\nOPENAI_TEST_MODEL = \"offline-test-model\"\n\n"
+        },
+        {
+          "source": "libs/core/tests/unit_tests/messages/block_translators/test_openai.py",
+          "symbol": "test_convert_to_v1_from_responses_async_tool_call"
+        },
+        {
+          "project_text": "\n"
+        },
+        {
+          "source": "libs/partners/openai/tests/unit_tests/chat_models/test_base.py",
+          "symbol": "test__construct_lc_result_from_responses_api_async_tool_call"
+        },
+        {
+          "project_text": "\n"
+        },
+        {
+          "source": "libs/partners/openai/tests/unit_tests/chat_models/test_base.py",
+          "symbol": "test_async_tool_call_round_trips_to_next_request"
+        },
+        {
+          "project_text": "\n"
+        },
+        {
+          "source": "libs/partners/openai/tests/unit_tests/chat_models/test_base.py",
+          "symbol": "test_async_tool_from_extras_in_payload"
+        },
+        {
+          "project_text": "\n"
+        },
+        {
+          "source": "libs/partners/openai/tests/unit_tests/chat_models/test_base.py",
+          "symbol": "test_async_tool_raw_dict_passthrough"
+        },
+        {
+          "project_text": "\n\n@pytest.mark.parametrize(\"flag\", [True, False, None])\ndef test_streaming_async_metadata(flag):\n    from openai.types.responses import ResponseOutputItemAddedEvent\n    item = {\"type\":\"function_call\", \"id\":\"fc_holdout\", \"call_id\":\"call_holdout\", \"name\":\"lookup\", \"arguments\":\"{}\"}\n    if flag is not None:\n        item[\"async\"] = flag\n    event = ResponseOutputItemAddedEvent.model_validate({\"type\":\"response.output_item.added\", \"output_index\":0, \"sequence_number\":0, \"item\":item})\n    _, _, _, generation = _convert_responses_chunk_to_generation_chunk(event, -1, -1, -1, output_version=\"responses/v1\")\n    block = generation.message.content[0]\n    assert block[\"call_id\"] == \"call_holdout\"\n    if flag is None:\n        assert \"async\" not in block\n    else:\n        assert block[\"async\"] is flag\n\n@pytest.mark.parametrize(\"flag\", [True, False])\ndef test_standard_content_roundtrip_async_false_and_true(flag):\n    from langchain_openai.chat_models._compat import _convert_from_v1_to_responses\n    message = AIMessage(content=[{\"type\":\"function_call\", \"name\":\"lookup\", \"arguments\":\"{}\", \"call_id\":\"call_holdout\", \"id\":\"fc_holdout\", \"async\":flag}], tool_calls=[{\"id\":\"call_holdout\", \"name\":\"lookup\", \"args\":{}, \"type\":\"tool_call\"}], response_metadata={\"model_provider\":\"openai\"})\n    blocks = message.content_blocks\n    assert blocks[0][\"extras\"][\"async\"] is flag\n    restored = _convert_from_v1_to_responses(blocks, [])\n    assert restored[0][\"async\"] is flag\n    assert restored[0][\"call_id\"] == \"call_holdout\"\n\n\n@pytest.mark.parametrize(\"flag\", [True, False])\ndef test_declaration_false_is_preserved(flag):\n    from langchain_core.tools import tool\n    @tool(extras={\"async\":flag})\n    def lookup(query: str) -> str:\n        \"\"\"Look up a value.\"\"\"\n        return query\n    model = ChatOpenAI(model=OPENAI_TEST_MODEL, use_responses_api=True)\n    binding = model.bind_tools([lookup])\n    payload = binding._get_request_payload(\"offline\", **binding.kwargs)\n    assert payload[\"tools\"][0][\"async\"] is flag\n"
+        }
+      ],
+      "output_sha256": "1cfa4811b28688129f388f8a0823e7d2c38d5b53b97e5a335f6f96be187de8de",
+      "public_stub": "harbor_tasks/settings/held-out-two-task-v1/LC-ASYNC-TOOLS-001/tests/test_acceptance.py",
+      "protocol": "unchanged exact acceptance bytes",
+      "license_sha256": "4ec67e4ca6e6721dba849b2ca82261597c86a61ee214bbf21416006b7b2d0478"
+    },
+    "LC-SUMMARY-OVERFLOW-001": {
+      "repository": "https://github.com/langchain-ai/langchain.git",
+      "commit": "e7ca68b92062312221d7768a9d731a2d4942416b",
+      "source_sha256": {
+        "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_summarization.py": "828cdf4f4230962e82ef31fdb1c6d341d40ea338b9e0117e8314f2ea5b8234aa"
+      },
+      "chunks": [
+        {
+          "project_text": "from typing import Any\nimport pytest\nfrom typing_extensions import override\nfrom pydantic import Field\nfrom langchain_core.callbacks import CallbackManagerForLLMRun\nfrom langchain_core.exceptions import ContextOverflowError, ModelAuthenticationError\nfrom langchain_core.language_models.chat_models import BaseChatModel\nfrom langchain_core.messages import AIMessage, AnyMessage, BaseMessage, HumanMessage\nfrom langchain_core.outputs import ChatGeneration, ChatResult\nfrom langchain.agents.middleware.summarization import SummarizationMiddleware\n\n"
+        },
+        {
+          "source": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_summarization.py",
+          "symbol": "_OverflowingModel"
+        },
+        {
+          "project_text": "\n"
+        },
+        {
+          "source": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_summarization.py",
+          "symbol": "_long_history"
+        },
+        {
+          "project_text": "\n"
+        },
+        {
+          "source": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_summarization.py",
+          "symbol": "test_create_summary_does_not_retry_non_retryable_errors"
+        },
+        {
+          "project_text": "\n"
+        },
+        {
+          "source": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_summarization.py",
+          "symbol": "test_create_summary_recovers_from_context_overflow"
+        },
+        {
+          "project_text": "\n"
+        },
+        {
+          "source": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_summarization.py",
+          "symbol": "test_acreate_summary_recovers_from_context_overflow",
+          "prefix": "@pytest.mark.asyncio\n"
+        },
+        {
+          "project_text": "\n"
+        },
+        {
+          "source": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_summarization.py",
+          "symbol": "test_create_summary_raises_on_persistent_context_overflow"
+        },
+        {
+          "project_text": "\n\n@pytest.mark.asyncio\nasync def test_async_persistent_overflow_is_bounded_and_distinct():\n    model = _OverflowingModel(max_chars=1)\n    middleware = SummarizationMiddleware(model=model, trim_tokens_to_summarize=None)\n    with pytest.raises(ContextOverflowError):\n        await middleware._acreate_summary(_long_history())\n    assert len(model.prompts) == 2\n    assert model.prompts[0] != model.prompts[1]\n\n\ndef test_recovery_preserves_original_input_and_trim_configuration():\n    model = _OverflowingModel(max_chars=25000)\n    middleware = SummarizationMiddleware(model=model, trim_tokens_to_summarize=None)\n    messages = _long_history()\n    original = [m.model_dump() for m in messages]\n    assert middleware._create_summary(messages) == \"Summary.\"\n    assert [m.model_dump() for m in messages] == original\n    assert middleware.trim_tokens_to_summarize is None\n\n\ndef test_transient_failures_still_retry():\n    class TransientModel(_OverflowingModel):\n        def _generate(self, messages, stop=None, run_manager=None, **kwargs):\n            self.prompts.append(messages[-1].text)\n            if len(self.prompts) < 3:\n                raise RuntimeError(\"temporary failure\")\n            return ChatResult(generations=[ChatGeneration(message=AIMessage(content=\"Recovered.\"))])\n    model = TransientModel(max_chars=100000)\n    middleware = SummarizationMiddleware(model=model)\n    middleware._summary_model.wait_exponential_jitter = False\n    assert middleware._create_summary([HumanMessage(content=\"hello\")]) == \"Recovered.\"\n    assert len(model.prompts) == 3\n\n\n@pytest.mark.asyncio\nasync def test_empty_summary_does_not_invoke_model():\n    model = _OverflowingModel(max_chars=1)\n    middleware = SummarizationMiddleware(model=model)\n    assert isinstance(middleware._create_summary([]), str)\n    assert isinstance(await middleware._acreate_summary([]), str)\n    assert not model.prompts\n"
+        }
+      ],
+      "output_sha256": "3b3d2be920170411299d92aee81f7ecaeadbf57a1ae45bbbf15e42dd8695d72f",
+      "public_stub": "harbor_tasks/settings/held-out-two-task-v1/LC-SUMMARY-OVERFLOW-001/tests/test_acceptance.py",
+      "protocol": "unchanged exact acceptance bytes",
+      "license_sha256": "4ec67e4ca6e6721dba849b2ca82261597c86a61ee214bbf21416006b7b2d0478"
+    },
+    "LC-FIREWORKS-RERANK-001": {
+      "repository": "https://github.com/langchain-ai/langchain.git",
+      "commit": "b8d1ab5946cdb306fa01e0117dbf151f9cd2d308",
+      "source_sha256": {
+        "libs/partners/fireworks/tests/unit_tests/test_rerank.py": "310eb801930a12c6ff24e1f84fe5b9c6c8389013bc1c827183d2f043178b202f"
+      },
+      "chunks": [
+        {
+          "project_text": "from __future__ import annotations\nfrom typing import Any\n\nimport pytest\nfrom langchain_core.documents import Document\n\ntry:\n    from langchain_fireworks import FireworksRerank\nexcept ImportError:\n    FireworksRerank = None\n\n\n"
+        },
+        {
+          "source": "libs/partners/fireworks/tests/unit_tests/test_rerank.py",
+          "symbol": "FakeClient"
+        },
+        {
+          "project_text": "\n\n"
+        },
+        {
+          "source": "libs/partners/fireworks/tests/unit_tests/test_rerank.py",
+          "symbol": "FakeAsyncClient"
+        },
+        {
+          "project_text": "\n\n"
+        },
+        {
+          "source": "libs/partners/fireworks/tests/unit_tests/test_rerank.py",
+          "symbol": "_reranker"
+        },
+        {
+          "project_text": "\n\n"
+        },
+        {
+          "source": "libs/partners/fireworks/tests/unit_tests/test_rerank.py",
+          "symbol": "test_missing_api_key_without_clients"
+        },
+        {
+          "project_text": "\n\n"
+        },
+        {
+          "source": "libs/partners/fireworks/tests/unit_tests/test_rerank.py",
+          "symbol": "test_missing_api_key_with_only_sync_client"
+        },
+        {
+          "project_text": "\n\n"
+        },
+        {
+          "source": "libs/partners/fireworks/tests/unit_tests/test_rerank.py",
+          "symbol": "test_rerank_posts_fireworks_payload"
+        },
+        {
+          "project_text": "\n\n"
+        },
+        {
+          "source": "libs/partners/fireworks/tests/unit_tests/test_rerank.py",
+          "symbol": "test_arerank_posts_fireworks_payload"
+        },
+        {
+          "project_text": "\n\n"
+        },
+        {
+          "source": "libs/partners/fireworks/tests/unit_tests/test_rerank.py",
+          "symbol": "test_rerank_serializes_mappings_and_rank_fields"
+        },
+        {
+          "project_text": "\n\n"
+        },
+        {
+          "source": "libs/partners/fireworks/tests/unit_tests/test_rerank.py",
+          "symbol": "test_arerank_serializes_mappings_and_rank_fields"
+        },
+        {
+          "project_text": "\n\n"
+        },
+        {
+          "source": "libs/partners/fireworks/tests/unit_tests/test_rerank.py",
+          "symbol": "test_rerank_empty_documents_does_not_call_client"
+        },
+        {
+          "project_text": "\n\n"
+        },
+        {
+          "source": "libs/partners/fireworks/tests/unit_tests/test_rerank.py",
+          "symbol": "test_arerank_empty_documents_does_not_call_client"
+        },
+        {
+          "project_text": "\n\n"
+        },
+        {
+          "source": "libs/partners/fireworks/tests/unit_tests/test_rerank.py",
+          "symbol": "test_compress_documents_preserves_metadata_and_adds_score"
+        },
+        {
+          "project_text": "\n\n"
+        },
+        {
+          "source": "libs/partners/fireworks/tests/unit_tests/test_rerank.py",
+          "symbol": "test_acompress_documents_preserves_metadata_and_adds_score"
+        },
+        {
+          "project_text": "\n\ndef test_previous_exports_retained():\n    from langchain_fireworks import __all__\n    assert {\"__version__\", \"ChatFireworks\", \"Fireworks\", \"FireworksEmbeddings\", \"FireworksRerank\"} <= set(__all__)\n"
+        }
+      ],
+      "output_sha256": "02d0e38f951abab3308c23171fdaa4eacc3df9b8209be0bbd16ff81d37e19c97",
+      "public_stub": "harbor_tasks/settings/held-out-remainder-round1-v1/LC-FIREWORKS-RERANK-001/tests/test_acceptance.py",
+      "protocol": "unchanged exact acceptance bytes",
+      "license_sha256": "4ec67e4ca6e6721dba849b2ca82261597c86a61ee214bbf21416006b7b2d0478"
+    },
+    "LC-HF-ACCELERATOR-001": {
+      "repository": "https://github.com/langchain-ai/langchain.git",
+      "commit": "443154df9db5251d73730e1de3eb63bf352e586f",
+      "source_sha256": {
+        "libs/partners/huggingface/tests/unit_tests/test_huggingface_pipeline.py": "ec9e2e43e64d5f4c85e991307e2ccb758208b466da669306e004f74d9b8c00e0"
+      },
+      "chunks": [
+        {
+          "source": "libs/partners/huggingface/tests/unit_tests/test_huggingface_pipeline.py",
+          "whole_file": true
+        }
+      ],
+      "output_sha256": "ec9e2e43e64d5f4c85e991307e2ccb758208b466da669306e004f74d9b8c00e0",
+      "public_stub": "harbor_tasks/settings/held-out-remainder-round1-v1/LC-HF-ACCELERATOR-001/tests/test_acceptance.py",
+      "protocol": "unchanged exact acceptance bytes",
+      "license_sha256": "4ec67e4ca6e6721dba849b2ca82261597c86a61ee214bbf21416006b7b2d0478"
+    },
+    "LC-JSON-INPUT-001": {
+      "repository": "https://github.com/langchain-ai/langchain.git",
+      "commit": "c318abed446e7d1a0e872a6967b9b17bc6f4761c",
+      "source_sha256": {
+        "libs/text-splitters/tests/unit_tests/test_text_splitters.py": "2d9c8523c1ea0c9447f5d0b0bd5dde4f978f52d2b312532bb2dfa749046cf8de"
+      },
+      "chunks": [
+        {
+          "project_text": "import pytest\nfrom langchain_text_splitters import RecursiveJsonSplitter\n\n"
+        },
+        {
+          "source": "libs/text-splitters/tests/unit_tests/test_text_splitters.py",
+          "symbol": "test_split_json_non_dict_input_raises"
+        },
+        {
+          "project_text": "\n"
+        },
+        {
+          "source": "libs/text-splitters/tests/unit_tests/test_text_splitters.py",
+          "symbol": "test_split_json_list_without_convert_lists_error_mentions_escape_hatch"
+        },
+        {
+          "project_text": "\n"
+        },
+        {
+          "source": "libs/text-splitters/tests/unit_tests/test_text_splitters.py",
+          "symbol": "test_split_json_list_with_convert_lists_still_works"
+        },
+        {
+          "project_text": "\n"
+        },
+        {
+          "source": "libs/text-splitters/tests/unit_tests/test_text_splitters.py",
+          "symbol": "test_split_json_none_input_returns_empty_list"
+        },
+        {
+          "project_text": "\n"
+        },
+        {
+          "source": "libs/text-splitters/tests/unit_tests/test_text_splitters.py",
+          "symbol": "test_split_json_none_input_returns_empty_list_with_convert_lists"
+        },
+        {
+          "project_text": "\n"
+        },
+        {
+          "source": "libs/text-splitters/tests/unit_tests/test_text_splitters.py",
+          "symbol": "test_split_json_convert_lists_true_non_list_no_misleading_hint",
+          "normalize_trailing_newlines": 0
+        }
+      ],
+      "output_sha256": "3ac0b6743a64bafbaca1247a350c5067dc56dbd6a938580300d8d066f90c114c",
+      "public_stub": "harbor_tasks/settings/held-out-remainder-round1-v1/LC-JSON-INPUT-001/tests/test_acceptance.py",
+      "protocol": "unchanged exact acceptance bytes",
+      "license_sha256": "4ec67e4ca6e6721dba849b2ca82261597c86a61ee214bbf21416006b7b2d0478"
+    }
+  }
+}

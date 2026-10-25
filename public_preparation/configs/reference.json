@@ -1,0 +1,9 @@
+{
+  "LC-INT-TEMPERATURE-001": {
+    "commit": "3686bcbd966ff1ef13e5fdbde28aa0e630ddd5c4",
+    "files": [
+      "libs/core/langchain_core/language_models/chat_models.py",
+      "libs/core/langchain_core/language_models/llms.py"
+    ]
+  }
+}

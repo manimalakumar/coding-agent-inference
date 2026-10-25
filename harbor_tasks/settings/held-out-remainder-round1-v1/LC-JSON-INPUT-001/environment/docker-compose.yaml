@@ -1,0 +1,19 @@
+services:
+  main:
+    pull_policy: never
+    read_only: true
+    user: 65532:65532
+    cap_drop:
+    - ALL
+    security_opt:
+    - no-new-privileges:true
+    network_mode: none
+    pids_limit: 128
+    tmpfs:
+    - /tmp:rw,nosuid,nodev,noexec,size=512m,mode=1777
+    volumes:
+    - source0:/workspace/libs/text-splitters/langchain_text_splitters
+    - tests0:/workspace/libs/text-splitters/tests/unit_tests
+volumes:
+  source0: {}
+  tests0: {}

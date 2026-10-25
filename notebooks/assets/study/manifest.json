@@ -1,0 +1,16 @@
+{
+  "evidence_content_id": "55cd01cf1f92dc4e53dd7432af20a8fd2ab1e0080fdc105e57b7c86f45f5a382",
+  "matched_task": "LC-INT-TEMPERATURE-001",
+  "matched_attempt": 1,
+  "matched_runs": [
+    "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-attempt-001/LC-INT-TEMPERATURE-001__387WVka",
+    "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-attempt-001/LC-INT-TEMPERATURE-001__CFAXfDX"
+  ],
+  "task_meaning": "Integer-temperature metadata bug; not a sampling-temperature intervention",
+  "files": {
+    "optional-minimax.svg": "d948802ea1fec8c5d778480f6bb9c63f7ff70f0349c9d0b2b27a8b24599f8739",
+    "distributions.svg": "890131746561209bcbfc41937b29ec37ea078c9655987b9e1b4cedd0899bf102",
+    "matched-cost.svg": "e8d8b82bfda149c23962d0913dc12524ba20a375f50c2b0875ad029873891eeb",
+    "matched-context.svg": "b2c349a02b30a7919d29ba43e49690563b2a6e6044dad5b0f093162d83592b25"
+  }
+}

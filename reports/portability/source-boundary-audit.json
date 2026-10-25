@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "model_requests": 0,
+  "public_files_scanned": 783,
+  "upstream_acceptance_definitions_compared": 36,
+  "matching_copied_acceptance_definitions": [],
+  "copied_acceptance_bodies_in_public_stubs": false,
+  "extraction_recipe_literals_checked": true,
+  "bundled_license_files": [],
+  "dependency_license_locations": "Fetched evaluator and installed distributions; not bundled public source",
+  "boundary": "Upstream tests and templates are obtained only during local preparation; ordinary API usage and project additions remain."
+}

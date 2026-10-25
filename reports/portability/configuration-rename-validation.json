@@ -1,0 +1,178 @@
+{
+  "status": "passed",
+  "scope": [
+    "tests/test_public_portability.py",
+    "tests/test_controller.py",
+    "tests/test_mini.py",
+    "tests/test_workspace_policy.py",
+    "tests/test_pilot2.py",
+    "tests/test_public_reporting.py",
+    "tests/test_openrouter_accounting.py",
+    "tests_public",
+    "tests/test_notebook_json.py",
+    "tests/test_study_views.py",
+    "tests/test_intervention_views.py",
+    "tests/test_notebook_presentation.py",
+    "tests/test_task_rosters.py",
+    "tests/test_notebook_workflow.py",
+    "tests/test_configuration_paths.py"
+  ],
+  "isolated_public_copy": true,
+  "network_credentials_and_private_reads_denied": true,
+  "matplotlib_font_cache_initialized_before_process_guard": true,
+  "runtime": "Installed dependencies shared; project source and inputs loaded from isolated public copy.",
+  "log_sha256": "c9044cd316ab8d4ef4adb7fa6f40742b1ef55d012340a775d7b3f01b345e4128",
+  "test_summary": "199 passed in 6.76s",
+  "model_requests": 0,
+  "live_provider_tests": false,
+  "tests": 199,
+  "renamed_configuration_files": 200,
+  "renamed_configuration_bytes_unchanged": 182,
+  "updated_checksum_projections": 18,
+  "versioned_configuration_filenames_remaining": 0,
+  "notebook_sha256": "487f442630f54e1161dcb47af1aa7b23bd398b0e23bdd3d6d495474580a3a684",
+  "entire_notebook_unchanged": true,
+  "first_exchange_cell_unchanged": true,
+  "historical_evidence_results_and_charts_unchanged": true,
+  "preserved_evidence_task_evaluator_and_lock_files": 258,
+  "historical_configuration_ids_unchanged": true,
+  "study_selector_changes": "Configuration paths only; study keys, settings and numeric values unchanged.",
+  "effective_template_hashes_verified": 11,
+  "configuration_checksum_entries_verified": 1643,
+  "offline_replay": "passed all 19 code cells with network/process/private reads denied",
+  "lint": "passed",
+  "format": "passed",
+  "environment_rebuilds": 0,
+  "working_control_report": "reports/public-readiness/configuration-rename-controls.json",
+  "isolated_control_report": "reports/public-readiness/isolated-configuration-rename-controls.json",
+  "setup_incidents": [
+    {
+      "task_id": "LC-HF-ACCELERATOR-001",
+      "passed": false,
+      "blocker": "RuntimeError: LC-HF-ACCELERATOR-001 reference_error failed public checks; inspect .local/public-v1/LC-HF-ACCELERATOR-001/controls-progress.json",
+      "reason": "Execution-error fixture reached the unchanged five-minute evaluator deadline after functional and quality checks passed.",
+      "action": "Rerun the same fixture controls alone; preserve all checks and the evaluation deadline."
+    }
+  ],
+  "readiness_table": [
+    {
+      "task_id": "LC-ASYNC-TOOLS-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-ASYNC-TOOLS-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-async-tools-001-v1",
+      "working_controls": "passed",
+      "isolated_controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-SUMMARY-OVERFLOW-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-SUMMARY-OVERFLOW-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-summary-overflow-001-v1",
+      "working_controls": "passed",
+      "isolated_controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-FIREWORKS-RERANK-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-FIREWORKS-RERANK-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-fireworks-rerank-001-v1",
+      "working_controls": "passed",
+      "isolated_controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-OPENROUTER-PROVIDER-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-OPENROUTER-PROVIDER-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-openrouter-provider-001-v1",
+      "working_controls": "passed",
+      "isolated_controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-HF-ACCELERATOR-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-HF-ACCELERATOR-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-hf-accelerator-001-v1",
+      "working_controls": "passed",
+      "isolated_controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-JSON-INPUT-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-JSON-INPUT-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-json-input-001-v1",
+      "working_controls": "passed",
+      "isolated_controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-INT-TEMPERATURE-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-INT-TEMPERATURE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-int-temperature-001-v1",
+      "working_controls": "passed",
+      "isolated_controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-PARALLEL-TOOL-MERGE-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-PARALLEL-TOOL-MERGE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-parallel-tool-merge-001-v1",
+      "working_controls": "passed",
+      "isolated_controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-ANNOTATED-TOOLS-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-ANNOTATED-TOOLS-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-annotated-tools-001-v1",
+      "working_controls": "passed",
+      "isolated_controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-CHROMA-NONE-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-CHROMA-NONE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-chroma-none-001-v1",
+      "working_controls": "passed",
+      "isolated_controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-CONTEXT-COUNTER-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-CONTEXT-COUNTER-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-context-counter-001-v1",
+      "working_controls": "passed",
+      "isolated_controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-RESPONSES-USAGE-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-RESPONSES-USAGE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-responses-usage-001-v1",
+      "working_controls": "passed",
+      "isolated_controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-TIMEOUT-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-TIMEOUT-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-timeout-001-v1",
+      "working_controls": "passed",
+      "isolated_controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    }
+  ],
+  "effective_json_configuration_files_verified": 146,
+  "effective_json_configuration_references_verified": 147
+}

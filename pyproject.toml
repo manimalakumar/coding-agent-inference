@@ -1,0 +1,30 @@
+[project]
+name = "maintenance-economics"
+version = "0.1.0"
+requires-python = ">=3.14,<3.15"
+dependencies = [
+    "httpx==0.28.1",
+    "pydantic>=2.12,<3",
+    "mini-swe-agent==2.4.6",
+    "harbor==0.24.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=9,<10", "ruff>=0.15,<1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["harbor_integration", "agent", "sandbox", "evaluator", "experiments", "public_replay", "public_preparation"]

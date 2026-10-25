@@ -1,0 +1,601 @@
+{
+  "schema_version": 1,
+  "round_id": "comparison-4x2x3-v1",
+  "status_at_freeze": "ready_not_started",
+  "planned_measured_runs": 24,
+  "task_count": 4,
+  "model_count": 2,
+  "fresh_attempts_per_cell": 3,
+  "models": {
+    "minimax": {
+      "model": "minimax/minimax-m2.5",
+      "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+      "temperature": 0,
+      "provider": {
+        "only": [
+          "minimax/fp8"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "reasoning": null
+    },
+    "glm5": {
+      "model": "z-ai/glm-5",
+      "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+      "temperature": 0,
+      "provider": {
+        "only": [
+          "z-ai/fp8"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "reasoning": {
+        "enabled": false
+      }
+    }
+  },
+  "agent_budgets": {
+    "seconds": 1200,
+    "model_calls": 30,
+    "generated_tokens": 10000,
+    "repair_rounds": 2,
+    "tool_seconds": 90,
+    "response_tokens": 1500
+  },
+  "evaluation_seconds": 300,
+  "completion_policy": "workspace-deliverable-v1",
+  "runtime": "harbor_integration.host_comparison:ComparisonAgent",
+  "runtime_revision": "comparison-civil-deadline-v1",
+  "task_bundles": [
+    {
+      "task_id": "LC-TIMEOUT-001",
+      "parent_study": "timeout",
+      "task_directory": "./harbor_tasks/settings/comparison-4x2x3-v1/LC-TIMEOUT-001",
+      "agent_image": "sha256:c83a3c7dff45c2784a9da1f7393b2e95276c059d572214f04df243164af1105e",
+      "verifier_image": "sha256:fb3c64ce6313ff31ebb1bb060b17f0980940649ac8df1f864430158e870a5b9a",
+      "starting_commit": "4ee6112161e63c320320da4ad4d56380604c35f1",
+      "baseline_checksum": "3ead9053d48be8d728e5bb85d353ba9a45e30b55f4b87d518dd58c093900a87c",
+      "state_directory": ".local/resources/comparison-4x2x3-v1/LC-TIMEOUT-001",
+      "hidden_acceptance_sha256": "0af9e3d8eb35b246278bac634ae718ff68fd49d6a16545ba92ec990f08c6d312",
+      "original_hidden_acceptance_sha256": "0af9e3d8eb35b246278bac634ae718ff68fd49d6a16545ba92ec990f08c6d312",
+      "setup_model_requests": 0
+    },
+    {
+      "task_id": "LC-RESPONSES-USAGE-001",
+      "parent_study": "responses-usage",
+      "task_directory": "./harbor_tasks/settings/comparison-4x2x3-v1/LC-RESPONSES-USAGE-001",
+      "agent_image": "sha256:eaa199c4980bc5c29183c3c883e32b0d5ed681a88f06e5c249b78e21f4e10a5e",
+      "verifier_image": "sha256:834aab169beba34b38f44a801da20cfee0844221abf92d2f597cbe0d5da28603",
+      "starting_commit": "9aa75eaef387459ce7e2beaad25c4607ac626d24",
+      "baseline_checksum": "07c07316f853e74980c44a6885fe18288bcbc4e90ff94117379a21ae5487724d",
+      "state_directory": ".local/resources/comparison-4x2x3-v1/LC-RESPONSES-USAGE-001",
+      "hidden_acceptance_sha256": "bbe6397b60f3b733a6ce50843ce9f6924bb34bebffab86d13a41cb1b1d0d2cd8",
+      "original_hidden_acceptance_sha256": "bbe6397b60f3b733a6ce50843ce9f6924bb34bebffab86d13a41cb1b1d0d2cd8",
+      "setup_model_requests": 0
+    },
+    {
+      "task_id": "LC-ANNOTATED-TOOLS-001",
+      "parent_study": "annotated-tools-workspace-v2",
+      "task_directory": "./harbor_tasks/settings/comparison-4x2x3-v1/LC-ANNOTATED-TOOLS-001",
+      "agent_image": "sha256:e417af208f26015fec647c49fba73a5310fcc28448359971059bfade43bf3b6d",
+      "verifier_image": "sha256:10074528afd79e6c9da5f333dd0ac9ae43939adf4c3ced98d29a2840f74b0c62",
+      "starting_commit": "dea43436ea501d3fadeddc7f75d34b31eb4f8254",
+      "baseline_checksum": "f280e006fb983c5499f011d76ecacf389b1832137cbde0558d600c1d91828793",
+      "state_directory": ".local/resources/comparison-4x2x3-v1/LC-ANNOTATED-TOOLS-001",
+      "hidden_acceptance_sha256": "9145f2d47909e2d30e97d02d53b1880041c2ed5ee51006058acf48abeafca1fa",
+      "original_hidden_acceptance_sha256": "9145f2d47909e2d30e97d02d53b1880041c2ed5ee51006058acf48abeafca1fa",
+      "setup_model_requests": 0
+    },
+    {
+      "task_id": "LC-CHROMA-NONE-001",
+      "parent_study": "chroma-none-workspace-v1",
+      "task_directory": "./harbor_tasks/settings/comparison-4x2x3-v1/LC-CHROMA-NONE-001",
+      "agent_image": "sha256:20b904cee25aa285543e0f1888703f4cf62b93f1999910f7aafcb3146d6310b4",
+      "verifier_image": "sha256:178335b0c7f166d5bd42ddc61a0637171c54ace43a3defe0ba8fb87b9875477f",
+      "starting_commit": "1ebcbf1d11578cb55db26013c745dc1e5722966e",
+      "baseline_checksum": "dc1a3d64aaf57840622b118a5bf9c36727e047dcc01e26076f1f809100399a2c",
+      "state_directory": ".local/resources/comparison-4x2x3-v1/LC-CHROMA-NONE-001",
+      "hidden_acceptance_sha256": "685878b27e3d9af3cf21069c80f9c41ce3869af8d005ad093348073395ba550c",
+      "original_hidden_acceptance_sha256": "685878b27e3d9af3cf21069c80f9c41ce3869af8d005ad093348073395ba550c",
+      "setup_model_requests": 0
+    }
+  ],
+  "schedule": [
+    {
+      "order": 1,
+      "task_id": "LC-TIMEOUT-001",
+      "model_key": "minimax",
+      "model_id": "minimax/minimax-m2.5",
+      "repeat": 1,
+      "job_name": "comparison-v1-lc-timeout-001-minimax-attempt-001",
+      "study_id": "comparison-v1-lc-timeout-001-minimax",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-timeout-001-minimax",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-timeout-001-minimax-attempt-001"
+      ]
+    },
+    {
+      "order": 2,
+      "task_id": "LC-TIMEOUT-001",
+      "model_key": "glm5",
+      "model_id": "z-ai/glm-5",
+      "repeat": 1,
+      "job_name": "comparison-v1-lc-timeout-001-glm5-attempt-001",
+      "study_id": "comparison-v1-lc-timeout-001-glm5",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-timeout-001-glm5",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-timeout-001-glm5-attempt-001"
+      ]
+    },
+    {
+      "order": 3,
+      "task_id": "LC-RESPONSES-USAGE-001",
+      "model_key": "glm5",
+      "model_id": "z-ai/glm-5",
+      "repeat": 1,
+      "job_name": "comparison-v1-lc-responses-usage-001-glm5-attempt-001",
+      "study_id": "comparison-v1-lc-responses-usage-001-glm5",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-responses-usage-001-glm5",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-responses-usage-001-glm5-attempt-001"
+      ]
+    },
+    {
+      "order": 4,
+      "task_id": "LC-RESPONSES-USAGE-001",
+      "model_key": "minimax",
+      "model_id": "minimax/minimax-m2.5",
+      "repeat": 1,
+      "job_name": "comparison-v1-lc-responses-usage-001-minimax-attempt-001",
+      "study_id": "comparison-v1-lc-responses-usage-001-minimax",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-responses-usage-001-minimax",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-responses-usage-001-minimax-attempt-001"
+      ]
+    },
+    {
+      "order": 5,
+      "task_id": "LC-ANNOTATED-TOOLS-001",
+      "model_key": "minimax",
+      "model_id": "minimax/minimax-m2.5",
+      "repeat": 1,
+      "job_name": "comparison-v1-lc-annotated-tools-001-minimax-attempt-001",
+      "study_id": "comparison-v1-lc-annotated-tools-001-minimax",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-annotated-tools-001-minimax",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-annotated-tools-001-minimax-attempt-001"
+      ]
+    },
+    {
+      "order": 6,
+      "task_id": "LC-ANNOTATED-TOOLS-001",
+      "model_key": "glm5",
+      "model_id": "z-ai/glm-5",
+      "repeat": 1,
+      "job_name": "comparison-v1-lc-annotated-tools-001-glm5-attempt-001",
+      "study_id": "comparison-v1-lc-annotated-tools-001-glm5",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-annotated-tools-001-glm5",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-annotated-tools-001-glm5-attempt-001"
+      ]
+    },
+    {
+      "order": 7,
+      "task_id": "LC-CHROMA-NONE-001",
+      "model_key": "glm5",
+      "model_id": "z-ai/glm-5",
+      "repeat": 1,
+      "job_name": "comparison-v1-lc-chroma-none-001-glm5-attempt-001",
+      "study_id": "comparison-v1-lc-chroma-none-001-glm5",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-chroma-none-001-glm5",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-chroma-none-001-glm5-attempt-001"
+      ]
+    },
+    {
+      "order": 8,
+      "task_id": "LC-CHROMA-NONE-001",
+      "model_key": "minimax",
+      "model_id": "minimax/minimax-m2.5",
+      "repeat": 1,
+      "job_name": "comparison-v1-lc-chroma-none-001-minimax-attempt-001",
+      "study_id": "comparison-v1-lc-chroma-none-001-minimax",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-chroma-none-001-minimax",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-chroma-none-001-minimax-attempt-001"
+      ]
+    },
+    {
+      "order": 9,
+      "task_id": "LC-TIMEOUT-001",
+      "model_key": "glm5",
+      "model_id": "z-ai/glm-5",
+      "repeat": 2,
+      "job_name": "comparison-v1-lc-timeout-001-glm5-attempt-002",
+      "study_id": "comparison-v1-lc-timeout-001-glm5",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-timeout-001-glm5",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-timeout-001-glm5-attempt-002"
+      ]
+    },
+    {
+      "order": 10,
+      "task_id": "LC-TIMEOUT-001",
+      "model_key": "minimax",
+      "model_id": "minimax/minimax-m2.5",
+      "repeat": 2,
+      "job_name": "comparison-v1-lc-timeout-001-minimax-attempt-002",
+      "study_id": "comparison-v1-lc-timeout-001-minimax",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-timeout-001-minimax",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-timeout-001-minimax-attempt-002"
+      ]
+    },
+    {
+      "order": 11,
+      "task_id": "LC-RESPONSES-USAGE-001",
+      "model_key": "minimax",
+      "model_id": "minimax/minimax-m2.5",
+      "repeat": 2,
+      "job_name": "comparison-v1-lc-responses-usage-001-minimax-attempt-002",
+      "study_id": "comparison-v1-lc-responses-usage-001-minimax",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-responses-usage-001-minimax",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-responses-usage-001-minimax-attempt-002"
+      ]
+    },
+    {
+      "order": 12,
+      "task_id": "LC-RESPONSES-USAGE-001",
+      "model_key": "glm5",
+      "model_id": "z-ai/glm-5",
+      "repeat": 2,
+      "job_name": "comparison-v1-lc-responses-usage-001-glm5-attempt-002",
+      "study_id": "comparison-v1-lc-responses-usage-001-glm5",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-responses-usage-001-glm5",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-responses-usage-001-glm5-attempt-002"
+      ]
+    },
+    {
+      "order": 13,
+      "task_id": "LC-ANNOTATED-TOOLS-001",
+      "model_key": "glm5",
+      "model_id": "z-ai/glm-5",
+      "repeat": 2,
+      "job_name": "comparison-v1-lc-annotated-tools-001-glm5-attempt-002",
+      "study_id": "comparison-v1-lc-annotated-tools-001-glm5",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-annotated-tools-001-glm5",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-annotated-tools-001-glm5-attempt-002"
+      ]
+    },
+    {
+      "order": 14,
+      "task_id": "LC-ANNOTATED-TOOLS-001",
+      "model_key": "minimax",
+      "model_id": "minimax/minimax-m2.5",
+      "repeat": 2,
+      "job_name": "comparison-v1-lc-annotated-tools-001-minimax-attempt-002",
+      "study_id": "comparison-v1-lc-annotated-tools-001-minimax",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-annotated-tools-001-minimax",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-annotated-tools-001-minimax-attempt-002"
+      ]
+    },
+    {
+      "order": 15,
+      "task_id": "LC-CHROMA-NONE-001",
+      "model_key": "minimax",
+      "model_id": "minimax/minimax-m2.5",
+      "repeat": 2,
+      "job_name": "comparison-v1-lc-chroma-none-001-minimax-attempt-002",
+      "study_id": "comparison-v1-lc-chroma-none-001-minimax",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-chroma-none-001-minimax",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-chroma-none-001-minimax-attempt-002"
+      ]
+    },
+    {
+      "order": 16,
+      "task_id": "LC-CHROMA-NONE-001",
+      "model_key": "glm5",
+      "model_id": "z-ai/glm-5",
+      "repeat": 2,
+      "job_name": "comparison-v1-lc-chroma-none-001-glm5-attempt-002",
+      "study_id": "comparison-v1-lc-chroma-none-001-glm5",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-chroma-none-001-glm5",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-chroma-none-001-glm5-attempt-002"
+      ]
+    },
+    {
+      "order": 17,
+      "task_id": "LC-TIMEOUT-001",
+      "model_key": "minimax",
+      "model_id": "minimax/minimax-m2.5",
+      "repeat": 3,
+      "job_name": "comparison-v1-lc-timeout-001-minimax-attempt-003",
+      "study_id": "comparison-v1-lc-timeout-001-minimax",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-timeout-001-minimax",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-timeout-001-minimax-attempt-003"
+      ]
+    },
+    {
+      "order": 18,
+      "task_id": "LC-TIMEOUT-001",
+      "model_key": "glm5",
+      "model_id": "z-ai/glm-5",
+      "repeat": 3,
+      "job_name": "comparison-v1-lc-timeout-001-glm5-attempt-003",
+      "study_id": "comparison-v1-lc-timeout-001-glm5",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-timeout-001-glm5",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-timeout-001-glm5-attempt-003"
+      ]
+    },
+    {
+      "order": 19,
+      "task_id": "LC-RESPONSES-USAGE-001",
+      "model_key": "glm5",
+      "model_id": "z-ai/glm-5",
+      "repeat": 3,
+      "job_name": "comparison-v1-lc-responses-usage-001-glm5-attempt-003",
+      "study_id": "comparison-v1-lc-responses-usage-001-glm5",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-responses-usage-001-glm5",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-responses-usage-001-glm5-attempt-003"
+      ]
+    },
+    {
+      "order": 20,
+      "task_id": "LC-RESPONSES-USAGE-001",
+      "model_key": "minimax",
+      "model_id": "minimax/minimax-m2.5",
+      "repeat": 3,
+      "job_name": "comparison-v1-lc-responses-usage-001-minimax-attempt-003",
+      "study_id": "comparison-v1-lc-responses-usage-001-minimax",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-responses-usage-001-minimax",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-responses-usage-001-minimax-attempt-003"
+      ]
+    },
+    {
+      "order": 21,
+      "task_id": "LC-ANNOTATED-TOOLS-001",
+      "model_key": "minimax",
+      "model_id": "minimax/minimax-m2.5",
+      "repeat": 3,
+      "job_name": "comparison-v1-lc-annotated-tools-001-minimax-attempt-003",
+      "study_id": "comparison-v1-lc-annotated-tools-001-minimax",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-annotated-tools-001-minimax",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-annotated-tools-001-minimax-attempt-003"
+      ]
+    },
+    {
+      "order": 22,
+      "task_id": "LC-ANNOTATED-TOOLS-001",
+      "model_key": "glm5",
+      "model_id": "z-ai/glm-5",
+      "repeat": 3,
+      "job_name": "comparison-v1-lc-annotated-tools-001-glm5-attempt-003",
+      "study_id": "comparison-v1-lc-annotated-tools-001-glm5",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-annotated-tools-001-glm5",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-annotated-tools-001-glm5-attempt-003"
+      ]
+    },
+    {
+      "order": 23,
+      "task_id": "LC-CHROMA-NONE-001",
+      "model_key": "glm5",
+      "model_id": "z-ai/glm-5",
+      "repeat": 3,
+      "job_name": "comparison-v1-lc-chroma-none-001-glm5-attempt-003",
+      "study_id": "comparison-v1-lc-chroma-none-001-glm5",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-chroma-none-001-glm5",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-chroma-none-001-glm5-attempt-003"
+      ]
+    },
+    {
+      "order": 24,
+      "task_id": "LC-CHROMA-NONE-001",
+      "model_key": "minimax",
+      "model_id": "minimax/minimax-m2.5",
+      "repeat": 3,
+      "job_name": "comparison-v1-lc-chroma-none-001-minimax-attempt-003",
+      "study_id": "comparison-v1-lc-chroma-none-001-minimax",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "experiments",
+        "execute",
+        "--study",
+        "comparison-v1-lc-chroma-none-001-minimax",
+        "--confirm-paid-run",
+        "--job-name",
+        "comparison-v1-lc-chroma-none-001-minimax-attempt-003"
+      ]
+    }
+  ],
+  "compatibility_result": "reports/compatibility/glm-5-z-ai-fp8-v1/result.json",
+  "pilot_reuse": false,
+  "fresh_context_and_snapshot_every_run": true,
+  "automatic_retries": 0,
+  "infrastructure_policy": {
+    "retain_every_attempt_and_cost": true,
+    "primary_end_to_end_economics_includes_all_scheduled_attempt_inference": true,
+    "coding_only_exclusions_require_explicit_reason_and_separate_denominator": true,
+    "excluded_spend_retained_as_operational_expense": true,
+    "no_silent_replacement_or_rerun": true,
+    "additional_attempts_require_separate_ids_and_authorization": true
+  },
+  "freeze_manifest": "configs/comparison-4x2x3-v1.sha256",
+  "frozen_setting": "configs/comparison-4x2x3-v1.frozen-setting.json"
+}

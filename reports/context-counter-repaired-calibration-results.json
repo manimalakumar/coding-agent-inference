@@ -1,0 +1,46 @@
+{
+  "setting": "context-counter-repaired-calibration-v1",
+  "setting_id": "b6772a74ea7229b71025bfc01c1e41aebddc0643d0cd5581b4ba795708726f3b",
+  "status": "two_authorized_attempts_completed_calibration_stopped",
+  "additional_attempts_authorized": 0,
+  "new_setup_inference_requests": 0,
+  "new_setup_inference_cost_usd": 0,
+  "total_measured_inference_spend_usd": 0.09067319,
+  "accepted_completions": 1,
+  "assessment_before_any_further_change": {
+    "minimax": "Functional implementation and regression evidence pass. Lint and formatting remain incomplete at cumulative output exhaustion; final attempted repair is malformed and never executes. No permission or mypy-cache blocker is observed.",
+    "glm5": "Final submitted candidate passes every required check. One success under this setting, pending human review; no reliability estimate."
+  },
+  "remaining_setup_failures_in_these_attempts": [],
+  "models": [
+    {
+      "model": "minimax/minimax-m2.5",
+      "run_id": "context-counter-repaired-calibration-v1-minimax-attempt-001/LC-CONTEXT-COUNTER-001__AdqPVtS",
+      "calls": 18,
+      "output_tokens": 10000,
+      "cost_usd": 0.02944119,
+      "patch_accepted": false,
+      "task_success": false,
+      "explicit_submission": false,
+      "termination_reason": "budget_exhausted",
+      "cost_per_accepted_patch_usd": null,
+      "cost_per_accepted_patch_status": "undefined_no_accepted_patches"
+    },
+    {
+      "model": "z-ai/glm-5",
+      "run_id": "context-counter-repaired-calibration-v1-glm5-attempt-001/LC-CONTEXT-COUNTER-001__UCdFb8M",
+      "calls": 16,
+      "output_tokens": 4752,
+      "cost_usd": 0.061232,
+      "patch_accepted": true,
+      "task_success": true,
+      "explicit_submission": true,
+      "termination_reason": "submitted",
+      "cost_per_accepted_patch_usd": 0.061232,
+      "cost_per_accepted_patch_status": "available_for_one_observation"
+    }
+  ],
+  "prior_outcomes_and_costs_preserved": true,
+  "previous_patches_or_diagnostics_in_context": false,
+  "comparison_partition": "feature development calibration; not the four-task comparison or held-out tasks"
+}

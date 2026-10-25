@@ -1,0 +1,443 @@
+{
+  "version": 1,
+  "files": {
+    "configs/held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-minimax-baseline.json": {
+      "effective_sha256": "b788c45c14edcb665d4b12049104354ceb2be684b4b6fc399d67bf622100cfc1"
+    },
+    "configs/comparison-4x2x3-v1-LC-RESPONSES-USAGE-001-minimax-reference_error.json": {
+      "effective_sha256": "864fb1611d626445dd41ef1bcd9bdbbe4c80b38450bb5c5bcced810a357bf676"
+    },
+    "configs/held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-minimax-reference_budget.json": {
+      "effective_sha256": "1255b10882d5e86edb30541b637bc06b0e1862e8d5b7b8a2770949f156cd4b27"
+    },
+    "configs/held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-minimax-reference_budget.json": {
+      "effective_sha256": "884d63b4941d21b357e4f5142ac5fcce5460305097e02c2a89ce8c0635e415bc"
+    },
+    "configs/context-counter-repaired-calibration-v1.frozen-setting.json": {
+      "effective_sha256": "d28c0e39e43c61c4930eaadaf0b045951b95321f54deb6b401e38cbf624c9f4c"
+    },
+    "configs/context-counter-response-6000-v1-model.json": {
+      "effective_sha256": "e1f03db81dfa0e960c9cd0027df0ac3a29ad2a4febbb99b46fda80291347026b"
+    },
+    "configs/context-counter-feature-v1.frozen-setting.json": {
+      "effective_sha256": "0e741b5fe31a29ec6b9f0ad85ce4e44117fb653c3acc8efaa2b94bb6fb5e588c"
+    },
+    "configs/held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-reference.json": {
+      "effective_sha256": "e69432d23f83c137ab0ae30d8af3ce5470df70bf3f8df813a9b4ef50f7f82198"
+    },
+    "configs/held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-minimax-baseline.json": {
+      "effective_sha256": "cf191a659e1c33f0aa1a1fcc6b98956ca63ceab6e269eed88aa4e2ff8137f3d8"
+    },
+    "configs/LC-ANNOTATED-TOOLS-001.workspace-deliverable-v2.frozen-setting.json": {
+      "effective_sha256": "ee55f2f7b1ce3d09d7905e210cae3b346531cfbc5a4a1fb0713e37bb61e2ccb9"
+    },
+    "configs/comparison-4x2x3-v1-LC-ANNOTATED-TOOLS-001-glm5-model.json": {
+      "effective_sha256": "14e33b92a0badab6724fe48efb9db023bf76c3d33f1309f0341a2ae5f0ff46b5"
+    },
+    "configs/comparison-4x2x3-v1-LC-ANNOTATED-TOOLS-001-minimax-baseline.json": {
+      "effective_sha256": "85bd29393b1baad24dd0d46e29d06cc37788a466384aa12689491db92a52a8f5"
+    },
+    "configs/held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-model.json": {
+      "effective_sha256": "10698e0d099ebe2d5a2d90bc51817989dcd2f392905355e30bb20c040c4cf6e0"
+    },
+    "configs/held-out-two-task-v1-LC-ASYNC-TOOLS-001-glm5-reference.json": {
+      "effective_sha256": "7caf16a5bf0210e1dded968632079dc2af427efea8e2f395b829113d74f4584b"
+    },
+    "configs/LC-ANNOTATED-TOOLS-001.focused-editing-v1.frozen-setting.json": {
+      "effective_sha256": "2b978f3951827a7bed0b68f24d614710efa432cb902e23371bdbb0a6fe03c8ab"
+    },
+    "configs/harbor-annotated-tools-v1-baseline.json": {
+      "effective_sha256": "0b8599d0c4b69c39150d55736d05d08a8e258ecd14785a02841884be2c2b149d"
+    },
+    "configs/harbor-chroma-none-workspace-v1-baseline.json": {
+      "effective_sha256": "842ccd10b6ebdec7d11f48e5264c516e35d46bc5b18f4c04d0e60c1130b96b36"
+    },
+    "configs/LC-ANNOTATED-TOOLS-001.workspace-deliverable-v1.frozen-setting.json": {
+      "effective_sha256": "b3647125e527fc0892035c3118b069bd4b0af5057d64633294acbdc4c58ad10f"
+    },
+    "configs/held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-glm5-reference.json": {
+      "effective_sha256": "621292c960a89d2844dea3f67a86819af5dc3d5e576d33ffbcc2ff632bbfc678"
+    },
+    "configs/context-counter-incremental-files-v1.frozen-setting.json": {
+      "effective_sha256": "bf31bd15db4ae51ee85f7cfed8afbb143eee9fee3179a78cfd0fe9700403bc0a"
+    },
+    "configs/context-counter-environment-v2-baseline.json": {
+      "effective_sha256": "859025d078678d279bf61dd89bc261e15be039a70fba8cc3afb37c42dcc7e835"
+    },
+    "configs/held-out-two-task-v1-LC-SUMMARY-OVERFLOW-001-glm5-baseline.json": {
+      "effective_sha256": "455dad3b8464808d6554aabdcecd1d5413e3604ccacc39f1fc28345b81e44c49"
+    },
+    "configs/held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-glm5-reference.json": {
+      "effective_sha256": "08ef12dfafc0b0b8328bcf650755cd9162cc61f11bc1551a8c6a1da0187b0d45"
+    },
+    "configs/harbor-workspace-deliverable-v2-model.json": {
+      "effective_sha256": "6a75d4c47ec778ea7e3397291c329ca59407039a2544713e59d5115a11e2132f"
+    },
+    "configs/held-out-two-task-v1-LC-ASYNC-TOOLS-001-minimax-model.json": {
+      "effective_sha256": "43c3663dd45bfc1c71f041b61674bfbc9568105a48be3b872446933a47840975"
+    },
+    "configs/held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-glm5-baseline.json": {
+      "effective_sha256": "c72bd4b143f9807243b455894408e7921f6899cc2598d143ebe0a9bb07c3f25f"
+    },
+    "configs/harbor-workspace-deliverable-v2-reference.json": {
+      "effective_sha256": "ed405b7a865967110fbf10b322989c63c6c49d6c8409d4393b30b60a4197c66f"
+    },
+    "configs/comparison-4x2x3-v1-LC-ANNOTATED-TOOLS-001-minimax-reference.json": {
+      "effective_sha256": "278825415148b15e82c465f04a1216d723822b9ebad9e2858b7fc526f50b0ed1"
+    },
+    "configs/harbor-annotated-tools-focused-editing-v1-reference.json": {
+      "effective_sha256": "d22101e16e1ef7261535f4cfad7dd6ac67d93a7585ebe1d740362c3fadd75dba"
+    },
+    "configs/harbor-workspace-deliverable-v2-reference_error.json": {
+      "effective_sha256": "a619bd9b00765e1234a7190f5432a6678249e98030d6214fa170b0b98433c4b1"
+    },
+    "configs/comparison-4x2x3-v1-LC-TIMEOUT-001-minimax-reference.json": {
+      "effective_sha256": "8e0a2d2da21e7b2fdb031adfb443fdee392e24ee70b7e0b1909139b31f99c36f"
+    },
+    "configs/context-counter-response-6000-v2-reference_error.json": {
+      "effective_sha256": "3f34ee650faee43d4a4b6c3cb5a2a25270f9d5c041a45adf72761da0501c26ed"
+    },
+    "configs/harbor-annotated-tools-v1-model.json": {
+      "effective_sha256": "782af0b80a9e55226b24bbc16ca20f33583cba1dd845db5dd49e9250960da12f"
+    },
+    "configs/held-out-remainder-round1-v1-LC-JSON-INPUT-001-minimax-model.json": {
+      "effective_sha256": "539a6da8b490a2620957b8b3c797dd56595553550f0f480f9963e9c7e2a7e829"
+    },
+    "configs/held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-glm5-reference_budget.json": {
+      "effective_sha256": "cf82e7c39bc9a8030163c0d4b1d003c85bb7e3ce695fcec44e802374d3fe16d4"
+    },
+    "configs/context-counter-repaired-calibration-v1-minimax-model.json": {
+      "effective_sha256": "8065bf4fe598a117e8ff61ada21dda30090129501b2bc02a5234b6e3e587eec4"
+    },
+    "configs/comparison-4x2x3-v1-LC-RESPONSES-USAGE-001-glm5-model.json": {
+      "effective_sha256": "6fc70c0166ec9ab6b96f72059235cf98e3f769413b5987c345a3427a95e13534"
+    },
+    "configs/harbor-chroma-none-workspace-v1-model.json": {
+      "effective_sha256": "0ad51e25fb5a30319c02c8f6825aa93451294afd16ea39a6068e46f6adfe9e0b"
+    },
+    "configs/context-counter-incremental-files-v1-model.json": {
+      "effective_sha256": "117ec5f84b2b5219eb6cdd2ffeb6aede8e8241b62aad366537a42370bc032eb4"
+    },
+    "configs/held-out-two-task-v1-LC-SUMMARY-OVERFLOW-001-glm5-reference_budget.json": {
+      "effective_sha256": "a8284b62a40d5d35c97d1387563948e220abef49113c3a862b408c9cd8dea79e"
+    },
+    "configs/comparison-4x2x3-v1-LC-RESPONSES-USAGE-001-minimax-model.json": {
+      "effective_sha256": "65284a9f5b29e76f100b348236884b33311ed468eed43fe27a41245b853ee118"
+    },
+    "configs/held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-glm5-baseline.json": {
+      "effective_sha256": "75fa3d9f3446e264eca488e4997a1423f1581bf26f33e68ca696b68ba83e9da3"
+    },
+    "configs/comparison-4x2x3-v1-LC-ANNOTATED-TOOLS-001-minimax-reference_budget.json": {
+      "effective_sha256": "a1ae8172f2dec7b361af2f4f3c71b8c3c7c7e7a705dc75fc3e3f98163201dbbd"
+    },
+    "configs/LC-TIMEOUT-001.harbor-v1.frozen-setting.json": {
+      "effective_sha256": "6abe9ddd5ec778fb6c081c2d17cf7d01b80db838a2dc1d0fa68798c1edd9569e"
+    },
+    "configs/held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-minimax-model.json": {
+      "effective_sha256": "59ef31aba6c600e1fdca0d6723f4eec184ac62c4186ba31de0d0aaf27d3406c9"
+    },
+    "configs/held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-minimax-reference_budget.json": {
+      "effective_sha256": "1f1834ade81eea746989b85c51688f43b791a0b78088fd5ef5fee8ee657dca73"
+    },
+    "configs/held-out-two-task-v1-LC-SUMMARY-OVERFLOW-001-glm5-model.json": {
+      "effective_sha256": "0c44ab97faee5e45dd631bc8888821b842ed6acaa45bc8ebb8381c18df13b154"
+    },
+    "configs/context-counter-environment-v2.frozen-setting.json": {
+      "effective_sha256": "872bb778253f35a994d11a3dd6cf7653607ddb2b19063c62c318e83eac001b9c"
+    },
+    "configs/comparison-4x2x3-v1-LC-CHROMA-NONE-001-minimax-reference_error.json": {
+      "effective_sha256": "cf4721c9ee7cb1dd55b279e178e7cdf90c5968088a9d0f217d0b4acefb1ccd00"
+    },
+    "configs/harbor-responses-usage-v1-baseline.json": {
+      "effective_sha256": "e7fb21057343e10458c692a64dc3d5dbe79069414391f7593a37e0ddc4e436a0"
+    },
+    "configs/context-counter-feature-v1-reference_error.json": {
+      "effective_sha256": "b10a234a6384e3b8e869965cb00769da9df1ae95dcb511d7da582594742176c4"
+    },
+    "configs/LC-CHROMA-NONE-001.workspace-v1.frozen-setting.json": {
+      "effective_sha256": "2b7eeb765366a236914ba432e2374805f3c0af84e83eb2d62d7f1c32ca19fdc3"
+    },
+    "configs/context-counter-feature-v1-model.json": {
+      "effective_sha256": "fe4e0306a21722d17981623ecbe0dc463edd92a0b6cdc26d7fdb63631463a773"
+    },
+    "configs/held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-glm5-model.json": {
+      "effective_sha256": "06dd15bf8430fc0a5c62752c2ace142ef4f0a878f8f61f853399d4672001bcd6"
+    },
+    "configs/held-out-two-task-v1-LC-SUMMARY-OVERFLOW-001-minimax-baseline.json": {
+      "effective_sha256": "4d98931565b6d69054b50ee443bf2245fb6426da985170fa29fcdc47c280e0ee"
+    },
+    "configs/comparison-4x2x3-v1-LC-TIMEOUT-001-glm5-model.json": {
+      "effective_sha256": "53c7d1bcbd363b4c0dc90fcc0717d3c4205b26dd256ccc2c55eb0f6a28912a4e"
+    },
+    "configs/harbor-workspace-deliverable-v1-reference_budget.json": {
+      "effective_sha256": "00cbc837a0fe20b72815ef68d4de9ff5bc186485ffa32c9a5299a148623203ec"
+    },
+    "configs/held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-minimax-reference.json": {
+      "effective_sha256": "a1f10b1d7c7232d235ec17a84d975574db42059e7e2474863b77db56c3dea8c5"
+    },
+    "configs/context-counter-repaired-calibration-v1-glm5-model.json": {
+      "effective_sha256": "1aa1714e6f63783081d6a0529063e6a9998e86964895452b6b0b58bfb7c62e01"
+    },
+    "configs/held-out-remainder-round1-v1-LC-JSON-INPUT-001-minimax-reference_budget.json": {
+      "effective_sha256": "547a681101e77b32c6d4bb75446e0454a01a965d02febf2440ddef33a8ada7b0"
+    },
+    "configs/held-out-two-task-v1-LC-ASYNC-TOOLS-001-minimax-baseline.json": {
+      "effective_sha256": "cf6e9aebe157270a1d30bca39ff64cf13b1829b4bee9124722e0ee57979b1b38"
+    },
+    "configs/harbor-reference.json": {
+      "effective_sha256": "0d36844091dac285faf90815299437b285791bead59bfe524a9ec5da63801132"
+    },
+    "configs/harbor-workspace-deliverable-v1-reference.json": {
+      "effective_sha256": "9f4afa80d21b980fd29b2b4946d64eadcb421352cb5003f43f138c8c324bca92"
+    },
+    "configs/context-counter-environment-v2-reference.json": {
+      "effective_sha256": "427c8c1ab0a14db0272231bb24ea945d497d08995cc9eb36100fb23854588f69"
+    },
+    "configs/harbor-chroma-none-workspace-v1-reference.json": {
+      "effective_sha256": "0cc7afcb6b69f5f6a963039767fda76ce2136ebb929fed9dd50599a61a3a93b9"
+    },
+    "configs/held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-glm5-model.json": {
+      "effective_sha256": "bbcc1c4dd72fb5e1760cb551ca489ef2b8424ac9cd5cecfcfbe4bc8c2124196d"
+    },
+    "configs/held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-reference.json": {
+      "effective_sha256": "39ceb74003d9593cc16f74aebdcacec9c3eef86ec5c2c36eb931864cbfa9adfa"
+    },
+    "configs/comparison-4x2x3-v1-LC-CHROMA-NONE-001-minimax-reference_budget.json": {
+      "effective_sha256": "0fee7388f64ca0bf01995e0bd042ba0e9ea8c140db6e4a82eac2e90aa4caa719"
+    },
+    "configs/harbor-annotated-tools-focused-editing-v1-baseline.json": {
+      "effective_sha256": "5e0162b91080807f779c652dcc1afca4d410c7de1baecd15756cbeddc5515484"
+    },
+    "configs/held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-minimax-reference.json": {
+      "effective_sha256": "050659e0f71dd3b581ee57ed56c85bcf5fa5cb8f8e19ff4f25b90478b6e02f6c"
+    },
+    "configs/comparison-4x2x3-v1-LC-RESPONSES-USAGE-001-minimax-reference_budget.json": {
+      "effective_sha256": "88e6751a4673b6182ddd9e406bb5065fe690895fae725e57b6e1fa7709343db1"
+    },
+    "configs/comparison-4x2x3-v1-LC-CHROMA-NONE-001-minimax-baseline.json": {
+      "effective_sha256": "9df1c132f13f5e2bea6cab97a5ab08ea1a100d71d3e746014d3fca17d6b22a92"
+    },
+    "configs/held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-minimax-reference_budget.json": {
+      "effective_sha256": "c5d59a5660f0d4f5557f4e5646b82862d94fd4fb0d52890c11f38259dc68eb50"
+    },
+    "configs/comparison-4x2x3-v1-LC-ANNOTATED-TOOLS-001-minimax-reference_error.json": {
+      "effective_sha256": "ac8d028972eebf72e9669155a343c5ac026e2cac1300d3a44dcff15be6a1a664"
+    },
+    "configs/held-out-two-task-v1-LC-ASYNC-TOOLS-001-glm5-model.json": {
+      "effective_sha256": "b0148a11524db7db2853b8b1b2dd9ba333be8267a0f3a436c3a07d28a156250b"
+    },
+    "configs/comparison-4x2x3-v1-LC-CHROMA-NONE-001-glm5-model.json": {
+      "effective_sha256": "f46752887af50bdbc88bd956cce27b6fcb5d6ea62c5d805b39f185e916b884d9"
+    },
+    "configs/held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-glm5-baseline.json": {
+      "effective_sha256": "db65f99a5f87a1610ca1a0a82b73fdb6b3b6940d403e2eaf8503a7bbd8baabc4"
+    },
+    "configs/harbor-model.json": {
+      "effective_sha256": "89c91b19d8513592079e23af4d58fc96288fe3393e7859eb97d3cbadde3286cf"
+    },
+    "configs/held-out-two-task-v1-LC-SUMMARY-OVERFLOW-001-minimax-reference.json": {
+      "effective_sha256": "529eec35ad139e9e3e49ab982b81229c89b3243161d7ca819848ec879a512880"
+    },
+    "configs/held-out-two-task-v1-LC-ASYNC-TOOLS-001-glm5-reference_budget.json": {
+      "effective_sha256": "9e34231dab111fbeb3de9503d496c87c0e0716014918ae8c77c2b8f8741ec814"
+    },
+    "configs/held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-minimax-baseline.json": {
+      "effective_sha256": "af33a007c5ac6586c2bec9c2193162a15f680cc78bccf025a168d3aa77c4f944"
+    },
+    "configs/comparison-4x2x3-v1-LC-CHROMA-NONE-001-minimax-reference.json": {
+      "effective_sha256": "2e9c9918862b41679f7615b75f2fd649c523d9bd4ac5590b0eadd8ce2f785ea0"
+    },
+    "configs/context-counter-feature-v1-reference.json": {
+      "effective_sha256": "9d102d32e75abaacc037807e1860f0b8ff600c76c07315e3cfbca573658f0587"
+    },
+    "configs/held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-glm5-model.json": {
+      "effective_sha256": "fadba5f11da23fc10790b1e7205342c816a180acef0fc36c13bc01145edfd22e"
+    },
+    "configs/held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-glm5-baseline.json": {
+      "effective_sha256": "e2960aca0bbb8107487380bc8b019e12f6eda2ca3f90eaa3f064df09f8b58cd5"
+    },
+    "configs/held-out-remainder-round1-v1-LC-JSON-INPUT-001-minimax-baseline.json": {
+      "effective_sha256": "76a15fb8c8568c0be39a06c3905100532f2529d7c4b84eca733e6a4a24396a34"
+    },
+    "configs/comparison-4x2x3-v1-LC-CHROMA-NONE-001-minimax-model.json": {
+      "effective_sha256": "c9a6225dd6260f1ed52d120245284e5d02bdd4a4a360000ea0034c8202bb7ae9"
+    },
+    "configs/comparison-4x2x3-v1-LC-TIMEOUT-001-minimax-baseline.json": {
+      "effective_sha256": "6f0d73d19f42ca275fe7a802268912d4fb2b9814bd779340e7e565cede0b4f67"
+    },
+    "configs/held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-glm5-reference_budget.json": {
+      "effective_sha256": "d7fdd94853c8caa09c4251baa0e24ba83d96a3c19c8c9b869199284b8ecf7c88"
+    },
+    "configs/harbor-workspace-deliverable-v2-baseline.json": {
+      "effective_sha256": "8adeb575702f3b5b2a59484b5fdf96f94611d0bd79a3096851c7e5b8c3b84d9d"
+    },
+    "configs/held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-minimax-model.json": {
+      "effective_sha256": "49d2a5ef0c2f26df28f8ee0b6b70ada0a28c07a542c34226a3871dea401e63eb"
+    },
+    "configs/held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-minimax-model.json": {
+      "effective_sha256": "6e7d592ee095b4dcd93185c9e64cf4ac02bbd4ab7a9f73f4a5704d412a0c6c82"
+    },
+    "configs/context-counter-response-6000-v1.frozen-setting.json": {
+      "effective_sha256": "0294827c72883cc163e28cf11408a27d7522985a5d8124a4599c73b54b84e2d0"
+    },
+    "configs/held-out-two-task-v1-LC-ASYNC-TOOLS-001-minimax-reference_budget.json": {
+      "effective_sha256": "292562ea77ccd8c483a1957a1165bcc53aec4da66e7b30b7f3b1e4a6f55d9594"
+    },
+    "configs/harbor-workspace-deliverable-v1-baseline.json": {
+      "effective_sha256": "930fe1b02def03d99d5bbe0e9b9d07953b5e4c084395fa1b7017fa93c4f70ec1"
+    },
+    "configs/held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-glm5-reference_budget.json": {
+      "effective_sha256": "21c9c522879c17b161ab714f49987fc88bb8f14d078a008f41bd2c096063d49d"
+    },
+    "configs/comparison-4x2x3-v1-LC-ANNOTATED-TOOLS-001-minimax-model.json": {
+      "effective_sha256": "7c59ec2ed204a6ccd58f6b3181939ceef1da38ec21c7ff729d5536802592ae08"
+    },
+    "configs/held-out-two-task-v1-LC-SUMMARY-OVERFLOW-001-minimax-reference_budget.json": {
+      "effective_sha256": "a3d2b2c128c092ead5bc9d37e65ab537317354ebdaef3a075ee7d6203b28da47"
+    },
+    "configs/context-counter-response-6000-v2.frozen-setting.json": {
+      "effective_sha256": "8f2041a90f0f2ad35147837caaec1d3e932f3ae2342488a834b292e066eb61fc"
+    },
+    "configs/held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-glm5-reference_budget.json": {
+      "effective_sha256": "7c6b4c0fc69b89e39859a2cd83fee95387e8c01370ee7e29ab436ccea2cf9f7b"
+    },
+    "configs/comparison-4x2x3-v1-LC-TIMEOUT-001-minimax-reference_budget.json": {
+      "effective_sha256": "f6a7b5fc1d7fc286d6c012c71c76c94feebe5d6e085b12b8060a6e0a36d42276"
+    },
+    "configs/held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-baseline.json": {
+      "effective_sha256": "eaddc27d0269360a286235c1b9c79de872a9feb60564f88e943919fd282cad26"
+    },
+    "configs/context-counter-feature-v1-baseline.json": {
+      "effective_sha256": "4ce6069e21728399b02d040f132a785e62110f42f8c0dd2f921530c563f56be4"
+    },
+    "configs/harbor-annotated-tools-v1-reference.json": {
+      "effective_sha256": "9c954986f88b5bd41f20242f352ad0fc47bab1d7d6affc71d2d07d1261ff667c"
+    },
+    "configs/harbor-annotated-tools-focused-editing-v1-model.json": {
+      "effective_sha256": "0c8b729b50935a0be6d9baa59acf8278cd42574c2e6e160de8dd2bb3a6ea071a"
+    },
+    "configs/harbor-chroma-none-workspace-v1-reference_error.json": {
+      "effective_sha256": "4f27aa80a0d8bb9af1e6b43109ddf6a3496b409665408ab3ac77f462b0fd2097"
+    },
+    "configs/held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-glm5-model.json": {
+      "effective_sha256": "fa2e751423db9a5b9adf7316d2a80466357249245224179b26f6f3d7daf9034b"
+    },
+    "configs/held-out-two-task-v1-LC-SUMMARY-OVERFLOW-001-minimax-model.json": {
+      "effective_sha256": "88d5c18590d93094fa0833f78a02de3687d44e8a8e24fdbc8204acd69f9e5bd2"
+    },
+    "configs/held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-model.json": {
+      "effective_sha256": "1c20ac625b42e4eba8ec642dd6519d95dc4e79ce6be2c71c8daaef2721184662"
+    },
+    "configs/held-out-two-task-v1-LC-ASYNC-TOOLS-001-minimax-reference.json": {
+      "effective_sha256": "588e85aa8054c929c977f44801d404312907996d7f672c2936a51f7ee453e717"
+    },
+    "configs/comparison-4x2x3-v1-LC-TIMEOUT-001-minimax-reference_error.json": {
+      "effective_sha256": "7c94f9388b8c616418360c0635ac755b5aaa9d7740a3c322ec041dd44b9aa84d"
+    },
+    "configs/held-out-remainder-round1-v1-LC-JSON-INPUT-001-minimax-reference.json": {
+      "effective_sha256": "e5323525412f9bf688a1b411b44cac5313ee2aa9a7b45e48dfdc111518d837fc"
+    },
+    "configs/LC-ANNOTATED-TOOLS-001.harbor-v1.frozen-setting.json": {
+      "effective_sha256": "d7384927d33994e48923d01bfb4dae54909a2010fc8927e232050ac409f84ee9"
+    },
+    "configs/held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-glm5-reference.json": {
+      "effective_sha256": "a93d63b6c00f957db91f332d6a45ff9d53543885910a6c2e7c4feedaddceddcb"
+    },
+    "configs/comparison-4x2x3-v1-LC-RESPONSES-USAGE-001-minimax-reference.json": {
+      "effective_sha256": "d319c6c25fd794caf65fb38f009e5f2635f2b285082c412406547bfbe9fa9870"
+    },
+    "configs/comparison-4x2x3-v1-LC-RESPONSES-USAGE-001-minimax-baseline.json": {
+      "effective_sha256": "d43a40deec4d98a794757482c40fe08da991de2958a000f6909fddbe7af8641b"
+    },
+    "configs/held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-minimax-baseline.json": {
+      "effective_sha256": "16c8c579ec45c753de8ae15d90796d482c81fd93792126f1b7fc3b7707b9d02b"
+    },
+    "configs/held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-baseline.json": {
+      "effective_sha256": "154fac823a9be459654671339dadf248859c4df2fbf6320f9843565cc23134a5"
+    },
+    "configs/harbor-workspace-deliverable-v2-reference_budget.json": {
+      "effective_sha256": "dc55fcd43031eee5da562df3eca6eda591c25a734978d326aed827738cc288b2"
+    },
+    "configs/held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-reference_budget.json": {
+      "effective_sha256": "397f45e6503663035fd68f6520e5b5b47cdc5f7aa94bbbcff81b67ccebdd16b2"
+    },
+    "configs/harbor-workspace-deliverable-v1-reference_error.json": {
+      "effective_sha256": "0fcfd573f047cf0a242aee04e1861687a60039130657d4d02441f1ddec47cb9e"
+    },
+    "configs/context-counter-feature-v1-reference_budget.json": {
+      "effective_sha256": "da348141e1ad4311202ad67156f8b2e4355e2e5725d045954fd2f72699a7d3b2"
+    },
+    "configs/held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-reference_budget.json": {
+      "effective_sha256": "e218d4ae03433e48a1bbe60a51ad11c558fb5a4e12db97a8216f90a0f3405562"
+    },
+    "configs/held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-glm5-reference.json": {
+      "effective_sha256": "65615cacee008e05e517514588305404e1387785083d8cc3c9237b868430be1d"
+    },
+    "configs/harbor-baseline.json": {
+      "effective_sha256": "49f2d4472755c01d103e8c7e34d6cf301887dc3e200b6f9fc05938e03193de9f"
+    },
+    "configs/harbor-chroma-none-workspace-v1-reference_budget.json": {
+      "effective_sha256": "8dae04d7a8f538f07a22548b78bbd33310b9e0e40a0881ef5086c2d3b8cfd43e"
+    },
+    "configs/held-out-two-task-v1-LC-SUMMARY-OVERFLOW-001-glm5-reference.json": {
+      "effective_sha256": "d8c77f150187e39efc3f60ce0b75c13e15992180615ee8a191431c25e6ab93f4"
+    },
+    "configs/held-out-remainder-round1-v1-LC-JSON-INPUT-001-glm5-model.json": {
+      "effective_sha256": "797aee98821a189cc8246603a1d3767c2f3510efe3f464fe55fc5ad6a05a98e6"
+    },
+    "configs/harbor-responses-usage-v1-model.json": {
+      "effective_sha256": "9d8a7febed4c19f74396067ff47604ae72fed0ed4482a2070d33fb1451afcb26"
+    },
+    "configs/held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-minimax-reference.json": {
+      "effective_sha256": "38dcba383e5ed78f1532f69473a49cd73bc8e2321803602dd2f103e865cd5d6a"
+    },
+    "configs/context-counter-response-6000-v2-model.json": {
+      "effective_sha256": "63c1e2081eb591879ea07adc8ce67c0665469275aef02b73ae8e6b6135fdb148"
+    },
+    "configs/context-counter-response-6000-v2-reference_budget.json": {
+      "effective_sha256": "f3d7ef35933aa3abcb70a8eadac3cd3da32a3e5efda3517fb046f9c55ae58295"
+    },
+    "configs/held-out-remainder-round1-v1-LC-JSON-INPUT-001-glm5-reference.json": {
+      "effective_sha256": "3be8d8f428b385f18f99ce5a60d789e0d0f1aaf8371d631efc72820543eaa92a"
+    },
+    "configs/context-counter-glm5-calibration-v1-model.json": {
+      "effective_sha256": "ad592eb086e5a66d39c358100f898409e1382f529dafc1ed2da360b04300dc72"
+    },
+    "configs/context-counter-glm5-calibration-v1.frozen-setting.json": {
+      "effective_sha256": "b6a71be21029b6b807569baa0b8d2a1f4c098d61a249a516ca76ebf6571b2396"
+    },
+    "configs/LC-RESPONSES-USAGE-001.harbor-v1.frozen-setting.json": {
+      "effective_sha256": "405f9cf2efeb5a6960a91679497440e777e409849f0d0f38d2bebf5d2032a703"
+    },
+    "configs/harbor-workspace-deliverable-v1-model.json": {
+      "effective_sha256": "af777b3b6d4f34f576138a6d20f5c59caf1ffdff661d9229893cb004af0c4094"
+    },
+    "configs/harbor-responses-usage-v1-reference.json": {
+      "effective_sha256": "8632bd4df3ca0176b5a276e6af7389b03128ceb1cccb9b38c0105b8f5528595b"
+    },
+    "configs/held-out-remainder-round1-v1-LC-JSON-INPUT-001-glm5-baseline.json": {
+      "effective_sha256": "f69d2854821f45bbf0231b6966f873377a1625e7af5a424728d91684b940d496"
+    },
+    "configs/context-counter-response-6000-v2-reference.json": {
+      "effective_sha256": "a499f62a75da3a52b505e9bba501a4a462e3e4c45b280e2026178903b59d0f08"
+    },
+    "configs/held-out-two-task-v1-LC-ASYNC-TOOLS-001-glm5-baseline.json": {
+      "effective_sha256": "5017de2b17afba9d1df91308c6d09aeca965778db754de4e6e75d611492d230b"
+    },
+    "configs/held-out-remainder-round1-v1-LC-JSON-INPUT-001-glm5-reference_budget.json": {
+      "effective_sha256": "881cfd7f7e872b96fac6f141c075cf5c6cd865916a39277185c408e0320e4106"
+    },
+    "configs/held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-minimax-model.json": {
+      "effective_sha256": "05a03c355cf18015011e1831370b479c09981e83eb61feea0902e11a4f0b757b"
+    },
+    "configs/comparison-4x2x3-v1-LC-TIMEOUT-001-minimax-model.json": {
+      "effective_sha256": "be53f3b2cc4d414c0e01b4ff15096d2420a4a471de8de0daa87fdd6a359a001e"
+    },
+    "configs/context-counter-response-6000-v2-baseline.json": {
+      "effective_sha256": "c0c9d17f3e20bd903a7542bfacade8eda1259b21687dca86cb79aa44eadfd09b"
+    },
+    "configs/held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-minimax-reference.json": {
+      "effective_sha256": "f410ca79f54a4ab7fe6f0ba7290796af9b0a8867dbf75fff3799c106a237f82b"
+    }
+  }
+}

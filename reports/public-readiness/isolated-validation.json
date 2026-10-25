@@ -1,0 +1,139 @@
+{
+  "status": "passed",
+  "audit_aggregation_version": 2,
+  "tasks": [
+    {
+      "task_id": "LC-ASYNC-TOOLS-001",
+      "protocol_id": "public-lc-async-tools-001-v1",
+      "passed": true,
+      "wrapper_checks_passed": 15,
+      "terminal_controls_passed": 4,
+      "model_requests": 0,
+      "setting_id": "04b2006d26aca7ba8e97a7e57d1cffb8a8fa9d9a65395a61d8200381649797e1"
+    },
+    {
+      "task_id": "LC-SUMMARY-OVERFLOW-001",
+      "protocol_id": "public-lc-summary-overflow-001-v1",
+      "passed": true,
+      "wrapper_checks_passed": 11,
+      "terminal_controls_passed": 4,
+      "model_requests": 0,
+      "setting_id": "3804e5fff839a192a0fd9bf162aeb1a002ba479f89c51fe1bbda330865a6415a"
+    },
+    {
+      "task_id": "LC-FIREWORKS-RERANK-001",
+      "protocol_id": "public-lc-fireworks-rerank-001-v1",
+      "passed": true,
+      "wrapper_checks_passed": 13,
+      "terminal_controls_passed": 4,
+      "model_requests": 0,
+      "setting_id": "b688968649e1c5a1e77e8f69787f43f3a2afb42887942540d261e69704912c16"
+    },
+    {
+      "task_id": "LC-OPENROUTER-PROVIDER-001",
+      "protocol_id": "public-lc-openrouter-provider-001-v1",
+      "passed": true,
+      "wrapper_checks_passed": 11,
+      "terminal_controls_passed": 4,
+      "model_requests": 0,
+      "setting_id": "3bfc611a78f90fd0bbc9559962ccac1a0d1342d90ae49c8816b2fe5c03b41da6"
+    },
+    {
+      "task_id": "LC-HF-ACCELERATOR-001",
+      "protocol_id": "public-lc-hf-accelerator-001-v1",
+      "passed": true,
+      "wrapper_checks_passed": 11,
+      "terminal_controls_passed": 4,
+      "model_requests": 0,
+      "setting_id": "5e79edb57ea460beeb440cf420374c783cb3e5cdf34ff09f2334e913a66bbd0e"
+    },
+    {
+      "task_id": "LC-JSON-INPUT-001",
+      "protocol_id": "public-lc-json-input-001-v1",
+      "passed": true,
+      "wrapper_checks_passed": 11,
+      "terminal_controls_passed": 4,
+      "model_requests": 0,
+      "setting_id": "38bb3fe766f128dc5439191fe5d03e9847defb8421e17e40dcf4a772243db359"
+    },
+    {
+      "task_id": "LC-INT-TEMPERATURE-001",
+      "protocol_id": "public-lc-int-temperature-001-v1",
+      "passed": true,
+      "wrapper_checks_passed": 12,
+      "terminal_controls_passed": 4,
+      "model_requests": 0,
+      "setting_id": "9e4ae8be990a67306f94b9f3db013389e0736b1ede2e09a9f0968d1341849496"
+    },
+    {
+      "task_id": "LC-PARALLEL-TOOL-MERGE-001",
+      "protocol_id": "public-lc-parallel-tool-merge-001-v1",
+      "passed": true,
+      "wrapper_checks_passed": 12,
+      "terminal_controls_passed": 4,
+      "model_requests": 0,
+      "setting_id": "8cb92fcbcf39efdcd88f936a7b1fd9f2fb6f62657c8e479c7b124d4aa3054708"
+    },
+    {
+      "task_id": "LC-ANNOTATED-TOOLS-001",
+      "protocol_id": "public-lc-annotated-tools-001-v1",
+      "passed": true,
+      "wrapper_checks_passed": 11,
+      "terminal_controls_passed": 4,
+      "model_requests": 0,
+      "setting_id": "7e0ca38b198dabb3127d682e19d4d5b06fdb67194eda0fb9a43b6112ca12e509"
+    },
+    {
+      "task_id": "LC-CHROMA-NONE-001",
+      "protocol_id": "public-lc-chroma-none-001-v1",
+      "passed": true,
+      "wrapper_checks_passed": 11,
+      "terminal_controls_passed": 4,
+      "model_requests": 0,
+      "setting_id": "e814aed31a095ef6279d9c1af1f937bc0b4684872888bdf980efaf767781be08"
+    },
+    {
+      "task_id": "LC-CONTEXT-COUNTER-001",
+      "protocol_id": "public-lc-context-counter-001-v1",
+      "passed": true,
+      "wrapper_checks_passed": 11,
+      "terminal_controls_passed": 4,
+      "model_requests": 0,
+      "setting_id": "486123fa6a0a7214df2715b927d5f1f26ba86cb202b1aef270fe36b71ac6f0bf"
+    },
+    {
+      "task_id": "LC-RESPONSES-USAGE-001",
+      "protocol_id": "public-lc-responses-usage-001-v1",
+      "passed": true,
+      "wrapper_checks_passed": 11,
+      "terminal_controls_passed": 4,
+      "model_requests": 0,
+      "setting_id": "fce6ad64f808f48e79a8ce014d6c8d31faf30bb21b65d017af96d39f72adc4d5"
+    },
+    {
+      "task_id": "LC-TIMEOUT-001",
+      "protocol_id": "public-lc-timeout-001-v1",
+      "passed": true,
+      "wrapper_checks_passed": 11,
+      "terminal_controls_passed": 4,
+      "model_requests": 0,
+      "setting_id": "3771702b2c7c010b3d9394e0430f07e3c16e5441c0cc029fc92039bd2b0fafee"
+    }
+  ],
+  "model_requests": 0,
+  "private_project_reads": 0,
+  "host_network_calls": 0,
+  "negative_controls": {
+    "original_public_source": "blocked before side effect",
+    "private_research": "blocked before side effect",
+    "private_zip": "blocked before side effect",
+    "network": "blocked before side effect"
+  },
+  "readiness_resource_fingerprints_rechecked": 13,
+  "relocated_task_resources": true,
+  "runtime": "Shared installed third-party runtime; project code and task resources loaded from isolated copy.",
+  "audit_guard_enforced": true,
+  "blocked_external_io_attempts": 301,
+  "blocked_attempts_note": "All denied before side effects; observed background Harbor telemetry and standard-library archive discovery. Blocked attempts are isolation evidence, not task failures.",
+  "historical_equivalence": "not claimed"
+}

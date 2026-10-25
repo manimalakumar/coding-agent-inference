@@ -1,0 +1,13 @@
+{
+  "model": "minimax/minimax-m2.5",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "temperature": 0,
+  "provider": {
+    "only": [
+      "minimax/fp8"
+    ],
+    "allow_fallbacks": false,
+    "require_parameters": true
+  },
+  "reasoning": null
+}

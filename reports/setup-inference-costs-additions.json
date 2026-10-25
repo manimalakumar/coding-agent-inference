@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "phase": "additional pre-measurement compatibility/setup",
+  "entries": [
+    {
+      "model": "z-ai/glm-5",
+      "provider": {
+        "only": [
+          "z-ai/fp8"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "model_requests": 2,
+      "cost_usd": 0.0006052,
+      "result": "reports/compatibility/glm-5-z-ai-fp8-response6000-v1/result.json",
+      "included_in_measured_round": false,
+      "purpose": "GLM-5 feature calibration adapter validation at 6000 response tokens"
+    }
+  ],
+  "total_reported_cost_usd": 0.0006052
+}

@@ -1,0 +1,40 @@
+schema_version = "1.4"
+artifacts = []
+
+[metadata]
+task_id = "LC-CONTEXT-COUNTER-001"
+starting_commit = "2019bf5ebe50324c548f67c2666a804343f9b772"
+baseline_checksum = "826ada7eb6e5c72ff131d50750a923abd82fab15bdf5910107b9ccf05983c099"
+experimental_setting = "context-counter-environment-v2"
+approval_status = "checks_passed_pending_review"
+completion_policy = "workspace-deliverable-v1"
+agent_budget_seconds = 1200
+evaluation_budget_seconds = 300
+configuration_revision = 3
+task_type = "feature_request"
+
+[environment]
+docker_image = "sha256:efbdda7277901dfd0f0f8a06a931d168bede9713f09a5e5bb88e40c2f4bc72ec"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048
+workdir = "/workspace/libs/langchain_v1"
+
+[agent]
+timeout_sec = 1280
+user = "65532:65532"
+
+[verifier]
+timeout_sec = 300
+environment_mode = "separate"
+user = "root"
+[[verifier.collect]]
+command = "rm -f /logs/artifacts/candidate.tar && tar --mode='u+rwX,go+rX' -cf /logs/artifacts/candidate.tar -C /workspace libs/langchain_v1/langchain/agents/middleware libs/langchain_v1/tests/unit_tests"
+user = "root"
+timeout_sec = 90
+
+[verifier.environment]
+docker_image = "sha256:b75213574af1a039c5ef1e524f1b641fa301579ba357a5eed35565ca999492ad"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048

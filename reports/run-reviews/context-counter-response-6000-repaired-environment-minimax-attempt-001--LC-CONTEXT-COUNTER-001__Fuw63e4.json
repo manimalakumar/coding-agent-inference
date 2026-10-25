@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "failure_category": "regression_and_lint_failure",
+  "contributing_factors": [
+    "cumulative_output_budget_exhausted",
+    "incorrect_generated_test_expectations",
+    "read_only_test_subdirectory_targeted_before_writable_root_used",
+    "trusted_evaluator_deadline_before_hidden_acceptance"
+  ],
+  "reason": "The larger response allowance accommodated complete tool payloads above 1,500 tokens and allowed a patch plus a new regression file. It did not produce an accepted completion: three new tests fail, lint reports 21 errors, and the cumulative output budget is exhausted. Hidden acceptance is unknown because trusted evaluation reached its deadline before that step. One diagnostic attempt cannot establish a causal effect or reliability.",
+  "original_verdict_preserved": true,
+  "code_repair_rounds": null,
+  "code_repair_measurement": "Not instrumented; separate from format retries.",
+  "evidence": {
+    "complete_tool_payloads_above_1500_requests": [
+      7,
+      15,
+      17
+    ],
+    "malformed_tool_arguments": 0,
+    "last_response_output_tokens": 82,
+    "hidden_acceptance": "not run; trusted evaluation deadline",
+    "generated_tests": "6 passed, 3 failed",
+    "lint_errors": 21,
+    "no_post_run_inference_or_edits": true
+  },
+  "original_run_sha256": {
+    "agent/isolation.json": "62b1e544e0f280d121739cefa13a8a4218aa3b16ddedca6e69f3cd1928862a64",
+    "agent/mini-swe-agent.trajectory.json": "98c34635501d12d0074be9aa803eb2ad38b135c2558ab0e04f1dfe3e0cba338b",
+    "agent/process-baseline.json": "4e707f0c3d9d9b14d70cfef7acf42e1e8c9e0ffb9e6634011c0a62467a771bdc",
+    "agent/quiescence.json": "fea343c141ef21778faf9509de729e4baaf72a50dc4a84dfeba3ee696bc58f92",
+    "agent/receipt.json": "7472c1f0182352c045bb5a71aa6a297c3e6888c3c6df8156a29d2801d0040cb8",
+    "agent/requests.jsonl": "7029d85c0666485ded1b2e60ed046108502be916d8938f83b182b08fab5f996b",
+    "agent/source-snapshot.json": "5db2b89ddd37cb8dc0df222d1c8c66ceb058473c0ddb9910ba894a0b32de3cad",
+    "agent/trajectory.json": "02f5917be724280a629e36b010339d8eb38aa7b14139eb08a693b70133da8163",
+    "artifacts/logs/artifacts/candidate.tar": "c9f7a4f7382d4f7d524c6aa1b665d857169c0cff3f916a7b8d68af94dc9264c0",
+    "artifacts/logs/artifacts/receipt.json": "7472c1f0182352c045bb5a71aa6a297c3e6888c3c6df8156a29d2801d0040cb8",
+    "artifacts/manifest.json": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f",
+    "config.json": "8c655a88edd9a5369f1c4081652974cd719c1cdb705c0bf34e3eab753819836b",
+    "lock.json": "c722f3fc7878d10e7a1f6ee203883799164006eaca35ac2197859dce816bc719",
+    "result.json": "cc904e7b25bbe79dd160eb415e04eaa554988ff4fbab5d4105b143cc45469070",
+    "trial.log": "3cbaa8db9f213aa9cd0b0d274eac929d0a9faf9cdd86d0fe2cd245718f910ae3",
+    "verifier/checks.json": "d0f79e4673760ece78cc3eded63f10d6cf9024afc4b78067f53464f10ba6bcaa",
+    "verifier/reward.json": "6673a6b7cead406149859f53ffa536b7393f0a2d25dc7dab98d298ed42dc3f20",
+    "verifier/submission.patch": "074b366ea0904731ec38d36cfc974200414087842ff922cff3c3c098c2047835",
+    "verifier/test-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "timing_valid_for_speed_comparison": false,
+  "timing_limitation": "Recorded civil agent elapsed 618.51s differs from monotonic 159.78s; native trial elapsed is 646.84s. Preserve all clocks; do not use this attempt as a speed comparison. Trusted evaluation reports deadline exhaustion; hidden checks did not run."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "task_id": "LC-TIMEOUT-001",
+  "commit": "4ee6112161e63c320320da4ad4d56380604c35f1",
+  "package": "libs/partners/openai",
+  "instructions": "Your first sandbox command must be exactly: python /task/reproduce.py. This complete read-only script produces the reported exception; execute it before inspection or editing. Then add a development regression test and implement the fix. Initializing ChatOpenAI with request_timeout=httpx.Timeout(timeout=60.0, connect=5.0) raises TypeError: unhashable type: 'Timeout' before any model request. Use model='gpt-4.1-mini' and api_key='sk-offline-placeholder'. Reproduce on unchanged code and add a regression test before fixing. Preserve custom timeout values. Equivalent defaults must still share HTTP clients; distinct base URLs and numeric timeouts must not alias. Cover sync and async initialization. Do not invoke or stream. Inspect only this supplied snapshot. Do not access Git history, upstream fixes, dependencies, evaluator internals, or external services. Keep all existing tests intact. Production changes belong only in libs/partners/openai/langchain_openai/chat_models/; new development tests belong only in libs/partners/openai/tests/unit_tests/. Do not change manifests, locks, public APIs or unrelated code. Missing dependencies or collection errors are environment blockers, not invalid issues. If blocked, explain whether the issue was not reproduced, the environment blocked execution, or clarification is needed. Passing checks means checks_passed_pending_review only.",
+  "source_paths": [
+    "libs/partners/openai/langchain_openai/chat_models"
+  ],
+  "test_paths": [
+    "libs/partners/openai/tests/unit_tests"
+  ],
+  "reproduction_command": "python /task/reproduce.py",
+  "expected_failure": "unhashable type: 'Timeout'",
+  "runtime_versions": {
+    "httpx": "0.28.1",
+    "openai": "1.90.0",
+    "pydantic": "2.12.5",
+    "langchain-openai": "0.3.24",
+    "langchain-core": "0.3.66"
+  },
+  "workspace_imports": [
+    "langchain_openai",
+    "langchain_core"
+  ],
+  "development_checks": [
+    {
+      "name": "existing_chat_models",
+      "command": "python -m pytest tests/unit_tests/chat_models/test_base.py -q --disable-socket --allow-unix-socket"
+    }
+  ],
+  "reproduction_script": "reproduce.py"
+}

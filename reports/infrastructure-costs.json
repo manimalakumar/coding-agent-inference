@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "scope": "Infrastructure incidents excluded from performance comparisons; their inference spend remains an operational expense.",
+  "incidents": [
+    {
+      "incident_id": "chroma-none-workspace-v1-minimax-attempt-003",
+      "task_id": "LC-CHROMA-NONE-001",
+      "model": "minimax/minimax-m2.5",
+      "configuration_id": "harbor:74d1d08d08bef42993c1347b2b5944d0d412ff17e99ba18a9d69840408ab8c79",
+      "frozen_setting_id": "f462fc0ccd55972f4fc2c105d54bf8fb20fe074e9f9066d4a89ac743a7457932",
+      "model_calls": 13,
+      "known_cost_usd": 0.01459125,
+      "cost_usd": 0.01459125,
+      "include_in_model_comparisons": false,
+      "include_in_operational_spend": true,
+      "incident_record": "reports/infrastructure-incidents/chroma-none-workspace-v1-minimax-attempt-003/incident.json"
+    }
+  ],
+  "known_spend_usd": 0.01459125,
+  "total_spend_usd": 0.01459125
+}

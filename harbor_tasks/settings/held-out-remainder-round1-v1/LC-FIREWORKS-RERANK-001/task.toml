@@ -1,0 +1,42 @@
+schema_version = "1.4"
+artifacts = []
+
+[metadata]
+task_id = "LC-FIREWORKS-RERANK-001"
+starting_commit = "8df1265122b36d74b83418631eec9bf7f3ba5f45"
+baseline_checksum = "ba1c36e61bedbe7f561e904c4ce9d9794090ace4cf212f534532fffeca144afd"
+experimental_setting = "held-out-remainder-round1-v1"
+approval_status = "checks_passed_pending_review"
+completion_policy = "workspace-deliverable-v1"
+agent_budget_seconds = 1200
+evaluation_budget_seconds = 300
+configuration_revision = 5
+task_type = "feature"
+split = "held_out"
+round = 1
+
+[environment]
+docker_image = "sha256:f28001225870d7125e55fa09eafbf823812f5cc250fb7c52bac1bc8bf51e19b8"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048
+workdir = "/workspace/libs/partners/fireworks"
+
+[agent]
+timeout_sec = 1280
+user = "65532:65532"
+
+[verifier]
+timeout_sec = 300
+environment_mode = "separate"
+user = "root"
+[[verifier.collect]]
+command = "rm -f /logs/artifacts/candidate.tar && tar --mode='u+rwX,go+rX' -cf /logs/artifacts/candidate.tar -C /workspace libs/partners/fireworks/langchain_fireworks libs/partners/fireworks/tests/unit_tests"
+user = "root"
+timeout_sec = 90
+
+[verifier.environment]
+docker_image = "sha256:69bc75502ffdcac19f52446c9ca3dc3baa323b6d56ae19b29684622ee7b24813"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048

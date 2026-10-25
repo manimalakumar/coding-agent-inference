@@ -1,0 +1,110 @@
+{
+  "setting_checksum": "99ad091a85581e4622ea0e1aa35e4ed3a86e392cf3f28b5e55f16974cc13b57f",
+  "setup_directory": ".local/resources/LC-TIMEOUT-001/fce87e54cc81bd8e",
+  "setting": {
+    "sandbox": {
+      "schema_version": 2,
+      "network": "none",
+      "python": "3.14.6",
+      "base_image": "python:3.14.6-slim-bookworm",
+      "cpus": 2.0,
+      "memory_mb": 2048,
+      "pids_limit": 128,
+      "writable": [
+        "libs/partners/openai/langchain_openai/chat_models",
+        "libs/partners/openai/tests/unit_tests"
+      ],
+      "resources": [],
+      "budgets": {
+        "seconds": 600,
+        "model_calls": 12,
+        "generated_tokens": 6000,
+        "repair_rounds": 2,
+        "tool_seconds": 90,
+        "response_tokens": 1500
+      },
+      "tool_output_chars": 16000
+    },
+    "task": {
+      "schema_version": 1,
+      "task_id": "LC-TIMEOUT-001",
+      "commit": "4ee6112161e63c320320da4ad4d56380604c35f1",
+      "package": "libs/partners/openai",
+      "instructions": "Your first sandbox command must be exactly: python /task/reproduce.py. This complete read-only script produces the reported exception; execute it before inspection or editing. Then add a development regression test and implement the fix. Initializing ChatOpenAI with request_timeout=httpx.Timeout(timeout=60.0, connect=5.0) raises TypeError: unhashable type: 'Timeout' before any model request. Use model='gpt-4.1-mini' and api_key='sk-offline-placeholder'. Reproduce on unchanged code and add a regression test before fixing. Preserve custom timeout values. Equivalent defaults must still share HTTP clients; distinct base URLs and numeric timeouts must not alias. Cover sync and async initialization. Do not invoke or stream. Inspect only this supplied snapshot. Do not access Git history, upstream fixes, dependencies, evaluator internals, or external services. Keep all existing tests intact. Production changes belong only in libs/partners/openai/langchain_openai/chat_models/; new development tests belong only in libs/partners/openai/tests/unit_tests/. Do not change manifests, locks, public APIs or unrelated code. Missing dependencies or collection errors are environment blockers, not invalid issues. Return JSON with classification (reproduced, not_reproduced, blocked_by_environment, needs_clarification) and explanation. Passing checks means checks_passed_pending_review only.",
+      "source_paths": [
+        "libs/partners/openai/langchain_openai/chat_models"
+      ],
+      "test_paths": [
+        "libs/partners/openai/tests/unit_tests"
+      ],
+      "development_checks": [
+        {
+          "name": "existing_chat_models",
+          "command": "python -m pytest tests/unit_tests/chat_models/test_base.py -q --disable-socket --allow-unix-socket"
+        }
+      ],
+      "reproduction_command": "python /task/reproduce.py",
+      "reproduction_script": "reproduce.py",
+      "expected_failure": "unhashable type: 'Timeout'",
+      "runtime_versions": {
+        "httpx": "0.28.1",
+        "openai": "1.90.0",
+        "pydantic": "2.12.5",
+        "langchain-openai": "0.3.24",
+        "langchain-core": "0.3.66"
+      },
+      "workspace_imports": [
+        "langchain_openai",
+        "langchain_core"
+      ]
+    },
+    "task_assets": {
+      "reproduce.py": "d80f39229591c7e3d70287f8bc56a5960513c989c8ead0ec883c77b3c41afaa0"
+    },
+    "baseline_checksum": "3ead9053d48be8d728e5bb85d353ba9a45e30b55f4b87d518dd58c093900a87c",
+    "image": "sha256:93f480007c3db7f32db83b4f6038bf627acbead3fec5fa769c051d7492b30d6d",
+    "resources": [],
+    "controller_dependency_lock": "2dda428f243e0502dd46cca64eadc9a632dbcf1eb53bba3397421cb773e9f0e2",
+    "tools": [
+      {
+        "type": "function",
+        "function": {
+          "name": "sandbox_exec",
+          "description": "Run a shell command offline inside the task container. Use it to search/read files, edit allowed source or new tests, and execute development checks. Workdir is /workspace/libs/partners/openai; python, pytest, ruff, and mypy are installed. Commands start in fresh containers; only allowed source/test edits persist. No Git, internet, host files, credentials or evaluator access.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "command": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "command"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    ],
+    "evaluator": {
+      "__init__.py": "1fec17fc8f1fcad5811cc72b326dfade480b76d3ccfd3af5da9acee1135dd4b6",
+      "selftest.py": "a9be140409c392b2f015ab839dd4ece60629d4311c8ff10525216591403ba060",
+      "test_acceptance.py": "cbecc7e1331467750af1e8dec81a2c84607bb23d066a1eeedb5c1b398b434813",
+      "qualify.py": "77ca19fb9f3a12fb127d5252624e798afbea6dec6190ec273c71795a4a8d6f69"
+    },
+    "controller": {
+      "controller.py": "8706ad3657a9b56cca7429b7396c7ce9d17cbe6d274541d327b58ee685ff65e7",
+      "provider.py": "2b143de51559578d9a4dc996cb733cd84cdc8f902cfe4c26f05a08e3301c2d8d",
+      "results.py": "4e721c3f8aa63ba24aa618e8eb38acff3476be934af1eee0606d4f6929c49c86",
+      "budget.py": "0c902daf10ec89bd004f0a38905aa8219fec54d1af18a8869ea9bb261e1896e9",
+      "__init__.py": "6d4ab337e29926bc43da64c236e17324f2a149763191d71576c437eadb578751",
+      "api_worker.py": "fdeb0109ee49486a8a454b85c0e91f9f15190702c7bbb09081902ae5308474c0",
+      "schemas.py": "4044701e36ea5bc4ebb00cb0cf9b361fc85aa065b1a511935fa0a5337b7686d5"
+    },
+    "sandbox_code": {
+      "__init__.py": "46a0595c06ce7809a48a6e7f03948df5a5062f6c378cdd37439e0480083c8e94",
+      "docker.py": "2a6becf5f220860983d2468f479c9db29237c786f7140a2cd0e2a2d243542c55",
+      "prepare.py": "9e0c9fc93545daeafd348ede19e32dd7267d3ce4d73614ba9125991ca1cac95c"
+    }
+  }
+}

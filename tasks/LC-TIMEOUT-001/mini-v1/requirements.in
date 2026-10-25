@@ -1,0 +1,23 @@
+# Trusted setup specification, frozen during image creation; never agent-writable.
+# The task runtime versions below are mandatory. No environment repair may upgrade them.
+-e /workspace/libs/core
+-e /workspace/libs/partners/openai
+-e /workspace/libs/standard-tests
+httpx==0.28.1
+openai==1.90.0
+pydantic==2.12.5
+# Tooling selected by setup for Python 3.14. Target runtime remains historically pinned.
+pytest==7.4.4
+pytest-asyncio==0.23.8
+pytest-cov==4.1.0
+pytest-mock==3.14.1
+pytest-socket==0.7.0
+pytest-xdist==3.7.0
+syrupy==4.9.1
+freezegun==1.5.2
+ruff==0.11.13
+mypy==1.15.0
+types-tqdm==4.67.0.20250516
+types-requests==2.32.0.20250602
+pdm-backend==2.4.4
+

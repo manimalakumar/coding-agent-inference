@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "network": "none",
+  "python": "3.14.6",
+  "base_image": "python:3.14.6-slim-bookworm",
+  "cpus": 2,
+  "memory_mb": 2048,
+  "pids_limit": 128,
+  "writable": [
+    "libs/partners/openai/langchain_openai/chat_models",
+    "libs/partners/openai/tests/unit_tests"
+  ],
+  "resources": [],
+  "budgets": {
+    "seconds": 1200,
+    "model_calls": 20,
+    "generated_tokens": 6000,
+    "repair_rounds": 2,
+    "tool_seconds": 90,
+    "response_tokens": 1500
+  },
+  "tool_output_chars": 16000,
+  "workflow_label": "revised-workflow-pilot3-provisional",
+  "file_writing_tool": true,
+  "workflow_instructions": [
+    "Batch related searches and file reads when possible.",
+    "Use the traceback's file and function names to locate code.",
+    "Once you have enough evidence, make a focused change and test it.",
+    "Create files with sandbox_write_file; use directory creation only for directories.",
+    "Track remaining budget and reserve calls for implementation and verification."
+  ]
+}

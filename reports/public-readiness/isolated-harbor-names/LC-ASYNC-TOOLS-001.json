@@ -1,0 +1,404 @@
+{
+  "task_id": "LC-ASYNC-TOOLS-001",
+  "protocol_id": "public-lc-async-tools-001-v1",
+  "setting_id": "8e4bf270ae95a7201b90c63c376f0d4705d551f6df0a49662ec75badf51f1008",
+  "historical_equivalence": "not claimed",
+  "model_requests": 0,
+  "baseline_rejected": true,
+  "reference_accepted": true,
+  "public_checks_preserved": true,
+  "wrapper_controls": [
+    {
+      "check": "baseline_reproduces",
+      "expected_exit": 1,
+      "observed_exit": 1,
+      "passed": true
+    },
+    {
+      "check": "isolation_workspace_imports",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "create_regression",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "regression_baseline",
+      "expected_exit": 1,
+      "observed_exit": 1,
+      "passed": true
+    },
+    {
+      "check": "apply_reference",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "reference_reproduces",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "regression_reference",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "focused_tests_0",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "focused_tests_1",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "lint_libs/core",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "format_libs/core",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "types_libs/core",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "lint_libs/partners/openai",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "format_libs/partners/openai",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "types_libs/partners/openai",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    }
+  ],
+  "controls": [
+    {
+      "fixture": "baseline",
+      "passed": true,
+      "accepted": false,
+      "model_requests": 0,
+      "termination_reason": "submitted",
+      "checks": {
+        "file_policy": {
+          "exit_code": 0
+        },
+        "reproducer": {
+          "exit_code": 1
+        },
+        "existing_tests_0": {
+          "exit_code": 0
+        },
+        "existing_tests_1": {
+          "exit_code": 0
+        },
+        "existing_tests": {
+          "exit_code": 0
+        },
+        "hidden_acceptance": {
+          "exit_code": 1
+        }
+      },
+      "isolation": {
+        "no_history": true,
+        "no_evaluator": true,
+        "no_keys": true,
+        "unprivileged": true,
+        "no_docker_socket": true,
+        "existing_readonly_libs/partners/openai/tests/unit_tests": true,
+        "existing_rename_denied_libs/partners/openai/tests/unit_tests": true,
+        "existing_readonly_libs/core/tests/unit_tests": true,
+        "existing_rename_denied_libs/core/tests/unit_tests": true,
+        "production_writable_libs/partners/openai/langchain_openai/chat_models": true,
+        "host_symlink_denied_libs/partners/openai/langchain_openai/chat_models": true,
+        "production_writable_libs/core/langchain_core/messages/block_translators": true,
+        "host_symlink_denied_libs/core/langchain_core/messages/block_translators": true,
+        "readonly_/opt/venv/public_probe": true,
+        "readonly_/workspace/public_probe": true,
+        "retained_isolation_suite": true,
+        "offline": true,
+        "workspace_import_langchain_openai": true,
+        "workspace_import_langchain_core": true
+      },
+      "error": null,
+      "artifact_dir": "runs/public-v1/public-v1-lc-async-tools-001-baseline/harbor-task__6T4pGzv"
+    },
+    {
+      "fixture": "reference",
+      "passed": true,
+      "accepted": true,
+      "model_requests": 0,
+      "termination_reason": "submitted",
+      "checks": {
+        "file_policy": {
+          "exit_code": 0
+        },
+        "regression_on_baseline": {
+          "exit_code": 1
+        },
+        "reproducer": {
+          "exit_code": 0
+        },
+        "regression": {
+          "exit_code": 0
+        },
+        "existing_tests_0": {
+          "exit_code": 0
+        },
+        "existing_tests_1": {
+          "exit_code": 0
+        },
+        "existing_tests": {
+          "exit_code": 0
+        },
+        "lint_libs_core": {
+          "exit_code": 0
+        },
+        "lint_libs_partners_openai": {
+          "exit_code": 0
+        },
+        "lint": {
+          "exit_code": 0
+        },
+        "format_libs_core": {
+          "exit_code": 0
+        },
+        "format_libs_partners_openai": {
+          "exit_code": 0
+        },
+        "format": {
+          "exit_code": 0
+        },
+        "types_libs_core": {
+          "exit_code": 0
+        },
+        "types_libs_partners_openai": {
+          "exit_code": 0
+        },
+        "types": {
+          "exit_code": 0
+        },
+        "hidden_acceptance": {
+          "exit_code": 0
+        }
+      },
+      "isolation": {
+        "no_history": true,
+        "no_evaluator": true,
+        "no_keys": true,
+        "unprivileged": true,
+        "no_docker_socket": true,
+        "existing_readonly_libs/partners/openai/tests/unit_tests": true,
+        "existing_rename_denied_libs/partners/openai/tests/unit_tests": true,
+        "existing_readonly_libs/core/tests/unit_tests": true,
+        "existing_rename_denied_libs/core/tests/unit_tests": true,
+        "production_writable_libs/partners/openai/langchain_openai/chat_models": true,
+        "host_symlink_denied_libs/partners/openai/langchain_openai/chat_models": true,
+        "production_writable_libs/core/langchain_core/messages/block_translators": true,
+        "host_symlink_denied_libs/core/langchain_core/messages/block_translators": true,
+        "readonly_/opt/venv/public_probe": true,
+        "readonly_/workspace/public_probe": true,
+        "retained_isolation_suite": true,
+        "offline": true,
+        "workspace_import_langchain_openai": true,
+        "workspace_import_langchain_core": true
+      },
+      "error": null,
+      "artifact_dir": "runs/public-v1/public-v1-lc-async-tools-001-reference/harbor-task__x3nAeEo"
+    },
+    {
+      "fixture": "reference_budget",
+      "passed": true,
+      "accepted": true,
+      "model_requests": 0,
+      "termination_reason": "budget_exhausted",
+      "checks": {
+        "file_policy": {
+          "exit_code": 0
+        },
+        "regression_on_baseline": {
+          "exit_code": 1
+        },
+        "reproducer": {
+          "exit_code": 0
+        },
+        "regression": {
+          "exit_code": 0
+        },
+        "existing_tests_0": {
+          "exit_code": 0
+        },
+        "existing_tests_1": {
+          "exit_code": 0
+        },
+        "existing_tests": {
+          "exit_code": 0
+        },
+        "lint_libs_core": {
+          "exit_code": 0
+        },
+        "lint_libs_partners_openai": {
+          "exit_code": 0
+        },
+        "lint": {
+          "exit_code": 0
+        },
+        "format_libs_core": {
+          "exit_code": 0
+        },
+        "format_libs_partners_openai": {
+          "exit_code": 0
+        },
+        "format": {
+          "exit_code": 0
+        },
+        "types_libs_core": {
+          "exit_code": 0
+        },
+        "types_libs_partners_openai": {
+          "exit_code": 0
+        },
+        "types": {
+          "exit_code": 0
+        },
+        "hidden_acceptance": {
+          "exit_code": 0
+        }
+      },
+      "isolation": {
+        "no_history": true,
+        "no_evaluator": true,
+        "no_keys": true,
+        "unprivileged": true,
+        "no_docker_socket": true,
+        "existing_readonly_libs/partners/openai/tests/unit_tests": true,
+        "existing_rename_denied_libs/partners/openai/tests/unit_tests": true,
+        "existing_readonly_libs/core/tests/unit_tests": true,
+        "existing_rename_denied_libs/core/tests/unit_tests": true,
+        "production_writable_libs/partners/openai/langchain_openai/chat_models": true,
+        "host_symlink_denied_libs/partners/openai/langchain_openai/chat_models": true,
+        "production_writable_libs/core/langchain_core/messages/block_translators": true,
+        "host_symlink_denied_libs/core/langchain_core/messages/block_translators": true,
+        "readonly_/opt/venv/public_probe": true,
+        "readonly_/workspace/public_probe": true,
+        "retained_isolation_suite": true,
+        "offline": true,
+        "workspace_import_langchain_openai": true,
+        "workspace_import_langchain_core": true
+      },
+      "error": null,
+      "artifact_dir": "runs/public-v1/public-v1-lc-async-tools-001-reference_budget/harbor-task__eJ8csAy"
+    },
+    {
+      "fixture": "reference_error",
+      "passed": true,
+      "accepted": true,
+      "model_requests": 0,
+      "termination_reason": "error",
+      "checks": {
+        "file_policy": {
+          "exit_code": 0
+        },
+        "regression_on_baseline": {
+          "exit_code": 1
+        },
+        "reproducer": {
+          "exit_code": 0
+        },
+        "regression": {
+          "exit_code": 0
+        },
+        "existing_tests_0": {
+          "exit_code": 0
+        },
+        "existing_tests_1": {
+          "exit_code": 0
+        },
+        "existing_tests": {
+          "exit_code": 0
+        },
+        "lint_libs_core": {
+          "exit_code": 0
+        },
+        "lint_libs_partners_openai": {
+          "exit_code": 0
+        },
+        "lint": {
+          "exit_code": 0
+        },
+        "format_libs_core": {
+          "exit_code": 0
+        },
+        "format_libs_partners_openai": {
+          "exit_code": 0
+        },
+        "format": {
+          "exit_code": 0
+        },
+        "types_libs_core": {
+          "exit_code": 0
+        },
+        "types_libs_partners_openai": {
+          "exit_code": 0
+        },
+        "types": {
+          "exit_code": 0
+        },
+        "hidden_acceptance": {
+          "exit_code": 0
+        }
+      },
+      "isolation": {
+        "no_history": true,
+        "no_evaluator": true,
+        "no_keys": true,
+        "unprivileged": true,
+        "no_docker_socket": true,
+        "existing_readonly_libs/partners/openai/tests/unit_tests": true,
+        "existing_rename_denied_libs/partners/openai/tests/unit_tests": true,
+        "existing_readonly_libs/core/tests/unit_tests": true,
+        "existing_rename_denied_libs/core/tests/unit_tests": true,
+        "production_writable_libs/partners/openai/langchain_openai/chat_models": true,
+        "host_symlink_denied_libs/partners/openai/langchain_openai/chat_models": true,
+        "production_writable_libs/core/langchain_core/messages/block_translators": true,
+        "host_symlink_denied_libs/core/langchain_core/messages/block_translators": true,
+        "readonly_/opt/venv/public_probe": true,
+        "readonly_/workspace/public_probe": true,
+        "retained_isolation_suite": true,
+        "offline": true,
+        "workspace_import_langchain_openai": true,
+        "workspace_import_langchain_core": true
+      },
+      "error": null,
+      "artifact_dir": "runs/public-v1/public-v1-lc-async-tools-001-reference_error/harbor-task__5n3reWg"
+    }
+  ],
+  "validated_at": 1792897638.039607
+}

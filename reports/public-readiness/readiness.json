@@ -1,0 +1,110 @@
+{
+  "model_requests": 0,
+  "ready_tasks": 13,
+  "tasks": [
+    {
+      "task_id": "LC-ASYNC-TOOLS-001",
+      "preparation_command": ".venv/bin/python -m experiments.portable_prepare prepare LC-ASYNC-TOOLS-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-async-tools-001-v1",
+      "ready": true,
+      "control_results": "baseline rejected; reference/submission/budget/error accepted; wrapper and isolation passed",
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-SUMMARY-OVERFLOW-001",
+      "preparation_command": ".venv/bin/python -m experiments.portable_prepare prepare LC-SUMMARY-OVERFLOW-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-summary-overflow-001-v1",
+      "ready": true,
+      "control_results": "baseline rejected; reference/submission/budget/error accepted; wrapper and isolation passed",
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-FIREWORKS-RERANK-001",
+      "preparation_command": ".venv/bin/python -m experiments.portable_prepare prepare LC-FIREWORKS-RERANK-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-fireworks-rerank-001-v1",
+      "ready": true,
+      "control_results": "baseline rejected; reference/submission/budget/error accepted; wrapper and isolation passed",
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-OPENROUTER-PROVIDER-001",
+      "preparation_command": ".venv/bin/python -m experiments.portable_prepare prepare LC-OPENROUTER-PROVIDER-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-openrouter-provider-001-v1",
+      "ready": true,
+      "control_results": "baseline rejected; reference/submission/budget/error accepted; wrapper and isolation passed",
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-HF-ACCELERATOR-001",
+      "preparation_command": ".venv/bin/python -m experiments.portable_prepare prepare LC-HF-ACCELERATOR-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-hf-accelerator-001-v1",
+      "ready": true,
+      "control_results": "baseline rejected; reference/submission/budget/error accepted; wrapper and isolation passed",
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-JSON-INPUT-001",
+      "preparation_command": ".venv/bin/python -m experiments.portable_prepare prepare LC-JSON-INPUT-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-json-input-001-v1",
+      "ready": true,
+      "control_results": "baseline rejected; reference/submission/budget/error accepted; wrapper and isolation passed",
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-INT-TEMPERATURE-001",
+      "preparation_command": ".venv/bin/python -m experiments.portable_prepare prepare LC-INT-TEMPERATURE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-int-temperature-001-v1",
+      "ready": true,
+      "control_results": "baseline rejected; reference/submission/budget/error accepted; wrapper and isolation passed",
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-PARALLEL-TOOL-MERGE-001",
+      "preparation_command": ".venv/bin/python -m experiments.portable_prepare prepare LC-PARALLEL-TOOL-MERGE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-parallel-tool-merge-001-v1",
+      "ready": true,
+      "control_results": "baseline rejected; reference/submission/budget/error accepted; wrapper and isolation passed",
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-ANNOTATED-TOOLS-001",
+      "preparation_command": ".venv/bin/python -m experiments.portable_prepare prepare LC-ANNOTATED-TOOLS-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-annotated-tools-001-v1",
+      "ready": true,
+      "control_results": "baseline rejected; reference/submission/budget/error accepted; wrapper and isolation passed",
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-CHROMA-NONE-001",
+      "preparation_command": ".venv/bin/python -m experiments.portable_prepare prepare LC-CHROMA-NONE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-chroma-none-001-v1",
+      "ready": true,
+      "control_results": "baseline rejected; reference/submission/budget/error accepted; wrapper and isolation passed",
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-CONTEXT-COUNTER-001",
+      "preparation_command": ".venv/bin/python -m experiments.portable_prepare prepare LC-CONTEXT-COUNTER-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-context-counter-001-v1",
+      "ready": true,
+      "control_results": "baseline rejected; reference/submission/budget/error accepted; wrapper and isolation passed",
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-RESPONSES-USAGE-001",
+      "preparation_command": ".venv/bin/python -m experiments.portable_prepare prepare LC-RESPONSES-USAGE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-responses-usage-001-v1",
+      "ready": true,
+      "control_results": "baseline rejected; reference/submission/budget/error accepted; wrapper and isolation passed",
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-TIMEOUT-001",
+      "preparation_command": ".venv/bin/python -m experiments.portable_prepare prepare LC-TIMEOUT-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-timeout-001-v1",
+      "ready": true,
+      "control_results": "baseline rejected; reference/submission/budget/error accepted; wrapper and isolation passed",
+      "remaining_blocker": null
+    }
+  ]
+}

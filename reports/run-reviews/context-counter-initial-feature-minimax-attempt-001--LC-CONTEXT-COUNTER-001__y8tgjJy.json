@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "failure_category": "tool_format_recovery_failure",
+  "contributing_factors": [
+    "per_response_output_ceiling",
+    "required_regression_tests_not_created"
+  ],
+  "reason": "Implementation passes 18 hidden behavioral checks, 8 existing tests, reproducer, lint, formatting, types and file policy. No new regression file exists: requests 13\u201315 each used all 1500 completion tokens and supplied an unterminated JSON tool-call string while attempting to write tests. Two recovery retries were exhausted. Missing regression and regression-on-baseline checks reject the candidate under the frozen policy; absence of explicit submission is not an acceptance failure.",
+  "candidate_modified_by_reviewer": false,
+  "additional_model_requests": 0,
+  "code_repair_rounds": 0,
+  "code_repair_measurement": "Audited twelve executed tool actions: one initial source patch, no subsequent candidate repair; test-writing responses were malformed and never executed.",
+  "tool_format_repair_rounds": 2,
+  "malformed_response_evidence": [
+    {
+      "request": 13,
+      "completion_tokens": 1500,
+      "finish_reason": "tool_calls",
+      "json_error": "Unterminated string starting at: line 1 column 13 (char 12)",
+      "cost_usd": 0.00243762
+    },
+    {
+      "request": 14,
+      "completion_tokens": 1500,
+      "finish_reason": "tool_calls",
+      "json_error": "Unterminated string starting at: line 1 column 13 (char 12)",
+      "cost_usd": 0.00244092
+    },
+    {
+      "request": 15,
+      "completion_tokens": 1500,
+      "finish_reason": "tool_calls",
+      "json_error": "Unterminated string starting at: line 1 column 13 (char 12)",
+      "cost_usd": 0.00244422
+    }
+  ],
+  "workflow_observations": {
+    "reproducer_executed_first": true,
+    "regression_added_before_implementation_change": false,
+    "first_source_change_request": 11,
+    "post_patch_reproducer_request": 12,
+    "baseline_diff_executed": false,
+    "explicit_submission": false,
+    "hidden_feedback_provided_during_agent_execution": false,
+    "fix_pr_provided_to_agent": false
+  },
+  "original_run_sha256": {
+    "agent/isolation.json": "62b1e544e0f280d121739cefa13a8a4218aa3b16ddedca6e69f3cd1928862a64",
+    "agent/mini-swe-agent.trajectory.json": "17e69bac53ae854f5b0e432078e9219943d657c20165001027944884f25c3968",
+    "agent/process-baseline.json": "933b21e1bda92c89f66ed9eb92c3f82efb4516302b12daf8ed88e3d15e01b5d4",
+    "agent/quiescence.json": "fea343c141ef21778faf9509de729e4baaf72a50dc4a84dfeba3ee696bc58f92",
+    "agent/receipt.json": "2a8bc0f7282de2af2c6cd95be8eb254fd5b7fb3d1c3d6354edba8a1ead5db82d",
+    "agent/requests.jsonl": "bba2cdf98564d7781565b5162a297b8082281d90b12e5c193808214492b5ab6f",
+    "agent/source-snapshot.json": "5db2b89ddd37cb8dc0df222d1c8c66ceb058473c0ddb9910ba894a0b32de3cad",
+    "agent/trajectory.json": "3a1d8f47c0f9c35cc2595d231875ba7c5bb0a8fed01e927f57c5a39eb3c89da4",
+    "artifacts/logs/artifacts/candidate.tar": "33528747fd99adc93af75112a6536e5de9637f2d80a8bb9fd44439a8e35ba582",
+    "artifacts/logs/artifacts/receipt.json": "2a8bc0f7282de2af2c6cd95be8eb254fd5b7fb3d1c3d6354edba8a1ead5db82d",
+    "artifacts/manifest.json": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f",
+    "config.json": "54d44722c5f792f125dc18e169c9a7498c95e8c119f10bb0bde03d70e70e4fad",
+    "lock.json": "72dc0007434cb526e6decfca702c5713c1e4b951e7febb818afa7ae3cbf7f4a9",
+    "result.json": "b08b08674e72b1a4ed05bf891a0bea8a55d9a3f61845cbe663a398542ac54afe",
+    "trial.log": "3cbaa8db9f213aa9cd0b0d274eac929d0a9faf9cdd86d0fe2cd245718f910ae3",
+    "verifier/checks.json": "c06a4beb193c93503d0fabdf6238e371fceb7be21ea6c98457372e90578d56ff",
+    "verifier/reward.json": "2d817bc3269952334130ccbf06e52d2975a6d1af8cd46b89f0fe8b01c6ac7a1f",
+    "verifier/submission.patch": "f8a1f28954263787f343b1a318296867b18ff0b7a7121926fc5ceccb380ae188",
+    "verifier/test-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

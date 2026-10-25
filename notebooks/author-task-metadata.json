@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "purpose": "Author-assigned presentation metadata only; not historical task ratings or evaluation policy",
+  "ratings": {
+    "31756": "L1", "39757": "L1", "39298": "L1", "38855": "L1", "39192": "L1", "35300": "L1",
+    "31698": "L2", "31181": "L2", "31377": "L2", "40205": "L2", "41155": "L2", "39340": "L2", "34807": "L2"
+  }
+}

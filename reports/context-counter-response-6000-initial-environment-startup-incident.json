@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "classification": "configuration_failure",
+  "phase": "trusted harness initialization before agent execution",
+  "job_name": "context-counter-response-6000-v1-minimax-attempt-001",
+  "original_artifacts_preserved": true,
+  "measured_coding_attempt": false,
+  "model_requests": 0,
+  "reported_cost_usd": null,
+  "verified_inference_spend_usd": 0,
+  "cost_note": "No provider request was made: WorkspaceAgent constructor rejected policy before environment setup or run. No API-reported charge exists. Verified zero execution cost is distinguished from a provider-reported zero.",
+  "error": "Every compared model must use the exact frozen completion policy",
+  "cause": "Historical WorkspaceAgent constructor requires the 1500-token completion policy.",
+  "resolution": "New versioned constructor guard in context-counter-response-6000-v2; inherited runtime and evaluator unchanged.",
+  "native_artifact_sha256": {
+    "runs/harbor/context-counter-response-6000-v1-minimax-attempt-001/job.log": "5ee357e42adce0a8fa64ba145dafe1053fc4bb6c4434456987c65af2d3af2850",
+    "runs/harbor/context-counter-response-6000-v1-minimax-attempt-001/lock.json": "b5df2114b77a36ecb16f02bcb0eb539212ad5f0690037ce8984a05c7408e5c22",
+    "runs/harbor/context-counter-response-6000-v1-minimax-attempt-001/result.json": "fa79e2d9022259841da8643a1f26a048cb4f1da8e10fff91a1e1a852d53d2bac",
+    "runs/harbor/context-counter-response-6000-v1-minimax-attempt-001/config.json": "17605512b86d36f24f13edb24e2ae24ab9b5c56e65085973375aed3804e5fa97",
+    "runs/harbor/context-counter-response-6000-v1-minimax-attempt-001/LC-CONTEXT-COUNTER-001__g5LKT8y/lock.json": "8fb8d7f4504f52676172f057e977bde587e95d4ecfaa93c5be1ba71843b6132a",
+    "runs/harbor/context-counter-response-6000-v1-minimax-attempt-001/LC-CONTEXT-COUNTER-001__g5LKT8y/trial.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

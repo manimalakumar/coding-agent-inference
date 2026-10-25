@@ -1,0 +1,6 @@
+[tool.mypy]
+python_version = "3.14"
+check_untyped_defs = true
+ignore_missing_imports = true
+follow_imports = "skip"
+files = ["public_replay", "experiments/public_export.py", "experiments/public_review_audit.py", "experiments/relocated_records.py", "experiments/records.py", "experiments/acceptance_labels.py", "agent/results.py", "agent/usage.py", "harbor_integration/host_reporting.py"]

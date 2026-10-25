@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "failure_category": "checks_passed_pending_review",
+  "original_verdict_preserved": true,
+  "split": "held_out",
+  "frozen_setting_id": "04829e5a8afb62fd012dfc4d7ad0d502079d4f1e6a5c0b64d16eb6708e61f703",
+  "failed_required_checks": [],
+  "reason": "Classification derived from the frozen final candidate, controller receipt and trusted checks; no additional inference, edits or repairs. Infrastructure interruptions are not diagnosed as coding failures; native patch verdicts remain intact.",
+  "code_repair_rounds": null,
+  "infrastructure_interrupted": false,
+  "execution_error": null,
+  "timing_audit": {
+    "controlled_completion_time_valid": true,
+    "monotonic_seconds": 83.41687275003642,
+    "civil_seconds": 83.41727113723755
+  },
+  "original_run_sha256": {
+    "agent/isolation.json": "62b1e544e0f280d121739cefa13a8a4218aa3b16ddedca6e69f3cd1928862a64",
+    "agent/mini-swe-agent.trajectory.json": "00b36950b22db17f8fc1a4859ff937164b83391b963e48bd8f7a1748e36f2330",
+    "agent/process-baseline.json": "efb9ed595ee17e41b991a4f31b9ceb16091e0a0b34af7d8167209b6e3fd92ddb",
+    "agent/quiescence.json": "fea343c141ef21778faf9509de729e4baaf72a50dc4a84dfeba3ee696bc58f92",
+    "agent/receipt.json": "35b5f1f265e6360c9e44c11bca92d1fd42f0231d8edbe1354ac08246c30198f2",
+    "agent/requests.jsonl": "b71bbc3c224c4d444f13b5e8c919ef6ba292498edee7c1c8ba2f948e9b257340",
+    "agent/source-snapshot.json": "74b642d1f8f38926f298beb56eef77f1ede7148c38c94f00c5b6aec759dcf944",
+    "agent/trajectory.json": "89f6d433dcd0bd37ac345b55fbd14eff0a698885a4f41099188bfcf4a010ebaa",
+    "artifacts/logs/artifacts/candidate.tar": "011bccd68a10383f0df1cbbb9ee9970b544262a13f537a0d85dbee0a638e2ca0",
+    "artifacts/logs/artifacts/receipt.json": "35b5f1f265e6360c9e44c11bca92d1fd42f0231d8edbe1354ac08246c30198f2",
+    "artifacts/manifest.json": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f",
+    "config.json": "68c3fd85d102e542c123fc383d58d60c710e3fff505cede739ff6039f650c6f9",
+    "lock.json": "29fa0e15380e5295600cc035a8e22d3c13bc74bde32826f8f35b4df0715521ee",
+    "result.json": "5388cd457f18865f721bbade265615fc2fed99e8c9cd9c30ab3865fa276cf273",
+    "trial.log": "4505dce39a99ae2fe0d9526c08f774dfd3287f46874beea71b2e012e566fd54c",
+    "verifier/checks.json": "dc173faf510a099b937900600c0fbfb2c5357a610a14821b5e0d8824a71bbed7",
+    "verifier/reward.json": "beb2c05486dc09e49c0466bb27538ba17cf88f94ac4cdeb183a6891d1449c7cf",
+    "verifier/submission.patch": "1174ee9637a7142b08f6ef5f3307051fa581451c9e42b3eda03d90898439bf8c",
+    "verifier/test-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

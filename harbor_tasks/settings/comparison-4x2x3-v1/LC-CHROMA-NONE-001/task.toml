@@ -1,0 +1,40 @@
+schema_version = "1.4"
+artifacts = []
+
+[metadata]
+task_id = "LC-CHROMA-NONE-001"
+starting_commit = "1ebcbf1d11578cb55db26013c745dc1e5722966e"
+baseline_checksum = "dc1a3d64aaf57840622b118a5bf9c36727e047dcc01e26076f1f809100399a2c"
+experimental_setting = "comparison-4x2x3-v1"
+approval_status = "checks_passed_pending_review"
+completion_policy = "workspace-deliverable-v1"
+agent_budget_seconds = 1200
+evaluation_budget_seconds = 300
+configuration_revision = 2
+difficulty = "Level 2"
+
+[environment]
+docker_image = "sha256:20b904cee25aa285543e0f1888703f4cf62b93f1999910f7aafcb3146d6310b4"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048
+workdir = "/workspace/libs/partners/chroma"
+
+[agent]
+timeout_sec = 1280
+user = "65532:65532"
+
+[verifier]
+timeout_sec = 300
+environment_mode = "separate"
+user = "root"
+[[verifier.collect]]
+command = "rm -f /logs/artifacts/candidate.tar && tar --mode='u+rwX,go+rX' -cf /logs/artifacts/candidate.tar -C /workspace libs/partners/chroma/langchain_chroma libs/partners/chroma/tests/unit_tests"
+user = "root"
+timeout_sec = 90
+
+[verifier.environment]
+docker_image = "sha256:178335b0c7f166d5bd42ddc61a0637171c54ace43a3defe0ba8fb87b9875477f"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "classification": "unsuccessful",
+  "failure_category": "submission_protocol_failure",
+  "reason": "The captured patch passes every required check, including 12 hidden tests, but the model used its final reserved request for more checks instead of standalone submission. Overall reward remains zero.",
+  "contributing_factors": [
+    "model_call_budget_exhaustion_after_reserved_submission_request_misuse"
+  ],
+  "candidate_modified_by_reviewer": false,
+  "additional_model_requests": 0,
+  "patch_acceptance": true,
+  "agent_submission": false,
+  "tool_format_repair_rounds": 0,
+  "code_repair_rounds": 2,
+  "code_repair_measurement": "Trusted post-run trace audit: edits to implementation or regression code after a failed check. Ruff-only formatting and tool-format recovery are excluded.",
+  "code_repair_evidence": [
+    {
+      "failed_check_request": 16,
+      "repair_edit_request": 21,
+      "type": "implementation repair"
+    },
+    {
+      "failed_check_request": 25,
+      "repair_edit_request": 26,
+      "type": "regression test lint repair"
+    }
+  ],
+  "ruff_formatting": {
+    "initial_format_check_failed_request": 27,
+    "cache_error_request": 28,
+    "successful_format_and_format_check_request": 29,
+    "evaluator_format_exit_code": 0
+  },
+  "editing_strategy_observations": {
+    "helper_calls": 0,
+    "explicit_snapshot_diff_observed": false,
+    "replacement_match_assertion_observed": false,
+    "production_change": "Focused replacement of the annotation-resolution block; no destructive full-file rewrite.",
+    "interpretation": "One attempt shows a qualifying patch, but the requested diff/restore strategy was only partly followed. No causal success claim; no provider or response-ceiling change."
+  },
+  "response_allowance": {
+    "configured_cap": 1500,
+    "largest_reported_completion": 658,
+    "length_finish_responses": 0,
+    "tool_format_repairs": 0,
+    "higher_ceiling_experiment_run": false
+  },
+  "trace_note": "Raw JSONL records all 30 paid requests/responses and 29 executed-command results. The final refused command and its returncode 2 are preserved in the native mini-SWE trajectory; the frozen bridge does not duplicate that early denial into JSONL.",
+  "original_run_sha256": {
+    "lock.json": "c53d21a1ce4208fca144043139399ddbe87d6f016802f0033ff8955e15725b4b",
+    "result.json": "cba5773005f6327ef25295abdff29c9202d01016ef6779dfc00c4a01d9c85df3",
+    "config.json": "5b027fa651419832a53042f00c1e782148cee23e46f4160108166b6113331130",
+    "trial.log": "67e7be0a76ae1725e2672748546d1bce9dc1ed8b9a8a805ba31f5f3f818bf2d2",
+    "artifacts/manifest.json": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f",
+    "agent/trajectory.json": "69ad5ba4f3baf47da52d4c3273d24a57ce3f33d239dbe192129461c3060dd36a",
+    "agent/requests.jsonl": "0b45e0ad24aefd6a90df36499b37cc1993775811ec6e51b61bee6bded8ebd358",
+    "agent/isolation.json": "62b1e544e0f280d121739cefa13a8a4218aa3b16ddedca6e69f3cd1928862a64",
+    "agent/source-snapshot.json": "e6b7cabbb46dc15d6fd61510aa8da4e2dcb2cb2a8d901addf5fb36ea6ab01fed",
+    "agent/mini-swe-agent.trajectory.json": "1a93598abc05068f9ea6383487bdbec71806dd258f3470f065359a6f33d2bab8",
+    "agent/receipt.json": "50efda94953f0d41bc752a9a1d8a8245fa344fbb9fd2ada3a6698bff2bfdf9c1",
+    "verifier/submission.patch": "b1280a048415958d3ab4359bc038055b4fc063a2e970cb4d4a06cea9ac0927ff",
+    "verifier/test-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verifier/reward.json": "b7a3b9f920fca99c6ea47a36501899a12a1cdb6e1b4a52b5d83b9a4bbeb8590a",
+    "verifier/checks.json": "c31cc132001c07f18e2f84e27d99868e86c9d1610d9e1cbb32f5aa2b8789fd3d",
+    "artifacts/logs/artifacts/candidate.tar": "fcfe42f1023d1b8c0a4e09b180d8ce3912adafc31e031ee0ab1828e2575221f5",
+    "artifacts/logs/artifacts/receipt.json": "50efda94953f0d41bc752a9a1d8a8245fa344fbb9fd2ada3a6698bff2bfdf9c1"
+  }
+}

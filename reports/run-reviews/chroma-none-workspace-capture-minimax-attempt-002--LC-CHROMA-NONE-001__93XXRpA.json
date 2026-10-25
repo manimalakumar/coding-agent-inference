@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "failure_category": "incomplete_implementation",
+  "contributing_factors": [
+    "regression_coverage_gap_for_vector_document_ids",
+    "unsuccessful_final_diff_inspection"
+  ],
+  "reason": "Fresh repeat under the identical frozen configuration submitted a three-line None-content filtering fix and seven new regressions. Reproducer, development regressions, 28 existing tests, lint, format, types and file policy passed. Hidden acceptance rejected it: 10 passed, 2 failed because vector-returning retrieval still omits Document.id. No infrastructure failure or tool-format recovery occurred. Attempt 001 and all its cost uncertainty remain preserved.",
+  "candidate_modified_by_reviewer": false,
+  "additional_model_requests": 0,
+  "code_repair_rounds": 2,
+  "code_repair_measurement": "Post-candidate development-test expectation correction at request 21 after failed test 20; regression-file import/lint repair at request 24 after lint failure 23. Implementation staging and correction of a no-op sed replacement before the first candidate test are not counted as post-test repair rounds. Ruff formatting/cache recovery is recorded separately, not as malformed-tool-response repair.",
+  "code_repair_evidence": [
+    {
+      "failed_check_request": 20,
+      "repair_edit_request": 21,
+      "type": "new regression fixture assertion corrected to match supplied retained-content value"
+    },
+    {
+      "failed_check_request": 23,
+      "repair_edit_request": 24,
+      "type": "Ruff import-order fix in new regression file"
+    }
+  ],
+  "ruff_format_recovery": {
+    "format_check_failed_request": 24,
+    "cache_error_request": 25,
+    "successful_no_cache_format_check_and_types_request": 26
+  },
+  "workflow_observations": {
+    "reproducer_executed_first": true,
+    "regression_added_before_implementation_change": true,
+    "new_test_creation_request": 9,
+    "regression_failed_before_source_change_request": 10,
+    "first_source_change_request": 11,
+    "source_edit_scope": "Three None guards; all other source contents preserved in captured diff.",
+    "baseline_diff_success": false,
+    "diff_helper_attempt_request": 28,
+    "diff_helper_error": "Package-relative path was rejected; helper requires repository-relative path.",
+    "unavailable_git_diff_request": 29,
+    "git_history_exposed": false,
+    "explicit_submission_request": 30,
+    "tool_format_repair_rounds": 0,
+    "first_request_roles": [
+      "system",
+      "user",
+      "user"
+    ],
+    "hidden_feedback_provided_before_submission": false
+  },
+  "same_configuration_verified": {
+    "declared_frozen_setting_id": "f462fc0ccd55972f4fc2c105d54bf8fb20fe074e9f9066d4a89ac743a7457932",
+    "configuration_id": "harbor:74d1d08d08bef42993c1347b2b5944d0d412ff17e99ba18a9d69840408ab8c79",
+    "baseline_checksum": "dc1a3d64aaf57840622b118a5bf9c36727e047dcc01e26076f1f809100399a2c",
+    "no_configuration_change": true
+  },
+  "original_run_sha256": {
+    "lock.json": "e6b28f41e2cd7c537e0baa2a8382ff5aec5a148573570338b07e8c796aabd201",
+    "result.json": "fad03194e67f5445afc456231b3bf0f75a1cea1e48b0bbc4c3383b8246db7024",
+    "config.json": "01e7ff1cc61bfae8c37da646d34ef5d597c463f9599ab5b1770c85e045cd4714",
+    "trial.log": "fc12f09c12caa0ee2cb63330b35a51cd992f4ea20f7195906a7703c066e402b1",
+    "artifacts/manifest.json": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f",
+    "agent/trajectory.json": "f3a98c732578dac1aea0f751460c0c4b1d023b21a5403cee9dcee894935e1a1c",
+    "agent/requests.jsonl": "c03bcd283e96f6738aef2ff426a635af745f477b7ff62aa13d9ad8b92fb7d64f",
+    "agent/isolation.json": "62b1e544e0f280d121739cefa13a8a4218aa3b16ddedca6e69f3cd1928862a64",
+    "agent/source-snapshot.json": "79515b3074b45d00889715abac055eb894eadc1f595ffba2c3e5e82df54175c4",
+    "agent/mini-swe-agent.trajectory.json": "a91eb3d92bb8fe9ccbc7dfec0bad722e22816734844020ec46e318713c20a5af",
+    "agent/process-baseline.json": "8e9616dc51129e40f6783d3609c01f9bd7b8947b27c4e51fec449214be7ff30f",
+    "agent/quiescence.json": "fea343c141ef21778faf9509de729e4baaf72a50dc4a84dfeba3ee696bc58f92",
+    "agent/receipt.json": "51c4f545d1b091874b97ea77c9e1ebd316217c7d18969d2282cae0596500cc2c",
+    "verifier/submission.patch": "ef6dfbea36227463afda257bbd86a0b86709662e9709c0a3a4c453e22f9597f1",
+    "verifier/test-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verifier/reward.json": "dbd77a58858d864675a1231953c422a42cc0bcc267a65ab64b146bef8d6ef284",
+    "verifier/checks.json": "e6fd08ae1230f3368c3f9b44b46c00dbbb45b507b43866cd57308bae66db17fb",
+    "artifacts/logs/artifacts/candidate.tar": "53380ad0149c494c4d027c536659675b17f220afa584f13d699d38d1f7fc042c",
+    "artifacts/logs/artifacts/receipt.json": "51c4f545d1b091874b97ea77c9e1ebd316217c7d18969d2282cae0596500cc2c"
+  }
+}

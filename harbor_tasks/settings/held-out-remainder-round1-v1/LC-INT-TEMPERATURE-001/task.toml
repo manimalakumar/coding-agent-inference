@@ -1,0 +1,42 @@
+schema_version = "1.4"
+artifacts = []
+
+[metadata]
+task_id = "LC-INT-TEMPERATURE-001"
+starting_commit = "9c160e2368f7f44bd41e967a7b3371208cf13a52"
+baseline_checksum = "7550beb21caca13f35f297131680e42e163ad6d83fd0c3fc376bb4da14165732"
+experimental_setting = "held-out-remainder-round1-v1"
+approval_status = "checks_passed_pending_review"
+completion_policy = "workspace-deliverable-v1"
+agent_budget_seconds = 1200
+evaluation_budget_seconds = 300
+configuration_revision = 5
+task_type = "bug_fix"
+split = "held_out"
+round = 1
+
+[environment]
+docker_image = "sha256:ec022d87e4a8d2b6e605788c4d697a62c92db1edecc71ff046449031853578fe"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048
+workdir = "/workspace/libs/core"
+
+[agent]
+timeout_sec = 1280
+user = "65532:65532"
+
+[verifier]
+timeout_sec = 300
+environment_mode = "separate"
+user = "root"
+[[verifier.collect]]
+command = "rm -f /logs/artifacts/candidate.tar && tar --mode='u+rwX,go+rX' -cf /logs/artifacts/candidate.tar -C /workspace libs/core/langchain_core/language_models libs/core/tests/unit_tests"
+user = "root"
+timeout_sec = 90
+
+[verifier.environment]
+docker_image = "sha256:3b27a0a2158adf0f8f807a2395949b7627539f4312dfe3c429eaa38d7b04ed1c"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048

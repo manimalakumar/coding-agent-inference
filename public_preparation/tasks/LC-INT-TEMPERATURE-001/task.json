@@ -1,0 +1,22 @@
+{
+  "task_id": "LC-INT-TEMPERATURE-001",
+  "repository": "https://github.com/langchain-ai/langchain.git",
+  "starting_commit": "9c160e2368f7f44bd41e967a7b3371208cf13a52",
+  "baseline_checksum": "7550beb21caca13f35f297131680e42e163ad6d83fd0c3fc376bb4da14165732",
+  "package": "libs/core",
+  "source_files": [
+    "libs/core/langchain_core/language_models/chat_models.py",
+    "libs/core/langchain_core/language_models/llms.py"
+  ],
+  "test_root": "libs/core/tests/unit_tests",
+  "expected_failure": "INTEGER_TEMPERATURE_DROPPED",
+  "platform": "linux/arm64",
+  "public_protocol": "public-temperature-v1",
+  "original_hidden_checks": "unavailable",
+  "required_commands": [
+    "python -m pytest tests/unit_tests/language_models/chat_models/test_base.py tests/unit_tests/language_models/llms/test_base.py -q",
+    "ruff check --no-cache langchain_core/language_models/chat_models.py langchain_core/language_models/llms.py",
+    "ruff format --check --no-cache langchain_core/language_models/chat_models.py langchain_core/language_models/llms.py",
+    "mypy --cache-dir=/dev/null langchain_core/language_models/chat_models.py langchain_core/language_models/llms.py"
+  ]
+}

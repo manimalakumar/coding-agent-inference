@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "public_files_scanned": 841,
+  "private_host_paths": [],
+  "credential_patterns": [],
+  "raw_patch_or_archive_files": [],
+  "python_syntax_errors": [],
+  "working_notebooks": 1,
+  "root_READMEs": 1,
+  "excluded_ignored_local_runtime": true,
+  "frozen_execution_files": 129,
+  "changed_frozen_execution_files": [],
+  "model_requests": 0,
+  "reviewed_test_fixtures": [
+    "Synthetic PRIVATE KEY header in redaction test; no credential material"
+  ],
+  "file_manifest": "PUBLIC_FILES.json",
+  "bundled_upstream_prompt_passages": []
+}

@@ -1,0 +1,13 @@
+{
+  "first_code_cell_sha256": "68f37fc6b8ceebdbfac4a6a6c7e62a7c83430601548c5b8e58f07b1a39435b91",
+  "first_exchange_sha256": "12ddf388172e1703a923fa75a034c3faabe1644bcbdb918bf7371602605157bc",
+  "first_exchange_preserved": false,
+  "first_invocation_code_and_outputs_preserved": false,
+  "model_requests": 0,
+  "historical_first_exchange_sha256": "4cb37dedf3dcaa6a581460ccdcf69dedd64b6404e662c6fb118206737b4bd517",
+  "historical_first_code_cell_sha256": "a83270e366c4593c528a04c32eb8c5b7277267b04b953d49534b9bb411e339fb",
+  "historical_first_code_source_sha256": "02fd612b4a08a1ca3ee191d49da6f026d4499af72d71bab436797f9c777a2a40",
+  "public_historical_request": "clearly labelled summary; exact version privately retained",
+  "first_response_sha256": "61de46604f67fbac3328b081e409119e5f4607a428f6b4b9709c1d5966fb146b",
+  "public_first_code_source_sha256": "f0866c39ab374797ed785994ff1ee6a9d2f3c5a36efa1760a0c87f0bea685770"
+}

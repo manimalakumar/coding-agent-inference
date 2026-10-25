@@ -1,0 +1,36 @@
+schema_version = "1.4"
+artifacts = []
+
+[metadata]
+task_id = "LC-RESPONSES-USAGE-001"
+starting_commit = "9aa75eaef387459ce7e2beaad25c4607ac626d24"
+baseline_checksum = "07c07316f853e74980c44a6885fe18288bcbc4e90ff94117379a21ae5487724d"
+experimental_setting = "harbor-responses-usage-v1"
+approval_status = "checks_passed_pending_review"
+shared_workflow_seconds = 1200
+
+[environment]
+docker_image = "sha256:ddb4f18cb6084c8256da73390288a61c73518f5baccad8204e25dd00b6d1a96e"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048
+workdir = "/workspace/libs/partners/openai"
+
+[agent]
+timeout_sec = 1200
+user = "65532:65532"
+
+[verifier]
+timeout_sec = 1200
+environment_mode = "separate"
+user = "root"
+[[verifier.collect]]
+command = "rm -f /logs/artifacts/candidate.tar && tar --mode='u+rwX,go+rX' -cf /logs/artifacts/candidate.tar -C /workspace libs/partners/openai/langchain_openai/chat_models libs/partners/openai/tests/unit_tests"
+user = "root"
+timeout_sec = 90
+
+[verifier.environment]
+docker_image = "sha256:62d2f2bb2ae5496c76de59d222e2ece7a15b64b5f3c7aed87dc2bb431cb808f5"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048

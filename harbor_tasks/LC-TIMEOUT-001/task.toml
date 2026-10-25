@@ -1,0 +1,36 @@
+schema_version = "1.4"
+artifacts = []
+
+[metadata]
+task_id = "LC-TIMEOUT-001"
+starting_commit = "4ee6112161e63c320320da4ad4d56380604c35f1"
+baseline_checksum = "3ead9053d48be8d728e5bb85d353ba9a45e30b55f4b87d518dd58c093900a87c"
+experimental_setting = "harbor-v1"
+approval_status = "checks_passed_pending_review"
+shared_workflow_seconds = 1200
+
+[environment]
+docker_image = "sha256:cb74655250dab0aa970e1191e16808c5568db4f4cbbca09d07f91c174c33f560"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048
+workdir = "/workspace/libs/partners/openai"
+
+[agent]
+timeout_sec = 1200
+user = "65532:65532"
+
+[verifier]
+timeout_sec = 1200
+environment_mode = "separate"
+user = "root"
+[[verifier.collect]]
+command = "rm -f /logs/artifacts/candidate.tar && tar --mode='u+rwX,go+rX' -cf /logs/artifacts/candidate.tar -C /workspace libs/partners/openai/langchain_openai/chat_models libs/partners/openai/tests/unit_tests"
+user = "root"
+timeout_sec = 90
+
+[verifier.environment]
+docker_image = "sha256:ff94a7eb747b72589639ad2fd19893ad400fd19e09427f314cc3adb987d9cc17"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048

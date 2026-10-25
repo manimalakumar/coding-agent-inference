@@ -1,0 +1,9 @@
+services:
+  main:
+    network_mode: none
+    user: root
+    security_opt:
+    - no-new-privileges:true
+    pids_limit: 128
+    tmpfs:
+    - /tmp:rw,nosuid,nodev,noexec,size=768m,mode=1777

@@ -1,0 +1,233 @@
+{
+  "setting": "harbor-workspace-deliverable-v2",
+  "task_id": "LC-ANNOTATED-TOOLS-001",
+  "validated_at": "2026-10-21T22:04:40.366256+00:00",
+  "model_requests": 0,
+  "reported_inference_cost_usd": 0,
+  "controls": {
+    "baseline": {
+      "job": "reports/harbor-validation/workspace-v2-baseline-control-001",
+      "trial": "reports/harbor-validation/workspace-v2-baseline-control-001/LC-ANNOTATED-TOOLS-001__UzeWY8p",
+      "rewards": {
+        "reward": 0,
+        "patch_acceptance": 0,
+        "patch_accepted": 0,
+        "task_success": 0,
+        "agent_submission": 1,
+        "explicit_submission": 1
+      },
+      "termination_reason": "submitted",
+      "explicit_submission": true,
+      "patch_accepted": false,
+      "task_success": false,
+      "check_exit_codes": {
+        "file_policy": 0,
+        "reproducer": 1,
+        "existing_tests": 0,
+        "hidden_acceptance": 1
+      },
+      "source_snapshot": {
+        "baseline_checksum": "f280e006fb983c5499f011d76ecacf389b1832137cbde0558d600c1d91828793",
+        "files": 5091
+      },
+      "isolation": {
+        "source_readable": true,
+        "source_writable": true,
+        "new_regression_writable": true,
+        "existing_test_read_only": true,
+        "dependencies_read_only": true,
+        "outside_source_read_only": true,
+        "existing_test_rename_denied": true,
+        "hidden_tests_absent": true,
+        "credentials_absent": true,
+        "history_absent": true,
+        "host_absent": true,
+        "reference_absent": true,
+        "host_symlink_inaccessible": true,
+        "network_disabled": true
+      },
+      "candidate_sha256": "f506ac43d2d1b944e4b6f6f8229650b95dffc68ffdf2f4b78234e54ae88262f9",
+      "quiescence": {
+        "returncode": 0,
+        "stdout": "{\"workspace_quiesced\": true, \"cleanup_passes\": 1, \"terminated_processes\": []}\n",
+        "stderr": null
+      },
+      "model_requests": 0,
+      "reported_cost_usd": 0,
+      "classification": "trusted_local_control_not_model_performance"
+    },
+    "reference": {
+      "job": "reports/harbor-validation/workspace-v2-reference-control-001",
+      "trial": "reports/harbor-validation/workspace-v2-reference-control-001/LC-ANNOTATED-TOOLS-001__JKc4gb6",
+      "rewards": {
+        "reward": 1,
+        "patch_acceptance": 1,
+        "patch_accepted": 1,
+        "task_success": 1,
+        "agent_submission": 1,
+        "explicit_submission": 1
+      },
+      "termination_reason": "submitted",
+      "explicit_submission": true,
+      "patch_accepted": true,
+      "task_success": true,
+      "check_exit_codes": {
+        "file_policy": 0,
+        "regression_on_baseline": 1,
+        "reproducer": 0,
+        "regression": 0,
+        "existing_tests": 0,
+        "lint": 0,
+        "format": 0,
+        "types": 0,
+        "hidden_acceptance": 0
+      },
+      "source_snapshot": {
+        "baseline_checksum": "f280e006fb983c5499f011d76ecacf389b1832137cbde0558d600c1d91828793",
+        "files": 5091
+      },
+      "isolation": {
+        "source_readable": true,
+        "source_writable": true,
+        "new_regression_writable": true,
+        "existing_test_read_only": true,
+        "dependencies_read_only": true,
+        "outside_source_read_only": true,
+        "existing_test_rename_denied": true,
+        "hidden_tests_absent": true,
+        "credentials_absent": true,
+        "history_absent": true,
+        "host_absent": true,
+        "reference_absent": true,
+        "host_symlink_inaccessible": true,
+        "network_disabled": true
+      },
+      "candidate_sha256": "2fae7b44b3faabfd95f24e7596d8d321d6252add757414877866daf8aadff7cc",
+      "quiescence": {
+        "returncode": 0,
+        "stdout": "{\"workspace_quiesced\": true, \"cleanup_passes\": 1, \"terminated_processes\": []}\n",
+        "stderr": null
+      },
+      "model_requests": 0,
+      "reported_cost_usd": 0,
+      "classification": "trusted_local_control_not_model_performance"
+    },
+    "reference_budget": {
+      "job": "reports/harbor-validation/workspace-v2-reference_budget-control-001",
+      "trial": "reports/harbor-validation/workspace-v2-reference_budget-control-001/LC-ANNOTATED-TOOLS-001__eAXYrrd",
+      "rewards": {
+        "reward": 1,
+        "patch_acceptance": 1,
+        "patch_accepted": 1,
+        "task_success": 1,
+        "agent_submission": 0,
+        "explicit_submission": 0
+      },
+      "termination_reason": "budget_exhausted",
+      "explicit_submission": false,
+      "patch_accepted": true,
+      "task_success": true,
+      "check_exit_codes": {
+        "file_policy": 0,
+        "regression_on_baseline": 1,
+        "reproducer": 0,
+        "regression": 0,
+        "existing_tests": 0,
+        "lint": 0,
+        "format": 0,
+        "types": 0,
+        "hidden_acceptance": 0
+      },
+      "source_snapshot": {
+        "baseline_checksum": "f280e006fb983c5499f011d76ecacf389b1832137cbde0558d600c1d91828793",
+        "files": 5091
+      },
+      "isolation": {
+        "source_readable": true,
+        "source_writable": true,
+        "new_regression_writable": true,
+        "existing_test_read_only": true,
+        "dependencies_read_only": true,
+        "outside_source_read_only": true,
+        "existing_test_rename_denied": true,
+        "hidden_tests_absent": true,
+        "credentials_absent": true,
+        "history_absent": true,
+        "host_absent": true,
+        "reference_absent": true,
+        "host_symlink_inaccessible": true,
+        "network_disabled": true
+      },
+      "candidate_sha256": "3bdc487cd4bebbcdd72af8ed1381a44bdc9245b56faf8206f478a7b4e53ddeb7",
+      "quiescence": {
+        "returncode": 0,
+        "stdout": "{\"workspace_quiesced\": true, \"cleanup_passes\": 2, \"terminated_processes\": [332]}\n",
+        "stderr": null
+      },
+      "model_requests": 0,
+      "reported_cost_usd": 0,
+      "classification": "trusted_local_control_not_model_performance"
+    },
+    "reference_error": {
+      "job": "reports/harbor-validation/workspace-v2-reference_error-control-001",
+      "trial": "reports/harbor-validation/workspace-v2-reference_error-control-001/LC-ANNOTATED-TOOLS-001__kq2nYKz",
+      "rewards": {
+        "reward": 1,
+        "patch_acceptance": 1,
+        "patch_accepted": 1,
+        "task_success": 1,
+        "agent_submission": 0,
+        "explicit_submission": 0
+      },
+      "termination_reason": "error",
+      "explicit_submission": false,
+      "patch_accepted": true,
+      "task_success": true,
+      "check_exit_codes": {
+        "file_policy": 0,
+        "regression_on_baseline": 1,
+        "reproducer": 0,
+        "regression": 0,
+        "existing_tests": 0,
+        "lint": 0,
+        "format": 0,
+        "types": 0,
+        "hidden_acceptance": 0
+      },
+      "source_snapshot": {
+        "baseline_checksum": "f280e006fb983c5499f011d76ecacf389b1832137cbde0558d600c1d91828793",
+        "files": 5091
+      },
+      "isolation": {
+        "source_readable": true,
+        "source_writable": true,
+        "new_regression_writable": true,
+        "existing_test_read_only": true,
+        "dependencies_read_only": true,
+        "outside_source_read_only": true,
+        "existing_test_rename_denied": true,
+        "hidden_tests_absent": true,
+        "credentials_absent": true,
+        "history_absent": true,
+        "host_absent": true,
+        "reference_absent": true,
+        "host_symlink_inaccessible": true,
+        "network_disabled": true
+      },
+      "candidate_sha256": "2fae7b44b3faabfd95f24e7596d8d321d6252add757414877866daf8aadff7cc",
+      "quiescence": {
+        "returncode": 0,
+        "stdout": "{\"workspace_quiesced\": true, \"cleanup_passes\": 1, \"terminated_processes\": []}\n",
+        "stderr": null
+      },
+      "model_requests": 0,
+      "reported_cost_usd": 0,
+      "classification": "trusted_local_control_not_model_performance"
+    }
+  },
+  "local_checks": {
+    "pytest": "98 passed"
+  },
+  "setup_policy": "Controls use fresh immutable snapshots and zero inference; excluded from the evaluated budget.",
+  "interpretation": "Single end-to-end workflow pilot; not a reliability estimate."
+}

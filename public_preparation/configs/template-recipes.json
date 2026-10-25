@@ -1,0 +1,3257 @@
+{
+  "version": 1,
+  "package": "mini-swe-agent",
+  "package_version": "2.4.6",
+  "resource": "config/mini.yaml",
+  "resource_sha256": "b539a8965f5bf41dd0f32daafa5d2db22581923d13812fa378fd09569b9d6b0c",
+  "configs": {
+    "mini-swe-context-counter-response-6000-v1.yaml": {
+      "effective_sha256": "7cea37f3b23d3769e347ec38d2a5dabfd9f2c1e34f8b51932728bfce69be9bea",
+      "templates": {
+        "agent.system_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                63
+              ]
+            }
+          ],
+          "sha256": "6fb54145bbb1724ce77430ff3852887acbd4a5cce10c86cd8dfbf4c7d55f1091"
+        },
+        "agent.instance_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                255
+              ]
+            },
+            {
+              "project_text": "Execut"
+            },
+            {
+              "copy": [
+                261,
+                267
+              ]
+            },
+            {
+              "project_text": "suppli"
+            },
+            {
+              "copy": [
+                270,
+                271
+              ]
+            },
+            {
+              "copy": [
+                289,
+                295
+              ]
+            },
+            {
+              "project_text": "-only reproduction script first: `python /task/reproduce.py`\n2. Use the traceback to locate and "
+            },
+            {
+              "copy": [
+                295,
+                297
+              ]
+            },
+            {
+              "project_text": "spect"
+            },
+            {
+              "copy": [
+                298,
+                308
+              ]
+            },
+            {
+              "copy": [
+                327,
+                328
+              ]
+            },
+            {
+              "copy": [
+                340,
+                342
+              ]
+            },
+            {
+              "copy": [
+                344,
+                345
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                345,
+                349
+              ]
+            },
+            {
+              "project_text": "n add a regression test and observe"
+            },
+            {
+              "copy": [
+                349,
+                351
+              ]
+            },
+            {
+              "project_text": "t fail"
+            },
+            {
+              "copy": [
+                355,
+                400
+              ]
+            },
+            {
+              "project_text": " while preserving the regression test"
+            },
+            {
+              "copy": [
+                400,
+                420
+              ]
+            },
+            {
+              "copy": [
+                426,
+                429
+              ]
+            },
+            {
+              "project_text": "re"
+            },
+            {
+              "copy": [
+                429,
+                437
+              ]
+            },
+            {
+              "project_text": "the regressi"
+            },
+            {
+              "copy": [
+                438,
+                439
+              ]
+            },
+            {
+              "project_text": "n test and s"
+            },
+            {
+              "copy": [
+                439,
+                440
+              ]
+            },
+            {
+              "project_text": "pplied "
+            },
+            {
+              "copy": [
+                440,
+                441
+              ]
+            },
+            {
+              "project_text": "eproduction"
+            },
+            {
+              "copy": [
+                441,
+                448
+              ]
+            },
+            {
+              "copy": [
+                454,
+                458
+              ]
+            },
+            {
+              "project_text": "Run the required development checks, then submit immediately once they pass; prioritize submission over optional t"
+            },
+            {
+              "copy": [
+                459,
+                462
+              ]
+            },
+            {
+              "project_text": "s,"
+            },
+            {
+              "copy": [
+                462,
+                463
+              ]
+            },
+            {
+              "project_text": "broad"
+            },
+            {
+              "copy": [
+                463,
+                464
+              ]
+            },
+            {
+              "project_text": "r"
+            },
+            {
+              "copy": [
+                467,
+                468
+              ]
+            },
+            {
+              "copy": [
+                470,
+                471
+              ]
+            },
+            {
+              "project_text": "uit"
+            },
+            {
+              "copy": [
+                471,
+                473
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                473,
+                474
+              ]
+            },
+            {
+              "project_text": "refac"
+            },
+            {
+              "copy": [
+                474,
+                476
+              ]
+            },
+            {
+              "project_text": "ring"
+            },
+            {
+              "copy": [
+                476,
+                477
+              ]
+            },
+            {
+              "copy": [
+                485,
+                486
+              ]
+            },
+            {
+              "copy": [
+                487,
+                489
+              ]
+            },
+            {
+              "project_text": "add"
+            },
+            {
+              "copy": [
+                490,
+                491
+              ]
+            },
+            {
+              "project_text": "tional"
+            },
+            {
+              "copy": [
+                492,
+                494
+              ]
+            },
+            {
+              "project_text": "nve"
+            },
+            {
+              "copy": [
+                500,
+                502
+              ]
+            },
+            {
+              "project_text": "igation"
+            },
+            {
+              "copy": [
+                502,
+                3007
+              ]
+            },
+            {
+              "project_text": "\n## Experiment workflow instructions\n\nThe only available tool is `bash`. Create files through bash, for example with `cat <<'EOF' > file.py`; use directory creation only for directories.\nBatch related searches and file reads when possible. Use traceback file and function names to locate code.\nAfter a failed patch test, inspect the failure and the changed execution path before further broad searches.\nOnce you have enough evidence, make a focused change and test it. Track remaining budget and reserve calls for implementation and verification.\nThis provisional baseline attempt has fixed limits: 30 model calls, 10,000 cumulative output tokens including reported reasoning, and 20 minutes. Success is not guaranteed.\n\n## Workspace delivery and stopping\n\nThe final workspace is your deliverable. Harbor automatically captures it when you\nsubmit, exhaust a budget, or stop with an execution error. Trusted evaluation then\nruns on that frozen candidate in a separate environment. Task success means all\nrequired functional, regression, lint, format, type and file-policy checks pass.\nExplicit submission is recorded separately and is not required for patch acceptance.\n\nNo model request or output tokens are reserved for submission. The last permitted\nrequest may edit source or execute development checks. Budget exhaustion stops\nagent execution; there are no extra model calls or repairs afterward. Tool actions\nauthorized by the final allowed response may execute within the remaining time.\nThe agent's limits remain 30 model requests, 10,000 cumulative output tokens and\n20 minutes; each response is capped at 6,000 tokens and each command at 90 seconds.\nMalformed tool-response recovery is limited to two retries within these same budgets.\nTrusted evaluation has a separate five-minute limit after capture and grants no\nagent actions, inference or repairs.\n\nOnce required checks pass, finish early to save inference. The standalone bash\ncommand `echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT` remains available for that\npurpose. Do not combine it with other commands. The agent cannot continue after\nsubmission. Passing checks means checks_passed_pending_review, with no authorization\nto commit, push, publish or merge.\n\nRun tests directly where practical. For pipelines use `set -o pipefail`; the harness\nalso enables it. Always run format --check after formatting and inspect exit codes.\n\nFollow the task-specific completion checklist and test requirements supplied in the issue above.\n\n\n## Focused editing and recovery\n\nFavor small, focused replacements or patches to existing source files. For a\nscripted replacement, assert that the old text occurs exactly once before writing.\nPreserve the rest of the file; avoid reconstructing entire existing files.\nImmediately after each source edit, inspect its diff against the unchanged\nsnapshot and check that unrelated imports, definitions and content remain intact.\n\nA read-only copy of the permitted production source from this attempt's unchanged\npre-fix snapshot is available at /task/unchanged. It contains no Git history.\nUse repository-relative paths with these commands:\n\n  python /task/workspace_edit.py diff PATH\n  python /task/workspace_edit.py restore PATH\n\nDiff prints a unified diff for the named production file (an empty diff means no\nchange). Restore replaces that file with its unchanged pre-fix contents, discarding\nyour edits to that file. Restore and retry a focused edit if you damage a file;\ndo not reconstruct it from memory or a partial display. These commands run inside\nthe same sandbox, with the same source permissions as bash.\n\nTool-format repair means recovery from a malformed model tool-call response.\nIt is distinct from repairing code after a failed check, and from Ruff formatting.\nThe existing allowance of two tool-format repairs is unchanged.\n\n\n## Incremental file creation\n\nCreate new files through short, incremental edits rather than a single large\ncommand. Write a small initial skeleton, then append or patch one small logical\nblock at a time in separate tool calls. Do not send an entire large file as one\ntool-call payload. Finish each command and its JSON arguments completely before\ncontinuing in a later call.\n"
+            }
+          ],
+          "sha256": "f5a7ee9452f442ec8bbd6ca203146079c0377fc5e9eab7921b902f969c0bf104"
+        },
+        "model.observation_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                599
+              ]
+            }
+          ],
+          "sha256": "bf5a29fe56e297588a40b3a8df70c8eb4d4664d205a930fa62e72560382b2916"
+        },
+        "model.format_error_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                841
+              ]
+            }
+          ],
+          "sha256": "03b5a9fab17867bf9942520c21f044bfc7779f07ac7253646ef0b71ae0caa32e"
+        }
+      }
+    },
+    "mini-swe-focused-editing-v1.yaml": {
+      "effective_sha256": "7e32e7780799305ad16a9183a7566cb04d030928d27824a0747017bc9035a848",
+      "templates": {
+        "agent.system_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                63
+              ]
+            }
+          ],
+          "sha256": "6fb54145bbb1724ce77430ff3852887acbd4a5cce10c86cd8dfbf4c7d55f1091"
+        },
+        "agent.instance_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                255
+              ]
+            },
+            {
+              "project_text": "Execut"
+            },
+            {
+              "copy": [
+                261,
+                267
+              ]
+            },
+            {
+              "project_text": "suppli"
+            },
+            {
+              "copy": [
+                270,
+                271
+              ]
+            },
+            {
+              "copy": [
+                289,
+                295
+              ]
+            },
+            {
+              "project_text": "-only reproduction script first: `python /task/reproduce.py`\n2. Use the traceback to locate and "
+            },
+            {
+              "copy": [
+                295,
+                297
+              ]
+            },
+            {
+              "project_text": "spect"
+            },
+            {
+              "copy": [
+                298,
+                308
+              ]
+            },
+            {
+              "copy": [
+                327,
+                328
+              ]
+            },
+            {
+              "copy": [
+                340,
+                342
+              ]
+            },
+            {
+              "copy": [
+                344,
+                345
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                345,
+                349
+              ]
+            },
+            {
+              "project_text": "n add a regression test and observe"
+            },
+            {
+              "copy": [
+                349,
+                351
+              ]
+            },
+            {
+              "project_text": "t fail"
+            },
+            {
+              "copy": [
+                355,
+                400
+              ]
+            },
+            {
+              "project_text": " while preserving the regression test"
+            },
+            {
+              "copy": [
+                400,
+                420
+              ]
+            },
+            {
+              "copy": [
+                426,
+                429
+              ]
+            },
+            {
+              "project_text": "re"
+            },
+            {
+              "copy": [
+                429,
+                437
+              ]
+            },
+            {
+              "project_text": "the regressi"
+            },
+            {
+              "copy": [
+                438,
+                439
+              ]
+            },
+            {
+              "project_text": "n test and s"
+            },
+            {
+              "copy": [
+                439,
+                440
+              ]
+            },
+            {
+              "project_text": "pplied "
+            },
+            {
+              "copy": [
+                440,
+                441
+              ]
+            },
+            {
+              "project_text": "eproduction"
+            },
+            {
+              "copy": [
+                441,
+                448
+              ]
+            },
+            {
+              "copy": [
+                454,
+                458
+              ]
+            },
+            {
+              "project_text": "Run the required development checks, then submit immediately once they pass; prioritize submission over optional t"
+            },
+            {
+              "copy": [
+                459,
+                462
+              ]
+            },
+            {
+              "project_text": "s,"
+            },
+            {
+              "copy": [
+                462,
+                463
+              ]
+            },
+            {
+              "project_text": "broad"
+            },
+            {
+              "copy": [
+                463,
+                464
+              ]
+            },
+            {
+              "project_text": "r"
+            },
+            {
+              "copy": [
+                467,
+                468
+              ]
+            },
+            {
+              "copy": [
+                470,
+                471
+              ]
+            },
+            {
+              "project_text": "uit"
+            },
+            {
+              "copy": [
+                471,
+                473
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                473,
+                474
+              ]
+            },
+            {
+              "project_text": "refac"
+            },
+            {
+              "copy": [
+                474,
+                476
+              ]
+            },
+            {
+              "project_text": "ring"
+            },
+            {
+              "copy": [
+                476,
+                477
+              ]
+            },
+            {
+              "copy": [
+                485,
+                486
+              ]
+            },
+            {
+              "copy": [
+                487,
+                489
+              ]
+            },
+            {
+              "project_text": "add"
+            },
+            {
+              "copy": [
+                490,
+                491
+              ]
+            },
+            {
+              "project_text": "tional"
+            },
+            {
+              "copy": [
+                492,
+                494
+              ]
+            },
+            {
+              "project_text": "nve"
+            },
+            {
+              "copy": [
+                500,
+                502
+              ]
+            },
+            {
+              "project_text": "igation"
+            },
+            {
+              "copy": [
+                502,
+                3007
+              ]
+            },
+            {
+              "project_text": "\n## Experiment workflow instructions\n\nThe only available tool is `bash`. Create files through bash, for example with `cat <<'EOF' > file.py`; use directory creation only for directories.\nBatch related searches and file reads when possible. Use traceback file and function names to locate code.\nAfter a failed patch test, inspect the failure and the changed execution path before further broad searches.\nOnce you have enough evidence, make a focused change and test it. Track remaining budget and reserve calls for implementation and verification.\nThis provisional baseline attempt has fixed limits: 30 model calls, 10,000 cumulative output tokens including reported reasoning, and 20 minutes. Success is not guaranteed.\n\n## Stopping and reliable test results\n\nAfter required checks pass, prioritize submission immediately. Do not spend remaining calls on optional work.\nReserve the final model request for submission: issue only `echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT` on that request. The controller reports remaining requests and reserves 128 output tokens for this handoff within the existing token budget.\nIf checks still fail or remain incomplete when the final request arrives, submit the current workspace anyway; submission does not assert that checks passed. The evaluator records acceptance separately.\nRun tests directly whenever practical. If piping test output through head, tail, tee or another command, use `set -o pipefail` so failures return a nonzero status. Bash pipefail is also enabled by the harness. Never infer test success from a pipeline's last command alone.\nRequired checks include the supplied reproducer, new regression tests, the existing focused test module, and required lint, formatting and type checks. Batch related checks to leave time and calls for submission.\nHarbor captures the final workspace and runs separate verification after termination. Agent submission and patch acceptance are recorded separately. Overall success requires explicit submission and passing every required check.\n\n\nFollow the task-specific completion checklist and test requirements supplied in the issue above.\n\n\n## Focused editing and recovery\n\nFavor small, focused replacements or patches to existing source files. For a\nscripted replacement, assert that the old text occurs exactly once before writing.\nPreserve the rest of the file; avoid reconstructing entire existing files.\nImmediately after each source edit, inspect its diff against the unchanged\nsnapshot and check that unrelated imports, definitions and content remain intact.\n\nA read-only copy of the permitted production source from this attempt's unchanged\npre-fix snapshot is available at /task/unchanged. It contains no Git history.\nUse repository-relative paths with these commands:\n\n  python /task/workspace_edit.py diff PATH\n  python /task/workspace_edit.py restore PATH\n\nDiff prints a unified diff for the named production file (an empty diff means no\nchange). Restore replaces that file with its unchanged pre-fix contents, discarding\nyour edits to that file. Restore and retry a focused edit if you damage a file;\ndo not reconstruct it from memory or a partial display. These commands run inside\nthe same sandbox, with the same source permissions as bash.\n\nTool-format repair means recovery from a malformed model tool-call response.\nIt is distinct from repairing code after a failed check, and from Ruff formatting.\nThe existing allowance of two tool-format repairs is unchanged.\n"
+            }
+          ],
+          "sha256": "6a8200e729c6d60f3a31407b4aee218fd5bac8e35f99d4c852c2b0d95ab4d2cd"
+        },
+        "model.observation_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                599
+              ]
+            }
+          ],
+          "sha256": "bf5a29fe56e297588a40b3a8df70c8eb4d4664d205a930fa62e72560382b2916"
+        },
+        "model.format_error_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                841
+              ]
+            }
+          ],
+          "sha256": "03b5a9fab17867bf9942520c21f044bfc7779f07ac7253646ef0b71ae0caa32e"
+        }
+      }
+    },
+    "mini-swe-harbor-v1.yaml": {
+      "effective_sha256": "89dd6c8b33e3c0ab7cc208a27b4c33cea2111225649f805f7664ccf9ca77aeb6",
+      "templates": {
+        "agent.system_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                63
+              ]
+            }
+          ],
+          "sha256": "6fb54145bbb1724ce77430ff3852887acbd4a5cce10c86cd8dfbf4c7d55f1091"
+        },
+        "agent.instance_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                255
+              ]
+            },
+            {
+              "project_text": "Execut"
+            },
+            {
+              "copy": [
+                261,
+                267
+              ]
+            },
+            {
+              "project_text": "suppli"
+            },
+            {
+              "copy": [
+                270,
+                271
+              ]
+            },
+            {
+              "copy": [
+                289,
+                295
+              ]
+            },
+            {
+              "project_text": "-only reproduction script first: `python /task/reproduce.py`\n2. Use the traceback to locate and "
+            },
+            {
+              "copy": [
+                295,
+                297
+              ]
+            },
+            {
+              "project_text": "spect"
+            },
+            {
+              "copy": [
+                298,
+                308
+              ]
+            },
+            {
+              "copy": [
+                327,
+                328
+              ]
+            },
+            {
+              "copy": [
+                340,
+                342
+              ]
+            },
+            {
+              "copy": [
+                344,
+                345
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                345,
+                349
+              ]
+            },
+            {
+              "project_text": "n add a regression test and observe"
+            },
+            {
+              "copy": [
+                349,
+                351
+              ]
+            },
+            {
+              "project_text": "t fail"
+            },
+            {
+              "copy": [
+                355,
+                400
+              ]
+            },
+            {
+              "project_text": " while preserving the regression test"
+            },
+            {
+              "copy": [
+                400,
+                420
+              ]
+            },
+            {
+              "copy": [
+                426,
+                429
+              ]
+            },
+            {
+              "project_text": "re"
+            },
+            {
+              "copy": [
+                429,
+                437
+              ]
+            },
+            {
+              "project_text": "the regressi"
+            },
+            {
+              "copy": [
+                438,
+                439
+              ]
+            },
+            {
+              "project_text": "n test and s"
+            },
+            {
+              "copy": [
+                439,
+                440
+              ]
+            },
+            {
+              "project_text": "pplied "
+            },
+            {
+              "copy": [
+                440,
+                441
+              ]
+            },
+            {
+              "project_text": "eproduction"
+            },
+            {
+              "copy": [
+                441,
+                448
+              ]
+            },
+            {
+              "copy": [
+                454,
+                458
+              ]
+            },
+            {
+              "project_text": "Run the required development checks, then submit immediately once they pass; prioritize submission over optional t"
+            },
+            {
+              "copy": [
+                459,
+                462
+              ]
+            },
+            {
+              "project_text": "s,"
+            },
+            {
+              "copy": [
+                462,
+                463
+              ]
+            },
+            {
+              "project_text": "broad"
+            },
+            {
+              "copy": [
+                463,
+                464
+              ]
+            },
+            {
+              "project_text": "r"
+            },
+            {
+              "copy": [
+                467,
+                468
+              ]
+            },
+            {
+              "copy": [
+                470,
+                471
+              ]
+            },
+            {
+              "project_text": "uit"
+            },
+            {
+              "copy": [
+                471,
+                473
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                473,
+                474
+              ]
+            },
+            {
+              "project_text": "refac"
+            },
+            {
+              "copy": [
+                474,
+                476
+              ]
+            },
+            {
+              "project_text": "ring"
+            },
+            {
+              "copy": [
+                476,
+                477
+              ]
+            },
+            {
+              "copy": [
+                485,
+                486
+              ]
+            },
+            {
+              "copy": [
+                487,
+                489
+              ]
+            },
+            {
+              "project_text": "add"
+            },
+            {
+              "copy": [
+                490,
+                491
+              ]
+            },
+            {
+              "project_text": "tional"
+            },
+            {
+              "copy": [
+                492,
+                494
+              ]
+            },
+            {
+              "project_text": "nve"
+            },
+            {
+              "copy": [
+                500,
+                502
+              ]
+            },
+            {
+              "project_text": "igation"
+            },
+            {
+              "copy": [
+                502,
+                3007
+              ]
+            },
+            {
+              "project_text": "\n## Experiment workflow instructions\n\nThe only available tool is `bash`. Create files through bash, for example with `cat <<'EOF' > file.py`; use directory creation only for directories.\nBatch related searches and file reads when possible. Use traceback file and function names to locate code.\nAfter a failed patch test, inspect the failure and the changed execution path before further broad searches.\nOnce you have enough evidence, make a focused change and test it. Track remaining budget and reserve calls for implementation and verification.\nThis provisional baseline attempt has fixed limits: 30 model calls, 10,000 cumulative output tokens including reported reasoning, and 20 minutes. Success is not guaranteed.\n\n## Stopping and reliable test results\n\nAfter required checks pass, prioritize submission immediately. Do not spend remaining calls on optional work.\nReserve the final model request for submission: issue only `echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT` on that request. The controller reports remaining requests and reserves 128 output tokens for this handoff within the existing token budget.\nIf checks still fail or remain incomplete when the final request arrives, submit the current workspace anyway; submission does not assert that checks passed. The evaluator records acceptance separately.\nRun tests directly whenever practical. If piping test output through head, tail, tee or another command, use `set -o pipefail` so failures return a nonzero status. Bash pipefail is also enabled by the harness. Never infer test success from a pipeline's last command alone.\nRequired checks include the supplied reproducer, new regression tests, the existing focused test module, and required lint, formatting and type checks. Batch related checks to leave time and calls for submission.\nHarbor captures the final workspace and runs separate verification after termination. Agent submission and patch acceptance are recorded separately. Overall success requires explicit submission and passing every required check.\n\n## Required completion checklist and commands\n\nRun commands from `/workspace/libs/partners/openai`. Choose CHANGED_SOURCE and CHANGED_TESTS from the Python files you changed or added during this attempt; do not include unchanged files. Set these variables again when starting a new bash action, because shell variables do not persist between actions.\n\n- Reproduce the reported error on unchanged source first: `python /task/reproduce.py`.\n- Add regression tests, observe the reported failure before the fix, and preserve those tests.\n- After implementation, rerun the supplied reproducer and your regression tests: `python /task/reproduce.py` and `python -m pytest -q --disable-socket --allow-unix-socket $CHANGED_TESTS`.\n- Run the existing required focused module: `python -m pytest tests/unit_tests/chat_models/test_base.py -q --disable-socket --allow-unix-socket`.\n- Run lint on changed production and development-test files: `ruff check --no-cache $CHANGED_SOURCE $CHANGED_TESTS`.\n- Verify formatting on those files: `ruff format --check --no-cache $CHANGED_SOURCE $CHANGED_TESTS`.\n- Run type checking on changed production files: `mypy --cache-dir=/tmp/mypy $CHANGED_SOURCE`.\n- Once all required checks pass, immediately submit using a separate bash action containing only `echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT`.\n\nA successful independent attempt requires both passing every required check and explicit submission. Do not delay submission for optional tests or investigation. These commands are development checks; the trusted evaluator runs its own checks after submission.\n\n## Explicit test-file policy and completion requirements\n\nExisting test files are read-only. Add regressions only in new `test_*.py` files.\nCreate regression files at `tests/unit_tests/test_*.py` or in a new subdirectory beneath `tests/unit_tests/`. Existing test subdirectories are read-only trees. Do not append tests to, replace, rename, delete, or format existing test files. Apply formatters and lint fixes only to files you changed or newly created.\nAfter running a formatter, rerun `ruff format --check --no-cache $CHANGED_SOURCE $CHANGED_TESTS` and require exit code zero. Formatting execution alone does not complete the formatting check.\nRegression tests must verify the configured timeout values on the underlying synchronous and asynchronous HTTP clients, including each configured timeout component. Checking only the model's configuration field is insufficient. Preserve equivalent default client reuse and distinguish configurations as required by the issue.\nThe provisional baseline budget remains 30 model calls, 10,000 cumulative output tokens including reported reasoning, and 20 minutes. Complete all required checks and then submit immediately.\n"
+            }
+          ],
+          "sha256": "f0b54e276fab303290b082092a87f514ed585dfea5eb91440d209c2f26eb6463"
+        },
+        "model.observation_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                599
+              ]
+            }
+          ],
+          "sha256": "bf5a29fe56e297588a40b3a8df70c8eb4d4664d205a930fa62e72560382b2916"
+        },
+        "model.format_error_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                841
+              ]
+            }
+          ],
+          "sha256": "03b5a9fab17867bf9942520c21f044bfc7779f07ac7253646ef0b71ae0caa32e"
+        }
+      }
+    },
+    "mini-swe-harbor-v2.yaml": {
+      "effective_sha256": "83e388a362c487578f1b19bbffb38201b0888f3983805e95bac3c08a64eb79e2",
+      "templates": {
+        "agent.system_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                63
+              ]
+            }
+          ],
+          "sha256": "6fb54145bbb1724ce77430ff3852887acbd4a5cce10c86cd8dfbf4c7d55f1091"
+        },
+        "agent.instance_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                255
+              ]
+            },
+            {
+              "project_text": "Execut"
+            },
+            {
+              "copy": [
+                261,
+                267
+              ]
+            },
+            {
+              "project_text": "suppli"
+            },
+            {
+              "copy": [
+                270,
+                271
+              ]
+            },
+            {
+              "copy": [
+                289,
+                295
+              ]
+            },
+            {
+              "project_text": "-only reproduction script first: `python /task/reproduce.py`\n2. Use the traceback to locate and "
+            },
+            {
+              "copy": [
+                295,
+                297
+              ]
+            },
+            {
+              "project_text": "spect"
+            },
+            {
+              "copy": [
+                298,
+                308
+              ]
+            },
+            {
+              "copy": [
+                327,
+                328
+              ]
+            },
+            {
+              "copy": [
+                340,
+                342
+              ]
+            },
+            {
+              "copy": [
+                344,
+                345
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                345,
+                349
+              ]
+            },
+            {
+              "project_text": "n add a regression test and observe"
+            },
+            {
+              "copy": [
+                349,
+                351
+              ]
+            },
+            {
+              "project_text": "t fail"
+            },
+            {
+              "copy": [
+                355,
+                400
+              ]
+            },
+            {
+              "project_text": " while preserving the regression test"
+            },
+            {
+              "copy": [
+                400,
+                420
+              ]
+            },
+            {
+              "copy": [
+                426,
+                429
+              ]
+            },
+            {
+              "project_text": "re"
+            },
+            {
+              "copy": [
+                429,
+                437
+              ]
+            },
+            {
+              "project_text": "the regressi"
+            },
+            {
+              "copy": [
+                438,
+                439
+              ]
+            },
+            {
+              "project_text": "n test and s"
+            },
+            {
+              "copy": [
+                439,
+                440
+              ]
+            },
+            {
+              "project_text": "pplied "
+            },
+            {
+              "copy": [
+                440,
+                441
+              ]
+            },
+            {
+              "project_text": "eproduction"
+            },
+            {
+              "copy": [
+                441,
+                448
+              ]
+            },
+            {
+              "copy": [
+                454,
+                458
+              ]
+            },
+            {
+              "project_text": "Run the required development checks, then submit immediately once they pass; prioritize submission over optional t"
+            },
+            {
+              "copy": [
+                459,
+                462
+              ]
+            },
+            {
+              "project_text": "s,"
+            },
+            {
+              "copy": [
+                462,
+                463
+              ]
+            },
+            {
+              "project_text": "broad"
+            },
+            {
+              "copy": [
+                463,
+                464
+              ]
+            },
+            {
+              "project_text": "r"
+            },
+            {
+              "copy": [
+                467,
+                468
+              ]
+            },
+            {
+              "copy": [
+                470,
+                471
+              ]
+            },
+            {
+              "project_text": "uit"
+            },
+            {
+              "copy": [
+                471,
+                473
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                473,
+                474
+              ]
+            },
+            {
+              "project_text": "refac"
+            },
+            {
+              "copy": [
+                474,
+                476
+              ]
+            },
+            {
+              "project_text": "ring"
+            },
+            {
+              "copy": [
+                476,
+                477
+              ]
+            },
+            {
+              "copy": [
+                485,
+                486
+              ]
+            },
+            {
+              "copy": [
+                487,
+                489
+              ]
+            },
+            {
+              "project_text": "add"
+            },
+            {
+              "copy": [
+                490,
+                491
+              ]
+            },
+            {
+              "project_text": "tional"
+            },
+            {
+              "copy": [
+                492,
+                494
+              ]
+            },
+            {
+              "project_text": "nve"
+            },
+            {
+              "copy": [
+                500,
+                502
+              ]
+            },
+            {
+              "project_text": "igation"
+            },
+            {
+              "copy": [
+                502,
+                3007
+              ]
+            },
+            {
+              "project_text": "\n## Experiment workflow instructions\n\nThe only available tool is `bash`. Create files through bash, for example with `cat <<'EOF' > file.py`; use directory creation only for directories.\nBatch related searches and file reads when possible. Use traceback file and function names to locate code.\nAfter a failed patch test, inspect the failure and the changed execution path before further broad searches.\nOnce you have enough evidence, make a focused change and test it. Track remaining budget and reserve calls for implementation and verification.\nThis provisional baseline attempt has fixed limits: 30 model calls, 10,000 cumulative output tokens including reported reasoning, and 20 minutes. Success is not guaranteed.\n\n## Stopping and reliable test results\n\nAfter required checks pass, prioritize submission immediately. Do not spend remaining calls on optional work.\nReserve the final model request for submission: issue only `echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT` on that request. The controller reports remaining requests and reserves 128 output tokens for this handoff within the existing token budget.\nIf checks still fail or remain incomplete when the final request arrives, submit the current workspace anyway; submission does not assert that checks passed. The evaluator records acceptance separately.\nRun tests directly whenever practical. If piping test output through head, tail, tee or another command, use `set -o pipefail` so failures return a nonzero status. Bash pipefail is also enabled by the harness. Never infer test success from a pipeline's last command alone.\nRequired checks include the supplied reproducer, new regression tests, the existing focused test module, and required lint, formatting and type checks. Batch related checks to leave time and calls for submission.\nHarbor captures the final workspace and runs separate verification after termination. Agent submission and patch acceptance are recorded separately. Overall success requires explicit submission and passing every required check.\n\n\nFollow the task-specific completion checklist and test requirements supplied in the issue above.\n"
+            }
+          ],
+          "sha256": "1b605583f0df16bea3f46899683979beff24c831aa8e7b7facaf863055490aa2"
+        },
+        "model.observation_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                599
+              ]
+            }
+          ],
+          "sha256": "bf5a29fe56e297588a40b3a8df70c8eb4d4664d205a930fa62e72560382b2916"
+        },
+        "model.format_error_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                841
+              ]
+            }
+          ],
+          "sha256": "03b5a9fab17867bf9942520c21f044bfc7779f07ac7253646ef0b71ae0caa32e"
+        }
+      }
+    },
+    "mini-swe-incremental-files-v1.yaml": {
+      "effective_sha256": "ad10c1d64eddae7c4ec4a355b1319e99bca6445b59f322f69d6b481c4af1679d",
+      "templates": {
+        "agent.system_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                63
+              ]
+            }
+          ],
+          "sha256": "6fb54145bbb1724ce77430ff3852887acbd4a5cce10c86cd8dfbf4c7d55f1091"
+        },
+        "agent.instance_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                255
+              ]
+            },
+            {
+              "project_text": "Execut"
+            },
+            {
+              "copy": [
+                261,
+                267
+              ]
+            },
+            {
+              "project_text": "suppli"
+            },
+            {
+              "copy": [
+                270,
+                271
+              ]
+            },
+            {
+              "copy": [
+                289,
+                295
+              ]
+            },
+            {
+              "project_text": "-only reproduction script first: `python /task/reproduce.py`\n2. Use the traceback to locate and "
+            },
+            {
+              "copy": [
+                295,
+                297
+              ]
+            },
+            {
+              "project_text": "spect"
+            },
+            {
+              "copy": [
+                298,
+                308
+              ]
+            },
+            {
+              "copy": [
+                327,
+                328
+              ]
+            },
+            {
+              "copy": [
+                340,
+                342
+              ]
+            },
+            {
+              "copy": [
+                344,
+                345
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                345,
+                349
+              ]
+            },
+            {
+              "project_text": "n add a regression test and observe"
+            },
+            {
+              "copy": [
+                349,
+                351
+              ]
+            },
+            {
+              "project_text": "t fail"
+            },
+            {
+              "copy": [
+                355,
+                400
+              ]
+            },
+            {
+              "project_text": " while preserving the regression test"
+            },
+            {
+              "copy": [
+                400,
+                420
+              ]
+            },
+            {
+              "copy": [
+                426,
+                429
+              ]
+            },
+            {
+              "project_text": "re"
+            },
+            {
+              "copy": [
+                429,
+                437
+              ]
+            },
+            {
+              "project_text": "the regressi"
+            },
+            {
+              "copy": [
+                438,
+                439
+              ]
+            },
+            {
+              "project_text": "n test and s"
+            },
+            {
+              "copy": [
+                439,
+                440
+              ]
+            },
+            {
+              "project_text": "pplied "
+            },
+            {
+              "copy": [
+                440,
+                441
+              ]
+            },
+            {
+              "project_text": "eproduction"
+            },
+            {
+              "copy": [
+                441,
+                448
+              ]
+            },
+            {
+              "copy": [
+                454,
+                458
+              ]
+            },
+            {
+              "project_text": "Run the required development checks, then submit immediately once they pass; prioritize submission over optional t"
+            },
+            {
+              "copy": [
+                459,
+                462
+              ]
+            },
+            {
+              "project_text": "s,"
+            },
+            {
+              "copy": [
+                462,
+                463
+              ]
+            },
+            {
+              "project_text": "broad"
+            },
+            {
+              "copy": [
+                463,
+                464
+              ]
+            },
+            {
+              "project_text": "r"
+            },
+            {
+              "copy": [
+                467,
+                468
+              ]
+            },
+            {
+              "copy": [
+                470,
+                471
+              ]
+            },
+            {
+              "project_text": "uit"
+            },
+            {
+              "copy": [
+                471,
+                473
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                473,
+                474
+              ]
+            },
+            {
+              "project_text": "refac"
+            },
+            {
+              "copy": [
+                474,
+                476
+              ]
+            },
+            {
+              "project_text": "ring"
+            },
+            {
+              "copy": [
+                476,
+                477
+              ]
+            },
+            {
+              "copy": [
+                485,
+                486
+              ]
+            },
+            {
+              "copy": [
+                487,
+                489
+              ]
+            },
+            {
+              "project_text": "add"
+            },
+            {
+              "copy": [
+                490,
+                491
+              ]
+            },
+            {
+              "project_text": "tional"
+            },
+            {
+              "copy": [
+                492,
+                494
+              ]
+            },
+            {
+              "project_text": "nve"
+            },
+            {
+              "copy": [
+                500,
+                502
+              ]
+            },
+            {
+              "project_text": "igation"
+            },
+            {
+              "copy": [
+                502,
+                3007
+              ]
+            },
+            {
+              "project_text": "\n## Experiment workflow instructions\n\nThe only available tool is `bash`. Create files through bash, for example with `cat <<'EOF' > file.py`; use directory creation only for directories.\nBatch related searches and file reads when possible. Use traceback file and function names to locate code.\nAfter a failed patch test, inspect the failure and the changed execution path before further broad searches.\nOnce you have enough evidence, make a focused change and test it. Track remaining budget and reserve calls for implementation and verification.\nThis provisional baseline attempt has fixed limits: 30 model calls, 10,000 cumulative output tokens including reported reasoning, and 20 minutes. Success is not guaranteed.\n\n## Workspace delivery and stopping\n\nThe final workspace is your deliverable. Harbor automatically captures it when you\nsubmit, exhaust a budget, or stop with an execution error. Trusted evaluation then\nruns on that frozen candidate in a separate environment. Task success means all\nrequired functional, regression, lint, format, type and file-policy checks pass.\nExplicit submission is recorded separately and is not required for patch acceptance.\n\nNo model request or output tokens are reserved for submission. The last permitted\nrequest may edit source or execute development checks. Budget exhaustion stops\nagent execution; there are no extra model calls or repairs afterward. Tool actions\nauthorized by the final allowed response may execute within the remaining time.\nThe agent's limits remain 30 model requests, 10,000 cumulative output tokens and\n20 minutes; each response is capped at 1,500 tokens and each command at 90 seconds.\nMalformed tool-response recovery is limited to two retries within these same budgets.\nTrusted evaluation has a separate five-minute limit after capture and grants no\nagent actions, inference or repairs.\n\nOnce required checks pass, finish early to save inference. The standalone bash\ncommand `echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT` remains available for that\npurpose. Do not combine it with other commands. The agent cannot continue after\nsubmission. Passing checks means checks_passed_pending_review, with no authorization\nto commit, push, publish or merge.\n\nRun tests directly where practical. For pipelines use `set -o pipefail`; the harness\nalso enables it. Always run format --check after formatting and inspect exit codes.\n\nFollow the task-specific completion checklist and test requirements supplied in the issue above.\n\n\n## Focused editing and recovery\n\nFavor small, focused replacements or patches to existing source files. For a\nscripted replacement, assert that the old text occurs exactly once before writing.\nPreserve the rest of the file; avoid reconstructing entire existing files.\nImmediately after each source edit, inspect its diff against the unchanged\nsnapshot and check that unrelated imports, definitions and content remain intact.\n\nA read-only copy of the permitted production source from this attempt's unchanged\npre-fix snapshot is available at /task/unchanged. It contains no Git history.\nUse repository-relative paths with these commands:\n\n  python /task/workspace_edit.py diff PATH\n  python /task/workspace_edit.py restore PATH\n\nDiff prints a unified diff for the named production file (an empty diff means no\nchange). Restore replaces that file with its unchanged pre-fix contents, discarding\nyour edits to that file. Restore and retry a focused edit if you damage a file;\ndo not reconstruct it from memory or a partial display. These commands run inside\nthe same sandbox, with the same source permissions as bash.\n\nTool-format repair means recovery from a malformed model tool-call response.\nIt is distinct from repairing code after a failed check, and from Ruff formatting.\nThe existing allowance of two tool-format repairs is unchanged.\n\n\n## Incremental file creation\n\nCreate new files through short, incremental edits rather than a single large\ncommand. Write a small initial skeleton, then append or patch one small logical\nblock at a time in separate tool calls. Do not send an entire large file as one\ntool-call payload. Finish each command and its JSON arguments completely before\ncontinuing in a later call.\n"
+            }
+          ],
+          "sha256": "f539d4b3015a79aaf9219032e073c06d0baea6f437204c3242fac04e4debc5f3"
+        },
+        "model.observation_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                599
+              ]
+            }
+          ],
+          "sha256": "bf5a29fe56e297588a40b3a8df70c8eb4d4664d205a930fa62e72560382b2916"
+        },
+        "model.format_error_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                841
+              ]
+            }
+          ],
+          "sha256": "03b5a9fab17867bf9942520c21f044bfc7779f07ac7253646ef0b71ae0caa32e"
+        }
+      }
+    },
+    "mini-swe-v2.yaml": {
+      "effective_sha256": "14baeecb209855f61480456e3ec95be58cce9a7f438ea84934e3ffd5e43b6a70",
+      "templates": {
+        "agent.system_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                63
+              ]
+            }
+          ],
+          "sha256": "6fb54145bbb1724ce77430ff3852887acbd4a5cce10c86cd8dfbf4c7d55f1091"
+        },
+        "agent.instance_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                255
+              ]
+            },
+            {
+              "project_text": "Execut"
+            },
+            {
+              "copy": [
+                261,
+                267
+              ]
+            },
+            {
+              "project_text": "suppli"
+            },
+            {
+              "copy": [
+                270,
+                271
+              ]
+            },
+            {
+              "copy": [
+                289,
+                295
+              ]
+            },
+            {
+              "project_text": "-only reproduction script first: `python /task/reproduce.py`\n2. Use the traceback to locate and "
+            },
+            {
+              "copy": [
+                295,
+                297
+              ]
+            },
+            {
+              "project_text": "spect"
+            },
+            {
+              "copy": [
+                298,
+                308
+              ]
+            },
+            {
+              "copy": [
+                327,
+                328
+              ]
+            },
+            {
+              "copy": [
+                340,
+                342
+              ]
+            },
+            {
+              "copy": [
+                344,
+                345
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                345,
+                349
+              ]
+            },
+            {
+              "project_text": "n add a regression test and observe"
+            },
+            {
+              "copy": [
+                349,
+                351
+              ]
+            },
+            {
+              "project_text": "t fail"
+            },
+            {
+              "copy": [
+                355,
+                400
+              ]
+            },
+            {
+              "project_text": " while preserving the regression test"
+            },
+            {
+              "copy": [
+                400,
+                420
+              ]
+            },
+            {
+              "copy": [
+                426,
+                429
+              ]
+            },
+            {
+              "project_text": "re"
+            },
+            {
+              "copy": [
+                429,
+                437
+              ]
+            },
+            {
+              "project_text": "the regressi"
+            },
+            {
+              "copy": [
+                438,
+                439
+              ]
+            },
+            {
+              "project_text": "n test and s"
+            },
+            {
+              "copy": [
+                439,
+                440
+              ]
+            },
+            {
+              "project_text": "pplied "
+            },
+            {
+              "copy": [
+                440,
+                441
+              ]
+            },
+            {
+              "project_text": "eproduction"
+            },
+            {
+              "copy": [
+                441,
+                448
+              ]
+            },
+            {
+              "copy": [
+                454,
+                458
+              ]
+            },
+            {
+              "project_text": "Run relevant existing tests and t"
+            },
+            {
+              "copy": [
+                459,
+                473
+              ]
+            },
+            {
+              "copy": [
+                502,
+                3007
+              ]
+            },
+            {
+              "project_text": "\n## Experiment workflow instructions\n\nThe only available tool is `bash`. Create files through bash, for example with `cat <<'EOF' > file.py`; use directory creation only for directories.\nBatch related searches and file reads when possible. Use traceback file and function names to locate code.\nAfter a failed patch test, inspect the failure and the changed execution path before further broad searches.\nOnce you have enough evidence, make a focused change and test it. Track remaining budget and reserve calls for implementation and verification.\nThis diagnostic attempt has fixed limits: 20 model calls, 6,000 cumulative output tokens including reported reasoning, and 20 minutes. Success is not guaranteed.\n"
+            }
+          ],
+          "sha256": "2835f9a1c220c4e2e0ab1dd496676743d7bb78e56b4f264e4aee39449d6b899d"
+        },
+        "model.observation_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                599
+              ]
+            }
+          ],
+          "sha256": "bf5a29fe56e297588a40b3a8df70c8eb4d4664d205a930fa62e72560382b2916"
+        },
+        "model.format_error_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                841
+              ]
+            }
+          ],
+          "sha256": "03b5a9fab17867bf9942520c21f044bfc7779f07ac7253646ef0b71ae0caa32e"
+        }
+      }
+    },
+    "mini-swe-v3.yaml": {
+      "effective_sha256": "ea00a9c47085a79e741a4fc164b3cb9c1be645a7981f1beb908367c2e8773739",
+      "templates": {
+        "agent.system_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                63
+              ]
+            }
+          ],
+          "sha256": "6fb54145bbb1724ce77430ff3852887acbd4a5cce10c86cd8dfbf4c7d55f1091"
+        },
+        "agent.instance_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                255
+              ]
+            },
+            {
+              "project_text": "Execut"
+            },
+            {
+              "copy": [
+                261,
+                267
+              ]
+            },
+            {
+              "project_text": "suppli"
+            },
+            {
+              "copy": [
+                270,
+                271
+              ]
+            },
+            {
+              "copy": [
+                289,
+                295
+              ]
+            },
+            {
+              "project_text": "-only reproduction script first: `python /task/reproduce.py`\n2. Use the traceback to locate and "
+            },
+            {
+              "copy": [
+                295,
+                297
+              ]
+            },
+            {
+              "project_text": "spect"
+            },
+            {
+              "copy": [
+                298,
+                308
+              ]
+            },
+            {
+              "copy": [
+                327,
+                328
+              ]
+            },
+            {
+              "copy": [
+                340,
+                342
+              ]
+            },
+            {
+              "copy": [
+                344,
+                345
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                345,
+                349
+              ]
+            },
+            {
+              "project_text": "n add a regression test and observe"
+            },
+            {
+              "copy": [
+                349,
+                351
+              ]
+            },
+            {
+              "project_text": "t fail"
+            },
+            {
+              "copy": [
+                355,
+                400
+              ]
+            },
+            {
+              "project_text": " while preserving the regression test"
+            },
+            {
+              "copy": [
+                400,
+                420
+              ]
+            },
+            {
+              "copy": [
+                426,
+                429
+              ]
+            },
+            {
+              "project_text": "re"
+            },
+            {
+              "copy": [
+                429,
+                437
+              ]
+            },
+            {
+              "project_text": "the regressi"
+            },
+            {
+              "copy": [
+                438,
+                439
+              ]
+            },
+            {
+              "project_text": "n test and s"
+            },
+            {
+              "copy": [
+                439,
+                440
+              ]
+            },
+            {
+              "project_text": "pplied "
+            },
+            {
+              "copy": [
+                440,
+                441
+              ]
+            },
+            {
+              "project_text": "eproduction"
+            },
+            {
+              "copy": [
+                441,
+                448
+              ]
+            },
+            {
+              "copy": [
+                454,
+                458
+              ]
+            },
+            {
+              "project_text": "Run the required development checks, then submit immediately once they pass; prioritize submission over optional t"
+            },
+            {
+              "copy": [
+                459,
+                462
+              ]
+            },
+            {
+              "project_text": "s,"
+            },
+            {
+              "copy": [
+                462,
+                463
+              ]
+            },
+            {
+              "project_text": "broad"
+            },
+            {
+              "copy": [
+                463,
+                464
+              ]
+            },
+            {
+              "project_text": "r"
+            },
+            {
+              "copy": [
+                467,
+                468
+              ]
+            },
+            {
+              "copy": [
+                470,
+                471
+              ]
+            },
+            {
+              "project_text": "uit"
+            },
+            {
+              "copy": [
+                471,
+                473
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                473,
+                474
+              ]
+            },
+            {
+              "project_text": "refac"
+            },
+            {
+              "copy": [
+                474,
+                476
+              ]
+            },
+            {
+              "project_text": "ring"
+            },
+            {
+              "copy": [
+                476,
+                477
+              ]
+            },
+            {
+              "copy": [
+                485,
+                486
+              ]
+            },
+            {
+              "copy": [
+                487,
+                489
+              ]
+            },
+            {
+              "project_text": "add"
+            },
+            {
+              "copy": [
+                490,
+                491
+              ]
+            },
+            {
+              "project_text": "tional"
+            },
+            {
+              "copy": [
+                492,
+                494
+              ]
+            },
+            {
+              "project_text": "nve"
+            },
+            {
+              "copy": [
+                500,
+                502
+              ]
+            },
+            {
+              "project_text": "igation"
+            },
+            {
+              "copy": [
+                502,
+                3007
+              ]
+            },
+            {
+              "project_text": "\n## Experiment workflow instructions\n\nThe only available tool is `bash`. Create files through bash, for example with `cat <<'EOF' > file.py`; use directory creation only for directories.\nBatch related searches and file reads when possible. Use traceback file and function names to locate code.\nAfter a failed patch test, inspect the failure and the changed execution path before further broad searches.\nOnce you have enough evidence, make a focused change and test it. Track remaining budget and reserve calls for implementation and verification.\nThis diagnostic attempt has fixed limits: 20 model calls, 6,000 cumulative output tokens including reported reasoning, and 20 minutes. Success is not guaranteed.\n\n## Stopping and reliable test results\n\nAfter required checks pass, prioritize submission immediately. Do not spend remaining calls on optional work.\nReserve the final model request for submission: issue only `echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT` on that request. The controller reports remaining requests and reserves 128 output tokens for this handoff within the existing token budget.\nIf checks still fail or remain incomplete when the final request arrives, submit the current workspace anyway; submission does not assert that checks passed. The evaluator records acceptance separately.\nRun tests directly whenever practical. If piping test output through head, tail, tee or another command, use `set -o pipefail` so failures return a nonzero status. Bash pipefail is also enabled by the harness. Never infer test success from a pipeline's last command alone.\nRequired checks include the supplied reproducer, new regression tests, the existing focused test module, and required lint, formatting and type checks. Batch related checks to leave time and calls for submission.\nThe final workspace is always captured. Automatic evaluation at budget exhaustion is disabled in this setting; evaluation begins only after explicit submission. Agent submission and patch acceptance are recorded separately.\n"
+            }
+          ],
+          "sha256": "bfe6c7250fd239112fff2303e4d8a771f22d6217eec22a8bab89b1a38a07ff12"
+        },
+        "model.observation_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                599
+              ]
+            }
+          ],
+          "sha256": "bf5a29fe56e297588a40b3a8df70c8eb4d4664d205a930fa62e72560382b2916"
+        },
+        "model.format_error_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                841
+              ]
+            }
+          ],
+          "sha256": "03b5a9fab17867bf9942520c21f044bfc7779f07ac7253646ef0b71ae0caa32e"
+        }
+      }
+    },
+    "mini-swe-v4.yaml": {
+      "effective_sha256": "dcf4b97848a62ce2b7c762af9d1ca686c57c1c17a10efdb79aec95dff1079bd5",
+      "templates": {
+        "agent.system_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                63
+              ]
+            }
+          ],
+          "sha256": "6fb54145bbb1724ce77430ff3852887acbd4a5cce10c86cd8dfbf4c7d55f1091"
+        },
+        "agent.instance_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                255
+              ]
+            },
+            {
+              "project_text": "Execut"
+            },
+            {
+              "copy": [
+                261,
+                267
+              ]
+            },
+            {
+              "project_text": "suppli"
+            },
+            {
+              "copy": [
+                270,
+                271
+              ]
+            },
+            {
+              "copy": [
+                289,
+                295
+              ]
+            },
+            {
+              "project_text": "-only reproduction script first: `python /task/reproduce.py`\n2. Use the traceback to locate and "
+            },
+            {
+              "copy": [
+                295,
+                297
+              ]
+            },
+            {
+              "project_text": "spect"
+            },
+            {
+              "copy": [
+                298,
+                308
+              ]
+            },
+            {
+              "copy": [
+                327,
+                328
+              ]
+            },
+            {
+              "copy": [
+                340,
+                342
+              ]
+            },
+            {
+              "copy": [
+                344,
+                345
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                345,
+                349
+              ]
+            },
+            {
+              "project_text": "n add a regression test and observe"
+            },
+            {
+              "copy": [
+                349,
+                351
+              ]
+            },
+            {
+              "project_text": "t fail"
+            },
+            {
+              "copy": [
+                355,
+                400
+              ]
+            },
+            {
+              "project_text": " while preserving the regression test"
+            },
+            {
+              "copy": [
+                400,
+                420
+              ]
+            },
+            {
+              "copy": [
+                426,
+                429
+              ]
+            },
+            {
+              "project_text": "re"
+            },
+            {
+              "copy": [
+                429,
+                437
+              ]
+            },
+            {
+              "project_text": "the regressi"
+            },
+            {
+              "copy": [
+                438,
+                439
+              ]
+            },
+            {
+              "project_text": "n test and s"
+            },
+            {
+              "copy": [
+                439,
+                440
+              ]
+            },
+            {
+              "project_text": "pplied "
+            },
+            {
+              "copy": [
+                440,
+                441
+              ]
+            },
+            {
+              "project_text": "eproduction"
+            },
+            {
+              "copy": [
+                441,
+                448
+              ]
+            },
+            {
+              "copy": [
+                454,
+                458
+              ]
+            },
+            {
+              "project_text": "Run the required development checks, then submit immediately once they pass; prioritize submission over optional t"
+            },
+            {
+              "copy": [
+                459,
+                462
+              ]
+            },
+            {
+              "project_text": "s,"
+            },
+            {
+              "copy": [
+                462,
+                463
+              ]
+            },
+            {
+              "project_text": "broad"
+            },
+            {
+              "copy": [
+                463,
+                464
+              ]
+            },
+            {
+              "project_text": "r"
+            },
+            {
+              "copy": [
+                467,
+                468
+              ]
+            },
+            {
+              "copy": [
+                470,
+                471
+              ]
+            },
+            {
+              "project_text": "uit"
+            },
+            {
+              "copy": [
+                471,
+                473
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                473,
+                474
+              ]
+            },
+            {
+              "project_text": "refac"
+            },
+            {
+              "copy": [
+                474,
+                476
+              ]
+            },
+            {
+              "project_text": "ring"
+            },
+            {
+              "copy": [
+                476,
+                477
+              ]
+            },
+            {
+              "copy": [
+                485,
+                486
+              ]
+            },
+            {
+              "copy": [
+                487,
+                489
+              ]
+            },
+            {
+              "project_text": "add"
+            },
+            {
+              "copy": [
+                490,
+                491
+              ]
+            },
+            {
+              "project_text": "tional"
+            },
+            {
+              "copy": [
+                492,
+                494
+              ]
+            },
+            {
+              "project_text": "nve"
+            },
+            {
+              "copy": [
+                500,
+                502
+              ]
+            },
+            {
+              "project_text": "igation"
+            },
+            {
+              "copy": [
+                502,
+                3007
+              ]
+            },
+            {
+              "project_text": "\n## Experiment workflow instructions\n\nThe only available tool is `bash`. Create files through bash, for example with `cat <<'EOF' > file.py`; use directory creation only for directories.\nBatch related searches and file reads when possible. Use traceback file and function names to locate code.\nAfter a failed patch test, inspect the failure and the changed execution path before further broad searches.\nOnce you have enough evidence, make a focused change and test it. Track remaining budget and reserve calls for implementation and verification.\nThis provisional baseline attempt has fixed limits: 30 model calls, 10,000 cumulative output tokens including reported reasoning, and 20 minutes. Success is not guaranteed.\n\n## Stopping and reliable test results\n\nAfter required checks pass, prioritize submission immediately. Do not spend remaining calls on optional work.\nReserve the final model request for submission: issue only `echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT` on that request. The controller reports remaining requests and reserves 128 output tokens for this handoff within the existing token budget.\nIf checks still fail or remain incomplete when the final request arrives, submit the current workspace anyway; submission does not assert that checks passed. The evaluator records acceptance separately.\nRun tests directly whenever practical. If piping test output through head, tail, tee or another command, use `set -o pipefail` so failures return a nonzero status. Bash pipefail is also enabled by the harness. Never infer test success from a pipeline's last command alone.\nRequired checks include the supplied reproducer, new regression tests, the existing focused test module, and required lint, formatting and type checks. Batch related checks to leave time and calls for submission.\nThe final workspace is always captured. Automatic evaluation at budget exhaustion is disabled in this setting; evaluation begins only after explicit submission. Agent submission and patch acceptance are recorded separately.\n\n## Required completion checklist and commands\n\nRun commands from `/workspace/libs/partners/openai`. Choose CHANGED_SOURCE and CHANGED_TESTS from the Python files you changed or added during this attempt; do not include unchanged files. Set these variables again when starting a new bash action, because shell variables do not persist between actions.\n\n- Reproduce the reported error on unchanged source first: `python /task/reproduce.py`.\n- Add regression tests, observe the reported failure before the fix, and preserve those tests.\n- After implementation, rerun the supplied reproducer and your regression tests: `python /task/reproduce.py` and `python -m pytest -q --disable-socket --allow-unix-socket $CHANGED_TESTS`.\n- Run the existing required focused module: `python -m pytest tests/unit_tests/chat_models/test_base.py -q --disable-socket --allow-unix-socket`.\n- Run lint on changed production and development-test files: `ruff check --no-cache $CHANGED_SOURCE $CHANGED_TESTS`.\n- Verify formatting on those files: `ruff format --check --no-cache $CHANGED_SOURCE $CHANGED_TESTS`.\n- Run type checking on changed production files: `mypy --cache-dir=/tmp/mypy $CHANGED_SOURCE`.\n- Once all required checks pass, immediately submit using a separate bash action containing only `echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT`.\n\nA successful independent attempt requires both passing every required check and explicit submission. Do not delay submission for optional tests or investigation. These commands are development checks; the trusted evaluator runs its own checks after submission.\n"
+            }
+          ],
+          "sha256": "f09d2ccbaf95d8b1dce08a477b212cffcdc8bbc670cd4c199604abcb791c1761"
+        },
+        "model.observation_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                599
+              ]
+            }
+          ],
+          "sha256": "bf5a29fe56e297588a40b3a8df70c8eb4d4664d205a930fa62e72560382b2916"
+        },
+        "model.format_error_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                841
+              ]
+            }
+          ],
+          "sha256": "03b5a9fab17867bf9942520c21f044bfc7779f07ac7253646ef0b71ae0caa32e"
+        }
+      }
+    },
+    "mini-swe-v5.yaml": {
+      "effective_sha256": "60ec0d4eb753377fb43b2be12dc433621a5568d6ba4a8328fe1fc830dc3a9de6",
+      "templates": {
+        "agent.system_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                63
+              ]
+            }
+          ],
+          "sha256": "6fb54145bbb1724ce77430ff3852887acbd4a5cce10c86cd8dfbf4c7d55f1091"
+        },
+        "agent.instance_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                255
+              ]
+            },
+            {
+              "project_text": "Execut"
+            },
+            {
+              "copy": [
+                261,
+                267
+              ]
+            },
+            {
+              "project_text": "suppli"
+            },
+            {
+              "copy": [
+                270,
+                271
+              ]
+            },
+            {
+              "copy": [
+                289,
+                295
+              ]
+            },
+            {
+              "project_text": "-only reproduction script first: `python /task/reproduce.py`\n2. Use the traceback to locate and "
+            },
+            {
+              "copy": [
+                295,
+                297
+              ]
+            },
+            {
+              "project_text": "spect"
+            },
+            {
+              "copy": [
+                298,
+                308
+              ]
+            },
+            {
+              "copy": [
+                327,
+                328
+              ]
+            },
+            {
+              "copy": [
+                340,
+                342
+              ]
+            },
+            {
+              "copy": [
+                344,
+                345
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                345,
+                349
+              ]
+            },
+            {
+              "project_text": "n add a regression test and observe"
+            },
+            {
+              "copy": [
+                349,
+                351
+              ]
+            },
+            {
+              "project_text": "t fail"
+            },
+            {
+              "copy": [
+                355,
+                400
+              ]
+            },
+            {
+              "project_text": " while preserving the regression test"
+            },
+            {
+              "copy": [
+                400,
+                420
+              ]
+            },
+            {
+              "copy": [
+                426,
+                429
+              ]
+            },
+            {
+              "project_text": "re"
+            },
+            {
+              "copy": [
+                429,
+                437
+              ]
+            },
+            {
+              "project_text": "the regressi"
+            },
+            {
+              "copy": [
+                438,
+                439
+              ]
+            },
+            {
+              "project_text": "n test and s"
+            },
+            {
+              "copy": [
+                439,
+                440
+              ]
+            },
+            {
+              "project_text": "pplied "
+            },
+            {
+              "copy": [
+                440,
+                441
+              ]
+            },
+            {
+              "project_text": "eproduction"
+            },
+            {
+              "copy": [
+                441,
+                448
+              ]
+            },
+            {
+              "copy": [
+                454,
+                458
+              ]
+            },
+            {
+              "project_text": "Run the required development checks, then submit immediately once they pass; prioritize submission over optional t"
+            },
+            {
+              "copy": [
+                459,
+                462
+              ]
+            },
+            {
+              "project_text": "s,"
+            },
+            {
+              "copy": [
+                462,
+                463
+              ]
+            },
+            {
+              "project_text": "broad"
+            },
+            {
+              "copy": [
+                463,
+                464
+              ]
+            },
+            {
+              "project_text": "r"
+            },
+            {
+              "copy": [
+                467,
+                468
+              ]
+            },
+            {
+              "copy": [
+                470,
+                471
+              ]
+            },
+            {
+              "project_text": "uit"
+            },
+            {
+              "copy": [
+                471,
+                473
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                473,
+                474
+              ]
+            },
+            {
+              "project_text": "refac"
+            },
+            {
+              "copy": [
+                474,
+                476
+              ]
+            },
+            {
+              "project_text": "ring"
+            },
+            {
+              "copy": [
+                476,
+                477
+              ]
+            },
+            {
+              "copy": [
+                485,
+                486
+              ]
+            },
+            {
+              "copy": [
+                487,
+                489
+              ]
+            },
+            {
+              "project_text": "add"
+            },
+            {
+              "copy": [
+                490,
+                491
+              ]
+            },
+            {
+              "project_text": "tional"
+            },
+            {
+              "copy": [
+                492,
+                494
+              ]
+            },
+            {
+              "project_text": "nve"
+            },
+            {
+              "copy": [
+                500,
+                502
+              ]
+            },
+            {
+              "project_text": "igation"
+            },
+            {
+              "copy": [
+                502,
+                3007
+              ]
+            },
+            {
+              "project_text": "\n## Experiment workflow instructions\n\nThe only available tool is `bash`. Create files through bash, for example with `cat <<'EOF' > file.py`; use directory creation only for directories.\nBatch related searches and file reads when possible. Use traceback file and function names to locate code.\nAfter a failed patch test, inspect the failure and the changed execution path before further broad searches.\nOnce you have enough evidence, make a focused change and test it. Track remaining budget and reserve calls for implementation and verification.\nThis provisional baseline attempt has fixed limits: 30 model calls, 10,000 cumulative output tokens including reported reasoning, and 20 minutes. Success is not guaranteed.\n\n## Stopping and reliable test results\n\nAfter required checks pass, prioritize submission immediately. Do not spend remaining calls on optional work.\nReserve the final model request for submission: issue only `echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT` on that request. The controller reports remaining requests and reserves 128 output tokens for this handoff within the existing token budget.\nIf checks still fail or remain incomplete when the final request arrives, submit the current workspace anyway; submission does not assert that checks passed. The evaluator records acceptance separately.\nRun tests directly whenever practical. If piping test output through head, tail, tee or another command, use `set -o pipefail` so failures return a nonzero status. Bash pipefail is also enabled by the harness. Never infer test success from a pipeline's last command alone.\nRequired checks include the supplied reproducer, new regression tests, the existing focused test module, and required lint, formatting and type checks. Batch related checks to leave time and calls for submission.\nThe final workspace is always captured. Automatic evaluation at budget exhaustion is disabled in this setting; evaluation begins only after explicit submission. Agent submission and patch acceptance are recorded separately.\n\n## Required completion checklist and commands\n\nRun commands from `/workspace/libs/partners/openai`. Choose CHANGED_SOURCE and CHANGED_TESTS from the Python files you changed or added during this attempt; do not include unchanged files. Set these variables again when starting a new bash action, because shell variables do not persist between actions.\n\n- Reproduce the reported error on unchanged source first: `python /task/reproduce.py`.\n- Add regression tests, observe the reported failure before the fix, and preserve those tests.\n- After implementation, rerun the supplied reproducer and your regression tests: `python /task/reproduce.py` and `python -m pytest -q --disable-socket --allow-unix-socket $CHANGED_TESTS`.\n- Run the existing required focused module: `python -m pytest tests/unit_tests/chat_models/test_base.py -q --disable-socket --allow-unix-socket`.\n- Run lint on changed production and development-test files: `ruff check --no-cache $CHANGED_SOURCE $CHANGED_TESTS`.\n- Verify formatting on those files: `ruff format --check --no-cache $CHANGED_SOURCE $CHANGED_TESTS`.\n- Run type checking on changed production files: `mypy --cache-dir=/tmp/mypy $CHANGED_SOURCE`.\n- Once all required checks pass, immediately submit using a separate bash action containing only `echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT`.\n\nA successful independent attempt requires both passing every required check and explicit submission. Do not delay submission for optional tests or investigation. These commands are development checks; the trusted evaluator runs its own checks after submission.\n\n## Explicit test-file policy and completion requirements\n\nExisting test files are read-only. Add regressions only in new `test_*.py` files.\nCreate regression files at `tests/unit_tests/test_*.py` or in a new subdirectory beneath `tests/unit_tests/`. Existing test subdirectories are read-only trees. Do not append tests to, replace, rename, delete, or format existing test files. Apply formatters and lint fixes only to files you changed or newly created.\nAfter running a formatter, rerun `ruff format --check --no-cache $CHANGED_SOURCE $CHANGED_TESTS` and require exit code zero. Formatting execution alone does not complete the formatting check.\nRegression tests must verify the configured timeout values on the underlying synchronous and asynchronous HTTP clients, including each configured timeout component. Checking only the model's configuration field is insufficient. Preserve equivalent default client reuse and distinguish configurations as required by the issue.\nThe provisional baseline budget remains 30 model calls, 10,000 cumulative output tokens including reported reasoning, and 20 minutes. Complete all required checks and then submit immediately.\n"
+            }
+          ],
+          "sha256": "60d05a0cb979df84d8952d17f70432565ad462aedb24c92f2e5bf06853b0c10d"
+        },
+        "model.observation_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                599
+              ]
+            }
+          ],
+          "sha256": "bf5a29fe56e297588a40b3a8df70c8eb4d4664d205a930fa62e72560382b2916"
+        },
+        "model.format_error_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                841
+              ]
+            }
+          ],
+          "sha256": "03b5a9fab17867bf9942520c21f044bfc7779f07ac7253646ef0b71ae0caa32e"
+        }
+      }
+    },
+    "mini-swe-workspace-v1.yaml": {
+      "effective_sha256": "6f5ee20b19828b9e170a207281d97de246ef56c4cef4a86af9e048e468966e5b",
+      "templates": {
+        "agent.system_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                63
+              ]
+            }
+          ],
+          "sha256": "6fb54145bbb1724ce77430ff3852887acbd4a5cce10c86cd8dfbf4c7d55f1091"
+        },
+        "agent.instance_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                255
+              ]
+            },
+            {
+              "project_text": "Execut"
+            },
+            {
+              "copy": [
+                261,
+                267
+              ]
+            },
+            {
+              "project_text": "suppli"
+            },
+            {
+              "copy": [
+                270,
+                271
+              ]
+            },
+            {
+              "copy": [
+                289,
+                295
+              ]
+            },
+            {
+              "project_text": "-only reproduction script first: `python /task/reproduce.py`\n2. Use the traceback to locate and "
+            },
+            {
+              "copy": [
+                295,
+                297
+              ]
+            },
+            {
+              "project_text": "spect"
+            },
+            {
+              "copy": [
+                298,
+                308
+              ]
+            },
+            {
+              "copy": [
+                327,
+                328
+              ]
+            },
+            {
+              "copy": [
+                340,
+                342
+              ]
+            },
+            {
+              "copy": [
+                344,
+                345
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                345,
+                349
+              ]
+            },
+            {
+              "project_text": "n add a regression test and observe"
+            },
+            {
+              "copy": [
+                349,
+                351
+              ]
+            },
+            {
+              "project_text": "t fail"
+            },
+            {
+              "copy": [
+                355,
+                400
+              ]
+            },
+            {
+              "project_text": " while preserving the regression test"
+            },
+            {
+              "copy": [
+                400,
+                420
+              ]
+            },
+            {
+              "copy": [
+                426,
+                429
+              ]
+            },
+            {
+              "project_text": "re"
+            },
+            {
+              "copy": [
+                429,
+                437
+              ]
+            },
+            {
+              "project_text": "the regressi"
+            },
+            {
+              "copy": [
+                438,
+                439
+              ]
+            },
+            {
+              "project_text": "n test and s"
+            },
+            {
+              "copy": [
+                439,
+                440
+              ]
+            },
+            {
+              "project_text": "pplied "
+            },
+            {
+              "copy": [
+                440,
+                441
+              ]
+            },
+            {
+              "project_text": "eproduction"
+            },
+            {
+              "copy": [
+                441,
+                448
+              ]
+            },
+            {
+              "copy": [
+                454,
+                458
+              ]
+            },
+            {
+              "project_text": "Run the required development checks, then submit immediately once they pass; prioritize submission over optional t"
+            },
+            {
+              "copy": [
+                459,
+                462
+              ]
+            },
+            {
+              "project_text": "s,"
+            },
+            {
+              "copy": [
+                462,
+                463
+              ]
+            },
+            {
+              "project_text": "broad"
+            },
+            {
+              "copy": [
+                463,
+                464
+              ]
+            },
+            {
+              "project_text": "r"
+            },
+            {
+              "copy": [
+                467,
+                468
+              ]
+            },
+            {
+              "copy": [
+                470,
+                471
+              ]
+            },
+            {
+              "project_text": "uit"
+            },
+            {
+              "copy": [
+                471,
+                473
+              ]
+            },
+            {
+              "project_text": ","
+            },
+            {
+              "copy": [
+                473,
+                474
+              ]
+            },
+            {
+              "project_text": "refac"
+            },
+            {
+              "copy": [
+                474,
+                476
+              ]
+            },
+            {
+              "project_text": "ring"
+            },
+            {
+              "copy": [
+                476,
+                477
+              ]
+            },
+            {
+              "copy": [
+                485,
+                486
+              ]
+            },
+            {
+              "copy": [
+                487,
+                489
+              ]
+            },
+            {
+              "project_text": "add"
+            },
+            {
+              "copy": [
+                490,
+                491
+              ]
+            },
+            {
+              "project_text": "tional"
+            },
+            {
+              "copy": [
+                492,
+                494
+              ]
+            },
+            {
+              "project_text": "nve"
+            },
+            {
+              "copy": [
+                500,
+                502
+              ]
+            },
+            {
+              "project_text": "igation"
+            },
+            {
+              "copy": [
+                502,
+                3007
+              ]
+            },
+            {
+              "project_text": "\n## Experiment workflow instructions\n\nThe only available tool is `bash`. Create files through bash, for example with `cat <<'EOF' > file.py`; use directory creation only for directories.\nBatch related searches and file reads when possible. Use traceback file and function names to locate code.\nAfter a failed patch test, inspect the failure and the changed execution path before further broad searches.\nOnce you have enough evidence, make a focused change and test it. Track remaining budget and reserve calls for implementation and verification.\nThis provisional baseline attempt has fixed limits: 30 model calls, 10,000 cumulative output tokens including reported reasoning, and 20 minutes. Success is not guaranteed.\n\n## Workspace delivery and stopping\n\nThe final workspace is your deliverable. Harbor automatically captures it when you\nsubmit, exhaust a budget, or stop with an execution error. Trusted evaluation then\nruns on that frozen candidate in a separate environment. Task success means all\nrequired functional, regression, lint, format, type and file-policy checks pass.\nExplicit submission is recorded separately and is not required for patch acceptance.\n\nNo model request or output tokens are reserved for submission. The last permitted\nrequest may edit source or execute development checks. Budget exhaustion stops\nagent execution; there are no extra model calls or repairs afterward. Tool actions\nauthorized by the final allowed response may execute within the remaining time.\nThe agent's limits remain 30 model requests, 10,000 cumulative output tokens and\n20 minutes; each response is capped at 1,500 tokens and each command at 90 seconds.\nMalformed tool-response recovery is limited to two retries within these same budgets.\nTrusted evaluation has a separate five-minute limit after capture and grants no\nagent actions, inference or repairs.\n\nOnce required checks pass, finish early to save inference. The standalone bash\ncommand `echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT` remains available for that\npurpose. Do not combine it with other commands. The agent cannot continue after\nsubmission. Passing checks means checks_passed_pending_review, with no authorization\nto commit, push, publish or merge.\n\nRun tests directly where practical. For pipelines use `set -o pipefail`; the harness\nalso enables it. Always run format --check after formatting and inspect exit codes.\n\nFollow the task-specific completion checklist and test requirements supplied in the issue above.\n\n\n## Focused editing and recovery\n\nFavor small, focused replacements or patches to existing source files. For a\nscripted replacement, assert that the old text occurs exactly once before writing.\nPreserve the rest of the file; avoid reconstructing entire existing files.\nImmediately after each source edit, inspect its diff against the unchanged\nsnapshot and check that unrelated imports, definitions and content remain intact.\n\nA read-only copy of the permitted production source from this attempt's unchanged\npre-fix snapshot is available at /task/unchanged. It contains no Git history.\nUse repository-relative paths with these commands:\n\n  python /task/workspace_edit.py diff PATH\n  python /task/workspace_edit.py restore PATH\n\nDiff prints a unified diff for the named production file (an empty diff means no\nchange). Restore replaces that file with its unchanged pre-fix contents, discarding\nyour edits to that file. Restore and retry a focused edit if you damage a file;\ndo not reconstruct it from memory or a partial display. These commands run inside\nthe same sandbox, with the same source permissions as bash.\n\nTool-format repair means recovery from a malformed model tool-call response.\nIt is distinct from repairing code after a failed check, and from Ruff formatting.\nThe existing allowance of two tool-format repairs is unchanged.\n"
+            }
+          ],
+          "sha256": "0de1f468903eb24b760ee339c3d40bd802280959ddf844dc41db32d01ab3e1f7"
+        },
+        "model.observation_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                599
+              ]
+            }
+          ],
+          "sha256": "bf5a29fe56e297588a40b3a8df70c8eb4d4664d205a930fa62e72560382b2916"
+        },
+        "model.format_error_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                841
+              ]
+            }
+          ],
+          "sha256": "03b5a9fab17867bf9942520c21f044bfc7779f07ac7253646ef0b71ae0caa32e"
+        }
+      }
+    },
+    "mini-swe.yaml": {
+      "effective_sha256": "4c006a3a4b2b9d31773e1faa7ebe102253d85e9d1e16340c4d36a3b950845444",
+      "templates": {
+        "agent.system_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                63
+              ]
+            }
+          ],
+          "sha256": "6fb54145bbb1724ce77430ff3852887acbd4a5cce10c86cd8dfbf4c7d55f1091"
+        },
+        "agent.instance_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                3007
+              ]
+            }
+          ],
+          "sha256": "546a89156d7823eb34eb49c5b31a3703df4d27639d034a6d13f0162488d70821"
+        },
+        "model.observation_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                599
+              ]
+            }
+          ],
+          "sha256": "bf5a29fe56e297588a40b3a8df70c8eb4d4664d205a930fa62e72560382b2916"
+        },
+        "model.format_error_template": {
+          "chunks": [
+            {
+              "copy": [
+                0,
+                841
+              ]
+            }
+          ],
+          "sha256": "03b5a9fab17867bf9942520c21f044bfc7779f07ac7253646ef0b71ae0caa32e"
+        }
+      }
+    }
+  }
+}

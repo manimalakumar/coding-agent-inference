@@ -1,0 +1,37 @@
+{
+  "evidence_content_id": "55cd01cf1f92dc4e53dd7432af20a8fd2ab1e0080fdc105e57b7c86f45f5a382",
+  "matched_task": "LC-INT-TEMPERATURE-001",
+  "readable_task": "Integer-temperature metadata bug",
+  "matched_attempt": 1,
+  "matched_runs": [
+    "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-attempt-001/LC-INT-TEMPERATURE-001__387WVka",
+    "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-attempt-001/LC-INT-TEMPERATURE-001__CFAXfDX"
+  ],
+  "model_colors": {
+    "minimax/minimax-m2.5": "#2463a5",
+    "z-ai/glm-5": "#b35716"
+  },
+  "outcome_counts": [
+    {
+      "model": "minimax/minimax-m2.5",
+      "Model": "MiniMax M2.5",
+      "Accepted": 2,
+      "Unsuccessful": 15,
+      "Interrupted": 1
+    },
+    {
+      "model": "z-ai/glm-5",
+      "Model": "GLM-5",
+      "Accepted": 11,
+      "Unsuccessful": 5,
+      "Interrupted": 2
+    }
+  ],
+  "files": {
+    "optional-minimax.svg": "f3f254d3f4cc89f3f6708066a454476bc2199b89aaf10571b22ec282110cd22c",
+    "distributions.svg": "08bc4600217fc42eac350c85689789c8300acd4664419245a691656802b79286",
+    "main-outcomes.svg": "ad2bd26cc550dea0e9c334d65bfaca081ebca23bd406a6cbe85abb0e6afd82a3",
+    "matched-cost.svg": "07a25f0d99e312d298e29a029d85c9e58008eb164275f0a2629f4775104ad6a4",
+    "matched-context.svg": "2be693c9422a8db8a15fc2e7244c0965708239b430becfb47607245840c25f36"
+  }
+}

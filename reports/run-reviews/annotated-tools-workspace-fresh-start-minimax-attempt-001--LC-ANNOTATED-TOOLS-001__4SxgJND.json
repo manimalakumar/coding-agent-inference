@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "reason": "Single revised-workflow pilot: the captured one-line implementation fix and five new regression tests passed all required trusted checks, including 12 hidden tests. The agent submitted early after 21 calls; automatic capture, evaluation and bookkeeping completed. This is not a reliability estimate.",
+  "candidate_modified_by_reviewer": false,
+  "additional_model_requests": 0,
+  "code_repair_rounds": 1,
+  "code_repair_measurement": "Trusted post-run trace audit: regression test lint repair after failed lint at request 16, repaired at 17. No implementation repair or tool-format recovery was needed.",
+  "code_repair_evidence": [
+    {
+      "failed_check_request": 16,
+      "repair_edit_request": 17,
+      "type": "regression test lint repair"
+    }
+  ],
+  "workflow_observations": {
+    "reproducer_executed_first": true,
+    "regression_added_before_implementation_change": false,
+    "regression_signal_confirmed_by_trusted_evaluator": "4 failed, 1 passed on unchanged source; all 5 passed on candidate",
+    "diff_restore_helper_used": false,
+    "focused_source_edit": true,
+    "interpretation": "Process adherence is reported separately; practical task success is determined by the frozen acceptance checks."
+  },
+  "original_run_sha256": {
+    "lock.json": "056f0a1f7de48094d90c28cbd4e80a5d4bbcd027e1c2abf317d06ca286aa980b",
+    "result.json": "965962c817baeb38b8c47906f62f3ce3a7786d26c7cbaa197ffa7f783dd06109",
+    "config.json": "dc0f847ba851d3c5916e47263d39f5a44b95c2cdbd701ab65c6570165325fca2",
+    "trial.log": "67e7be0a76ae1725e2672748546d1bce9dc1ed8b9a8a805ba31f5f3f818bf2d2",
+    "artifacts/manifest.json": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f",
+    "agent/trajectory.json": "0fc1106460f239636af7e7b1b176e20ce390492ce7f4a2491473e8022f015822",
+    "agent/requests.jsonl": "3f36de240f16ee6a43bbfe5f3d50d715482afeefc85579ac2965866a09fe5198",
+    "agent/isolation.json": "62b1e544e0f280d121739cefa13a8a4218aa3b16ddedca6e69f3cd1928862a64",
+    "agent/source-snapshot.json": "e6b7cabbb46dc15d6fd61510aa8da4e2dcb2cb2a8d901addf5fb36ea6ab01fed",
+    "agent/mini-swe-agent.trajectory.json": "3653575542874501f408aa88d2e25189acc85518674cee73f5afb14a36854d45",
+    "agent/process-baseline.json": "1cc80ded930ff542a972418e3048d4017f2a440a984cfb955b5ccf61cfa898f3",
+    "agent/quiescence.json": "fea343c141ef21778faf9509de729e4baaf72a50dc4a84dfeba3ee696bc58f92",
+    "agent/receipt.json": "03fe5d0fd1216fddf9a097d805972f6bbfaad4f570306d359f58ec157d3a88fe",
+    "verifier/submission.patch": "f2fcc50b3f30d82ead799490e8c9ef81741132c01172390f45acb7229c43fd44",
+    "verifier/test-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verifier/reward.json": "beb2c05486dc09e49c0466bb27538ba17cf88f94ac4cdeb183a6891d1449c7cf",
+    "verifier/checks.json": "08deae6d381a049c864ff05740c4526d9233b41427ef8b42d336f7ec2e3f41a0",
+    "artifacts/logs/artifacts/candidate.tar": "08c1534477c9fb35d04baa3edaaa31369f4c56e1f9f3e66cf2172a37a5d498aa",
+    "artifacts/logs/artifacts/receipt.json": "03fe5d0fd1216fddf9a097d805972f6bbfaad4f570306d359f58ec157d3a88fe"
+  }
+}

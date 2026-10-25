@@ -1,0 +1,36 @@
+schema_version = "1.4"
+artifacts = []
+
+[metadata]
+task_id = "LC-ANNOTATED-TOOLS-001"
+starting_commit = "dea43436ea501d3fadeddc7f75d34b31eb4f8254"
+baseline_checksum = "f280e006fb983c5499f011d76ecacf389b1832137cbde0558d600c1d91828793"
+experimental_setting = "harbor-annotated-tools-v1"
+approval_status = "checks_passed_pending_review"
+shared_workflow_seconds = 1200
+
+[environment]
+docker_image = "sha256:7d297146c39fd7ab0d5b6493958f2471ac95a383a9b4b7fe4e7da1b98d46ca79"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048
+workdir = "/workspace/libs/core"
+
+[agent]
+timeout_sec = 1200
+user = "65532:65532"
+
+[verifier]
+timeout_sec = 1200
+environment_mode = "separate"
+user = "root"
+[[verifier.collect]]
+command = "rm -f /logs/artifacts/candidate.tar && tar --mode='u+rwX,go+rX' -cf /logs/artifacts/candidate.tar -C /workspace libs/core/langchain_core/tools libs/core/tests/unit_tests"
+user = "root"
+timeout_sec = 90
+
+[verifier.environment]
+docker_image = "sha256:7d9990bf877bf51850345862176187ef07b44289dbee12a1859ca38beb61d4f6"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048

@@ -1,0 +1,172 @@
+{
+  "status": "passed",
+  "scope": [
+    "tests/test_public_portability.py",
+    "tests/test_controller.py",
+    "tests/test_mini.py",
+    "tests/test_workspace_policy.py",
+    "tests/test_pilot2.py",
+    "tests/test_public_reporting.py",
+    "tests/test_openrouter_accounting.py",
+    "tests_public",
+    "tests/test_notebook_json.py",
+    "tests/test_study_views.py",
+    "tests/test_intervention_views.py",
+    "tests/test_notebook_presentation.py",
+    "tests/test_task_rosters.py",
+    "tests/test_notebook_workflow.py",
+    "tests/test_configuration_paths.py",
+    "tests/test_harbor_tasks.py::test_task_specific_reproduction_never_accepts_unrelated_errors"
+  ],
+  "isolated_public_copy": true,
+  "network_credentials_and_private_reads_denied": true,
+  "matplotlib_font_cache_initialized_before_process_guard": true,
+  "runtime": "Installed dependencies shared; project source and inputs loaded from isolated public copy.",
+  "log_sha256": "5a63b1683e744d5f278ace87d1dfaf1c444d79c65b048b2c9add176332330353",
+  "test_summary": "Matplotlib is building the font cache; this may take a moment.",
+  "model_requests": 0,
+  "live_provider_tests": false,
+  "renamed_modules": {
+    "harbor_integration/host_mini_v2.py": "harbor_integration/host_task.py",
+    "harbor_integration/host_reporting_v2.py": "harbor_integration/host_reporting.py"
+  },
+  "historical_evidence_and_configuration_files_preserved": 455,
+  "historical_configuration_ids_and_json_unchanged": true,
+  "quality_configuration_changes": "Only the reporting adapter filename in the mypy file list; original hash retained in historical_sha256 and current hash recorded in adapted_sha256.",
+  "host_task_module_byte_identical": true,
+  "reporting_adapter_ast_unchanged_except_import": true,
+  "notebook_byte_identical": true,
+  "saved_notebook_sha256": "487f442630f54e1161dcb47af1aa7b23bd398b0e23bdd3d6d495474580a3a684",
+  "remaining_version_suffixed_harbor_filenames": 0,
+  "obsolete_active_imports": 0,
+  "host_reporting_type_check": {
+    "status": "passed",
+    "method": "Pinned mypy from an existing trusted verifier image; read-only isolated public source mount; networking disabled.",
+    "mypy_version": "2.1.0",
+    "checked_source_files": 18,
+    "log_sha256": "88fe827c636a04c691d60cb768a7ac3077b3f88379842e946f181a3ad3f821ea",
+    "preexisting_issue_corrected": "Local argparse variable renamed validate_parser to avoid a mypy name/type collision; CLI behavior unchanged.",
+    "dependency_installations": 0
+  },
+  "cli_validate": {
+    "status": "passed",
+    "runtime": "Notebook environment with nbformat available; no additional dependency installation."
+  },
+  "cli_change_scope": "Two local parser-variable references only; runtime behavior unchanged.",
+  "tests": 203,
+  "environment_rebuilds": 0,
+  "configuration_checksum_entries_verified": 1643,
+  "lint": "18 edited Python files passed",
+  "format": "18 edited Python files passed",
+  "offline_replay": "All 19 code cells passed from an isolated public copy; saved notebook unchanged.",
+  "working_controls": "All 13 wrapper controls and all four fixture control cases per task passed after rebinding the renamed source paths.",
+  "isolated_controls": "All 13 task fixture control sets executed from the isolated public copy, without prior runs or control bindings.",
+  "working_control_report": "reports/public-readiness/harbor-names-controls.json",
+  "isolated_control_report": "reports/public-readiness/isolated-harbor-names-controls.json",
+  "readiness_table": [
+    {
+      "task_id": "LC-ASYNC-TOOLS-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-ASYNC-TOOLS-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-async-tools-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-SUMMARY-OVERFLOW-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-SUMMARY-OVERFLOW-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-summary-overflow-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-FIREWORKS-RERANK-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-FIREWORKS-RERANK-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-fireworks-rerank-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-OPENROUTER-PROVIDER-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-OPENROUTER-PROVIDER-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-openrouter-provider-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-HF-ACCELERATOR-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-HF-ACCELERATOR-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-hf-accelerator-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-JSON-INPUT-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-JSON-INPUT-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-json-input-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-INT-TEMPERATURE-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-INT-TEMPERATURE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-int-temperature-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-PARALLEL-TOOL-MERGE-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-PARALLEL-TOOL-MERGE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-parallel-tool-merge-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-ANNOTATED-TOOLS-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-ANNOTATED-TOOLS-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-annotated-tools-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-CHROMA-NONE-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-CHROMA-NONE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-chroma-none-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-CONTEXT-COUNTER-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-CONTEXT-COUNTER-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-context-counter-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-RESPONSES-USAGE-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-RESPONSES-USAGE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-responses-usage-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-TIMEOUT-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-TIMEOUT-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-timeout-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    }
+  ]
+}

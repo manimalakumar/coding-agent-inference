@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "source_tasks": 13,
+  "historical_SHA_and_checksum_matches": 13,
+  "checks": [
+    "safe history-free export and checksum",
+    "rejected ../escape",
+    "rejected /outside",
+    "rejected .git/config",
+    "rejected link"
+  ],
+  "network_calls": 0,
+  "model_requests": 0,
+  "environment_rebuilds": 0
+}

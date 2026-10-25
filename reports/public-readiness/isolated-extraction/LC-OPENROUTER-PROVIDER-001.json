@@ -1,0 +1,321 @@
+{
+  "task_id": "LC-OPENROUTER-PROVIDER-001",
+  "protocol_id": "public-lc-openrouter-provider-001-v1",
+  "setting_id": "cf63ee571fc3226493873989b335d4e3c90b89518d2f2700870753531801e020",
+  "historical_equivalence": "not claimed",
+  "model_requests": 0,
+  "baseline_rejected": true,
+  "reference_accepted": true,
+  "public_checks_preserved": true,
+  "wrapper_controls": [
+    {
+      "check": "baseline_reproduces",
+      "expected_exit": 1,
+      "observed_exit": 1,
+      "passed": true
+    },
+    {
+      "check": "isolation_workspace_imports",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "create_regression",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "regression_baseline",
+      "expected_exit": 1,
+      "observed_exit": 1,
+      "passed": true
+    },
+    {
+      "check": "apply_reference",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "reference_reproduces",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "regression_reference",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "focused_tests_0",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "lint_libs/partners/openrouter",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "format_libs/partners/openrouter",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "types_libs/partners/openrouter",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    }
+  ],
+  "controls": [
+    {
+      "fixture": "baseline",
+      "passed": true,
+      "accepted": false,
+      "model_requests": 0,
+      "termination_reason": "submitted",
+      "checks": {
+        "file_policy": {
+          "exit_code": 0
+        },
+        "reproducer": {
+          "exit_code": 1
+        },
+        "existing_tests_0": {
+          "exit_code": 0
+        },
+        "existing_tests": {
+          "exit_code": 0
+        },
+        "hidden_acceptance": {
+          "exit_code": 1
+        }
+      },
+      "isolation": {
+        "no_history": true,
+        "no_evaluator": true,
+        "no_keys": true,
+        "unprivileged": true,
+        "no_docker_socket": true,
+        "existing_readonly_libs/partners/openrouter/tests/unit_tests": true,
+        "existing_rename_denied_libs/partners/openrouter/tests/unit_tests": true,
+        "production_writable_libs/partners/openrouter/langchain_openrouter": true,
+        "host_symlink_denied_libs/partners/openrouter/langchain_openrouter": true,
+        "readonly_/opt/venv/public_probe": true,
+        "readonly_/workspace/public_probe": true,
+        "offline": true,
+        "workspace_import_langchain_openrouter": true,
+        "workspace_import_langchain_core": true
+      },
+      "error": null,
+      "artifact_dir": "runs/public-v1/public-v1-lc-openrouter-provider-001-baseline/harbor-task__2k8efb4"
+    },
+    {
+      "fixture": "reference",
+      "passed": true,
+      "accepted": true,
+      "model_requests": 0,
+      "termination_reason": "submitted",
+      "checks": {
+        "file_policy": {
+          "exit_code": 0
+        },
+        "regression_on_baseline": {
+          "exit_code": 1
+        },
+        "reproducer": {
+          "exit_code": 0
+        },
+        "regression": {
+          "exit_code": 0
+        },
+        "existing_tests_0": {
+          "exit_code": 0
+        },
+        "existing_tests": {
+          "exit_code": 0
+        },
+        "lint_libs_partners_openrouter": {
+          "exit_code": 0
+        },
+        "lint": {
+          "exit_code": 0
+        },
+        "format_libs_partners_openrouter": {
+          "exit_code": 0
+        },
+        "format": {
+          "exit_code": 0
+        },
+        "types_libs_partners_openrouter": {
+          "exit_code": 0
+        },
+        "types": {
+          "exit_code": 0
+        },
+        "hidden_acceptance": {
+          "exit_code": 0
+        }
+      },
+      "isolation": {
+        "no_history": true,
+        "no_evaluator": true,
+        "no_keys": true,
+        "unprivileged": true,
+        "no_docker_socket": true,
+        "existing_readonly_libs/partners/openrouter/tests/unit_tests": true,
+        "existing_rename_denied_libs/partners/openrouter/tests/unit_tests": true,
+        "production_writable_libs/partners/openrouter/langchain_openrouter": true,
+        "host_symlink_denied_libs/partners/openrouter/langchain_openrouter": true,
+        "readonly_/opt/venv/public_probe": true,
+        "readonly_/workspace/public_probe": true,
+        "offline": true,
+        "workspace_import_langchain_openrouter": true,
+        "workspace_import_langchain_core": true
+      },
+      "error": null,
+      "artifact_dir": "runs/public-v1/public-v1-lc-openrouter-provider-001-reference/harbor-task__x9bjBwJ"
+    },
+    {
+      "fixture": "reference_budget",
+      "passed": true,
+      "accepted": true,
+      "model_requests": 0,
+      "termination_reason": "budget_exhausted",
+      "checks": {
+        "file_policy": {
+          "exit_code": 0
+        },
+        "regression_on_baseline": {
+          "exit_code": 1
+        },
+        "reproducer": {
+          "exit_code": 0
+        },
+        "regression": {
+          "exit_code": 0
+        },
+        "existing_tests_0": {
+          "exit_code": 0
+        },
+        "existing_tests": {
+          "exit_code": 0
+        },
+        "lint_libs_partners_openrouter": {
+          "exit_code": 0
+        },
+        "lint": {
+          "exit_code": 0
+        },
+        "format_libs_partners_openrouter": {
+          "exit_code": 0
+        },
+        "format": {
+          "exit_code": 0
+        },
+        "types_libs_partners_openrouter": {
+          "exit_code": 0
+        },
+        "types": {
+          "exit_code": 0
+        },
+        "hidden_acceptance": {
+          "exit_code": 0
+        }
+      },
+      "isolation": {
+        "no_history": true,
+        "no_evaluator": true,
+        "no_keys": true,
+        "unprivileged": true,
+        "no_docker_socket": true,
+        "existing_readonly_libs/partners/openrouter/tests/unit_tests": true,
+        "existing_rename_denied_libs/partners/openrouter/tests/unit_tests": true,
+        "production_writable_libs/partners/openrouter/langchain_openrouter": true,
+        "host_symlink_denied_libs/partners/openrouter/langchain_openrouter": true,
+        "readonly_/opt/venv/public_probe": true,
+        "readonly_/workspace/public_probe": true,
+        "offline": true,
+        "workspace_import_langchain_openrouter": true,
+        "workspace_import_langchain_core": true
+      },
+      "error": null,
+      "artifact_dir": "runs/public-v1/public-v1-lc-openrouter-provider-001-reference_budget/harbor-task__8wGaWxA"
+    },
+    {
+      "fixture": "reference_error",
+      "passed": true,
+      "accepted": true,
+      "model_requests": 0,
+      "termination_reason": "error",
+      "checks": {
+        "file_policy": {
+          "exit_code": 0
+        },
+        "regression_on_baseline": {
+          "exit_code": 1
+        },
+        "reproducer": {
+          "exit_code": 0
+        },
+        "regression": {
+          "exit_code": 0
+        },
+        "existing_tests_0": {
+          "exit_code": 0
+        },
+        "existing_tests": {
+          "exit_code": 0
+        },
+        "lint_libs_partners_openrouter": {
+          "exit_code": 0
+        },
+        "lint": {
+          "exit_code": 0
+        },
+        "format_libs_partners_openrouter": {
+          "exit_code": 0
+        },
+        "format": {
+          "exit_code": 0
+        },
+        "types_libs_partners_openrouter": {
+          "exit_code": 0
+        },
+        "types": {
+          "exit_code": 0
+        },
+        "hidden_acceptance": {
+          "exit_code": 0
+        }
+      },
+      "isolation": {
+        "no_history": true,
+        "no_evaluator": true,
+        "no_keys": true,
+        "unprivileged": true,
+        "no_docker_socket": true,
+        "existing_readonly_libs/partners/openrouter/tests/unit_tests": true,
+        "existing_rename_denied_libs/partners/openrouter/tests/unit_tests": true,
+        "production_writable_libs/partners/openrouter/langchain_openrouter": true,
+        "host_symlink_denied_libs/partners/openrouter/langchain_openrouter": true,
+        "readonly_/opt/venv/public_probe": true,
+        "readonly_/workspace/public_probe": true,
+        "offline": true,
+        "workspace_import_langchain_openrouter": true,
+        "workspace_import_langchain_core": true
+      },
+      "error": null,
+      "artifact_dir": "runs/public-v1/public-v1-lc-openrouter-provider-001-reference_error/harbor-task__auhso4Q"
+    }
+  ],
+  "validated_at": 1792877834.47682
+}

@@ -1,0 +1,69 @@
+{
+  "job_name": "harbor-reference",
+  "jobs_dir": "./reports/harbor-validation",
+  "n_attempts": 1,
+  "n_concurrent_trials": 1,
+  "retry": {
+    "max_retries": 0
+  },
+  "environment": {
+    "type": "docker",
+    "delete": true
+  },
+  "agents": [
+    {
+      "import_path": "harbor_integration.host_mini:HostMiniSweAgent",
+      "model_name": "openrouter/minimax/minimax-m2.5",
+      "kwargs": {
+        "policy": {
+          "budgets": {
+            "seconds": 1200,
+            "model_calls": 30,
+            "generated_tokens": 10000,
+            "repair_rounds": 2,
+            "tool_seconds": 90,
+            "response_tokens": 1500
+          },
+          "model": {
+            "model": "minimax/minimax-m2.5",
+            "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+            "temperature": 0,
+            "provider": {
+              "only": [
+                "minimax/fp8"
+              ],
+              "allow_fallbacks": false,
+              "require_parameters": true
+            },
+            "reasoning": null
+          },
+          "prompt_config": "mini-swe-harbor-v1.yaml",
+          "receipt_key": ".local/resources/LC-TIMEOUT-001/8cbe4a8bbcc50763/harbor-v1/receipt.key",
+          "reference_fixture": ".local/resources/LC-TIMEOUT-001/8cbe4a8bbcc50763/harbor-v1/reference-fixture.json",
+          "mini_config": {
+            "$mini_config": "mini-swe-harbor-v1.yaml",
+            "effective_sha256": "89dd6c8b33e3c0ab7cc208a27b4c33cea2111225649f805f7664ccf9ca77aeb6"
+          },
+          "code_fingerprints": {
+            "harbor_integration/isolation.py": "d6cadf67998063201ee6b0bd7c865a64dc27859b067d7ebc8f4c21f32e012522",
+            "harbor_integration/trace.py": "6b884a784e359c734f015fcf3cbe3bebec0452751a03a9779b8fc7ca81ce2c2c",
+            "harbor_integration/__init__.py": "18c9023782f296b4de4bf4e792c18cd7afc6981f53c77b6bb938c1a659211291",
+            "harbor_integration/host_mini.py": "42dee86f2be5bf2e7f0d659f86b110e9f9b9fe68ed6871d623ddafaec4d1805a",
+            "harbor_integration/prepare.py": "3d5bc062dff2082db8a053b7e6664c04e40564e56d95bbd79db8a0fdfe99c93a",
+            "agent/budget.py": "710c1549eb93928edebca909745f61f1e69c8bfef6fc27c0ff774f7fc54e95ac",
+            "agent/mini_runtime.py": "499af65eb833dd1791dda48b1b73731462637aaad9016b0d9218f701e240c79a",
+            "agent/provider.py": "a3982215f71e74094cb84b97e248368dbd4f95195a768f6253c84c0676f36bee",
+            "agent/schemas.py": "129a65878e54dc71cf9ea88da46fe261da3213aa11cfbea19d89a89242a99225",
+            "configs/mini-swe.yaml": "b539a8965f5bf41dd0f32daafa5d2db22581923d13812fa378fd09569b9d6b0c"
+          }
+        },
+        "fixture": "reference"
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "path": "./harbor_tasks/LC-TIMEOUT-001"
+    }
+  ]
+}

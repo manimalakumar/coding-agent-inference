@@ -1,0 +1,42 @@
+schema_version = "1.4"
+artifacts = []
+
+[metadata]
+task_id = "LC-ASYNC-TOOLS-001"
+starting_commit = "1a3d81756fa249e4054f036ca61e6fd56b3f78df"
+baseline_checksum = "507b4a5c84a1e363de3edcb7ea4652662f4771f2e4d300602e414c636b59671c"
+experimental_setting = "held-out-two-task-v1"
+approval_status = "checks_passed_pending_review"
+completion_policy = "workspace-deliverable-v1"
+agent_budget_seconds = 1200
+evaluation_budget_seconds = 300
+configuration_revision = 5
+task_type = "feature"
+difficulty = "L2"
+split = "held_out"
+
+[environment]
+docker_image = "sha256:6e80a68459dc037c27dc8b82829113988ae787ad6d25ef39eec69055ee6a027f"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048
+workdir = "/workspace/libs/partners/openai"
+
+[agent]
+timeout_sec = 1280
+user = "65532:65532"
+
+[verifier]
+timeout_sec = 300
+environment_mode = "separate"
+user = "root"
+[[verifier.collect]]
+command = "rm -f /logs/artifacts/candidate.tar && tar --mode='u+rwX,go+rX' -cf /logs/artifacts/candidate.tar -C /workspace libs/partners/openai/langchain_openai/chat_models libs/core/langchain_core/messages/block_translators libs/partners/openai/tests/unit_tests libs/core/tests/unit_tests"
+user = "root"
+timeout_sec = 90
+
+[verifier.environment]
+docker_image = "sha256:0d2215b3d32b70503c5d73b18a79b1e2317b40ae16f834c3f874161455a7df99"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048

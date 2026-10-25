@@ -1,0 +1,42 @@
+schema_version = "1.4"
+artifacts = []
+
+[metadata]
+task_id = "LC-HF-ACCELERATOR-001"
+starting_commit = "3539ca08d92e10b65b6f3117cfd657b16b05c865"
+baseline_checksum = "e2a0d6f2ce7d62cdad9d7a953ac4f3a53a8bd52a8e6d8f4277b96d230cf2002f"
+experimental_setting = "held-out-remainder-round1-v1"
+approval_status = "checks_passed_pending_review"
+completion_policy = "workspace-deliverable-v1"
+agent_budget_seconds = 1200
+evaluation_budget_seconds = 300
+configuration_revision = 5
+task_type = "feature"
+split = "held_out"
+round = 1
+
+[environment]
+docker_image = "sha256:fed65a8218133a7c3a47ceb371109d79348991180cdd07f528ab64596658f648"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048
+workdir = "/workspace/libs/partners/huggingface"
+
+[agent]
+timeout_sec = 1280
+user = "65532:65532"
+
+[verifier]
+timeout_sec = 300
+environment_mode = "separate"
+user = "root"
+[[verifier.collect]]
+command = "rm -f /logs/artifacts/candidate.tar && tar --mode='u+rwX,go+rX' -cf /logs/artifacts/candidate.tar -C /workspace libs/partners/huggingface/langchain_huggingface/llms libs/partners/huggingface/tests/unit_tests"
+user = "root"
+timeout_sec = 90
+
+[verifier.environment]
+docker_image = "sha256:4aabc81cb557ffdaa318dd03672dc4ce710cd971af3e80304c4386a51b2a9810"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "failure_category": "lint_and_format_failure",
+  "contributing_factors": [
+    "cumulative_output_budget_exhausted",
+    "final_tool_arguments_truncated"
+  ],
+  "reason": "The captured patch passes all functional checks, 18 hidden tests, 11 new regressions, 8 existing tests and full strict typing. It is not accepted because 16 lint errors and formatting remain. Output is exhausted after 18 calls; the final truncated tool arguments do not execute. The demonstrated setup problems are absent in this attempt. This is one unsuccessful calibration observation, not a model success or a reliability estimate.",
+  "original_verdict_preserved": true,
+  "code_repair_rounds": null,
+  "code_repair_measurement": "Not instrumented; never infer from tool-format recovery counts.",
+  "original_run_sha256": {
+    "agent/isolation.json": "62b1e544e0f280d121739cefa13a8a4218aa3b16ddedca6e69f3cd1928862a64",
+    "agent/mini-swe-agent.trajectory.json": "5e8656023a43ff72809f59e42d3aba80cb336b7ae025a8faa8f096033abf4c80",
+    "agent/process-baseline.json": "52c15bf0cef44593d0d6594172696befc6881ce7d6da945664d3aa1ddf7c3f5e",
+    "agent/quiescence.json": "fea343c141ef21778faf9509de729e4baaf72a50dc4a84dfeba3ee696bc58f92",
+    "agent/receipt.json": "9295b0d52c2bab068db902bee0e64d99befdba7aabe734086ede213e1dac63c9",
+    "agent/requests.jsonl": "434e737a606e961d77d902feec09ae8cd5582ad3c7537b562f26b217105c4889",
+    "agent/source-snapshot.json": "5db2b89ddd37cb8dc0df222d1c8c66ceb058473c0ddb9910ba894a0b32de3cad",
+    "agent/trajectory.json": "87a06c509592b6bd85f91fafaf01df2a9b7f84cde84f0c7fe251278f6f1c9063",
+    "artifacts/logs/artifacts/candidate.tar": "3e73665d1e51e42d1a7a5d52b41c28b5f1d58488624c54ee9ae088bc25db6359",
+    "artifacts/logs/artifacts/receipt.json": "9295b0d52c2bab068db902bee0e64d99befdba7aabe734086ede213e1dac63c9",
+    "artifacts/manifest.json": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f",
+    "config.json": "2604f861be4e194b7d7192345d5076beac1b7b029b5885950b23c0e1ce152da0",
+    "lock.json": "18c94341ccd753dcacef95b5419d72bc295002f98124117ebb84db6f82e572db",
+    "result.json": "c9ec50957caf49e657e6c43e53b5622ae6f689828539b44bc4aeff4c8eafffce",
+    "trial.log": "3cbaa8db9f213aa9cd0b0d274eac929d0a9faf9cdd86d0fe2cd245718f910ae3",
+    "verifier/checks.json": "891ac74fc7cb19bf234478c3e3ac25ac0d30b7301319dd420604149f108b0351",
+    "verifier/reward.json": "2d817bc3269952334130ccbf06e52d2975a6d1af8cd46b89f0fe8b01c6ac7a1f",
+    "verifier/submission.patch": "77dc865e2a60b87412f350b9c1f2e6bf8dbabf214bcf84214b91fdddf6c9e02a",
+    "verifier/test-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

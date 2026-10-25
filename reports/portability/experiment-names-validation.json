@@ -1,0 +1,168 @@
+{
+  "status": "passed",
+  "scope": [
+    "tests/test_public_portability.py",
+    "tests/test_controller.py",
+    "tests/test_mini.py",
+    "tests/test_workspace_policy.py",
+    "tests/test_pilot2.py",
+    "tests/test_public_reporting.py",
+    "tests/test_openrouter_accounting.py",
+    "tests_public",
+    "tests/test_notebook_json.py",
+    "tests/test_study_views.py",
+    "tests/test_intervention_views.py",
+    "tests/test_notebook_presentation.py",
+    "tests/test_task_rosters.py",
+    "tests/test_notebook_workflow.py",
+    "tests/test_configuration_paths.py"
+  ],
+  "isolated_public_copy": true,
+  "network_credentials_and_private_reads_denied": true,
+  "matplotlib_font_cache_initialized_before_process_guard": true,
+  "runtime": "Installed dependencies shared; project source and inputs loaded from isolated public copy.",
+  "log_sha256": "9d529549ecb1094cadfc3dc0591eeef7c660b245130b6486c5cd30e39a3d7dd8",
+  "test_summary": "Matplotlib is building the font cache; this may take a moment.",
+  "model_requests": 0,
+  "live_provider_tests": false,
+  "renamed_modules": {
+    "experiments/comparison_tool_controls_v2.py": "experiments/comparison_wrapper_controls.py",
+    "experiments/freeze_context_environment_v2.py": "experiments/freeze_context_environment.py",
+    "experiments/heldout_bundle_v1.py": "experiments/heldout_bundle.py",
+    "experiments/heldout_controls_v1.py": "experiments/heldout_controls.py",
+    "experiments/heldout_freeze_v1.py": "experiments/heldout_freeze.py",
+    "experiments/heldout_remainder_bundle_v1.py": "experiments/heldout_remainder_bundle.py",
+    "experiments/heldout_remainder_controls_v1.py": "experiments/heldout_remainder_controls.py",
+    "experiments/heldout_remainder_freeze_v1.py": "experiments/heldout_remainder_freeze.py",
+    "experiments/heldout_remainder_results_v1.py": "experiments/heldout_remainder_results.py",
+    "experiments/heldout_remainder_v1.py": "experiments/prepare_heldout_remainder.py",
+    "experiments/heldout_repeats_results_v1.py": "experiments/heldout_repeats_results.py",
+    "experiments/heldout_results_v1.py": "experiments/heldout_results.py",
+    "experiments/heldout_tasks_v1.py": "experiments/prepare_heldout_tasks.py",
+    "experiments/prepare_context_environment_v2.py": "experiments/prepare_context_environment.py",
+    "experiments/response_ceiling_setting_v2.py": "experiments/response_ceiling_validated_setting.py"
+  },
+  "removed_parser_alias": "experiments/records_safe_v2.py",
+  "historical_evidence_and_configuration_files_preserved": 457,
+  "historical_task_definitions_and_ids_unchanged": true,
+  "saved_notebook_sha256": "487f442630f54e1161dcb47af1aa7b23bd398b0e23bdd3d6d495474580a3a684",
+  "notebook_byte_identical": true,
+  "obsolete_active_module_references": 0,
+  "remaining_version_suffixed_experiment_filenames": 0,
+  "lint_and_format": "11 edited Python files passed; untouched script formatting retained",
+  "historical_filename_mentions": "Original names remain only in saved historical fingerprint records and manifest reconciliation provenance; no active import depends on them.",
+  "tests": 199,
+  "environment_rebuilds": 0,
+  "configuration_checksum_entries_verified": 1643,
+  "offline_replay": "All 19 cells passed from an isolated public copy; saved notebook unchanged.",
+  "working_controls": "All 13 actual wrapper controls and fixture receipt checks passed; existing bound fixture artifacts may be reused by the validator.",
+  "isolated_controls": "All 13 task fixture control sets executed from the isolated public copy, without control bindings or prior runs.",
+  "working_control_report": "reports/public-readiness/experiment-names-controls.json",
+  "isolated_control_report": "reports/public-readiness/isolated-experiment-names-controls.json",
+  "readiness_table": [
+    {
+      "task_id": "LC-ASYNC-TOOLS-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-ASYNC-TOOLS-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-async-tools-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-SUMMARY-OVERFLOW-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-SUMMARY-OVERFLOW-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-summary-overflow-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-FIREWORKS-RERANK-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-FIREWORKS-RERANK-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-fireworks-rerank-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-OPENROUTER-PROVIDER-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-OPENROUTER-PROVIDER-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-openrouter-provider-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-HF-ACCELERATOR-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-HF-ACCELERATOR-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-hf-accelerator-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-JSON-INPUT-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-JSON-INPUT-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-json-input-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-INT-TEMPERATURE-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-INT-TEMPERATURE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-int-temperature-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-PARALLEL-TOOL-MERGE-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-PARALLEL-TOOL-MERGE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-parallel-tool-merge-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-ANNOTATED-TOOLS-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-ANNOTATED-TOOLS-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-annotated-tools-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-CHROMA-NONE-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-CHROMA-NONE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-chroma-none-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-CONTEXT-COUNTER-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-CONTEXT-COUNTER-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-context-counter-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-RESPONSES-USAGE-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-RESPONSES-USAGE-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-responses-usage-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    },
+    {
+      "task_id": "LC-TIMEOUT-001",
+      "preparation_command": "python -m experiments.portable_prepare prepare LC-TIMEOUT-001 --allow-setup-network --controls",
+      "protocol_id": "public-lc-timeout-001-v1",
+      "controls": "passed",
+      "execute_ready": true,
+      "remaining_blocker": null
+    }
+  ]
+}

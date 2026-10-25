@@ -1,0 +1,42 @@
+schema_version = "1.4"
+artifacts = []
+
+[metadata]
+task_id = "LC-JSON-INPUT-001"
+starting_commit = "1499aa9900987c6050670eb1cbd47bc4db0a6d18"
+baseline_checksum = "9aa6b00f0f1354dc49eccc7e71c633a10c544d005884e187f826a41dee12a113"
+experimental_setting = "held-out-remainder-round1-v1"
+approval_status = "checks_passed_pending_review"
+completion_policy = "workspace-deliverable-v1"
+agent_budget_seconds = 1200
+evaluation_budget_seconds = 300
+configuration_revision = 5
+task_type = "bug_fix"
+split = "held_out"
+round = 1
+
+[environment]
+docker_image = "sha256:06b3fb4e99f8d382662d3df01ce51dab37f876be67ac78ce12926f4b3f5022a9"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048
+workdir = "/workspace/libs/text-splitters"
+
+[agent]
+timeout_sec = 1280
+user = "65532:65532"
+
+[verifier]
+timeout_sec = 300
+environment_mode = "separate"
+user = "root"
+[[verifier.collect]]
+command = "rm -f /logs/artifacts/candidate.tar && tar --mode='u+rwX,go+rX' -cf /logs/artifacts/candidate.tar -C /workspace libs/text-splitters/langchain_text_splitters libs/text-splitters/tests/unit_tests"
+user = "root"
+timeout_sec = 90
+
+[verifier.environment]
+docker_image = "sha256:8a3f655ddfb17277ebcced040883c63bb5049a9f1b72bf31ff701c91da6f7ddd"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048

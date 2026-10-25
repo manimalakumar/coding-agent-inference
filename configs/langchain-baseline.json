@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/langchain-ai/langchain.git",
+  "checkout": "../LagChain-Cloned-Maintenance-Targets/langchain",
+  "commit": "e6d83ef6a6e2482cd55691023c51e45d7584a94f",
+  "checkout_mode": "detached HEAD",
+  "package_directory": "../LagChain-Cloned-Maintenance-Targets/langchain/libs/core",
+  "python_version": "3.14.6",
+  "uv_version": "0.11.29",
+  "lockfile_sha256": "d54df7944c17c82ce9df490ce448040f27e144527522cda6a49912b5b78f40c2",
+  "setup_command": "uv sync --frozen --group test --python 3.14.6",
+  "test_command": "UV_NO_SYNC=1 make test",
+  "command_working_directory": "../LagChain-Cloned-Maintenance-Targets/langchain/libs/core",
+  "setup_documentation": "https://github.com/langchain-ai/docs/blob/main/src/oss/contributing/code.mdx",
+  "evaluation_policy": {
+    "preflight": "Verify the checkout SHA and lockfile, explicitly sync dependencies from libs/core, and establish passing existing tests before evaluating agent patches.",
+    "setup_failures": "Classify interpreter, dependency, permission, DNS, and environment failures as setup failures. Resolve them and rerun the unchanged baseline before attributing failures to agent code.",
+    "dns_requirement": "Existing SSRF unit tests resolve public hostnames. Provide working DNS while retaining the Makefile's pytest socket restrictions.",
+    "scope": "Core unit tests only; integration tests and other packages require their own baseline."
+  },
+  "baseline_evidence": "runs/langchain-core-baseline-2026-10-20/result.json"
+}

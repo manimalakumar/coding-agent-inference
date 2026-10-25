@@ -1,0 +1,39 @@
+schema_version = "1.4"
+artifacts = []
+
+[metadata]
+task_id = "LC-ANNOTATED-TOOLS-001"
+starting_commit = "dea43436ea501d3fadeddc7f75d34b31eb4f8254"
+baseline_checksum = "f280e006fb983c5499f011d76ecacf389b1832137cbde0558d600c1d91828793"
+experimental_setting = "comparison-4x2x3-v1"
+approval_status = "checks_passed_pending_review"
+completion_policy = "workspace-deliverable-v1"
+agent_budget_seconds = 1200
+evaluation_budget_seconds = 300
+configuration_revision = 2
+
+[environment]
+docker_image = "sha256:e417af208f26015fec647c49fba73a5310fcc28448359971059bfade43bf3b6d"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048
+workdir = "/workspace/libs/core"
+
+[agent]
+timeout_sec = 1280
+user = "65532:65532"
+
+[verifier]
+timeout_sec = 300
+environment_mode = "separate"
+user = "root"
+[[verifier.collect]]
+command = "rm -f /logs/artifacts/candidate.tar && tar --mode='u+rwX,go+rX' -cf /logs/artifacts/candidate.tar -C /workspace libs/core/langchain_core/tools libs/core/tests/unit_tests"
+user = "root"
+timeout_sec = 90
+
+[verifier.environment]
+docker_image = "sha256:10074528afd79e6c9da5f333dd0ac9ae43939adf4c3ced98d29a2840f74b0c62"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048

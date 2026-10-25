@@ -1,0 +1,28 @@
+{
+  "schema_version": 4,
+  "network": "none",
+  "python": "3.14.6",
+  "base_image": "python:3.14.6-slim-bookworm",
+  "cpus": 2,
+  "memory_mb": 2048,
+  "pids_limit": 128,
+  "writable": [
+    "libs/partners/openai/langchain_openai/chat_models",
+    "libs/partners/openai/tests/unit_tests"
+  ],
+  "resources": [],
+  "budgets": {
+    "seconds": 1200,
+    "model_calls": 30,
+    "generated_tokens": 10000,
+    "repair_rounds": 2,
+    "tool_seconds": 90,
+    "response_tokens": 1500
+  },
+  "tool_output_chars": 16000,
+  "workflow_label": "mini-swe-agent-2.4.6-v4-provisional-baseline-30calls-10000tokens",
+  "file_writing_tool": false,
+  "workflow_instructions": [],
+  "prompt_config": "mini-swe-v4.yaml",
+  "stopping_protocol": "submit_priority_v1"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "network": "none",
+  "python": "3.14.6",
+  "base_image": "python:3.14.6-slim-bookworm",
+  "cpus": 2,
+  "memory_mb": 2048,
+  "pids_limit": 128,
+  "writable": [
+    "libs/partners/openai/langchain_openai/chat_models",
+    "libs/partners/openai/tests/unit_tests"
+  ],
+  "resources": [],
+  "budgets": {
+    "seconds": 600,
+    "model_calls": 6,
+    "generated_tokens": 6000,
+    "repair_rounds": 2,
+    "tool_seconds": 90,
+    "response_tokens": 1500
+  },
+  "tool_output_chars": 16000
+}

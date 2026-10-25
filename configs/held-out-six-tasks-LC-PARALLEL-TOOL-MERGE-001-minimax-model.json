@@ -1,0 +1,148 @@
+{
+  "job_name": "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-minimax-model-001",
+  "jobs_dir": "./runs/harbor",
+  "n_attempts": 1,
+  "n_concurrent_trials": 1,
+  "retry": {
+    "max_retries": 0
+  },
+  "environment": {
+    "type": "docker",
+    "delete": true
+  },
+  "agents": [
+    {
+      "import_path": "harbor_integration.host_response_ceiling:ResponseCeilingAgent",
+      "model_name": "openrouter/minimax/minimax-m2.5",
+      "kwargs": {
+        "policy": {
+          "budgets": {
+            "seconds": 1200,
+            "model_calls": 30,
+            "generated_tokens": 10000,
+            "repair_rounds": 2,
+            "tool_seconds": 90,
+            "response_tokens": 6000
+          },
+          "source_provenance": {
+            "starting_commit": "3686bcbd966ff1ef13e5fdbde28aa0e630ddd5c4",
+            "baseline_checksum": "439bad9d0e6c998feef797510938eb8a4ad5bc0be262ddb25cb90917dffd3497"
+          },
+          "model": {
+            "model": "minimax/minimax-m2.5",
+            "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+            "temperature": 0,
+            "provider": {
+              "only": [
+                "minimax/fp8"
+              ],
+              "allow_fallbacks": false,
+              "require_parameters": true
+            },
+            "reasoning": null
+          },
+          "prompt_config": "mini-swe-context-counter-response-6000-v1.yaml",
+          "reproduction": {
+            "expected_failure": "DISTINCT_TOOL_CALLS_MERGED"
+          },
+          "receipt_key": ".local/resources/held-out-remainder-round1-v1/LC-PARALLEL-TOOL-MERGE-001/receipt.key",
+          "reference_fixture": ".local/resources/held-out-remainder-round1-v1/LC-PARALLEL-TOOL-MERGE-001/reference-fixture.json",
+          "mini_config": {
+            "$mini_config": "mini-swe-context-counter-response-6000-v1.yaml",
+            "effective_sha256": "7cea37f3b23d3769e347ec38d2a5dabfd9f2c1e34f8b51932728bfce69be9bea"
+          },
+          "code_fingerprints": {
+            "harbor_integration/isolation.py": "d6cadf67998063201ee6b0bd7c865a64dc27859b067d7ebc8f4c21f32e012522",
+            "harbor_integration/trace.py": "6b884a784e359c734f015fcf3cbe3bebec0452751a03a9779b8fc7ca81ce2c2c",
+            "harbor_integration/setup_resources.py": "7a4240de00241830ae51877b2f05683e15145c36f46c55f04d312c5df52957c5",
+            "harbor_integration/prepare_resources.py": "fab3f622a1f06cba16ac9bff4dde45fafd903b4f77c0743771c9ac839e4c8bee",
+            "harbor_integration/__init__.py": "18c9023782f296b4de4bf4e792c18cd7afc6981f53c77b6bb938c1a659211291",
+            "harbor_integration/host_mini.py": "42dee86f2be5bf2e7f0d659f86b110e9f9b9fe68ed6871d623ddafaec4d1805a",
+            "harbor_integration/host_mini_v2.py": "7ffe2b170cfdbaf3d9651631d31157cef29a15610aefa93d9306f608b570886d",
+            "harbor_integration/setup_task.py": "e660b7e2839ba914eb32855aa63967c79a1f06eb89bfd16f2d5466eb0e58b384",
+            "harbor_integration/prepare_task.py": "3bbdfd21fe1da54a4e88bbb4d4dd30fe7f9baf479abe9b3d62fa7c25f33a73bd",
+            "harbor_integration/prepare.py": "3d5bc062dff2082db8a053b7e6664c04e40564e56d95bbd79db8a0fdfe99c93a",
+            "agent/budget.py": "710c1549eb93928edebca909745f61f1e69c8bfef6fc27c0ff774f7fc54e95ac",
+            "agent/mini_runtime.py": "499af65eb833dd1791dda48b1b73731462637aaad9016b0d9218f701e240c79a",
+            "agent/provider.py": "a3982215f71e74094cb84b97e248368dbd4f95195a768f6253c84c0676f36bee",
+            "agent/schemas.py": "129a65878e54dc71cf9ea88da46fe261da3213aa11cfbea19d89a89242a99225",
+            "configs/mini-swe.yaml": "b539a8965f5bf41dd0f32daafa5d2db22581923d13812fa378fd09569b9d6b0c",
+            "sandbox/workspace_edit.py": "577ee344a1d604aecb8298d1f9c0e60a0341bf44bff9da2463f9f744508a50bb",
+            "harbor_integration/focused_editing.py": "2677f074e0c8aa27220ba5b2277ff9f5ae56204333c32370fae0d4259291a748",
+            "configs/completion-workspace-v1.json": "af17e3c07f5d0db5faa98d5ad311e666964d1fcef535a72673ccc82aee6eb535",
+            "harbor_integration/host_workspace.py": "0fbee3e390fae0ae64e51d388812a5ead5fd1edb242dcc5e8278457c9c593d46",
+            "harbor_integration/workspace_setting.py": "c3c5ca4ffa799255256ba1a7f86ddf706c8a877397e97fa36cbf205e30216ff1",
+            "evaluator/workspace_policy.py": "c50fe49b86d9996434a9570f52577e8f24abd8dcd48ef802a7ec9332f3085f31",
+            "harbor_integration/host_comparison.py": "ff8f6e41716c3ac063818b1ec783eaa96b7cc8d33ea252fb734c2db43c1f62f1",
+            "configs/mini-swe-incremental-files-v1.yaml": "751729db77c9c787ff33cf937504f5a2fadb8896d96bf9c045b8a320673164a9",
+            "configs/mini-swe-context-counter-response-6000-v1.yaml": "50ac88073cc593d4a56925351228a9a26a4a0bffd3790f85b1206678ebebc488",
+            "harbor_integration/host_response_ceiling.py": "7fe51c403def6d9d59354cc88f1afc17564ff5d91e7bca0203759a991a60bbb8",
+            "configs/completion-response-6000-v1.json": "6b9a43ac6721321c198682a5c2d921d759d034fea831739b6dbaefb47a1891ce"
+          },
+          "editing_strategy": {
+            "version": "focused-editing-v1",
+            "baseline_source": "/task/unchanged",
+            "helper": "/task/workspace_edit.py",
+            "permissions": "read-only baseline; same writable production paths"
+          },
+          "repair_semantics": {
+            "repair_rounds": "tool-format recovery only; never Ruff formatting",
+            "code_repair_rounds": "reported separately, nullable unless audited"
+          },
+          "completion_policy": {
+            "schema_version": 1,
+            "policy_id": "workspace-deliverable-v1",
+            "deliverable": "automatically captured final workspace",
+            "capture_on": [
+              "submitted",
+              "budget_exhausted",
+              "error"
+            ],
+            "require_explicit_submission_for_task_success": false,
+            "reserve_final_call": false,
+            "reserved_output_tokens": 0,
+            "submission_command": "echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT",
+            "agent_budgets": {
+              "seconds": 1200,
+              "model_calls": 30,
+              "generated_tokens": 10000,
+              "repair_rounds": 2,
+              "tool_seconds": 90,
+              "response_tokens": 6000
+            },
+            "evaluation_seconds": 300,
+            "evaluation_budget_scope": "trusted post-capture evaluation, separate from agent execution",
+            "http_retries": 0,
+            "trial_retries": 0,
+            "required_checks": [
+              "file_policy",
+              "regression_on_baseline",
+              "reproducer",
+              "regression",
+              "existing_tests",
+              "lint",
+              "format",
+              "types",
+              "hidden_acceptance"
+            ],
+            "task_success_rule": "all required checks pass; regression_on_baseline must fail with pytest exit 1",
+            "review_status": "checks_passed_pending_review",
+            "comparison_rule": "identical completion policy, budgets, tools and task resources for every compared model; preserve historical outcomes under their original policies"
+          },
+          "runtime_revision": "comparison-civil-deadline-v1",
+          "environment_revision": {
+            "version": "held-out-remainder-round1-v1",
+            "regression_location": "new direct-child test_*.py at permitted test root",
+            "type_command": "mypy --cache-dir=/dev/null $CHANGED_SOURCE",
+            "authorized_scope": "round 1: one fresh attempt per task per model; no automatic retries"
+          }
+        }
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "path": "./harbor_tasks/settings/held-out-remainder-round1-v1/LC-PARALLEL-TOOL-MERGE-001"
+    }
+  ]
+}

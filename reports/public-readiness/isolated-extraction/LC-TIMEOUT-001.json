@@ -1,0 +1,286 @@
+{
+  "task_id": "LC-TIMEOUT-001",
+  "protocol_id": "public-lc-timeout-001-v1",
+  "setting_id": "110c297af373b34e412e25dcb6736f3a385bdda8f67ef838e30ae332aec21ba0",
+  "historical_equivalence": "not claimed",
+  "model_requests": 0,
+  "baseline_rejected": true,
+  "reference_accepted": true,
+  "public_checks_preserved": true,
+  "wrapper_controls": [
+    {
+      "check": "baseline_reproduces",
+      "expected_exit": 1,
+      "observed_exit": 1,
+      "passed": true
+    },
+    {
+      "check": "isolation_workspace_imports",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "create_regression",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "regression_baseline",
+      "expected_exit": 1,
+      "observed_exit": 1,
+      "passed": true
+    },
+    {
+      "check": "apply_reference",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "reference_reproduces",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "regression_reference",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "focused_tests_0",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "lint_libs/partners/openai",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "format_libs/partners/openai",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    },
+    {
+      "check": "types_libs/partners/openai",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "passed": true
+    }
+  ],
+  "controls": [
+    {
+      "fixture": "baseline",
+      "passed": true,
+      "accepted": false,
+      "model_requests": 0,
+      "termination_reason": "submitted",
+      "checks": {
+        "file_policy": {
+          "exit_code": 0
+        },
+        "reproducer": {
+          "exit_code": 1
+        },
+        "existing_tests": {
+          "exit_code": 0
+        },
+        "hidden_acceptance": {
+          "exit_code": 1
+        }
+      },
+      "isolation": {
+        "no_history": true,
+        "no_evaluator": true,
+        "no_keys": true,
+        "unprivileged": true,
+        "no_docker_socket": true,
+        "existing_readonly_libs/partners/openai/tests/unit_tests": true,
+        "existing_rename_denied_libs/partners/openai/tests/unit_tests": true,
+        "production_writable_libs/partners/openai/langchain_openai/chat_models": true,
+        "host_symlink_denied_libs/partners/openai/langchain_openai/chat_models": true,
+        "readonly_/opt/venv/public_probe": true,
+        "readonly_/workspace/public_probe": true,
+        "retained_isolation_suite": true,
+        "offline": true,
+        "workspace_import_langchain_openai": true,
+        "workspace_import_langchain_core": true
+      },
+      "error": null,
+      "artifact_dir": "runs/public-v1/public-v1-lc-timeout-001-baseline/harbor-task__gWp4n7T"
+    },
+    {
+      "fixture": "reference",
+      "passed": true,
+      "accepted": true,
+      "model_requests": 0,
+      "termination_reason": "submitted",
+      "checks": {
+        "file_policy": {
+          "exit_code": 0
+        },
+        "regression_on_baseline": {
+          "exit_code": 1
+        },
+        "reproducer": {
+          "exit_code": 0
+        },
+        "regression": {
+          "exit_code": 0
+        },
+        "existing_tests": {
+          "exit_code": 0
+        },
+        "lint": {
+          "exit_code": 0
+        },
+        "format": {
+          "exit_code": 0
+        },
+        "types": {
+          "exit_code": 0
+        },
+        "hidden_acceptance": {
+          "exit_code": 0
+        }
+      },
+      "isolation": {
+        "no_history": true,
+        "no_evaluator": true,
+        "no_keys": true,
+        "unprivileged": true,
+        "no_docker_socket": true,
+        "existing_readonly_libs/partners/openai/tests/unit_tests": true,
+        "existing_rename_denied_libs/partners/openai/tests/unit_tests": true,
+        "production_writable_libs/partners/openai/langchain_openai/chat_models": true,
+        "host_symlink_denied_libs/partners/openai/langchain_openai/chat_models": true,
+        "readonly_/opt/venv/public_probe": true,
+        "readonly_/workspace/public_probe": true,
+        "retained_isolation_suite": true,
+        "offline": true,
+        "workspace_import_langchain_openai": true,
+        "workspace_import_langchain_core": true
+      },
+      "error": null,
+      "artifact_dir": "runs/public-v1/public-v1-lc-timeout-001-reference/harbor-task__VtQuz8j"
+    },
+    {
+      "fixture": "reference_budget",
+      "passed": true,
+      "accepted": true,
+      "model_requests": 0,
+      "termination_reason": "budget_exhausted",
+      "checks": {
+        "file_policy": {
+          "exit_code": 0
+        },
+        "regression_on_baseline": {
+          "exit_code": 1
+        },
+        "reproducer": {
+          "exit_code": 0
+        },
+        "regression": {
+          "exit_code": 0
+        },
+        "existing_tests": {
+          "exit_code": 0
+        },
+        "lint": {
+          "exit_code": 0
+        },
+        "format": {
+          "exit_code": 0
+        },
+        "types": {
+          "exit_code": 0
+        },
+        "hidden_acceptance": {
+          "exit_code": 0
+        }
+      },
+      "isolation": {
+        "no_history": true,
+        "no_evaluator": true,
+        "no_keys": true,
+        "unprivileged": true,
+        "no_docker_socket": true,
+        "existing_readonly_libs/partners/openai/tests/unit_tests": true,
+        "existing_rename_denied_libs/partners/openai/tests/unit_tests": true,
+        "production_writable_libs/partners/openai/langchain_openai/chat_models": true,
+        "host_symlink_denied_libs/partners/openai/langchain_openai/chat_models": true,
+        "readonly_/opt/venv/public_probe": true,
+        "readonly_/workspace/public_probe": true,
+        "retained_isolation_suite": true,
+        "offline": true,
+        "workspace_import_langchain_openai": true,
+        "workspace_import_langchain_core": true
+      },
+      "error": null,
+      "artifact_dir": "runs/public-v1/public-v1-lc-timeout-001-reference_budget/harbor-task__K2J7S7u"
+    },
+    {
+      "fixture": "reference_error",
+      "passed": true,
+      "accepted": true,
+      "model_requests": 0,
+      "termination_reason": "error",
+      "checks": {
+        "file_policy": {
+          "exit_code": 0
+        },
+        "regression_on_baseline": {
+          "exit_code": 1
+        },
+        "reproducer": {
+          "exit_code": 0
+        },
+        "regression": {
+          "exit_code": 0
+        },
+        "existing_tests": {
+          "exit_code": 0
+        },
+        "lint": {
+          "exit_code": 0
+        },
+        "format": {
+          "exit_code": 0
+        },
+        "types": {
+          "exit_code": 0
+        },
+        "hidden_acceptance": {
+          "exit_code": 0
+        }
+      },
+      "isolation": {
+        "no_history": true,
+        "no_evaluator": true,
+        "no_keys": true,
+        "unprivileged": true,
+        "no_docker_socket": true,
+        "existing_readonly_libs/partners/openai/tests/unit_tests": true,
+        "existing_rename_denied_libs/partners/openai/tests/unit_tests": true,
+        "production_writable_libs/partners/openai/langchain_openai/chat_models": true,
+        "host_symlink_denied_libs/partners/openai/langchain_openai/chat_models": true,
+        "readonly_/opt/venv/public_probe": true,
+        "readonly_/workspace/public_probe": true,
+        "retained_isolation_suite": true,
+        "offline": true,
+        "workspace_import_langchain_openai": true,
+        "workspace_import_langchain_core": true
+      },
+      "error": null,
+      "artifact_dir": "runs/public-v1/public-v1-lc-timeout-001-reference_error/harbor-task__RJ2Cms4"
+    }
+  ],
+  "validated_at": 1792879582.547814
+}

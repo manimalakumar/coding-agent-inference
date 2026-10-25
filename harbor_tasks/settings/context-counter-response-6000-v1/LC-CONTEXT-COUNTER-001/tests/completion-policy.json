@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "policy_id": "workspace-deliverable-v1",
+  "deliverable": "automatically captured final workspace",
+  "capture_on": ["submitted", "budget_exhausted", "error"],
+  "require_explicit_submission_for_task_success": false,
+  "reserve_final_call": false,
+  "reserved_output_tokens": 0,
+  "submission_command": "echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT",
+  "agent_budgets": {
+    "seconds": 1200,
+    "model_calls": 30,
+    "generated_tokens": 10000,
+    "repair_rounds": 2,
+    "tool_seconds": 90,
+    "response_tokens": 1500
+  },
+  "evaluation_seconds": 300,
+  "evaluation_budget_scope": "trusted post-capture evaluation, separate from agent execution",
+  "http_retries": 0,
+  "trial_retries": 0,
+  "required_checks": ["file_policy", "regression_on_baseline", "reproducer", "regression", "existing_tests", "lint", "format", "types", "hidden_acceptance"],
+  "task_success_rule": "all required checks pass; regression_on_baseline must fail with pytest exit 1",
+  "review_status": "checks_passed_pending_review",
+  "comparison_rule": "identical completion policy, budgets, tools and task resources for every compared model; preserve historical outcomes under their original policies"
+}

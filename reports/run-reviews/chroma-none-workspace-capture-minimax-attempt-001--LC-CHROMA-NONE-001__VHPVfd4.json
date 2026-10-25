@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "failure_category": "infrastructure_failure",
+  "contributing_factors": [
+    "output_ceiling_tool_format_failure",
+    "unreliable_elapsed_time_measurement"
+  ],
+  "reason": "OpenRouter connection timeout on request 11 interrupted the attempt before any edit. Request 9 reached the 1,500-token response cap and returned unterminated tool-call JSON, so its test-writing action did not execute; one tool-format repair followed. Automatic capture/evaluation completed on unchanged source. No accepted patch or explicit submission. Ten responses report $0.01343532; request 11 has unknown usage and cost. The timing discrepancy makes this unsuitable as a controlled completion-time observation.",
+  "candidate_modified_by_reviewer": false,
+  "additional_model_requests": 0,
+  "code_repair_rounds": 0,
+  "code_repair_measurement": "Trace audit: no production edit or test-writing action executed; no code-repair round occurred. One malformed-tool-response repair is recorded separately.",
+  "workflow_observations": {
+    "reproducer_executed_first": true,
+    "executed_tool_actions": 9,
+    "source_or_test_edits_applied": false,
+    "submitted": false,
+    "request_9_output_tokens": 1500,
+    "request_9_finish_reason": "tool_calls",
+    "request_9_tool_arguments_valid_json": false,
+    "request_11_error": "OpenRouterAPIError / ConnectTimeoutError",
+    "model_api_retries": 0,
+    "evaluation_ran_automatically_after_error": true
+  },
+  "accounting": {
+    "known_successful_responses": 10,
+    "attempted_requests": 11,
+    "reported_input_tokens": 64825,
+    "reported_output_tokens": 2670,
+    "known_cost_usd": 0.01343532,
+    "total_cost_usd": null,
+    "requests_without_usage_or_cost": 1,
+    "budget_output_tokens_charged": 4170,
+    "explanation": "Controller conservatively reserves 1,500 tokens for the failed request; these are not reported/generated usage. All ten billed responses, including the malformed response, remain in spend."
+  },
+  "timing_audit": {
+    "native_agent_elapsed_seconds": 1947.389081,
+    "native_workflow_elapsed_seconds": 1969.524347,
+    "outer_command_tool_reported_wall_seconds": 146.33706,
+    "last_executed_tool_at": "2026-10-21T22:38:38.391117+00:00",
+    "failed_request_started_at": "2026-10-21T22:38:38.394861+00:00",
+    "failed_request_error_at": "2026-10-21T23:10:19.228988+00:00",
+    "cause": "Undetermined. Host suspension or clock adjustment is a possible explanation, not established evidence.",
+    "controlled_completion_time_valid": false,
+    "wall_clock_budget_caveat": "The existing watchdog uses time.monotonic while native timestamps use time.time. The receipt clamps execution_stopped_at to its deadline; this is not an independent observation of actual stop time. No later model request or tool action is present after request 11 began. This interrupted run does not validate a strict civil-clock deadline across host suspension/clock changes."
+  },
+  "original_run_sha256": {
+    "lock.json": "e6b28f41e2cd7c537e0baa2a8382ff5aec5a148573570338b07e8c796aabd201",
+    "result.json": "350f2b39a5a8b16f870b95292ac3bd93cdbe775d8108d83f819266dfd32b0dea",
+    "config.json": "bcaa23a677ad51b5e09012358c2cec1ed37e25c708d7e95a79e46c612885718f",
+    "trial.log": "fc12f09c12caa0ee2cb63330b35a51cd992f4ea20f7195906a7703c066e402b1",
+    "artifacts/manifest.json": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f",
+    "agent/trajectory.json": "f68825930e27cf3df05cff470e874a0de3f61d339a6aa0a8da40bea4d5abf599",
+    "agent/requests.jsonl": "e7999659d7ec8908bf72b83e53f11807a1223a1af457bd1a2dc9732a0ed389b4",
+    "agent/isolation.json": "62b1e544e0f280d121739cefa13a8a4218aa3b16ddedca6e69f3cd1928862a64",
+    "agent/source-snapshot.json": "79515b3074b45d00889715abac055eb894eadc1f595ffba2c3e5e82df54175c4",
+    "agent/mini-swe-agent.trajectory.json": "aae6b53d3148b96fad4c005a5ff6100f589d68adc8fd7208f2dbf0c33645412d",
+    "agent/process-baseline.json": "5294e7a9c7fc8e9ba434586df8e6b49687eedb211bf7194f82b623849ba8c4fb",
+    "agent/quiescence.json": "fea343c141ef21778faf9509de729e4baaf72a50dc4a84dfeba3ee696bc58f92",
+    "agent/receipt.json": "e15a1f2a9725113bcb0acf9dd1e065de48e07269f4f8c2de55ffdfa482451d47",
+    "verifier/submission.patch": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verifier/test-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verifier/reward.json": "2d817bc3269952334130ccbf06e52d2975a6d1af8cd46b89f0fe8b01c6ac7a1f",
+    "verifier/checks.json": "bb5f05ad90255b9b36bb297bbcc3cfac839d1685b6752815e82bf426ac5e519a",
+    "artifacts/logs/artifacts/candidate.tar": "c3987b7ed5552a525d87168d02731560180dc5856378d88fdcf8a8888c42dbff",
+    "artifacts/logs/artifacts/receipt.json": "e15a1f2a9725113bcb0acf9dd1e065de48e07269f4f8c2de55ffdfa482451d47"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "model": "qwen/qwen3-coder",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "temperature": 0,
+  "provider": {
+    "require_parameters": true
+  },
+  "reasoning": null
+}

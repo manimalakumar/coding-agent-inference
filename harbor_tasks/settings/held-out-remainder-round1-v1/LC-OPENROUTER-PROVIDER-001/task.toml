@@ -1,0 +1,42 @@
+schema_version = "1.4"
+artifacts = []
+
+[metadata]
+task_id = "LC-OPENROUTER-PROVIDER-001"
+starting_commit = "367df8e3d95da4b766d2a262b40ed7cb56fcc464"
+baseline_checksum = "dd2ff394d54988bd6336874888c7337db612d4a06c47c5c713ef4df977300873"
+experimental_setting = "held-out-remainder-round1-v1"
+approval_status = "checks_passed_pending_review"
+completion_policy = "workspace-deliverable-v1"
+agent_budget_seconds = 1200
+evaluation_budget_seconds = 300
+configuration_revision = 5
+task_type = "feature"
+split = "held_out"
+round = 1
+
+[environment]
+docker_image = "sha256:815e07c2ef823936d54bec545fc2ab960a2b5e241d852128bff6bf3db99cab28"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048
+workdir = "/workspace/libs/partners/openrouter"
+
+[agent]
+timeout_sec = 1280
+user = "65532:65532"
+
+[verifier]
+timeout_sec = 300
+environment_mode = "separate"
+user = "root"
+[[verifier.collect]]
+command = "rm -f /logs/artifacts/candidate.tar && tar --mode='u+rwX,go+rX' -cf /logs/artifacts/candidate.tar -C /workspace libs/partners/openrouter/langchain_openrouter libs/partners/openrouter/tests/unit_tests"
+user = "root"
+timeout_sec = 90
+
+[verifier.environment]
+docker_image = "sha256:5ec8d26f3e1efbb7aa76b429a5b1656b3671b9385f9c54a1efd1e0df28ef962f"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048

@@ -1,0 +1,75 @@
+{
+  "checks": {
+    "file_policy": {
+      "exit_code": 0
+    },
+    "reproducer": {
+      "exit_code": 1,
+      "command": [
+        "python",
+        "/task/reproduce.py"
+      ]
+    },
+    "existing_tests": {
+      "exit_code": 0,
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/unit_tests/test_tools.py",
+        "tests/unit_tests/utils/test_function_calling.py",
+        "-q",
+        "--disable-socket",
+        "--allow-unix-socket"
+      ]
+    },
+    "hidden_acceptance": {
+      "exit_code": 1,
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q",
+        "-c",
+        "/dev/null",
+        "--confcutdir=/tests",
+        "--disable-socket",
+        "--allow-unix-socket",
+        "/tests/test_acceptance.py"
+      ]
+    }
+  },
+  "status": "checks_failed",
+  "controller_receipt": {
+    "completion_policy": "workspace-deliverable-v1",
+    "workspace_quiesced": true,
+    "started_at": 1792620211.28756,
+    "agent_deadline": 1792621411.28756,
+    "execution_stopped_at": 1792620212.397881,
+    "evaluation_seconds": 300,
+    "termination_reason": "submitted",
+    "termination_detail": "Submitted",
+    "explicit_submission": true,
+    "agent_submission": true,
+    "exit_status": "Submitted",
+    "execution_error": null,
+    "model_requests": 0,
+    "controller_requests": 2,
+    "local_fixture": true,
+    "output_tokens": 0,
+    "repair_rounds": 0,
+    "tool_format_repair_rounds": 0,
+    "generated_tokens_charged": 0,
+    "reported_cost": 0
+  },
+  "termination_reason": "submitted",
+  "explicit_submission": true,
+  "completion_policy": "workspace-deliverable-v1",
+  "evaluation_started_at": 1792620219.5620306,
+  "evaluation_deadline": 1792620519.5620306,
+  "candidate_sha256": "f506ac43d2d1b944e4b6f6f8229650b95dffc68ffdf2f4b78234e54ae88262f9",
+  "files_changed": [],
+  "regression_signal": false,
+  "task_success": false,
+  "patch_accepted": false
+}

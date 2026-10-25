@@ -1,0 +1,19 @@
+services:
+  main:
+    pull_policy: never
+    read_only: true
+    user: 65532:65532
+    cap_drop:
+    - ALL
+    security_opt:
+    - no-new-privileges:true
+    network_mode: none
+    pids_limit: 128
+    tmpfs:
+    - /tmp:rw,nosuid,nodev,noexec,size=512m,mode=1777
+    volumes:
+    - production:/workspace/libs/partners/openai/langchain_openai/chat_models
+    - development-tests:/workspace/libs/partners/openai/tests/unit_tests
+volumes:
+  production: {}
+  development-tests: {}

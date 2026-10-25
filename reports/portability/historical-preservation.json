@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "notebook_cells": 37,
+  "protected_first_invocation_cell": 12,
+  "first_invocation_cell_and_outputs_exactly_preserved": true,
+  "unchanged_tutorial_sections": [
+    "records",
+    "selected_run_id",
+    "first_exchange",
+    "request_preview",
+    "ledger",
+    "accounting",
+    "issue_outputs"
+  ],
+  "changed_tutorial_sections": [
+    "candidate",
+    "context_demo",
+    "milestones",
+    "provenance"
+  ],
+  "source_and_patch_displays_replaced_with": "Author-written explanations; original numeric measurements and exit codes retained.",
+  "historical_numeric_bundle_content_id": "55cd01cf1f92dc4e53dd7432af20a8fd2ab1e0080fdc105e57b7c86f45f5a382",
+  "model_requests": 0
+}

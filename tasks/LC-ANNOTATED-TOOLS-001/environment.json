@@ -1,0 +1,28 @@
+{
+  "lockfile": "libs/core/uv.lock",
+  "packages": [
+    "langsmith",
+    "pytest",
+    "pytest-asyncio",
+    "blockbuster",
+    "forbiddenfruit",
+    "types-pyyaml",
+    "zstandard"
+  ],
+  "source_paths": [
+    "libs/core/langchain_core/tools"
+  ],
+  "test_paths": [
+    "libs/core/tests/unit_tests"
+  ],
+  "existing_tests": [
+    "tests/unit_tests/test_tools.py",
+    "tests/unit_tests/utils/test_function_calling.py"
+  ],
+  "python_image": "python@sha256:73aa5faee130c60da030e105ec971ccf57473fbd22ce73bd6fc9ba99a40b838d",
+  "python_series": [
+    3,
+    13
+  ],
+  "python_version": "3.13.16"
+}

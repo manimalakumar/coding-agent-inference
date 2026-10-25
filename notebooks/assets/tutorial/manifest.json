@@ -1,0 +1,47 @@
+{
+  "evidence_content_id": "55cd01cf1f92dc4e53dd7432af20a8fd2ab1e0080fdc105e57b7c86f45f5a382",
+  "matched_task": "LC-INT-TEMPERATURE-001",
+  "readable_task": "Integer-temperature metadata bug",
+  "matched_attempt": 1,
+  "matched_runs": [
+    "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-attempt-001/LC-INT-TEMPERATURE-001__387WVka",
+    "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-attempt-001/LC-INT-TEMPERATURE-001__CFAXfDX"
+  ],
+  "model_colors": {
+    "minimax/minimax-m2.5": "#2463a5",
+    "z-ai/glm-5": "#b35716"
+  },
+  "outcome_counts": [
+    {
+      "model": "minimax/minimax-m2.5",
+      "Model": "MiniMax M2.5",
+      "Accepted": 2,
+      "Unsuccessful": 15,
+      "Interrupted": 1
+    },
+    {
+      "model": "z-ai/glm-5",
+      "Model": "GLM-5",
+      "Accepted": 11,
+      "Unsuccessful": 5,
+      "Interrupted": 2
+    }
+  ],
+  "launches_per_model": 18,
+  "trajectory_request_limit": 30,
+  "trajectory_request_range": [
+    1,
+    30
+  ],
+  "budget_reference_lines": {
+    "model_requests": 30,
+    "output_tokens": 10000
+  },
+  "cost_policy": "Exact cumulative costs stop at first unknown; lower bounds are not plotted as exact totals",
+  "files": {
+    "distributions.svg": "73c27b69174c707c8ce9fe484f814b58793fc58ca1c7ee49b7ebe991ac4ceaff",
+    "main-outcomes.svg": "74ad0a361e62e8f4ffad73f6c805433b3343a469cd32a60b7295fbd2bc4dec63",
+    "matched-cost.svg": "beec6218360faffa2a5f3187f6396bd5e1f92a89c3adbf34c9fd358677890a93",
+    "matched-context.svg": "8b18fa9bc92359a13fd4c4cdd6912255cac237789948a67f24c6cf0da0ff3d92"
+  }
+}

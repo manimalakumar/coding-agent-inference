@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "tasks": [
+    {
+      "task_id": "LC-ASYNC-TOOLS-001",
+      "passed": true,
+      "model_requests": 0,
+      "log": ".local/LC-ASYNC-TOOLS-001-validation.log"
+    },
+    {
+      "task_id": "LC-SUMMARY-OVERFLOW-001",
+      "passed": true,
+      "model_requests": 0,
+      "log": ".local/LC-SUMMARY-OVERFLOW-001-validation.log"
+    },
+    {
+      "task_id": "LC-FIREWORKS-RERANK-001",
+      "passed": true,
+      "model_requests": 0,
+      "log": ".local/LC-FIREWORKS-RERANK-001-validation.log"
+    },
+    {
+      "task_id": "LC-OPENROUTER-PROVIDER-001",
+      "passed": true,
+      "model_requests": 0,
+      "log": ".local/LC-OPENROUTER-PROVIDER-001-validation.log"
+    },
+    {
+      "task_id": "LC-JSON-INPUT-001",
+      "passed": true,
+      "model_requests": 0,
+      "log": ".local/LC-JSON-INPUT-001-validation.log"
+    },
+    {
+      "task_id": "LC-INT-TEMPERATURE-001",
+      "passed": true,
+      "model_requests": 0,
+      "log": ".local/LC-INT-TEMPERATURE-001-validation.log"
+    },
+    {
+      "task_id": "LC-PARALLEL-TOOL-MERGE-001",
+      "passed": true,
+      "model_requests": 0,
+      "log": ".local/LC-PARALLEL-TOOL-MERGE-001-validation.log"
+    },
+    {
+      "task_id": "LC-CONTEXT-COUNTER-001",
+      "passed": true,
+      "model_requests": 0,
+      "log": ".local/LC-CONTEXT-COUNTER-001-validation.log"
+    },
+    {
+      "task_id": "LC-ANNOTATED-TOOLS-001",
+      "passed": true,
+      "model_requests": 0,
+      "log": ".local/LC-ANNOTATED-TOOLS-001-validation.log"
+    },
+    {
+      "task_id": "LC-CHROMA-NONE-001",
+      "passed": true,
+      "model_requests": 0,
+      "log": ".local/LC-CHROMA-NONE-001-validation.log"
+    },
+    {
+      "task_id": "LC-RESPONSES-USAGE-001",
+      "passed": true,
+      "model_requests": 0,
+      "log": ".local/LC-RESPONSES-USAGE-001-validation.log"
+    },
+    {
+      "task_id": "LC-TIMEOUT-001",
+      "passed": true,
+      "model_requests": 0,
+      "log": ".local/LC-TIMEOUT-001-validation.log"
+    },
+    {
+      "task_id": "LC-HF-ACCELERATOR-001",
+      "passed": true,
+      "model_requests": 0,
+      "log": ".local/LC-HF-ACCELERATOR-001-validation.log"
+    }
+  ],
+  "private_project_reads": 0,
+  "original_public_project_reads": 0,
+  "audit_guard_enforced": true,
+  "model_requests": 0,
+  "host_network_calls": 0,
+  "negative_controls": {
+    "original_public_source": "blocked before side effect",
+    "private_research": "blocked before side effect",
+    "private_zip": "blocked before side effect",
+    "network": "blocked before side effect"
+  },
+  "runtime": "Installed dependencies shared; project source and generated task resources loaded from isolated public copy.",
+  "blocked_external_io_attempts": 0,
+  "blocked_attempts_note": "Denied before side effects; no forbidden read or external connection succeeded."
+}

@@ -1,0 +1,194 @@
+{
+  "LC-ANNOTATED-TOOLS-001": {
+    "baseline_checksums": [
+      "f280e006fb983c5499f011d76ecacf389b1832137cbde0558d600c1d91828793"
+    ],
+    "reconstruction": "not independently reconstructed",
+    "starting_commits": [
+      "dea43436ea501d3fadeddc7f75d34b31eb4f8254"
+    ]
+  },
+  "LC-ASYNC-TOOLS-001": {
+    "baseline_checksums": [
+      "507b4a5c84a1e363de3edcb7ea4652662f4771f2e4d300602e414c636b59671c"
+    ],
+    "reconstruction": "not independently reconstructed",
+    "starting_commits": [
+      "1a3d81756fa249e4054f036ca61e6fd56b3f78df"
+    ]
+  },
+  "LC-CHROMA-NONE-001": {
+    "baseline_checksums": [
+      "dc1a3d64aaf57840622b118a5bf9c36727e047dcc01e26076f1f809100399a2c"
+    ],
+    "reconstruction": "not independently reconstructed",
+    "starting_commits": [
+      "1ebcbf1d11578cb55db26013c745dc1e5722966e"
+    ]
+  },
+  "LC-CONTEXT-COUNTER-001": {
+    "baseline_checksums": [
+      "826ada7eb6e5c72ff131d50750a923abd82fab15bdf5910107b9ccf05983c099"
+    ],
+    "reconstruction": "not independently reconstructed",
+    "starting_commits": [
+      "2019bf5ebe50324c548f67c2666a804343f9b772"
+    ]
+  },
+  "LC-FIREWORKS-RERANK-001": {
+    "baseline_checksums": [
+      "ba1c36e61bedbe7f561e904c4ce9d9794090ace4cf212f534532fffeca144afd"
+    ],
+    "reconstruction": "not independently reconstructed",
+    "starting_commits": [
+      "8df1265122b36d74b83418631eec9bf7f3ba5f45"
+    ]
+  },
+  "LC-HF-ACCELERATOR-001": {
+    "baseline_checksums": [
+      "e2a0d6f2ce7d62cdad9d7a953ac4f3a53a8bd52a8e6d8f4277b96d230cf2002f"
+    ],
+    "reconstruction": "not independently reconstructed",
+    "starting_commits": [
+      "3539ca08d92e10b65b6f3117cfd657b16b05c865"
+    ]
+  },
+  "LC-INT-TEMPERATURE-001": {
+    "baseline_checksums": [
+      "7550beb21caca13f35f297131680e42e163ad6d83fd0c3fc376bb4da14165732"
+    ],
+    "control_evidence": {
+      "artifact_id": "public-review-v1/task-reconstruction-v5",
+      "checks": [
+        {
+          "captured_before_evaluation": true,
+          "expected_control_passed": true,
+          "public_candidate_accepted": false,
+          "scenario": "baseline",
+          "separate_clean_evaluation": true,
+          "termination_control": "simulated stop label; separate adapter tests cover controller finalization"
+        },
+        {
+          "captured_before_evaluation": true,
+          "expected_control_passed": true,
+          "public_candidate_accepted": true,
+          "scenario": "reference",
+          "separate_clean_evaluation": true,
+          "termination_control": "simulated stop label; separate adapter tests cover controller finalization"
+        },
+        {
+          "captured_before_evaluation": true,
+          "expected_control_passed": true,
+          "public_candidate_accepted": true,
+          "scenario": "reference_budget",
+          "separate_clean_evaluation": true,
+          "termination_control": "simulated stop label; separate adapter tests cover controller finalization"
+        },
+        {
+          "captured_before_evaluation": true,
+          "expected_control_passed": true,
+          "public_candidate_accepted": true,
+          "scenario": "reference_error",
+          "separate_clean_evaluation": true,
+          "termination_control": "simulated stop label; separate adapter tests cover controller finalization"
+        }
+      ],
+      "control_receipt_sha256": "91b641e13f76403618b5d342b008c1aacc6cda57c9d9726a8a95402b7cd4a439",
+      "elapsed_seconds": 138.8731092499802,
+      "hidden_verifier": "unavailable: private original fixtures intentionally not bundled",
+      "model_requests": 0,
+      "other_tasks": "not independently reconstructed",
+      "platform": "linux/arm64",
+      "schema_version": 2,
+      "starting_environment": "fresh fetched commits and new BuildKit builder, --no-cache",
+      "task": "LC-INT-TEMPERATURE-001"
+    },
+    "portable_recipe": {
+      "base_images": {
+        "python": "python@sha256:4c92ffcde4dd6f1ff72a24518f49fd4990b27134987dfa31a733badde66df9f8",
+        "uv": "ghcr.io/astral-sh/uv@sha256:eb2843a1e56fd9e30c7276ce1a52cba86e64c7b385f5e3279a0e08e02dd058fc"
+      },
+      "baseline_checksum": "7550beb21caca13f35f297131680e42e163ad6d83fd0c3fc376bb4da14165732",
+      "cache_fresh": true,
+      "control_recipe_version": "public-temperature-reconstruction-v2",
+      "dockerfile": "FROM ghcr.io/astral-sh/uv@sha256:eb2843a1e56fd9e30c7276ce1a52cba86e64c7b385f5e3279a0e08e02dd058fc AS uv\nFROM python@sha256:4c92ffcde4dd6f1ff72a24518f49fd4990b27134987dfa31a733badde66df9f8\nCOPY --from=uv /uv /usr/local/bin/uv\nCOPY source /workspace\nCOPY expected-requirements.lock /tmp/expected-requirements.lock\nWORKDIR /workspace/libs/core\nENV UV_PROJECT_ENVIRONMENT=/opt/venv UV_PYTHON_DOWNLOADS=never\nRUN uv sync --frozen --group test --group lint --group typing --group test_integration\nRUN uv pip freeze --python /opt/venv/bin/python > /tmp/actual-requirements.lock && diff -u /tmp/expected-requirements.lock /tmp/actual-requirements.lock\nENV PATH=/opt/venv/bin:/usr/local/bin:/usr/bin:/bin HOME=/tmp PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/workspace/libs/core:/workspace/libs/standard-tests\nENV PYTEST_ADDOPTS=\"-p no:cacheprovider\" MYPY_CACHE_DIR=/dev/null\nUSER 65532\n",
+      "expected_failure": "INTEGER_TEMPERATURE_DROPPED",
+      "historical_semantic_protocol": "04829e5a8afb62fd012dfc4d7ad0d502079d4f1e6a5c0b64d16eb6708e61f703",
+      "model_requests": 0,
+      "platform": "linux/arm64",
+      "private_resource_mounts": 0,
+      "reference_commit": "3686bcbd966ff1ef13e5fdbde28aa0e630ddd5c4",
+      "reproducer": "from langchain_core.language_models.fake_chat_models import FakeListChatModel\nfrom langchain_core.language_models.fake import FakeListLLM\nfor model in [FakeListChatModel(responses=[\"ok\"]), FakeListLLM(responses=[\"ok\"])]:\n    assert model._get_ls_params(temperature=0).get(\"ls_temperature\") == 0, \"INTEGER_TEMPERATURE_DROPPED\"\nprint(\"Integer temperature retained for both model families\")\n",
+      "required_commands": [
+        "python -m pytest tests/unit_tests/language_models/chat_models/test_base.py tests/unit_tests/language_models/llms/test_base.py tests/unit_tests/test_public_location.py -q",
+        "ruff check --no-cache langchain_core/language_models/chat_models.py langchain_core/language_models/llms.py tests/unit_tests/test_public_location.py",
+        "ruff format --check --no-cache langchain_core/language_models/chat_models.py langchain_core/language_models/llms.py tests/unit_tests/test_public_location.py",
+        "mypy --cache-dir=/dev/null langchain_core/language_models/chat_models.py langchain_core/language_models/llms.py"
+      ],
+      "requirements_lock": "annotated-types==0.7.0\nanyio==4.12.0\nargon2-cffi==25.1.0\nargon2-cffi-bindings==25.1.0\narrow==1.4.0\nasttokens==3.0.1\nasync-lru==2.0.5\nattrs==25.4.0\nbabel==2.17.0\nbeautifulsoup4==4.14.3\nbleach==6.3.0\nblockbuster==1.5.26\ncertifi==2025.11.12\ncffi==2.0.0\ncharset-normalizer==3.4.4\ncomm==0.2.3\ndebugpy==1.8.17\ndecorator==5.2.1\ndefusedxml==0.7.1\nexecnet==2.1.2\nexecuting==2.2.1\nfastjsonschema==2.21.2\nforbiddenfruit==0.1.4\nfqdn==1.5.1\nfreezegun==1.5.5\ngrandalf==0.8\nh11==0.16.0\nhttpcore==1.0.9\nhttpx==0.28.1\nidna==3.11\niniconfig==2.3.0\nipykernel==7.1.0\nipython==9.8.0\nipython-pygments-lexers==1.1.1\nipywidgets==8.1.8\nisoduration==20.11.0\njedi==0.19.2\njinja2==3.1.6\njson5==0.12.1\njsonpatch==1.33\njsonpointer==3.0.0\njsonschema==4.25.1\njsonschema-specifications==2025.9.1\njupyter==1.1.1\njupyter-client==8.6.3\njupyter-console==6.6.3\njupyter-core==5.9.1\njupyter-events==0.12.0\njupyter-lsp==2.3.0\njupyter-server==2.17.0\njupyter-server-terminals==0.5.3\njupyterlab==4.5.0\njupyterlab-pygments==0.3.0\njupyterlab-server==2.28.0\njupyterlab-widgets==3.0.16\n-e file:///workspace/libs/core\nlangchain-tests @ file:///workspace/libs/standard-tests\nlangchain-text-splitters @ file:///workspace/libs/text-splitters\nlangsmith==0.7.3\nlark==1.3.1\nlibrt==0.7.5\nmarkdown-it-py==4.0.0\nmarkupsafe==3.0.3\nmatplotlib-inline==0.2.1\nmdurl==0.1.2\nmistune==3.1.4\nmypy==1.19.1\nmypy-extensions==1.1.0\nnbclient==0.10.2\nnbconvert==7.17.0\nnbformat==5.10.4\nnest-asyncio==1.6.0\nnotebook==7.5.0\nnotebook-shim==0.2.4\nnumpy==2.3.5\norjson==3.11.5\npackaging==26.0\npandocfilters==1.5.1\nparso==0.8.5\npathspec==0.12.1\npexpect==4.9.0\nplatformdirs==4.5.1\npluggy==1.6.0\nprometheus-client==0.23.1\nprompt-toolkit==3.0.52\npsutil==7.1.3\nptyprocess==0.7.0\npure-eval==0.2.3\npy-cpuinfo==9.0.0\npycparser==2.23\npydantic==2.12.5\npydantic-core==2.41.5\npygments==2.19.2\npyparsing==3.2.5\npytest==9.0.2\npytest-asyncio==1.3.0\npytest-benchmark==5.2.3\npytest-codspeed==4.3.0\npytest-mock==3.15.1\npytest-recording==0.13.4\npytest-socket==0.7.0\npytest-watcher==0.6.3\npytest-xdist==3.8.0\npython-dateutil==2.9.0.post0\npython-json-logger==4.0.0\npyyaml==6.0.3\npyzmq==27.1.0\nreferencing==0.37.0\nrequests==2.32.5\nrequests-toolbelt==1.0.0\nresponses==0.25.8\nrfc3339-validator==0.1.4\nrfc3986-validator==0.1.1\nrfc3987-syntax==1.1.0\nrich==14.2.0\nrpds-py==0.30.0\nruff==0.15.1\nsend2trash==1.8.3\nsetuptools==82.0.0\nsix==1.17.0\nsoupsieve==2.8\nstack-data==0.6.3\nsyrupy==5.1.0\ntenacity==9.1.4\nterminado==0.18.1\ntinycss2==1.4.0\ntornado==6.5.2\ntraitlets==5.14.3\ntypes-pyyaml==6.0.12.20250915\ntypes-requests==2.32.4.20260107\ntyping-extensions==4.15.0\ntyping-inspection==0.4.2\ntzdata==2025.2\nuri-template==1.3.0\nurllib3==2.6.3\nuuid-utils==0.14.0\nvcrpy==8.1.1\nwatchdog==6.0.0\nwcwidth==0.2.14\nwebcolors==25.10.0\nwebencodings==0.5.1\nwebsocket-client==1.9.0\nwidgetsnbextension==4.0.15\nwrapt==2.0.1\nxxhash==3.6.0\nzstandard==0.25.0\n",
+      "source_files": [
+        "libs/core/langchain_core/language_models/chat_models.py",
+        "libs/core/langchain_core/language_models/llms.py"
+      ],
+      "starting_commit": "9c160e2368f7f44bd41e967a7b3371208cf13a52"
+    },
+    "reconstruction": "independent public controls passed; original hidden verifier unavailable",
+    "starting_commits": [
+      "9c160e2368f7f44bd41e967a7b3371208cf13a52"
+    ]
+  },
+  "LC-JSON-INPUT-001": {
+    "baseline_checksums": [
+      "9aa6b00f0f1354dc49eccc7e71c633a10c544d005884e187f826a41dee12a113"
+    ],
+    "reconstruction": "not independently reconstructed",
+    "starting_commits": [
+      "1499aa9900987c6050670eb1cbd47bc4db0a6d18"
+    ]
+  },
+  "LC-OPENROUTER-PROVIDER-001": {
+    "baseline_checksums": [
+      "dd2ff394d54988bd6336874888c7337db612d4a06c47c5c713ef4df977300873"
+    ],
+    "reconstruction": "not independently reconstructed",
+    "starting_commits": [
+      "367df8e3d95da4b766d2a262b40ed7cb56fcc464"
+    ]
+  },
+  "LC-PARALLEL-TOOL-MERGE-001": {
+    "baseline_checksums": [
+      "439bad9d0e6c998feef797510938eb8a4ad5bc0be262ddb25cb90917dffd3497"
+    ],
+    "reconstruction": "not independently reconstructed",
+    "starting_commits": [
+      "3686bcbd966ff1ef13e5fdbde28aa0e630ddd5c4"
+    ]
+  },
+  "LC-RESPONSES-USAGE-001": {
+    "baseline_checksums": [
+      "07c07316f853e74980c44a6885fe18288bcbc4e90ff94117379a21ae5487724d"
+    ],
+    "reconstruction": "not independently reconstructed",
+    "starting_commits": [
+      "9aa75eaef387459ce7e2beaad25c4607ac626d24"
+    ]
+  },
+  "LC-SUMMARY-OVERFLOW-001": {
+    "baseline_checksums": [
+      "7fc2f9b8b6ef4799fe4e033b94c702379040eef84ab005f2a5f5cb4ea683a576"
+    ],
+    "reconstruction": "not independently reconstructed",
+    "starting_commits": [
+      "fc7dc7757a46ebb444be1ead0efdeab5ca7ad8ce"
+    ]
+  },
+  "LC-TIMEOUT-001": {
+    "baseline_checksums": [
+      "3ead9053d48be8d728e5bb85d353ba9a45e30b55f4b87d518dd58c093900a87c"
+    ],
+    "reconstruction": "not independently reconstructed",
+    "starting_commits": [
+      "4ee6112161e63c320320da4ad4d56380604c35f1"
+    ]
+  }
+}

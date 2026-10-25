@@ -1,0 +1,13 @@
+{
+  "content_id": "55cd01cf1f92dc4e53dd7432af20a8fd2ab1e0080fdc105e57b7c86f45f5a382",
+  "files": {
+    "attempts.json": "70c82fdd785290167fb738150efaac1bb868e7068ac5c2050ea6d1b8500612d2",
+    "context.json": "d0c6da7e94a9bff80c2ab0befbbf9392e1b5d0011c29fcb94603c7fe9f830ea3",
+    "requests.json": "5e49d560226657d2e716d03510166870e5e4864950ec4ba780a33e65a9ce445a",
+    "study.json": "c2461d463d2c143479f0a21e178aecfb3de8482e74b5f6145b46238e419124b2",
+    "tasks.json": "5375df28552fa167f216c388da5128f898424362445f2d3aa0253b7ea4752a7a"
+  },
+  "identity": "Sanitized derived evidence, mapped to original run IDs; not native byte identity",
+  "projection_version": "public-evidence-v1",
+  "schema_version": 1
+}

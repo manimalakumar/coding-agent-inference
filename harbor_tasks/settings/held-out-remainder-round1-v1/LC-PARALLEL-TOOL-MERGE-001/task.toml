@@ -1,0 +1,42 @@
+schema_version = "1.4"
+artifacts = []
+
+[metadata]
+task_id = "LC-PARALLEL-TOOL-MERGE-001"
+starting_commit = "3686bcbd966ff1ef13e5fdbde28aa0e630ddd5c4"
+baseline_checksum = "439bad9d0e6c998feef797510938eb8a4ad5bc0be262ddb25cb90917dffd3497"
+experimental_setting = "held-out-remainder-round1-v1"
+approval_status = "checks_passed_pending_review"
+completion_policy = "workspace-deliverable-v1"
+agent_budget_seconds = 1200
+evaluation_budget_seconds = 300
+configuration_revision = 5
+task_type = "bug_fix"
+split = "held_out"
+round = 1
+
+[environment]
+docker_image = "sha256:26bd65ad96972f0f875d6e913beb01552e519213c9f854de73d73576e200bdd3"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048
+workdir = "/workspace/libs/core"
+
+[agent]
+timeout_sec = 1280
+user = "65532:65532"
+
+[verifier]
+timeout_sec = 300
+environment_mode = "separate"
+user = "root"
+[[verifier.collect]]
+command = "rm -f /logs/artifacts/candidate.tar && tar --mode='u+rwX,go+rX' -cf /logs/artifacts/candidate.tar -C /workspace libs/core/langchain_core/utils libs/core/tests/unit_tests"
+user = "root"
+timeout_sec = 90
+
+[verifier.environment]
+docker_image = "sha256:70878bb5b284988cf5b4957b33a3abffb39c14fb83198ca017ef9b522b35047d"
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048

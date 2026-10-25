@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "failure_category": "tool_format_recovery_failure",
+  "contributing_factors": [
+    "incremental_file_creation_instruction_not_followed",
+    "per_response_output_ceiling",
+    "repeated_large_existing_source_rewrites",
+    "read_only_test_subdirectory_targeted_in_unexecuted_payload"
+  ],
+  "reason": "Prompt-only incremental-file development intervention did not yield a usable patch in this fresh diagnostic attempt. Requests 8, 20 and 21 each consumed 1500 completion tokens and returned unterminated JSON. No new file write from them executed. Request 8 again targeted an existing read-only test subdirectory. The initial source replacement at request 11 was abandoned; request 18 restored the unchanged file. Trusted capture contains no source/test changes. Eight existing tests pass, reproducer fails, and all eighteen feature acceptance cases fail on the baseline.",
+  "candidate_modified_by_reviewer": false,
+  "additional_model_requests": 0,
+  "code_repair_rounds": 0,
+  "code_repair_measurement": "No candidate development check was run after the initial edit; restoration/recovery before a candidate test is reported separately rather than counted as a post-test code-repair round.",
+  "tool_format_repair_rounds": 2,
+  "malformed_response_evidence": [
+    {
+      "request": 8,
+      "completion_tokens": 1500,
+      "reported_cost_usd": 0.00224928,
+      "finish_reason": "tool_calls",
+      "json_error": "Unterminated string starting at: line 1 column 13 (char 12)",
+      "unexecuted_command_prefix": "{\"command\": \"cat <<'EOF' > /workspace/libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_context_editing_custom_token_counter.py\\n\\\"\\\"\\\"Regression tests for custom token counter in ContextEditingMiddleware.\\\"\\\"\\\"\\n\\nfrom __future__ impor"
+    },
+    {
+      "request": 20,
+      "completion_tokens": 1500,
+      "reported_cost_usd": 0.00314211,
+      "finish_reason": "tool_calls",
+      "json_error": "Unterminated string starting at: line 1 column 13 (char 12)",
+      "unexecuted_command_prefix": "{\"command\": \"cat > /workspace/libs/langchain_v1/langchain/agents/middleware/context_editing.py << 'EOF'\\n\\\"\\\"\\\"Context editing middleware.\\n\\nMirrors Anthropic's context editing capabilities by clearing older tool results once the\\nconversation grows beyond a "
+    },
+    {
+      "request": 21,
+      "completion_tokens": 1500,
+      "reported_cost_usd": 0.00253197,
+      "finish_reason": "tool_calls",
+      "json_error": "Unterminated string starting at: line 1 column 13 (char 12)",
+      "unexecuted_command_prefix": "{\"command\": \"cat > /workspace/libs/langchain_v1/langchain/agents/middleware/context_editing.py << 'ENDOFFILE'\\n\\\"\\\"\\\"Context editing middleware.\\n\\nMirrors Anthropic's context editing capabilities by clearing older tool results once the\\nconversation grows bey"
+    }
+  ],
+  "workflow_observations": {
+    "reproducer_executed_first": true,
+    "initial_source_change_request": 11,
+    "failed_helper_restore_request": 15,
+    "failed_baseline_copy_request": 16,
+    "successful_baseline_restore_request": 18,
+    "incremental_new_file_creation_executed": false,
+    "new_regression_created": false,
+    "original_instruction_for_test_locations_unchanged": true,
+    "directory_control_diagnosis_passed_to_agent": false,
+    "previous_patch_or_hidden_feedback_passed_to_agent": false,
+    "first_request_roles": [
+      "system",
+      "user",
+      "user"
+    ]
+  },
+  "original_run_sha256": {
+    "agent/isolation.json": "62b1e544e0f280d121739cefa13a8a4218aa3b16ddedca6e69f3cd1928862a64",
+    "agent/mini-swe-agent.trajectory.json": "b68cef1c4b9213970eb588bcf14937d3485a735ee53c4de6cc40db870ad1706c",
+    "agent/process-baseline.json": "2e3590463af9fdc7a2e2205f51fd84ee5f1706f56345b3b8b1881c5fc3ed70a8",
+    "agent/quiescence.json": "fea343c141ef21778faf9509de729e4baaf72a50dc4a84dfeba3ee696bc58f92",
+    "agent/receipt.json": "cfff3d6646c4a9fed1d3f337ea6b08f4e68bfbf6528a180e3c412b244f8d7673",
+    "agent/requests.jsonl": "31a8f5e0336fa5ee8557b84c1ee66b0b4fc8251118b77303dffa36e433ba0b58",
+    "agent/source-snapshot.json": "5db2b89ddd37cb8dc0df222d1c8c66ceb058473c0ddb9910ba894a0b32de3cad",
+    "agent/trajectory.json": "793436e730644509351178aec796eef95d7743917834e138d99700dae78600bf",
+    "artifacts/logs/artifacts/candidate.tar": "a57e1559efe1a82be1464006f045dee63779b552694d39e2b5e341c008479c26",
+    "artifacts/logs/artifacts/receipt.json": "cfff3d6646c4a9fed1d3f337ea6b08f4e68bfbf6528a180e3c412b244f8d7673",
+    "artifacts/manifest.json": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f",
+    "config.json": "bc434d65937e4023106bd712513c92f80f3303523eeaaecaa655afba380ff18a",
+    "lock.json": "040f3df3a7656bf98511f589e00173de47a1efcd6c9cbee64cf9021e7e7eba5c",
+    "result.json": "6cb83f295806e78e75983c25c65a02c49af9a87eba5bfb7f4a305bc2cbdf82da",
+    "trial.log": "3cbaa8db9f213aa9cd0b0d274eac929d0a9faf9cdd86d0fe2cd245718f910ae3",
+    "verifier/checks.json": "90b855d4e54d0639ee74d3bb8546374cf714d548999ff3d7016eb66176edbd5e",
+    "verifier/reward.json": "2d817bc3269952334130ccbf06e52d2975a6d1af8cd46b89f0fe8b01c6ac7a1f",
+    "verifier/submission.patch": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verifier/test-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

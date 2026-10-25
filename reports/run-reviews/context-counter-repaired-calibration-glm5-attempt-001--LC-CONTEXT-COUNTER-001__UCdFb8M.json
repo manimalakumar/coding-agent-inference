@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "failure_category": null,
+  "contributing_factors": [],
+  "reason": "Accepted final candidate, checks_passed_pending_review: the model submits after all required development checks pass, and the trusted evaluator confirms all nine required checks including 18 hidden tests, 7 new regressions, 8 existing tests, lint, format and full strict typing. This is one successful fresh calibration attempt under the repaired setting, not a reliability estimate; no earlier failed workspace or verdict is promoted.",
+  "original_verdict_preserved": true,
+  "code_repair_rounds": null,
+  "code_repair_measurement": "Not instrumented; never infer from tool-format recovery counts.",
+  "original_run_sha256": {
+    "agent/isolation.json": "62b1e544e0f280d121739cefa13a8a4218aa3b16ddedca6e69f3cd1928862a64",
+    "agent/mini-swe-agent.trajectory.json": "221a66bd79173b300f5c4a3fc252246050f03bd6b7c9cb8e9a00bdd27b190d01",
+    "agent/process-baseline.json": "56301edf33f0cb5a2e2bc500cc9136edf5408fb3c1f67e427e5dd1ed11ebbd7b",
+    "agent/quiescence.json": "fea343c141ef21778faf9509de729e4baaf72a50dc4a84dfeba3ee696bc58f92",
+    "agent/receipt.json": "e7eaf14ff5a3a043f8f7f37f628379ca13a55c52f3fb22930f8a1ea16d65db04",
+    "agent/requests.jsonl": "c842e65d260aace8d0830f83650bdaab441e6eb27877f272133a6de4bf6f0c4c",
+    "agent/source-snapshot.json": "5db2b89ddd37cb8dc0df222d1c8c66ceb058473c0ddb9910ba894a0b32de3cad",
+    "agent/trajectory.json": "af6b515cfa92f34c2dc1666e2c56761505d29a49fb969b64fb2065fa212c38f6",
+    "artifacts/logs/artifacts/candidate.tar": "a98facd9ce33c227a04a1b12eed5ca2668f377fd41bceb4c7ac1e7a2c9b58cc1",
+    "artifacts/logs/artifacts/receipt.json": "e7eaf14ff5a3a043f8f7f37f628379ca13a55c52f3fb22930f8a1ea16d65db04",
+    "artifacts/manifest.json": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f",
+    "config.json": "a7a4c41e1c9c13a9bf18f4c81b34b9990256f0ac27e05fbd017669c719d5c640",
+    "lock.json": "baa9ae95961871069222743c21077f16a86fb448ffb680990373336a21f648b7",
+    "result.json": "61e2b4c69e9ac867d09296cbf8f2a3020fa3b2eea01f7c3789583fe173eef3d9",
+    "trial.log": "3cbaa8db9f213aa9cd0b0d274eac929d0a9faf9cdd86d0fe2cd245718f910ae3",
+    "verifier/checks.json": "ca75d20e4397e0285e9123d6398d20979a917f1e5c6f9621fbcdabd6914d29bb",
+    "verifier/reward.json": "beb2c05486dc09e49c0466bb27538ba17cf88f94ac4cdeb183a6891d1449c7cf",
+    "verifier/submission.patch": "5c424ada94c2a6e9ca853a7c36e1ab2de420be6480d917d2f86e58c407e93a65",
+    "verifier/test-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

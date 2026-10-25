@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "classification": "unsuccessful",
+  "failure_category": "destructive_edit_failure",
+  "contributing_factors": [
+    "output_ceiling_tool_format_recovery_failure"
+  ],
+  "reason": "Destructive edit failure: the agent overwrote tools/base.py with a 32-line fragment. Output-ceiling/tool-format recovery failure contributed; malformed-response repair exhaustion stopped submission.",
+  "tool_format_repair_rounds": 2,
+  "tool_format_error_responses": 3,
+  "code_repair_rounds": null,
+  "code_repair_measurement": "not instrumented for this historical run; do not equate tool-format repair with code repair or Ruff formatting",
+  "accounting_reconciliation": {
+    "raw_total_usd": 0.03044406,
+    "native_trajectory_total_usd": 0.02845695,
+    "difference_usd": 0.00198711,
+    "request_26_cost_usd": 0.00198711
+  },
+  "measurement_note": "The native trajectory instance_cost is $0.02845695; the complete raw total is $0.03044406. The $0.00198711 difference equals request 26 cost. This finding does not establish that all malformed responses were omitted. The separate Harbor derived model_usage rollup is also incomplete; raw request usage remains authoritative.",
+  "candidate_modified_by_reviewer": false,
+  "original_run_sha256": {
+    "lock.json": "e77c05948ce2777b5b88c4b44fae40dd199eb84bb8173db26b14e83d631eeedf",
+    "result.json": "022d0d9a42f176c224b763eaf04d8e958ff6e8a82e65287cd4b902b91cef8d2c",
+    "config.json": "2bec06158974e2736ea36ff7a5f46766d2a3eeee9620e58128bbde7d8df140b5",
+    "trial.log": "67e7be0a76ae1725e2672748546d1bce9dc1ed8b9a8a805ba31f5f3f818bf2d2",
+    "review.json": "b5fec8b8d9f6e2521188c445215747038bcc97bce1dd3cd59bbdcbec75998e70",
+    "artifacts/manifest.json": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f",
+    "agent/trajectory.json": "d9103eab8b865b660c5b26a63c8b8e3bccebccc766098fcf01548b8c75130b0b",
+    "agent/requests.jsonl": "65e6917a73c7392ce77e84a1d819b0e14017d36300f1bc8a359bb2a12bfd9ef9",
+    "agent/isolation.json": "62b1e544e0f280d121739cefa13a8a4218aa3b16ddedca6e69f3cd1928862a64",
+    "agent/source-snapshot.json": "e6b7cabbb46dc15d6fd61510aa8da4e2dcb2cb2a8d901addf5fb36ea6ab01fed",
+    "agent/mini-swe-agent.trajectory.json": "a463137f74edc09175ff3251ee7bb7f67f0d9c6270531088f521fcff1529414c",
+    "agent/receipt.json": "d4c4fa68c1db492712bab5538bc6a1543a83f6868c49b06e1b9a6a1f78d27d90",
+    "verifier/submission.patch": "2bfbe71159a483b1b7ee73fcbbb7cd63994aca07a8110978f39d8d37f9ffdd05",
+    "verifier/test-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verifier/reward.json": "c7a7d13dcb02aee47de162fc0a9a61108461c7b12368ef60a41d3d0c80b67b96",
+    "verifier/checks.json": "adc67894ddc945f1692159df634bebb5b2fc2c0f282c5db6d09010efa429da42",
+    "artifacts/logs/artifacts/candidate.tar": "380e632f160a64d987a8c81b6d09754a5c3d512bfc035fc7a60ea529dc913ecb",
+    "artifacts/logs/artifacts/receipt.json": "d4c4fa68c1db492712bab5538bc6a1543a83f6868c49b06e1b9a6a1f78d27d90"
+  }
+}

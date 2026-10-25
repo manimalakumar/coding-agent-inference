@@ -1,0 +1,328 @@
+{
+  "schema_version": 2,
+  "presentation_id": "minimax-glm5-educational-v2-heldout-remainder-repeats-v1",
+  "models": [
+    "minimax/minimax-m2.5",
+    "z-ai/glm-5"
+  ],
+  "development_plan": "configs/comparison-four-tasks.plan.json",
+  "feature_study": "context-counter-feature-v1",
+  "feature_run_id": "context-counter-feature-v1-minimax-attempt-001/LC-CONTEXT-COUNTER-001__y8tgjJy",
+  "glm_compatibility": "reports/compatibility/glm-5-z-ai-fp8-v1/result.json",
+  "task_families": {
+    "LC-TIMEOUT-001": "Client initialization and configuration preservation",
+    "LC-RESPONSES-USAGE-001": "Response usage accounting",
+    "LC-ANNOTATED-TOOLS-001": "Type annotations and tool schema descriptions",
+    "LC-CHROMA-NONE-001": "Retrieval with missing document content",
+    "LC-CONTEXT-COUNTER-001": "Feature development: pluggable context token counting"
+  },
+  "bug_walkthroughs": [
+    {
+      "run_id": "LC-TIMEOUT-001-dc26d992137f",
+      "question": "Does a submitted patch preserve the actual configured client values?",
+      "requests": [
+        1,
+        2,
+        20,
+        22
+      ],
+      "learning": "Constructor success alone does not establish preservation of values on the underlying clients. Read file-policy and post-run diagnostic evidence without promoting diagnostics to a successful attempt."
+    },
+    {
+      "run_id": "annotated-tools-minimax-attempt-001/LC-ANNOTATED-TOOLS-001__CFC988s",
+      "question": "Can an editing failure prevent acceptance tests from collecting?",
+      "requests": [
+        1,
+        10,
+        15,
+        25
+      ],
+      "learning": "A destructive replacement can turn a local edit into an import/collection failure. Small edits and a Git-free restore resource address recoverability; their benefit still requires separate experiments."
+    },
+    {
+      "run_id": "annotated-tools-focused-editing-minimax-attempt-001/LC-ANNOTATED-TOOLS-001__UEiZNLt",
+      "question": "Why can an accepted patch retain an unsuccessful historical verdict?",
+      "requests": [
+        1,
+        14,
+        23,
+        30
+      ],
+      "learning": "This older attempt accepted the patch but failed its submission protocol. Its historical task verdict stays unsuccessful even though the newer policy evaluates captured workspaces independently of submission."
+    },
+    {
+      "run_id": "annotated-tools-workspace-v2-minimax-attempt-001/LC-ANNOTATED-TOOLS-001__4SxgJND",
+      "question": "What does one end-to-end successful attempt establish?",
+      "requests": [
+        1,
+        10,
+        20,
+        21
+      ],
+      "learning": "A passing attempt demonstrates that the full workflow can complete. It does not establish a population success rate or show that a particular policy change caused the success."
+    },
+    {
+      "run_id": "responses-usage-minimax-attempt-001/LC-RESPONSES-USAGE-001__vsykNXt",
+      "question": "How do regression, existing tests and trusted acceptance complement one another?",
+      "requests": [
+        1,
+        16,
+        28,
+        30
+      ],
+      "learning": "Development regression tests, unchanged existing tests and private acceptance checks answer different questions. A single successful task does not establish cross-task reliability."
+    },
+    {
+      "run_id": "chroma-none-workspace-v1-minimax-attempt-002/LC-CHROMA-NONE-001__93XXRpA",
+      "question": "Can development checks pass while trusted acceptance still rejects a partial fix?",
+      "requests": [
+        1,
+        11,
+        20,
+        30
+      ],
+      "learning": "Passing development checks can miss a behavior covered by trusted acceptance. Read the actual failing assertions before interpreting a partial fix as success."
+    }
+  ],
+  "held_out": {
+    "status": "four_attempts_completed_one_infrastructure_interruption",
+    "task_ids": [
+      "LC-ASYNC-TOOLS-001",
+      "LC-SUMMARY-OVERFLOW-001"
+    ],
+    "selection_frozen": true,
+    "frozen_setting_id": "b9c8933595b8e4f9f50e939850e3758a54d0fd8d0001448eb0ad1f03a7c5b010",
+    "run_ids": [
+      "held-out-two-task-v1-LC-ASYNC-TOOLS-001-minimax-attempt-001/LC-ASYNC-TOOLS-001__JxC3Deu",
+      "held-out-two-task-v1-LC-ASYNC-TOOLS-001-glm5-attempt-001/LC-ASYNC-TOOLS-001__w4jfk9B",
+      "held-out-two-task-v1-LC-SUMMARY-OVERFLOW-001-glm5-attempt-001/LC-SUMMARY-OVERFLOW-001__rpB7EwZ",
+      "held-out-two-task-v1-LC-SUMMARY-OVERFLOW-001-minimax-attempt-001/LC-SUMMARY-OVERFLOW-001__oqQP8ui",
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-minimax-attempt-001/LC-FIREWORKS-RERANK-001__jL4JLbw",
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-glm5-attempt-001/LC-FIREWORKS-RERANK-001__B7eX8ZX",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-glm5-attempt-001/LC-OPENROUTER-PROVIDER-001__cXyDWcg",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-minimax-attempt-001/LC-OPENROUTER-PROVIDER-001__FkuYm4J",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-minimax-attempt-001/LC-HF-ACCELERATOR-001__HMQKVCY",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-glm5-attempt-001/LC-HF-ACCELERATOR-001__YMcFSie",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-glm5-attempt-001/LC-JSON-INPUT-001__qipi9TX",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-minimax-attempt-001/LC-JSON-INPUT-001__ZVh6vHt",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-attempt-001/LC-INT-TEMPERATURE-001__387WVka",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-attempt-001/LC-INT-TEMPERATURE-001__CFAXfDX",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-glm5-attempt-001/LC-PARALLEL-TOOL-MERGE-001__aTDK7FV",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-minimax-attempt-001/LC-PARALLEL-TOOL-MERGE-001__RqdbSF5",
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-glm5-attempt-002/LC-FIREWORKS-RERANK-001__LtsakZ5",
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-minimax-attempt-002/LC-FIREWORKS-RERANK-001__RfEaBLW",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-minimax-attempt-002/LC-OPENROUTER-PROVIDER-001__XHKuTFx",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-glm5-attempt-002/LC-OPENROUTER-PROVIDER-001__JgiKep5",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-glm5-attempt-002/LC-HF-ACCELERATOR-001__kPwBEmC",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-minimax-attempt-002/LC-HF-ACCELERATOR-001__pkN2Y6o",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-minimax-attempt-002/LC-JSON-INPUT-001__F7m3LCt",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-glm5-attempt-002/LC-JSON-INPUT-001__5nEfq8b",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-attempt-002/LC-INT-TEMPERATURE-001__SfC7ooN",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-attempt-002/LC-INT-TEMPERATURE-001__DwsvJbD",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-minimax-attempt-002/LC-PARALLEL-TOOL-MERGE-001__v5hJ2s8",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-glm5-attempt-002/LC-PARALLEL-TOOL-MERGE-001__2Fqn99Y",
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-minimax-attempt-003/LC-FIREWORKS-RERANK-001__MZT5EYS",
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-glm5-attempt-003/LC-FIREWORKS-RERANK-001__3Jtmh7T",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-glm5-attempt-003/LC-OPENROUTER-PROVIDER-001__CBSo9uK",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-minimax-attempt-003/LC-OPENROUTER-PROVIDER-001__VXB5Um6",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-minimax-attempt-003/LC-HF-ACCELERATOR-001__uA6BK5t",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-glm5-attempt-003/LC-HF-ACCELERATOR-001__PLjUMd2",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-glm5-attempt-003/LC-JSON-INPUT-001__b78jfqp",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-minimax-attempt-003/LC-JSON-INPUT-001__88ppdMr",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-attempt-003/LC-INT-TEMPERATURE-001__Z9pzVvE",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-attempt-003/LC-INT-TEMPERATURE-001__a6VKqqv",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-glm5-attempt-003/LC-PARALLEL-TOOL-MERGE-001__zKnHArd",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-minimax-attempt-003/LC-PARALLEL-TOOL-MERGE-001__KCSDxLb"
+    ],
+    "launch_enabled": false,
+    "prerequisite": "Validated and frozen before the four authorized attempts. No automatic reruns.",
+    "request_run_ids": {
+      "minimax": "held-out-two-task-v1-LC-ASYNC-TOOLS-001-minimax-attempt-001/LC-ASYNC-TOOLS-001__JxC3Deu",
+      "glm5": "held-out-two-task-v1-LC-ASYNC-TOOLS-001-glm5-attempt-001/LC-ASYNC-TOOLS-001__w4jfk9B"
+    },
+    "prior_round_run_ids": [
+      "held-out-two-task-v1-LC-ASYNC-TOOLS-001-minimax-attempt-001/LC-ASYNC-TOOLS-001__JxC3Deu",
+      "held-out-two-task-v1-LC-ASYNC-TOOLS-001-glm5-attempt-001/LC-ASYNC-TOOLS-001__w4jfk9B",
+      "held-out-two-task-v1-LC-SUMMARY-OVERFLOW-001-glm5-attempt-001/LC-SUMMARY-OVERFLOW-001__rpB7EwZ",
+      "held-out-two-task-v1-LC-SUMMARY-OVERFLOW-001-minimax-attempt-001/LC-SUMMARY-OVERFLOW-001__oqQP8ui"
+    ]
+  },
+  "run_labels": {
+    "LC-TIMEOUT-001-b01980bd6da5": "Timeout \u00b7 early pilot",
+    "LC-TIMEOUT-001-dc26d992137f": "Timeout \u00b7 submitted pilot",
+    "annotated-tools-minimax-attempt-001/LC-ANNOTATED-TOOLS-001__CFC988s": "Annotated \u00b7 original",
+    "annotated-tools-focused-editing-minimax-attempt-001/LC-ANNOTATED-TOOLS-001__UEiZNLt": "Annotated \u00b7 focused edit",
+    "annotated-tools-workspace-v2-minimax-attempt-001/LC-ANNOTATED-TOOLS-001__4SxgJND": "Annotated \u00b7 workspace v2",
+    "responses-usage-minimax-attempt-001/LC-RESPONSES-USAGE-001__vsykNXt": "Responses \u00b7 attempt 001",
+    "chroma-none-workspace-v1-minimax-attempt-001/LC-CHROMA-NONE-001__VHPVfd4": "Chroma \u00b7 infrastructure 001",
+    "chroma-none-workspace-v1-minimax-attempt-002/LC-CHROMA-NONE-001__93XXRpA": "Chroma \u00b7 attempt 002",
+    "context-counter-feature-v1-minimax-attempt-001/LC-CONTEXT-COUNTER-001__y8tgjJy": "Feature \u00b7 calibration 001",
+    "context-counter-incremental-files-v1-minimax-attempt-001/LC-CONTEXT-COUNTER-001__jMEPg2U": "Feature \u00b7 incremental files v1",
+    "context-counter-response-6000-v2-minimax-attempt-001/LC-CONTEXT-COUNTER-001__Fuw63e4": "Feature tuning: 6000-token response ceiling",
+    "context-counter-glm5-calibration-v1-attempt-001/LC-CONTEXT-COUNTER-001__okup4qo": "GLM-5 feature calibration: 6000-token response ceiling",
+    "context-counter-repaired-calibration-v1-minimax-attempt-001/LC-CONTEXT-COUNTER-001__AdqPVtS": "MiniMax feature calibration: repaired environment",
+    "context-counter-repaired-calibration-v1-glm5-attempt-001/LC-CONTEXT-COUNTER-001__UCdFb8M": "GLM-5 feature calibration: repaired environment"
+  },
+  "feature_tuning_run_ids": [
+    "context-counter-incremental-files-v1-minimax-attempt-001/LC-CONTEXT-COUNTER-001__jMEPg2U"
+  ],
+  "response_ceiling_run_id": "context-counter-response-6000-v2-minimax-attempt-001/LC-CONTEXT-COUNTER-001__Fuw63e4",
+  "glm_feature_calibration_run_id": "context-counter-glm5-calibration-v1-attempt-001/LC-CONTEXT-COUNTER-001__okup4qo",
+  "environment_repair_setting": "configs/context-counter-repaired-environment.frozen-setting.json",
+  "paid_calibration_status": "two_authorized_attempts_completed_no_additional_runs",
+  "repaired_calibration_runs": {
+    "minimax": "context-counter-repaired-calibration-v1-minimax-attempt-001/LC-CONTEXT-COUNTER-001__AdqPVtS",
+    "glm5": "context-counter-repaired-calibration-v1-glm5-attempt-001/LC-CONTEXT-COUNTER-001__UCdFb8M"
+  },
+  "context_measurement_protocol": "reports/context-measurement-v1/protocol.json",
+  "context_measurement_scope": "Two explicitly selected repaired feature-calibration attempts; no context intervention",
+  "held_out_remaining": {
+    "status": "twelve_attempts_completed",
+    "setting": "held-out-remainder-round1-v1",
+    "setting_id": "04829e5a8afb62fd012dfc4d7ad0d502079d4f1e6a5c0b64d16eb6708e61f703",
+    "run_ids": [
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-minimax-attempt-001/LC-FIREWORKS-RERANK-001__jL4JLbw",
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-glm5-attempt-001/LC-FIREWORKS-RERANK-001__B7eX8ZX",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-glm5-attempt-001/LC-OPENROUTER-PROVIDER-001__cXyDWcg",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-minimax-attempt-001/LC-OPENROUTER-PROVIDER-001__FkuYm4J",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-minimax-attempt-001/LC-HF-ACCELERATOR-001__HMQKVCY",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-glm5-attempt-001/LC-HF-ACCELERATOR-001__YMcFSie",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-glm5-attempt-001/LC-JSON-INPUT-001__qipi9TX",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-minimax-attempt-001/LC-JSON-INPUT-001__ZVh6vHt",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-attempt-001/LC-INT-TEMPERATURE-001__387WVka",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-attempt-001/LC-INT-TEMPERATURE-001__CFAXfDX",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-glm5-attempt-001/LC-PARALLEL-TOOL-MERGE-001__aTDK7FV",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-minimax-attempt-001/LC-PARALLEL-TOOL-MERGE-001__RqdbSF5"
+    ],
+    "task_ids": [
+      "LC-FIREWORKS-RERANK-001",
+      "LC-OPENROUTER-PROVIDER-001",
+      "LC-HF-ACCELERATOR-001",
+      "LC-JSON-INPUT-001",
+      "LC-INT-TEMPERATURE-001",
+      "LC-PARALLEL-TOOL-MERGE-001"
+    ],
+    "round": 1,
+    "launch_enabled": false,
+    "walkthroughs": [
+      {
+        "run_id": "held-out-remainder-round1-v1-LC-JSON-INPUT-001-glm5-attempt-001/LC-JSON-INPUT-001__qipi9TX",
+        "requests": [
+          1,
+          12,
+          14,
+          24,
+          26,
+          28
+        ],
+        "question": "How does a candidate progress from a passing new regression to complete qualification?",
+        "learning": "The new regression initially passed while an existing case failed. The agent repaired that case and verified source plus new-test lint/format and native typing before submission. Trusted evaluation accepted the preserved candidate."
+      },
+      {
+        "run_id": "held-out-remainder-round1-v1-LC-JSON-INPUT-001-minimax-attempt-001/LC-JSON-INPUT-001__ZVh6vHt",
+        "requests": [
+          1,
+          9,
+          12,
+          15,
+          16,
+          19
+        ],
+        "question": "Why can a submitted, behaviorally correct candidate still fail the frozen success definition?",
+        "learning": "The public behavior and regression checks pass, but the agent checks lint/format only on production source. Trusted evaluation rejects style violations in its new test file. The original rejection is preserved; submission does not override failed checks."
+      }
+    ]
+  },
+  "held_out_repeats": {
+    "status": "24_additional_attempts_completed_original_12_preserved",
+    "report": "reports/held-out-remainder-repeats-v1/results.json",
+    "authorization_plan": "reports/held-out-remainder-repeats-v1/plan.json",
+    "frozen_setting_id": "04829e5a8afb62fd012dfc4d7ad0d502079d4f1e6a5c0b64d16eb6708e61f703",
+    "new_harness_configuration": false,
+    "task_ids": [
+      "LC-FIREWORKS-RERANK-001",
+      "LC-OPENROUTER-PROVIDER-001",
+      "LC-HF-ACCELERATOR-001",
+      "LC-JSON-INPUT-001",
+      "LC-INT-TEMPERATURE-001",
+      "LC-PARALLEL-TOOL-MERGE-001"
+    ],
+    "new_run_ids": [
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-glm5-attempt-002/LC-FIREWORKS-RERANK-001__LtsakZ5",
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-minimax-attempt-002/LC-FIREWORKS-RERANK-001__RfEaBLW",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-minimax-attempt-002/LC-OPENROUTER-PROVIDER-001__XHKuTFx",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-glm5-attempt-002/LC-OPENROUTER-PROVIDER-001__JgiKep5",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-glm5-attempt-002/LC-HF-ACCELERATOR-001__kPwBEmC",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-minimax-attempt-002/LC-HF-ACCELERATOR-001__pkN2Y6o",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-minimax-attempt-002/LC-JSON-INPUT-001__F7m3LCt",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-glm5-attempt-002/LC-JSON-INPUT-001__5nEfq8b",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-attempt-002/LC-INT-TEMPERATURE-001__SfC7ooN",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-attempt-002/LC-INT-TEMPERATURE-001__DwsvJbD",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-minimax-attempt-002/LC-PARALLEL-TOOL-MERGE-001__v5hJ2s8",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-glm5-attempt-002/LC-PARALLEL-TOOL-MERGE-001__2Fqn99Y",
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-minimax-attempt-003/LC-FIREWORKS-RERANK-001__MZT5EYS",
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-glm5-attempt-003/LC-FIREWORKS-RERANK-001__3Jtmh7T",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-glm5-attempt-003/LC-OPENROUTER-PROVIDER-001__CBSo9uK",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-minimax-attempt-003/LC-OPENROUTER-PROVIDER-001__VXB5Um6",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-minimax-attempt-003/LC-HF-ACCELERATOR-001__uA6BK5t",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-glm5-attempt-003/LC-HF-ACCELERATOR-001__PLjUMd2",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-glm5-attempt-003/LC-JSON-INPUT-001__b78jfqp",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-minimax-attempt-003/LC-JSON-INPUT-001__88ppdMr",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-attempt-003/LC-INT-TEMPERATURE-001__Z9pzVvE",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-attempt-003/LC-INT-TEMPERATURE-001__a6VKqqv",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-glm5-attempt-003/LC-PARALLEL-TOOL-MERGE-001__zKnHArd",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-minimax-attempt-003/LC-PARALLEL-TOOL-MERGE-001__KCSDxLb"
+    ],
+    "all_run_ids": [
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-minimax-attempt-001/LC-FIREWORKS-RERANK-001__jL4JLbw",
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-glm5-attempt-001/LC-FIREWORKS-RERANK-001__B7eX8ZX",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-glm5-attempt-001/LC-OPENROUTER-PROVIDER-001__cXyDWcg",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-minimax-attempt-001/LC-OPENROUTER-PROVIDER-001__FkuYm4J",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-minimax-attempt-001/LC-HF-ACCELERATOR-001__HMQKVCY",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-glm5-attempt-001/LC-HF-ACCELERATOR-001__YMcFSie",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-glm5-attempt-001/LC-JSON-INPUT-001__qipi9TX",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-minimax-attempt-001/LC-JSON-INPUT-001__ZVh6vHt",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-attempt-001/LC-INT-TEMPERATURE-001__387WVka",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-attempt-001/LC-INT-TEMPERATURE-001__CFAXfDX",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-glm5-attempt-001/LC-PARALLEL-TOOL-MERGE-001__aTDK7FV",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-minimax-attempt-001/LC-PARALLEL-TOOL-MERGE-001__RqdbSF5",
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-glm5-attempt-002/LC-FIREWORKS-RERANK-001__LtsakZ5",
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-minimax-attempt-002/LC-FIREWORKS-RERANK-001__RfEaBLW",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-minimax-attempt-002/LC-OPENROUTER-PROVIDER-001__XHKuTFx",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-glm5-attempt-002/LC-OPENROUTER-PROVIDER-001__JgiKep5",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-glm5-attempt-002/LC-HF-ACCELERATOR-001__kPwBEmC",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-minimax-attempt-002/LC-HF-ACCELERATOR-001__pkN2Y6o",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-minimax-attempt-002/LC-JSON-INPUT-001__F7m3LCt",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-glm5-attempt-002/LC-JSON-INPUT-001__5nEfq8b",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-attempt-002/LC-INT-TEMPERATURE-001__SfC7ooN",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-attempt-002/LC-INT-TEMPERATURE-001__DwsvJbD",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-minimax-attempt-002/LC-PARALLEL-TOOL-MERGE-001__v5hJ2s8",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-glm5-attempt-002/LC-PARALLEL-TOOL-MERGE-001__2Fqn99Y",
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-minimax-attempt-003/LC-FIREWORKS-RERANK-001__MZT5EYS",
+      "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-glm5-attempt-003/LC-FIREWORKS-RERANK-001__3Jtmh7T",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-glm5-attempt-003/LC-OPENROUTER-PROVIDER-001__CBSo9uK",
+      "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-minimax-attempt-003/LC-OPENROUTER-PROVIDER-001__VXB5Um6",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-minimax-attempt-003/LC-HF-ACCELERATOR-001__uA6BK5t",
+      "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-glm5-attempt-003/LC-HF-ACCELERATOR-001__PLjUMd2",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-glm5-attempt-003/LC-JSON-INPUT-001__b78jfqp",
+      "held-out-remainder-round1-v1-LC-JSON-INPUT-001-minimax-attempt-003/LC-JSON-INPUT-001__88ppdMr",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-attempt-003/LC-INT-TEMPERATURE-001__Z9pzVvE",
+      "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5-attempt-003/LC-INT-TEMPERATURE-001__a6VKqqv",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-glm5-attempt-003/LC-PARALLEL-TOOL-MERGE-001__zKnHArd",
+      "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-minimax-attempt-003/LC-PARALLEL-TOOL-MERGE-001__KCSDxLb"
+    ],
+    "launch_enabled": false,
+    "walkthroughs": [
+      {
+        "run_id": "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax-attempt-002/LC-INT-TEMPERATURE-001__DwsvJbD",
+        "question": "Why does this budget-terminated candidate count as accepted without submission?",
+        "requests": [
+          1,
+          11,
+          29,
+          30
+        ]
+      }
+    ]
+  }
+}

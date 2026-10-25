@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "failure_category": "infrastructure_interruption",
+  "original_verdict_preserved": true,
+  "split": "held_out",
+  "frozen_setting_id": "04829e5a8afb62fd012dfc4d7ad0d502079d4f1e6a5c0b64d16eb6708e61f703",
+  "failed_required_checks": [
+    "regression_on_baseline",
+    "reproducer",
+    "regression",
+    "lint",
+    "format",
+    "types",
+    "hidden_acceptance"
+  ],
+  "reason": "Classification derived from the frozen final candidate, controller receipt and trusted checks; no additional inference, edits or repairs. Infrastructure interruptions are not diagnosed as coding failures; native patch verdicts remain intact.",
+  "code_repair_rounds": null,
+  "infrastructure_interrupted": true,
+  "execution_error": "OpenRouterAPIError: Request failed: (\"Connection broken: ConnectionResetError(54, 'Connection reset by peer')\", ConnectionResetError(54, 'Connection reset by peer'))",
+  "timing_audit": {
+    "controlled_completion_time_valid": false,
+    "monotonic_seconds": 186.66255787498085,
+    "civil_seconds": 793.0474817752838
+  },
+  "original_run_sha256": {
+    "agent/isolation.json": "62b1e544e0f280d121739cefa13a8a4218aa3b16ddedca6e69f3cd1928862a64",
+    "agent/mini-swe-agent.trajectory.json": "991bb5acd86104c6f89275089bf01bd266f236f38141f47152a3996a9ab90668",
+    "agent/process-baseline.json": "9db8224ac68e342cff84691ad88af5786d95c5ace7c346bcf3467aba2dc1e3f1",
+    "agent/quiescence.json": "fea343c141ef21778faf9509de729e4baaf72a50dc4a84dfeba3ee696bc58f92",
+    "agent/receipt.json": "8c14dba09dbb9dcb1f8bbbff1905b22df078b10bc519e481b8bfcb6584e83664",
+    "agent/requests.jsonl": "41b3c51bc07663b1e69d20a02726d305943ced022edf04f67788c7f339fb867c",
+    "agent/source-snapshot.json": "720fd8ad502274aaf9cd31bd317e4d4ebdc0b2973bf1ad443ad2bc26808e7be7",
+    "agent/trajectory.json": "6fbe9a083647d906940c118bd93fdad62853545605912bf9da848caf508e01e4",
+    "artifacts/logs/artifacts/candidate.tar": "44d01d08fbd5b7e6fcb2a4b83f0e4d4d5b1aff1b23a31414debccbeffc1c05fa",
+    "artifacts/logs/artifacts/receipt.json": "8c14dba09dbb9dcb1f8bbbff1905b22df078b10bc519e481b8bfcb6584e83664",
+    "artifacts/manifest.json": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f",
+    "config.json": "b0e09a41d4d3a7bde974d1924cafab7e2f378e6840f9d54bf77cd793b5fc50ac",
+    "lock.json": "5be4f0200a9019423e4fb8ccd0c47e6a5bbd1ab3abfc32aac9f4215aaaef333f",
+    "result.json": "20ebff74ad106a238643079223a661680233fd16492b6212487040aa5843c437",
+    "trial.log": "3cdd1bc2da072b9bbe8842d8616a3e56defa0dc5840ed431375bd22eb35f2914",
+    "verifier/checks.json": "67bd935fb64de257b7b157a88f972a13088b3730f5b627dd660fa940760273d9",
+    "verifier/reward.json": "2d817bc3269952334130ccbf06e52d2975a6d1af8cd46b89f0fe8b01c6ac7a1f",
+    "verifier/submission.patch": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verifier/test-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

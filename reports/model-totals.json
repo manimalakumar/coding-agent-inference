@@ -1,0 +1,50 @@
+{
+  "minimax/minimax-m2.5": {
+    "attempts": 2,
+    "requests_including_unsuccessful": 42,
+    "successful_tasks": 0,
+    "success_criterion": "Attempt reached checks_passed_pending_review; no merge implied.",
+    "known_reported_cost_all_attempts_usd": 0.04357107,
+    "total_cost_all_attempts_usd": 0.04357107,
+    "requests_without_cost_record": 0,
+    "cost_per_successful_task_usd": null,
+    "metric_status": "undefined_no_successes",
+    "formula": "Cost of ALL inference requests for this model, including failures and repairs, divided by qualifying successful attempts."
+  },
+  "mistralai/ministral-8b-2512": {
+    "attempts": 2,
+    "requests_including_unsuccessful": 18,
+    "successful_tasks": 0,
+    "success_criterion": "Attempt reached checks_passed_pending_review; no merge implied.",
+    "known_reported_cost_all_attempts_usd": 0.00356304,
+    "total_cost_all_attempts_usd": null,
+    "requests_without_cost_record": 1,
+    "cost_per_successful_task_usd": null,
+    "metric_status": "undefined_no_successes",
+    "formula": "Cost of ALL inference requests for this model, including failures and repairs, divided by qualifying successful attempts."
+  },
+  "qwen/qwen3-14b": {
+    "attempts": 1,
+    "requests_including_unsuccessful": 4,
+    "successful_tasks": 0,
+    "success_criterion": "Attempt reached checks_passed_pending_review; no merge implied.",
+    "known_reported_cost_all_attempts_usd": 0.00058056,
+    "total_cost_all_attempts_usd": 0.00058056,
+    "requests_without_cost_record": 0,
+    "cost_per_successful_task_usd": null,
+    "metric_status": "undefined_no_successes",
+    "formula": "Cost of ALL inference requests for this model, including failures and repairs, divided by qualifying successful attempts."
+  },
+  "qwen/qwen3-coder": {
+    "attempts": 2,
+    "requests_including_unsuccessful": 32,
+    "successful_tasks": 0,
+    "success_criterion": "Attempt reached checks_passed_pending_review; no merge implied.",
+    "known_reported_cost_all_attempts_usd": 0.05483336,
+    "total_cost_all_attempts_usd": 0.05483336,
+    "requests_without_cost_record": 0,
+    "cost_per_successful_task_usd": null,
+    "metric_status": "undefined_no_successes",
+    "formula": "Cost of ALL inference requests for this model, including failures and repairs, divided by qualifying successful attempts."
+  }
+}

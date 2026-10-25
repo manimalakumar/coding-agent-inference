@@ -1,0 +1,67 @@
+{
+  "LC-ASYNC-TOOLS-001": {
+    "pull_request": 40208,
+    "reference_commit": "3f212e7a88d2acd0d26ac4b5755f5c76c6a88e37",
+    "reference_url": "https://github.com/langchain-ai/langchain/pull/40208"
+  },
+  "LC-SUMMARY-OVERFLOW-001": {
+    "pull_request": 41159,
+    "reference_commit": "e7ca68b92062312221d7768a9d731a2d4942416b",
+    "reference_url": "https://github.com/langchain-ai/langchain/pull/41159"
+  },
+  "LC-FIREWORKS-RERANK-001": {
+    "pull_request": 39732,
+    "reference_commit": "b8d1ab5946cdb306fa01e0117dbf151f9cd2d308",
+    "reference_url": "https://github.com/langchain-ai/langchain/pull/39732"
+  },
+  "LC-OPENROUTER-PROVIDER-001": {
+    "pull_request": 39301,
+    "reference_commit": "2f4aa5a79c30638a75150b58065be7affb494835",
+    "reference_url": "https://github.com/langchain-ai/langchain/pull/39301"
+  },
+  "LC-HF-ACCELERATOR-001": {
+    "pull_request": 39640,
+    "reference_commit": "443154df9db5251d73730e1de3eb63bf352e586f",
+    "reference_url": "https://github.com/langchain-ai/langchain/pull/39640"
+  },
+  "LC-JSON-INPUT-001": {
+    "pull_request": 39238,
+    "reference_commit": "c318abed446e7d1a0e872a6967b9b17bc6f4761c",
+    "reference_url": "https://github.com/langchain-ai/langchain/pull/39238"
+  },
+  "LC-INT-TEMPERATURE-001": {
+    "pull_request": 35302,
+    "reference_commit": "3686bcbd966ff1ef13e5fdbde28aa0e630ddd5c4",
+    "reference_url": "https://github.com/langchain-ai/langchain/pull/35302"
+  },
+  "LC-PARALLEL-TOOL-MERGE-001": {
+    "pull_request": 35281,
+    "reference_commit": "5053436dcfe531edd1619862f74c07c61fd57801",
+    "reference_url": "https://github.com/langchain-ai/langchain/pull/35281"
+  },
+  "LC-ANNOTATED-TOOLS-001": {
+    "pull_request": 31181,
+    "reference_commit": "ae3551c96b590790bc7779bd2609f5cb425bdbcd",
+    "reference_url": "https://github.com/langchain-ai/langchain/pull/31181"
+  },
+  "LC-CHROMA-NONE-001": {
+    "pull_request": 31377,
+    "reference_commit": "0861cba04b71ea50c188a6926c0e3a3ce7279fd3",
+    "reference_url": "https://github.com/langchain-ai/langchain/pull/31377"
+  },
+  "LC-RESPONSES-USAGE-001": {
+    "pull_request": 31756,
+    "reference_commit": "0189c50570913d73afe8c854f95dcfd5e7d6dd71",
+    "reference_url": "https://github.com/langchain-ai/langchain/pull/31756"
+  },
+  "LC-TIMEOUT-001": {
+    "pull_request": 31698,
+    "reference_commit": "b268ab6a2874b716d311af590188f6b5422c5d82",
+    "reference_url": "https://github.com/langchain-ai/langchain/pull/31698"
+  },
+  "LC-CONTEXT-COUNTER-001": {
+    "pull_request": 39754,
+    "reference_commit": "37f266278d780cd7ebdfbf1891ba92066192d687",
+    "reference_url": "https://github.com/langchain-ai/langchain/pull/39754"
+  }
+}

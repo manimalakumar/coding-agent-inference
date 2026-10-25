@@ -1,0 +1,109 @@
+{
+  "status": "passed",
+  "tasks": [
+    {
+      "task_id": "LC-SUMMARY-OVERFLOW-001",
+      "passed": true,
+      "model_requests": 0,
+      "elapsed_seconds": 159.12268328666687,
+      "log_sha256": "e535a78444eeab8ddb4810a39cc3c3db67f9c24bec41e1e8cd06a07adece8e28"
+    },
+    {
+      "task_id": "LC-ASYNC-TOOLS-001",
+      "passed": true,
+      "model_requests": 0,
+      "elapsed_seconds": 189.5957009792328,
+      "log_sha256": "40f6056aefe46e170420e17e7f54f5c51afe464ed81822dbe2519a42e4214436"
+    },
+    {
+      "task_id": "LC-FIREWORKS-RERANK-001",
+      "passed": true,
+      "model_requests": 0,
+      "elapsed_seconds": 186.4315869808197,
+      "log_sha256": "cdcafa4d5ae76666a2a1eeb3260bbbceca9e90da774d0e25a2a0a1cf466a861e"
+    },
+    {
+      "task_id": "LC-OPENROUTER-PROVIDER-001",
+      "passed": true,
+      "model_requests": 0,
+      "elapsed_seconds": 156.42993593215942,
+      "log_sha256": "edc71bedc13517a163ba2d986efba86193f3ae1ddcfc35a6738420970aaff946"
+    },
+    {
+      "task_id": "LC-JSON-INPUT-001",
+      "passed": true,
+      "model_requests": 0,
+      "elapsed_seconds": 104.4665219783783,
+      "log_sha256": "1886c29ddba4dc141b9aa730e85eedc35fd3d710bc438a4118a4b15fde7cab55"
+    },
+    {
+      "task_id": "LC-INT-TEMPERATURE-001",
+      "passed": true,
+      "model_requests": 0,
+      "elapsed_seconds": 136.81924700737,
+      "log_sha256": "f7b85f7ff2c9bb4afc0e3250a49ac45d57df21c5cec6ba03a475d0e516d351d7"
+    },
+    {
+      "task_id": "LC-PARALLEL-TOOL-MERGE-001",
+      "passed": true,
+      "model_requests": 0,
+      "elapsed_seconds": 119.39124608039856,
+      "log_sha256": "9631177f1bcc968a0849ae0b5fea2b111423353a5b863beead941f7bbc9f23c5"
+    },
+    {
+      "task_id": "LC-ANNOTATED-TOOLS-001",
+      "passed": true,
+      "model_requests": 0,
+      "elapsed_seconds": 140.40885996818542,
+      "log_sha256": "d9b974133f21651cbc7294ab9c7c5c24f314ba8efd647cf77b8092a265f7d501"
+    },
+    {
+      "task_id": "LC-CHROMA-NONE-001",
+      "passed": true,
+      "model_requests": 0,
+      "elapsed_seconds": 162.38201904296875,
+      "log_sha256": "26d2c9c4ec807498ae8274ecc00bc861ba09868def3113aa55481f027570fe48"
+    },
+    {
+      "task_id": "LC-CONTEXT-COUNTER-001",
+      "passed": true,
+      "model_requests": 0,
+      "elapsed_seconds": 135.1714596748352,
+      "log_sha256": "aaf04e8213ac929323126ca48b674efccc7aa311757e6b6fda09d33f13619ff4"
+    },
+    {
+      "task_id": "LC-RESPONSES-USAGE-001",
+      "passed": true,
+      "model_requests": 0,
+      "elapsed_seconds": 152.951406955719,
+      "log_sha256": "a141f8114fbc3bd40fcb9fd8e687aa6a9f0d1e717d1d0f379291c8fe50206d6c"
+    },
+    {
+      "task_id": "LC-TIMEOUT-001",
+      "passed": true,
+      "model_requests": 0,
+      "elapsed_seconds": 154.68989276885986,
+      "log_sha256": "cd9ebb337128110696a2929876024525f2c21f77641c0724e635ea4255cb4e4c"
+    },
+    {
+      "task_id": "LC-HF-ACCELERATOR-001",
+      "passed": true,
+      "model_requests": 0,
+      "elapsed_seconds": 342.82902812957764,
+      "log_sha256": "557342c8f9b3b9eb536947c5940e8c4af35c6fcc391afcb27bc080d818dc40b7"
+    }
+  ],
+  "model_requests": 0,
+  "environment_rebuilds": 0,
+  "private_project_reads": 0,
+  "original_public_project_reads": 0,
+  "audit_guard_enforced": true,
+  "negative_controls": {
+    "original_public_source": "blocked before side effect",
+    "private_research": "blocked before side effect",
+    "private_zip": "blocked before side effect",
+    "network": "blocked before side effect"
+  },
+  "runtime": "Installed dependencies shared; project source, renamed configurations and generated resources loaded from isolated public copy.",
+  "blocked_external_io_attempts": 0
+}

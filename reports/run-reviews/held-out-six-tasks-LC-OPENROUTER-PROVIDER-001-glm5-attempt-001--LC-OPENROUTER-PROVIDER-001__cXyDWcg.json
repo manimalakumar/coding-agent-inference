@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "failure_category": "infrastructure_interruption",
+  "original_verdict_preserved": true,
+  "split": "held_out",
+  "frozen_setting_id": "04829e5a8afb62fd012dfc4d7ad0d502079d4f1e6a5c0b64d16eb6708e61f703",
+  "failed_required_checks": [
+    "regression_on_baseline",
+    "reproducer",
+    "regression",
+    "lint",
+    "format",
+    "types",
+    "hidden_acceptance"
+  ],
+  "reason": "Classification derived from the frozen final candidate, controller receipt and trusted checks; no additional inference, edits or repairs. Infrastructure interruptions are not diagnosed as coding failures; native patch verdicts remain intact.",
+  "code_repair_rounds": null,
+  "infrastructure_interrupted": true,
+  "execution_error": "ValueError: Provider omitted completion usage; attempt cannot continue",
+  "timing_audit": {
+    "controlled_completion_time_valid": true,
+    "monotonic_seconds": 119.05429533403367,
+    "civil_seconds": 119.05411124229431
+  },
+  "original_run_sha256": {
+    "agent/isolation.json": "62b1e544e0f280d121739cefa13a8a4218aa3b16ddedca6e69f3cd1928862a64",
+    "agent/mini-swe-agent.trajectory.json": "2caa0d303f464af1e203f5ac054ee37772add48a65942a7a5825ab2720892e2b",
+    "agent/process-baseline.json": "2b422019c7ecfef0a6e1c07999388a01aa710d60b1eb6779d176e0b96a5330c0",
+    "agent/quiescence.json": "fea343c141ef21778faf9509de729e4baaf72a50dc4a84dfeba3ee696bc58f92",
+    "agent/receipt.json": "126be2104d5c8d2bc27fbbb0ff0f1653a6c6f6eb5add66d483092e685d72b1f2",
+    "agent/requests.jsonl": "af89ea072c3d352ec59fc9295cf43875585ebb657cb1784b29e899fd99227177",
+    "agent/source-snapshot.json": "9cfd9e8411c129b47f126bb24589f581c53ac280cb75524ae0b1f257d3ef223b",
+    "agent/trajectory.json": "a73fc2a607b19089759c7a5ad5b904d2b00ca5b525c427ef497d9e311f9b51be",
+    "artifacts/logs/artifacts/candidate.tar": "bb1a608a8353a5c9456e26dfdc07930ec3d7ab2ee0e5551061bc8351b03989f7",
+    "artifacts/logs/artifacts/receipt.json": "126be2104d5c8d2bc27fbbb0ff0f1653a6c6f6eb5add66d483092e685d72b1f2",
+    "artifacts/manifest.json": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f",
+    "config.json": "56513f9fd4e447ee6c4a2500b1570aebb972f51162f239f03f7e48fd0193dbc9",
+    "lock.json": "e6b8bfe498f8caebdf6d40a807ab3acefa0e7622db9aa87bcd13af215b6dc529",
+    "result.json": "c4e3147e53cb137d6c65a1e200d3348cb95de4893455cf8ee4f289004e0f80d8",
+    "trial.log": "0e40d3319ff5210f3f90919e07e4ad9fb00c2636aa077b859306a7c833961dab",
+    "verifier/checks.json": "dc83d2b3060fde204b1feb39029b3dfc26ff0c1c73eb6becde7e05397b11111d",
+    "verifier/reward.json": "2d817bc3269952334130ccbf06e52d2975a6d1af8cd46b89f0fe8b01c6ac7a1f",
+    "verifier/submission.patch": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verifier/test-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

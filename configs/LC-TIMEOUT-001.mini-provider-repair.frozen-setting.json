@@ -1,0 +1,132 @@
+{
+  "workflow_label": "mini-swe-agent-2.4.6-v2-pinned-provider-repair-guidance",
+  "setup_directory": ".local/resources/LC-TIMEOUT-001/c144cce98f20e6c5",
+  "setting_checksum": "46710b2fb20120cee210bb855c50c58547a49c820a4c8baf25611f55c8b03139",
+  "model": {
+    "model": "qwen/qwen3-coder",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "temperature": 0.0,
+    "provider": {
+      "only": [
+        "deepinfra/turbo"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true
+    },
+    "reasoning": null
+  },
+  "measured_model_runs": 0,
+  "setting": {
+    "sandbox": {
+      "schema_version": 4,
+      "prompt_config": "mini-swe-v2.yaml",
+      "workflow_label": "mini-swe-agent-2.4.6-v2-pinned-provider-repair-guidance",
+      "workflow_instructions": [],
+      "file_writing_tool": false,
+      "network": "none",
+      "python": "3.14.6",
+      "base_image": "python:3.14.6-slim-bookworm",
+      "cpus": 2.0,
+      "memory_mb": 2048,
+      "pids_limit": 128,
+      "writable": [
+        "libs/partners/openai/langchain_openai/chat_models",
+        "libs/partners/openai/tests/unit_tests"
+      ],
+      "resources": [],
+      "budgets": {
+        "seconds": 1200,
+        "model_calls": 20,
+        "generated_tokens": 6000,
+        "repair_rounds": 2,
+        "tool_seconds": 90,
+        "response_tokens": 1500
+      },
+      "tool_output_chars": 16000
+    },
+    "task": {
+      "schema_version": 1,
+      "task_id": "LC-TIMEOUT-001",
+      "commit": "4ee6112161e63c320320da4ad4d56380604c35f1",
+      "package": "libs/partners/openai",
+      "instructions": "Your first sandbox command must be exactly: python /task/reproduce.py. This complete read-only script produces the reported exception; execute it before inspection or editing. Then add a development regression test and implement the fix. Initializing ChatOpenAI with request_timeout=httpx.Timeout(timeout=60.0, connect=5.0) raises TypeError: unhashable type: 'Timeout' before any model request. Use model='gpt-4.1-mini' and api_key='sk-offline-placeholder'. Reproduce on unchanged code and add a regression test before fixing. Preserve custom timeout values. Equivalent defaults must still share HTTP clients; distinct base URLs and numeric timeouts must not alias. Cover sync and async initialization. Do not invoke or stream. Inspect only this supplied snapshot. Do not access Git history, upstream fixes, dependencies, evaluator internals, or external services. Keep all existing tests intact. Production changes belong only in libs/partners/openai/langchain_openai/chat_models/; new development tests belong only in libs/partners/openai/tests/unit_tests/. Do not change manifests, locks, public APIs or unrelated code. Missing dependencies or collection errors are environment blockers, not invalid issues. If blocked, explain whether the issue was not reproduced, the environment blocked execution, or clarification is needed. Passing checks means checks_passed_pending_review only.",
+      "source_paths": [
+        "libs/partners/openai/langchain_openai/chat_models"
+      ],
+      "test_paths": [
+        "libs/partners/openai/tests/unit_tests"
+      ],
+      "development_checks": [
+        {
+          "name": "existing_chat_models",
+          "command": "python -m pytest tests/unit_tests/chat_models/test_base.py -q --disable-socket --allow-unix-socket"
+        }
+      ],
+      "reproduction_command": "python /task/reproduce.py",
+      "reproduction_script": "reproduce.py",
+      "expected_failure": "unhashable type: 'Timeout'",
+      "runtime_versions": {
+        "httpx": "0.28.1",
+        "openai": "1.90.0",
+        "pydantic": "2.12.5",
+        "langchain-openai": "0.3.24",
+        "langchain-core": "0.3.66"
+      },
+      "workspace_imports": [
+        "langchain_openai",
+        "langchain_core"
+      ]
+    },
+    "task_assets": {
+      "reproduce.py": "d80f39229591c7e3d70287f8bc56a5960513c989c8ead0ec883c77b3c41afaa0"
+    },
+    "baseline_checksum": "3ead9053d48be8d728e5bb85d353ba9a45e30b55f4b87d518dd58c093900a87c",
+    "image": "sha256:93f480007c3db7f32db83b4f6038bf627acbead3fec5fa769c051d7492b30d6d",
+    "resources": [],
+    "controller_dependency_lock": "8a8c1f8530f4a8c54b3ab2df02ff3ad3a30435fa65945013fdd6d185173bb887",
+    "tools": [
+      {
+        "type": "function",
+        "function": {
+          "name": "bash",
+          "description": "Execute a bash command",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "command": {
+                "type": "string",
+                "description": "The bash command to execute"
+              }
+            },
+            "required": [
+              "command"
+            ]
+          }
+        }
+      }
+    ],
+    "framework": "mini-swe-agent==2.4.6",
+    "standard_config": "ab88341df117ef808ce327cf1753c57fd377b2f1b6363cb1cce96930afd43ed4",
+    "evaluator": {
+      "__init__.py": "1fec17fc8f1fcad5811cc72b326dfade480b76d3ccfd3af5da9acee1135dd4b6",
+      "selftest.py": "a9be140409c392b2f015ab839dd4ece60629d4311c8ff10525216591403ba060",
+      "test_acceptance.py": "cbecc7e1331467750af1e8dec81a2c84607bb23d066a1eeedb5c1b398b434813",
+      "qualify.py": "77ca19fb9f3a12fb127d5252624e798afbea6dec6190ec273c71795a4a8d6f69"
+    },
+    "controller": {
+      "local_test.py": "827413d95ccd97bf64f58f3d38edd4372024111fa5113fa1b9d455ecd9310f68",
+      "controller.py": "1e68c3479e386ab239f0375817846cb51858c3c0e276013e64380dcaaf04c6f8",
+      "provider.py": "2b143de51559578d9a4dc996cb733cd84cdc8f902cfe4c26f05a08e3301c2d8d",
+      "results.py": "25167038d5ced6958da46972841925c8d89f787e83effca496d5cd415bf71971",
+      "budget.py": "0c902daf10ec89bd004f0a38905aa8219fec54d1af18a8869ea9bb261e1896e9",
+      "__init__.py": "3d05b724141747eab601bfd2ac4bb2bd8ed3532a01c60dea72b0d355d4b9c074",
+      "mini_runtime.py": "25aa6db2eec38b15187c94b55e31d265e81680638085bc48b1ad2f2f1e9f3703",
+      "schemas.py": "bfe8ffa514256a98018c50b001c6c6afde7f017b4ee14541d5b829328b6d13b6"
+    },
+    "sandbox_code": {
+      "__init__.py": "46a0595c06ce7809a48a6e7f03948df5a5062f6c378cdd37439e0480083c8e94",
+      "docker.py": "e77b45949200c4498edb55eadefc69a347d7078e747748dcee7b0e22817853b8",
+      "prepare.py": "9e0c9fc93545daeafd348ede19e32dd7267d3ce4d73614ba9125991ca1cac95c"
+    }
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "active_study": "chroma-none-workspace-v1",
+  "studies": {
+    "timeout": {
+      "task_ids": [
+        "LC-TIMEOUT-001"
+      ],
+      "job_config": "configs/harbor-model.json",
+      "freeze_manifest": "configs/harbor-submission.sha256",
+      "frozen_setting": "configs/LC-TIMEOUT-001.harbor-submission.frozen-setting.json"
+    },
+    "responses-usage": {
+      "task_ids": [
+        "LC-RESPONSES-USAGE-001"
+      ],
+      "job_config": "configs/harbor-responses-usage-model.json",
+      "freeze_manifest": "configs/harbor-responses-usage.sha256",
+      "frozen_setting": "configs/LC-RESPONSES-USAGE-001.harbor-submission.frozen-setting.json"
+    },
+    "annotated-tools": {
+      "task_ids": [
+        "LC-ANNOTATED-TOOLS-001"
+      ],
+      "job_config": "configs/harbor-annotated-tools-submission-model.json",
+      "freeze_manifest": "configs/harbor-annotated-tools-submission.sha256",
+      "frozen_setting": "configs/LC-ANNOTATED-TOOLS-001.harbor-submission.frozen-setting.json"
+    },
+    "annotated-tools-focused-editing": {
+      "task_ids": [
+        "LC-ANNOTATED-TOOLS-001"
+      ],
+      "job_config": "configs/harbor-annotated-tools-focused-editing-model.json",
+      "freeze_manifest": "configs/harbor-annotated-tools-focused-editing.sha256",
+      "frozen_setting": "configs/LC-ANNOTATED-TOOLS-001.focused-editing.frozen-setting.json"
+    },
+    "annotated-tools-workspace": {
+      "task_ids": [
+        "LC-ANNOTATED-TOOLS-001"
+      ],
+      "job_config": "configs/harbor-workspace-initial-model.json",
+      "freeze_manifest": "configs/harbor-workspace-initial.sha256",
+      "frozen_setting": "configs/LC-ANNOTATED-TOOLS-001.workspace-initial.frozen-setting.json"
+    },
+    "annotated-tools-workspace-v2": {
+      "task_ids": [
+        "LC-ANNOTATED-TOOLS-001"
+      ],
+      "job_config": "configs/harbor-workspace-fresh-start-model.json",
+      "freeze_manifest": "configs/harbor-workspace-fresh-start.sha256",
+      "frozen_setting": "configs/LC-ANNOTATED-TOOLS-001.workspace-fresh-start.frozen-setting.json"
+    },
+    "chroma-none-workspace-v1": {
+      "task_ids": [
+        "LC-CHROMA-NONE-001"
+      ],
+      "job_config": "configs/harbor-chroma-none-workspace-model.json",
+      "freeze_manifest": "configs/harbor-chroma-none-workspace.sha256",
+      "frozen_setting": "configs/LC-CHROMA-NONE-001.workspace-capture.frozen-setting.json"
+    },
+    "comparison-v1-lc-timeout-001-minimax": {
+      "task_ids": [
+        "LC-TIMEOUT-001"
+      ],
+      "job_config": "configs/comparison-four-tasks-LC-TIMEOUT-001-minimax-model.json",
+      "freeze_manifest": "configs/comparison-four-tasks.sha256",
+      "frozen_setting": "configs/comparison-four-tasks.frozen-setting.json",
+      "comparison_round": "comparison-4x2x3-v1"
+    },
+    "comparison-v1-lc-timeout-001-glm5": {
+      "task_ids": [
+        "LC-TIMEOUT-001"
+      ],
+      "job_config": "configs/comparison-four-tasks-LC-TIMEOUT-001-glm5-model.json",
+      "freeze_manifest": "configs/comparison-four-tasks.sha256",
+      "frozen_setting": "configs/comparison-four-tasks.frozen-setting.json",
+      "comparison_round": "comparison-4x2x3-v1"
+    },
+    "comparison-v1-lc-responses-usage-001-minimax": {
+      "task_ids": [
+        "LC-RESPONSES-USAGE-001"
+      ],
+      "job_config": "configs/comparison-four-tasks-LC-RESPONSES-USAGE-001-minimax-model.json",
+      "freeze_manifest": "configs/comparison-four-tasks.sha256",
+      "frozen_setting": "configs/comparison-four-tasks.frozen-setting.json",
+      "comparison_round": "comparison-4x2x3-v1"
+    },
+    "comparison-v1-lc-responses-usage-001-glm5": {
+      "task_ids": [
+        "LC-RESPONSES-USAGE-001"
+      ],
+      "job_config": "configs/comparison-four-tasks-LC-RESPONSES-USAGE-001-glm5-model.json",
+      "freeze_manifest": "configs/comparison-four-tasks.sha256",
+      "frozen_setting": "configs/comparison-four-tasks.frozen-setting.json",
+      "comparison_round": "comparison-4x2x3-v1"
+    },
+    "comparison-v1-lc-annotated-tools-001-minimax": {
+      "task_ids": [
+        "LC-ANNOTATED-TOOLS-001"
+      ],
+      "job_config": "configs/comparison-four-tasks-LC-ANNOTATED-TOOLS-001-minimax-model.json",
+      "freeze_manifest": "configs/comparison-four-tasks.sha256",
+      "frozen_setting": "configs/comparison-four-tasks.frozen-setting.json",
+      "comparison_round": "comparison-4x2x3-v1"
+    },
+    "comparison-v1-lc-annotated-tools-001-glm5": {
+      "task_ids": [
+        "LC-ANNOTATED-TOOLS-001"
+      ],
+      "job_config": "configs/comparison-four-tasks-LC-ANNOTATED-TOOLS-001-glm5-model.json",
+      "freeze_manifest": "configs/comparison-four-tasks.sha256",
+      "frozen_setting": "configs/comparison-four-tasks.frozen-setting.json",
+      "comparison_round": "comparison-4x2x3-v1"
+    },
+    "comparison-v1-lc-chroma-none-001-minimax": {
+      "task_ids": [
+        "LC-CHROMA-NONE-001"
+      ],
+      "job_config": "configs/comparison-four-tasks-LC-CHROMA-NONE-001-minimax-model.json",
+      "freeze_manifest": "configs/comparison-four-tasks.sha256",
+      "frozen_setting": "configs/comparison-four-tasks.frozen-setting.json",
+      "comparison_round": "comparison-4x2x3-v1"
+    },
+    "comparison-v1-lc-chroma-none-001-glm5": {
+      "task_ids": [
+        "LC-CHROMA-NONE-001"
+      ],
+      "job_config": "configs/comparison-four-tasks-LC-CHROMA-NONE-001-glm5-model.json",
+      "freeze_manifest": "configs/comparison-four-tasks.sha256",
+      "frozen_setting": "configs/comparison-four-tasks.frozen-setting.json",
+      "comparison_round": "comparison-4x2x3-v1"
+    },
+    "context-counter-feature-v1": {
+      "task_ids": [
+        "LC-CONTEXT-COUNTER-001"
+      ],
+      "job_config": "configs/context-counter-initial-feature-model.json",
+      "freeze_manifest": "configs/context-counter-initial-feature.sha256",
+      "frozen_setting": "configs/context-counter-initial-feature.frozen-setting.json"
+    },
+    "context-counter-incremental-files-v1": {
+      "task_ids": [
+        "LC-CONTEXT-COUNTER-001"
+      ],
+      "job_config": "configs/context-counter-incremental-edits-model.json",
+      "freeze_manifest": "configs/context-counter-incremental-edits.sha256",
+      "frozen_setting": "configs/context-counter-incremental-edits.frozen-setting.json"
+    },
+    "context-counter-response-6000-v1": {
+      "task_ids": [
+        "LC-CONTEXT-COUNTER-001"
+      ],
+      "job_config": "configs/context-counter-response-6000-initial-environment-model.json",
+      "freeze_manifest": "configs/context-counter-response-6000-initial-environment.sha256",
+      "frozen_setting": "configs/context-counter-response-6000-initial-environment.frozen-setting.json"
+    },
+    "context-counter-response-6000-v2": {
+      "task_ids": [
+        "LC-CONTEXT-COUNTER-001"
+      ],
+      "job_config": "configs/context-counter-response-6000-repaired-environment-model.json",
+      "freeze_manifest": "configs/context-counter-response-6000-repaired-environment.sha256",
+      "frozen_setting": "configs/context-counter-response-6000-repaired-environment.frozen-setting.json"
+    },
+    "context-counter-glm5-calibration-v1": {
+      "task_ids": [
+        "LC-CONTEXT-COUNTER-001"
+      ],
+      "job_config": "configs/context-counter-glm5-calibration-model.json",
+      "freeze_manifest": "configs/context-counter-glm5-calibration.sha256",
+      "frozen_setting": "configs/context-counter-glm5-calibration.frozen-setting.json"
+    },
+    "context-counter-repaired-calibration-v1-minimax": {
+      "task_ids": [
+        "LC-CONTEXT-COUNTER-001"
+      ],
+      "job_config": "configs/context-counter-repaired-calibration-minimax-model.json",
+      "freeze_manifest": "configs/context-counter-repaired-calibration.sha256",
+      "frozen_setting": "configs/context-counter-repaired-calibration.frozen-setting.json"
+    },
+    "context-counter-repaired-calibration-v1-glm5": {
+      "task_ids": [
+        "LC-CONTEXT-COUNTER-001"
+      ],
+      "job_config": "configs/context-counter-repaired-calibration-glm5-model.json",
+      "freeze_manifest": "configs/context-counter-repaired-calibration.sha256",
+      "frozen_setting": "configs/context-counter-repaired-calibration.frozen-setting.json"
+    },
+    "held-out-two-task-v1-LC-ASYNC-TOOLS-001-minimax": {
+      "task_ids": [
+        "LC-ASYNC-TOOLS-001"
+      ],
+      "job_config": "configs/held-out-two-tasks-LC-ASYNC-TOOLS-001-minimax-model.json",
+      "freeze_manifest": "configs/held-out-two-tasks.sha256",
+      "frozen_setting": "configs/held-out-two-tasks.frozen-setting.json",
+      "split": "held_out"
+    },
+    "held-out-two-task-v1-LC-ASYNC-TOOLS-001-glm5": {
+      "task_ids": [
+        "LC-ASYNC-TOOLS-001"
+      ],
+      "job_config": "configs/held-out-two-tasks-LC-ASYNC-TOOLS-001-glm5-model.json",
+      "freeze_manifest": "configs/held-out-two-tasks.sha256",
+      "frozen_setting": "configs/held-out-two-tasks.frozen-setting.json",
+      "split": "held_out"
+    },
+    "held-out-two-task-v1-LC-SUMMARY-OVERFLOW-001-minimax": {
+      "task_ids": [
+        "LC-SUMMARY-OVERFLOW-001"
+      ],
+      "job_config": "configs/held-out-two-tasks-LC-SUMMARY-OVERFLOW-001-minimax-model.json",
+      "freeze_manifest": "configs/held-out-two-tasks.sha256",
+      "frozen_setting": "configs/held-out-two-tasks.frozen-setting.json",
+      "split": "held_out"
+    },
+    "held-out-two-task-v1-LC-SUMMARY-OVERFLOW-001-glm5": {
+      "task_ids": [
+        "LC-SUMMARY-OVERFLOW-001"
+      ],
+      "job_config": "configs/held-out-two-tasks-LC-SUMMARY-OVERFLOW-001-glm5-model.json",
+      "freeze_manifest": "configs/held-out-two-tasks.sha256",
+      "frozen_setting": "configs/held-out-two-tasks.frozen-setting.json",
+      "split": "held_out"
+    },
+    "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-minimax": {
+      "task_ids": [
+        "LC-FIREWORKS-RERANK-001"
+      ],
+      "job_config": "configs/held-out-six-tasks-LC-FIREWORKS-RERANK-001-minimax-model.json",
+      "freeze_manifest": "configs/held-out-six-tasks.sha256",
+      "frozen_setting": "configs/held-out-six-tasks.frozen-setting.json",
+      "split": "held_out"
+    },
+    "held-out-remainder-round1-v1-LC-FIREWORKS-RERANK-001-glm5": {
+      "task_ids": [
+        "LC-FIREWORKS-RERANK-001"
+      ],
+      "job_config": "configs/held-out-six-tasks-LC-FIREWORKS-RERANK-001-glm5-model.json",
+      "freeze_manifest": "configs/held-out-six-tasks.sha256",
+      "frozen_setting": "configs/held-out-six-tasks.frozen-setting.json",
+      "split": "held_out"
+    },
+    "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-minimax": {
+      "task_ids": [
+        "LC-OPENROUTER-PROVIDER-001"
+      ],
+      "job_config": "configs/held-out-six-tasks-LC-OPENROUTER-PROVIDER-001-minimax-model.json",
+      "freeze_manifest": "configs/held-out-six-tasks.sha256",
+      "frozen_setting": "configs/held-out-six-tasks.frozen-setting.json",
+      "split": "held_out"
+    },
+    "held-out-remainder-round1-v1-LC-OPENROUTER-PROVIDER-001-glm5": {
+      "task_ids": [
+        "LC-OPENROUTER-PROVIDER-001"
+      ],
+      "job_config": "configs/held-out-six-tasks-LC-OPENROUTER-PROVIDER-001-glm5-model.json",
+      "freeze_manifest": "configs/held-out-six-tasks.sha256",
+      "frozen_setting": "configs/held-out-six-tasks.frozen-setting.json",
+      "split": "held_out"
+    },
+    "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-minimax": {
+      "task_ids": [
+        "LC-HF-ACCELERATOR-001"
+      ],
+      "job_config": "configs/held-out-six-tasks-LC-HF-ACCELERATOR-001-minimax-model.json",
+      "freeze_manifest": "configs/held-out-six-tasks.sha256",
+      "frozen_setting": "configs/held-out-six-tasks.frozen-setting.json",
+      "split": "held_out"
+    },
+    "held-out-remainder-round1-v1-LC-HF-ACCELERATOR-001-glm5": {
+      "task_ids": [
+        "LC-HF-ACCELERATOR-001"
+      ],
+      "job_config": "configs/held-out-six-tasks-LC-HF-ACCELERATOR-001-glm5-model.json",
+      "freeze_manifest": "configs/held-out-six-tasks.sha256",
+      "frozen_setting": "configs/held-out-six-tasks.frozen-setting.json",
+      "split": "held_out"
+    },
+    "held-out-remainder-round1-v1-LC-JSON-INPUT-001-minimax": {
+      "task_ids": [
+        "LC-JSON-INPUT-001"
+      ],
+      "job_config": "configs/held-out-six-tasks-LC-JSON-INPUT-001-minimax-model.json",
+      "freeze_manifest": "configs/held-out-six-tasks.sha256",
+      "frozen_setting": "configs/held-out-six-tasks.frozen-setting.json",
+      "split": "held_out"
+    },
+    "held-out-remainder-round1-v1-LC-JSON-INPUT-001-glm5": {
+      "task_ids": [
+        "LC-JSON-INPUT-001"
+      ],
+      "job_config": "configs/held-out-six-tasks-LC-JSON-INPUT-001-glm5-model.json",
+      "freeze_manifest": "configs/held-out-six-tasks.sha256",
+      "frozen_setting": "configs/held-out-six-tasks.frozen-setting.json",
+      "split": "held_out"
+    },
+    "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-minimax": {
+      "task_ids": [
+        "LC-INT-TEMPERATURE-001"
+      ],
+      "job_config": "configs/held-out-six-tasks-LC-INT-TEMPERATURE-001-minimax-model.json",
+      "freeze_manifest": "configs/held-out-six-tasks.sha256",
+      "frozen_setting": "configs/held-out-six-tasks.frozen-setting.json",
+      "split": "held_out"
+    },
+    "held-out-remainder-round1-v1-LC-INT-TEMPERATURE-001-glm5": {
+      "task_ids": [
+        "LC-INT-TEMPERATURE-001"
+      ],
+      "job_config": "configs/held-out-six-tasks-LC-INT-TEMPERATURE-001-glm5-model.json",
+      "freeze_manifest": "configs/held-out-six-tasks.sha256",
+      "frozen_setting": "configs/held-out-six-tasks.frozen-setting.json",
+      "split": "held_out"
+    },
+    "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-minimax": {
+      "task_ids": [
+        "LC-PARALLEL-TOOL-MERGE-001"
+      ],
+      "job_config": "configs/held-out-six-tasks-LC-PARALLEL-TOOL-MERGE-001-minimax-model.json",
+      "freeze_manifest": "configs/held-out-six-tasks.sha256",
+      "frozen_setting": "configs/held-out-six-tasks.frozen-setting.json",
+      "split": "held_out"
+    },
+    "held-out-remainder-round1-v1-LC-PARALLEL-TOOL-MERGE-001-glm5": {
+      "task_ids": [
+        "LC-PARALLEL-TOOL-MERGE-001"
+      ],
+      "job_config": "configs/held-out-six-tasks-LC-PARALLEL-TOOL-MERGE-001-glm5-model.json",
+      "freeze_manifest": "configs/held-out-six-tasks.sha256",
+      "frozen_setting": "configs/held-out-six-tasks.frozen-setting.json",
+      "split": "held_out"
+    }
+  }
+}

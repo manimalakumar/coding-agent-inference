@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "experimental_setting": "harbor-responses-usage-v1",
+  "task_id": "LC-RESPONSES-USAGE-001",
+  "difficulty": "Level 1",
+  "frozen_at": "2026-10-21T19:57:19.827485+00:00",
+  "starting_commit": "9aa75eaef387459ce7e2beaad25c4607ac626d24",
+  "baseline_checksum": "07c07316f853e74980c44a6885fe18288bcbc4e90ff94117379a21ae5487724d",
+  "agent_image": "sha256:ddb4f18cb6084c8256da73390288a61c73518f5baccad8204e25dd00b6d1a96e",
+  "verifier_image": "sha256:62d2f2bb2ae5496c76de59d222e2ece7a15b64b5f3c7aed87dc2bb431cb808f5",
+  "packages": {
+    "harbor": "0.24.0",
+    "mini-swe-agent": "2.4.6",
+    "pydantic": "2.14.1",
+    "httpx": "0.28.1"
+  },
+  "task_runtime_versions": {
+    "httpx": "0.28.1",
+    "openai": "1.92.0",
+    "pydantic": "2.12.5",
+    "langchain-openai": "0.3.26",
+    "langchain-core": "0.3.66"
+  },
+  "policy": {
+    "budgets": {
+      "seconds": 1200,
+      "model_calls": 30,
+      "generated_tokens": 10000,
+      "repair_rounds": 2,
+      "tool_seconds": 90,
+      "response_tokens": 1500
+    },
+    "source_provenance": {
+      "starting_commit": "9aa75eaef387459ce7e2beaad25c4607ac626d24",
+      "baseline_checksum": "07c07316f853e74980c44a6885fe18288bcbc4e90ff94117379a21ae5487724d"
+    },
+    "model": {
+      "model": "minimax/minimax-m2.5",
+      "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+      "temperature": 0,
+      "provider": {
+        "only": [
+          "minimax/fp8"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true
+      },
+      "reasoning": null
+    },
+    "prompt_config": "mini-swe-harbor-v2.yaml",
+    "reproduction": {
+      "expected_failure": "Responses API usage metadata mismatch"
+    },
+    "receipt_key": ".local/resources/LC-RESPONSES-USAGE-001/a2a43b036e3d2f8a/harbor-responses-usage-v1/receipt.key",
+    "reference_fixture": ".local/resources/LC-RESPONSES-USAGE-001/a2a43b036e3d2f8a/harbor-responses-usage-v1/reference-fixture.json",
+    "mini_config": {
+      "$mini_config": "mini-swe-harbor-v2.yaml",
+      "effective_sha256": "83e388a362c487578f1b19bbffb38201b0888f3983805e95bac3c08a64eb79e2"
+    },
+    "code_fingerprints": {
+      "harbor_integration/isolation.py": "d6cadf67998063201ee6b0bd7c865a64dc27859b067d7ebc8f4c21f32e012522",
+      "harbor_integration/trace.py": "6b884a784e359c734f015fcf3cbe3bebec0452751a03a9779b8fc7ca81ce2c2c",
+      "harbor_integration/__init__.py": "18c9023782f296b4de4bf4e792c18cd7afc6981f53c77b6bb938c1a659211291",
+      "harbor_integration/host_mini.py": "42dee86f2be5bf2e7f0d659f86b110e9f9b9fe68ed6871d623ddafaec4d1805a",
+      "harbor_integration/host_mini_v2.py": "7ffe2b170cfdbaf3d9651631d31157cef29a15610aefa93d9306f608b570886d",
+      "harbor_integration/setup_task.py": "e660b7e2839ba914eb32855aa63967c79a1f06eb89bfd16f2d5466eb0e58b384",
+      "harbor_integration/prepare_task.py": "3bbdfd21fe1da54a4e88bbb4d4dd30fe7f9baf479abe9b3d62fa7c25f33a73bd",
+      "harbor_integration/prepare.py": "3d5bc062dff2082db8a053b7e6664c04e40564e56d95bbd79db8a0fdfe99c93a",
+      "agent/budget.py": "710c1549eb93928edebca909745f61f1e69c8bfef6fc27c0ff774f7fc54e95ac",
+      "agent/mini_runtime.py": "499af65eb833dd1791dda48b1b73731462637aaad9016b0d9218f701e240c79a",
+      "agent/provider.py": "a3982215f71e74094cb84b97e248368dbd4f95195a768f6253c84c0676f36bee",
+      "agent/schemas.py": "129a65878e54dc71cf9ea88da46fe261da3213aa11cfbea19d89a89242a99225",
+      "configs/mini-swe.yaml": "b539a8965f5bf41dd0f32daafa5d2db22581923d13812fa378fd09569b9d6b0c"
+    }
+  },
+  "termination_policy": {
+    "capture_final_workspace": true,
+    "verify_after_termination": true,
+    "separate_verifier_environment": true,
+    "require_explicit_submission_for_overall_success": true,
+    "shared_deadline_seconds": 1200,
+    "retry_max": 0
+  },
+  "source_and_config_sha256": {
+    "agent/__init__.py": "d844a2b11d1a2e4fd85c2aaf41aac374056d0e5e01c59766cf955bf149a9a321",
+    "agent/budget.py": "710c1549eb93928edebca909745f61f1e69c8bfef6fc27c0ff774f7fc54e95ac",
+    "agent/controller.py": "61c10b0afe5f22a09a390b4c422a2912cb5ba55e31077ab7f29f5a11f9be8ccd",
+    "agent/local_test.py": "a04a2d50af343253324e5716009c17d9242929bd3c56c7b08386ccd5ab3da445",
+    "agent/mini_runtime.py": "499af65eb833dd1791dda48b1b73731462637aaad9016b0d9218f701e240c79a",
+    "agent/provider.py": "a3982215f71e74094cb84b97e248368dbd4f95195a768f6253c84c0676f36bee",
+    "agent/results.py": "106154ce4dae5a7bfb3aa2225e8b8f39ab03763a21041404a4eaeffcbf747267",
+    "agent/schemas.py": "129a65878e54dc71cf9ea88da46fe261da3213aa11cfbea19d89a89242a99225",
+    "configs/harbor-responses-usage-v1-baseline.json": "6147f3d6d5c486db69f03c6e33b4fc9714d966085b1f88c12bd81f96d89c3f2f",
+    "configs/harbor-responses-usage-v1-model.json": "43f3bb4efbe44e03cb138b370e1942a23a3a4284fe29040973b4dc5f1002b85d",
+    "configs/harbor-responses-usage-v1-reference.json": "30f6f87a16a194d047b50a60c59f6bfea37ea931281999cb771c57836b31f10e",
+    "configs/mini-swe-harbor-v2.yaml": "e1f16a205ec3123aaf4af3d628aaaf25cb87653bb996259c077470b4163f244c",
+    "configs/mini-swe.yaml": "b539a8965f5bf41dd0f32daafa5d2db22581923d13812fa378fd09569b9d6b0c",
+    "harbor_integration/__init__.py": "18c9023782f296b4de4bf4e792c18cd7afc6981f53c77b6bb938c1a659211291",
+    "harbor_integration/host_mini.py": "42dee86f2be5bf2e7f0d659f86b110e9f9b9fe68ed6871d623ddafaec4d1805a",
+    "harbor_integration/host_mini_v2.py": "7ffe2b170cfdbaf3d9651631d31157cef29a15610aefa93d9306f608b570886d",
+    "harbor_integration/isolation.py": "d6cadf67998063201ee6b0bd7c865a64dc27859b067d7ebc8f4c21f32e012522",
+    "harbor_integration/prepare.py": "3d5bc062dff2082db8a053b7e6664c04e40564e56d95bbd79db8a0fdfe99c93a",
+    "harbor_integration/prepare_task.py": "3bbdfd21fe1da54a4e88bbb4d4dd30fe7f9baf479abe9b3d62fa7c25f33a73bd",
+    "harbor_integration/setup_task.py": "e660b7e2839ba914eb32855aa63967c79a1f06eb89bfd16f2d5466eb0e58b384",
+    "harbor_integration/trace.py": "6b884a784e359c734f015fcf3cbe3bebec0452751a03a9779b8fc7ca81ce2c2c",
+    "harbor_tasks/LC-RESPONSES-USAGE-001/environment/docker-compose.yaml": "debe8cd47bc6c66e10c3df6cee35295ad7de25c22c84b40e20c163e1672e87f9",
+    "harbor_tasks/LC-RESPONSES-USAGE-001/instruction.md": "aafad76e7b7d1d140ff0aa17c7f7dadb8c00e254c692e8302e3134178c7607bc",
+    "harbor_tasks/LC-RESPONSES-USAGE-001/task.toml": "6fdb88185eff9ec1112e7dfb3571e0b6172b2c39d9ac2e0a6101982b8444756b",
+    "harbor_tasks/LC-RESPONSES-USAGE-001/tests/docker-compose.yaml": "182854c3ef62750d278378bbeb76bb8af72a27c047aef5c99937fc51492c4b6c",
+    "harbor_tasks/LC-RESPONSES-USAGE-001/tests/test.sh": "18ca72e5aa9ead5230d8145a62e32f7b51a01aea72797682bb3e99d17ba006f1",
+    "harbor_tasks/LC-RESPONSES-USAGE-001/tests/test_acceptance.py": "bbe6397b60f3b733a6ce50843ce9f6924bb34bebffab86d13a41cb1b1d0d2cd8",
+    "harbor_tasks/LC-RESPONSES-USAGE-001/tests/verify.py": "5d0e5a03009bc99647a1ece8f3f847ead513858a41496521d439b06985f35b3e",
+    "pyproject.toml": "83aa0ac02031e4e5deb47075850d1f498ddc0a6bf8577adde09e298fb2eab68e",
+    "sandbox/__init__.py": "2fe0fa6fa4226a029909be00c4c34c9bac42a86d1eda1c85965c8a9b6bf312a1",
+    "sandbox/docker.py": "f84ed6551da086d598db361399a24589d50fe83337463a6aa7babe248439e9a9",
+    "sandbox/prepare.py": "b168937cf9a7377478e1a111c2f86cc9d1ae91effca3d5eb5f2b52cf79efe089",
+    "tasks/LC-RESPONSES-USAGE-001/reproduce.py": "b6be61d920aae69f1744dbf7bf1ed3496d1a1fb8c98663cbde510d1109a94038",
+    "tasks/LC-RESPONSES-USAGE-001/requirements.in": "de59acb0eb4bee1cd3be549312dbe7970cb3c3e0035e0b7a7710e2d7bcdeb4b5",
+    "tasks/LC-RESPONSES-USAGE-001/task.json": "60a3011b2f27389130b0df1d8deed52f1bb7705337e3195744208e6e42aaac48",
+    "uv.lock": "aec20f916067832bac63b44dddeee696950b9ac945a7710b19c3da5a466ea71c"
+  },
+  "validation_report": "reports/harbor-responses-usage-v1-validation-summary.json",
+  "comparison_policy": "Separate configuration from timeout task. Preserve all unsuccessful inference cost; do not pool policies implicitly.",
+  "setting_id": "6184f2db505280242733a015b2bcc53f04e2179d753b756740224c6fbf1ae1be"
+}

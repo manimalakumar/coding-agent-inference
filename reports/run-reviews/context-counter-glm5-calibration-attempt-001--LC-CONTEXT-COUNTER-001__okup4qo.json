@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "failure_category": "file_policy_failure",
+  "contributing_factors": [
+    "implementation_restored_and_not_reapplied",
+    "cumulative_output_and_call_budgets_exhausted",
+    "final_tool_arguments_truncated",
+    "mypy_internal_error_observed_on_changed_and_restored_source"
+  ],
+  "reason": "Unsuccessful calibration: the trusted evaluator rejects a prohibited new __init__.py before functional/hidden checks. Although an intermediate patch passed the reproducer, 11 new tests, 8 existing tests, lint and format checks, the agent restored the pre-fix source while diagnosing a mypy internal error. Its final reapplication was truncated at the remaining output limit. The captured candidate has no implementation change. This is not a submission-only failure; one calibration does not establish model reliability.",
+  "original_verdict_preserved": true,
+  "code_repair_rounds": null,
+  "code_repair_measurement": "Not instrumented; separate from format retries.",
+  "evidence": {
+    "prohibited_new_file": "libs/langchain_v1/tests/unit_tests/context_editing_token_counter/__init__.py",
+    "source_restore_request": 29,
+    "failed_reapply_request": 30,
+    "last_request_output_tokens": 337,
+    "last_request_finish_reason": "tool_calls",
+    "implementation_sha256": "38c5c6683ef2bbee386d17c4904ad3b93db30dc17b4dc02e27420277c659da12",
+    "candidate_diff": "reports/LC-CONTEXT-COUNTER-001-glm5-calibration-v1-candidate.patch",
+    "hidden_checks": "not run; file policy rejected first",
+    "no_post_run_inference_or_edits": true
+  },
+  "original_run_sha256": {
+    "agent/isolation.json": "62b1e544e0f280d121739cefa13a8a4218aa3b16ddedca6e69f3cd1928862a64",
+    "agent/mini-swe-agent.trajectory.json": "17b4e06b856ed30949a253d4d7d71b52716c224f21daf9cc6c205603e253160d",
+    "agent/process-baseline.json": "694679809716540159a979cf4455c453401d30284434872b4039c8b42a1e2b9a",
+    "agent/quiescence.json": "fea343c141ef21778faf9509de729e4baaf72a50dc4a84dfeba3ee696bc58f92",
+    "agent/receipt.json": "342e1bc5b0496a91b9ca684f682f44aa70eb14074eab8510ff4b09793af1ec2b",
+    "agent/requests.jsonl": "f82c87296e74574a3f04681d672b0a9546fc6c672c6b42c7696b1bd4722eab84",
+    "agent/source-snapshot.json": "5db2b89ddd37cb8dc0df222d1c8c66ceb058473c0ddb9910ba894a0b32de3cad",
+    "agent/trajectory.json": "cea78c3cb2905d2b8c85067fc7037f4bb7d0529436d1557e6e4659af083000ef",
+    "artifacts/logs/artifacts/candidate.tar": "30e885564ecd1fbf40767b0721c367f7161d5c18b0879c1a6584f0f707ca7cc2",
+    "artifacts/logs/artifacts/receipt.json": "342e1bc5b0496a91b9ca684f682f44aa70eb14074eab8510ff4b09793af1ec2b",
+    "artifacts/manifest.json": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f",
+    "config.json": "f2050578dd7015268f8bbddfe9240e73edb25b7601c1669bdb9854093856bda1",
+    "lock.json": "013e896a229df02c98405c7c26b869a3c1146e2ac9ca0be206ec3423301a559a",
+    "result.json": "ebd385b47322416f031351fe08847e39c436ebfa3d8cc44dcac2d9470b92673b",
+    "trial.log": "3cbaa8db9f213aa9cd0b0d274eac929d0a9faf9cdd86d0fe2cd245718f910ae3",
+    "verifier/checks.json": "c7297f350a9b63eb2f915e5071ca669ce9c8f173f52def390d47d80f602f2d37",
+    "verifier/reward.json": "6673a6b7cead406149859f53ffa536b7393f0a2d25dc7dab98d298ed42dc3f20",
+    "verifier/test-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
