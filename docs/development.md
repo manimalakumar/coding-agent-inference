@@ -41,7 +41,7 @@ Evidence manifests are under `evidence/` and `notebooks/evidence/`. Report and n
 
 ## Public files and publication checks
 
-`PUBLIC_FILES.json` lists the intended public files. Downloaded upstream source, reconstructed acceptance suites, expanded prompts, environments and generated runs are ignored. Setup obtains upstream material locally and verifies the recorded hashes.
+Downloaded upstream source, reconstructed acceptance suites, expanded prompts, environments and generated runs are ignored. Setup obtains upstream material locally and verifies the recorded hashes.
 
 Before committing a notebook used for Execute, restore `MODE="replay"` and `CONFIRM_PAID_EXECUTION=False`, then run:
 
