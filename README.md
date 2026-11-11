@@ -99,6 +99,6 @@ This is a small, repository-specific study, not an official SWE-bench evaluation
 
 Inference spend is only part of adoption cost. Environment preparation, evaluator maintenance, operational diagnosis and human review also require effort. Those lessons are documented but not assigned a dollar value.
 
-Explore the [task inventory](reports/public-readiness/inventory.json), [readiness report](reports/public-readiness/readiness.json) and [clean-setup evidence](reports/public-readiness/clean-setup-validation.json). Historical and public evaluation protocols have separate identities; setup controls never count as model successes.
+Explore the [task inventory](reports/public-readiness/inventory.json), [readiness report](reports/public-readiness/readiness.json) and [clean-setup](reports/public-readiness/clean-setup-validation.json). Historical and public evaluation protocols have separate identities; setup controls never count as model successes.
 
 For implementation navigation and offline/publication checks, see [the developer guide](docs/development.md). Downloaded source, reconstructed suites, expanded prompts and raw run artifacts remain ignored.
