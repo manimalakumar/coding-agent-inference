@@ -159,7 +159,11 @@ def test_saved_exchange_and_cost_come_from_reviewed_public_evidence():
     assert len(ledger) == 21
     assert summary["complete reported spend USD"] == 0.02148405
     assert summary["cost complete"] is True
-    assert "Historical request summary" in presentation.exchange_html(ROOT, record)
+    rendered = presentation.exchange_html(ROOT, record)
+    assert "Model action (bash)" in rendered
+    assert "python /task/reproduce.py" in rendered
+    assert first["response"]["id"] in rendered
+    assert "Actual first response JSON" in rendered
     assert hashlib.sha256(path.read_bytes()).hexdigest() == before
 
 
@@ -379,7 +383,11 @@ def test_live_section_one_cells_handle_no_request_outcome(tmp_path, monkeypatch)
     namespace = {
         "workflow": w,
         "presentation": presentation,
+        "session": __import__(
+            "experiments.notebook_session", fromlist=["display_summary"]
+        ),
         "run": record,
+        "result": {"launched": True},
         "ROOT": ROOT,
         "MODE": "execute",
         "preview": {},

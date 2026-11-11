@@ -10051,5 +10051,60 @@
       }
     ],
     "adapted_chart_hashes": "notebooks/artifact-paths.json: adapted_sha256; original hashes and exact prior charts retained privately."
+  },
+  "live_notebook": {
+    "scope": "Live-default notebook using existing public launcher; original first response outputs and completed study data retained.",
+    "new_display_inputs": {
+      "experiments/notebook_session.py": "e9fc6bb8b883b62bde7d6b3f1538d1bc663d1a07c65b335e688fdd83510bbc55"
+    },
+    "runtime_resource_hashes_changed": 0,
+    "new_model_requests": 0,
+    "first_response_provenance": "evidence/first-invocation-provenance.json"
+  },
+  "linear_live_tutorial": {
+    "scope": "Section 1.5 display labels; runnable development and held-out preparation/API calls without new inference.",
+    "implementation_display_changes": [
+      {
+        "path": "experiments/notebook_session.py",
+        "previous_public_sha256": "e9fc6bb8b883b62bde7d6b3f1538d1bc663d1a07c65b335e688fdd83510bbc55",
+        "public_sha256": "db08c642e901aba072116f5886a83eabf1815f1ac1d3982f6cdf9779473cbbf7"
+      }
+    ],
+    "new_notebook_execution_adapter": {
+      "path": "experiments/notebook_execution.py",
+      "public_sha256": "896b1a60f2893b6920198cd5080ef754b89cca12edf9ed9f059eed023104f7dd"
+    },
+    "original_numeric_evidence_and_charts_unchanged": true,
+    "first_response_sha256": "61de46604f67fbac3328b081e409119e5f4607a428f6b4b9709c1d5966fb146b",
+    "execution_resource_binding_hashes_changed": 0,
+    "validation": "reports/portability/linear-live-validation.json"
+  },
+  "section_1_4_labels": {
+    "path": "experiments/notebook_session.py",
+    "previous_public_sha256": "db08c642e901aba072116f5886a83eabf1815f1ac1d3982f6cdf9779473cbbf7",
+    "public_sha256": "76555bd5ae46845aadd3e30dadbd94ea8b4c0cba15633b4e4330e8d68df2de00",
+    "scope": "Request summary labels in section 1.4 outputs and future rendering; evidence data unchanged.",
+    "model_requests": 0
+  },
+  "request_labels": {
+    "scope": "Request headings and saved display labels; summary disclosure retained in adjacent teaching text.",
+    "path": "experiments/notebook_session.py",
+    "previous_public_sha256": "76555bd5ae46845aadd3e30dadbd94ea8b4c0cba15633b4e4330e8d68df2de00",
+    "public_sha256": "c59286dd93f9cfd98c1c5c66b652d0854b87247f35e00a90fafcb64f2714ac05",
+    "model_requests": 0
+  },
+  "teaching_presentation_pass": {
+    "scope": "Opening walkthrough presentation and default annotated-tools setup commands; study sections, evidence and public runtime unchanged.",
+    "display_changes": [
+      {
+        "path": "experiments/notebook_presentation.py",
+        "previous_public_sha256": "4784ca6777f6187a8b05011d5e4d4d62d92f7af58788cada94827c338f9dd969",
+        "public_sha256": "b16815e0004772a3d294f44bf9b480420fd196650b2b8ecb240e14e4d3162442"
+      }
+    ],
+    "validation": "reports/portability/teaching-pass-validation.json",
+    "first_response_sha256": "61de46604f67fbac3328b081e409119e5f4607a428f6b4b9709c1d5966fb146b",
+    "model_requests": 0,
+    "execution_resource_binding_hashes_changed": 0
   }
 }

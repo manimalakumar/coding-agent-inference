@@ -1,5 +1,7 @@
 """Current notebook displays, including reviewed historical summaries."""
 
+import copy
+import html
 import json
 import re
 from pathlib import Path
@@ -20,8 +22,96 @@ SCOPE_LABELS = {
 
 
 def __getattr__(name):
-    # In particular, the protected first-response display stays byte-for-byte equal.
+    # Keep the existing study views; the opening lesson has compact views below.
     return getattr(prior, name)
+
+
+def exchange_html(project, record):
+    """Lead with the model's actual action; keep the entire exchange expandable."""
+    exchange = workflow.first_exchange(record)
+    response = copy.deepcopy(exchange.get("response") or {})
+    response = response.get("provider_response") or response
+    actions = []
+    for choice in response.get("choices") or []:
+        message = choice.get("message", {})
+        for field in ["reasoning", "reasoning_details"]:
+            message.pop(field, None)
+        for call in message.get("tool_calls") or []:
+            function = call.get("function") or {}
+            arguments = function.get("arguments", {})
+            if isinstance(arguments, str):
+                try:
+                    arguments = json.loads(arguments)
+                except ValueError:
+                    arguments = {}
+            if function.get("name") == "bash" and isinstance(arguments, dict):
+                command = arguments.get("command")
+                if isinstance(command, str):
+                    actions.append(command)
+    shown = "".join(
+        '<pre style="white-space:pre-wrap">'
+        + html.escape(prior.relative_paths(project, command))
+        + "</pre>"
+        for command in actions
+    )
+    if not actions:
+        shown = "<p>No bash action was returned in the first response.</p>"
+    return (
+        "<h4>Model action (bash)</h4>"
+        + shown
+        + prior.details(
+            project,
+            "First exchange details",
+            {
+                "run_id": record["run_id"],
+                "trace_sha256": exchange.get("trace_sha256"),
+                "response_status": exchange.get("response_status"),
+                "request_text": "summary"
+                if exchange.get("summarized")
+                else "actual request",
+            },
+        )
+        + prior.details(project, "Request", exchange.get("request"))
+        + prior.details(
+            project, "Actual first response JSON (raw reasoning omitted)", response
+        )
+    )
+
+
+def feedback_html(project, context_requests, added_messages):
+    """Show observed tool feedback and the next request without inventing a turn."""
+    tools = [m for m in added_messages if m.get("role") == "tool"]
+    shown = (
+        prior.messages_html(project, tools).replace(
+            "<h4>Tool result</h4>", "<h4>Tool result summary</h4>"
+        )
+        if tools
+        else "<h4>Tool result summary</h4><p>No tool result is available.</p>"
+    )
+    shown += "<h4>Next request</h4>"
+    if len(context_requests) < 2 or not tools:
+        return (
+            shown + "<p>No subsequent request carrying tool feedback is available.</p>"
+        )
+    later = context_requests.iloc[1]
+    shown += (
+        "<p>Request "
+        + html.escape(str(later["Request number"]))
+        + " carries "
+        + html.escape(str(later["Message count"]))
+        + " messages, including the model action and tool feedback. "
+        + "The agent can use that result to choose its next action.</p>"
+    )
+    for message in added_messages:
+        if message.get("role") == "user":
+            shown += (
+                '<pre style="white-space:pre-wrap">'
+                + html.escape(
+                    prior.relative_paths(project, str(message.get("content", "")))
+                )
+                + "</pre>"
+            )
+    return shown
 
 
 def stack_models(study):

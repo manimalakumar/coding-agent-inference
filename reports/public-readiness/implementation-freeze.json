@@ -1,5 +1,5 @@
 {
-  "status": "implementation frozen after trajectory endpoint presentation update passed offline tests and Replay; all 13 execution resource bindings unchanged",
+  "status": "Presentation pass validated: same-task opening, visible real API excerpt, actual action/feedback sequence and folded provenance; public execution plumbing and all prepared resources unchanged.",
   "model_requests": 0,
   "files": {
     "agent/__init__.py": "d844a2b11d1a2e4fd85c2aaf41aac374056d0e5e01c59766cf955bf149a9a321",
@@ -103,7 +103,7 @@
     "experiments/notebook_charts.py": "5e618d3cf4870e7a99fb6d3e08669ae3f6eccfe3150c203baebc134e057cb908",
     "experiments/study_views.py": "e3ccc7eb7a4488b887da9282dba69cbc67df760e4e84a6100cc277a8bdecab8d",
     "experiments/intervention_views.py": "8e6d039ef1aa5138b7232c003f37ad1e10058c6267c8e32b92cc6afd233750d6",
-    "experiments/notebook_presentation.py": "4784ca6777f6187a8b05011d5e4d4d62d92f7af58788cada94827c338f9dd969",
+    "experiments/notebook_presentation.py": "b16815e0004772a3d294f44bf9b480420fd196650b2b8ecb240e14e4d3162442",
     "experiments/task_rosters.py": "cdd91574b07d350b78ab8cf3b94312842dd0ec7391db4141ffc97d6a56d16753",
     "experiments/notebook_workflow.py": "da839f677d303127f3c34e9a3ea380464121d6c2caa2c13f7a4fc1673caa53db",
     "experiments/public_export.py": "bce02c52beff3a14b5628b0044fcb3944be704a0bec0ced9427f75d86d22106d",
@@ -130,7 +130,9 @@
     "harbor_integration/host_task.py": "c6b6368dc475e021c37fdd5f113b6cd4756eff853e33689ff3402989ee44ab6b",
     "harbor_integration/host_reporting.py": "1f21b25091a3b83dee2acbf9ec5c1822b0f65bb990f221df70ede6e83c5e0516",
     "experiments/artifact_paths.py": "396f1f0cd7efd80128c12c1f9c5dcab712e47a00ca1511317b506f63e3aa0afa",
-    "notebooks/artifact-paths.json": "931530243472ea85be4cee5998a6e37c758c1073c6d2e43c5015bcdedf86d6b0"
+    "notebooks/artifact-paths.json": "931530243472ea85be4cee5998a6e37c758c1073c6d2e43c5015bcdedf86d6b0",
+    "experiments/notebook_session.py": "c59286dd93f9cfd98c1c5c66b652d0854b87247f35e00a90fafcb64f2714ac05",
+    "experiments/notebook_execution.py": "896b1a60f2893b6920198cd5080ef754b89cca12edf9ed9f059eed023104f7dd"
   },
   "reporting_consolidation": "Canonical agent.results uses shared unknown-aware accounting; task execution inputs and historical results unchanged.",
   "usage_module_rename": "Shared usage module renamed without changing its contents or task execution inputs.",

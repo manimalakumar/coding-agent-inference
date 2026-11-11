@@ -22,7 +22,10 @@ def test_tutorial_structure_and_public_first_cell_remain_preserved():
     notebook = nbformat.read(ROOT / "main.ipynb", 4)
     headings = "\n".join(c.source for c in notebook.cells if c.cell_type == "markdown")
     assert "## 1. One task end to end" in headings
-    assert "Historical" in headings or "historical" in headings
+    assert notebook.metadata.notebook_workflow.default_mode == "live"
+    assert (
+        notebook.metadata.notebook_workflow.walkthrough_task == "LC-ANNOTATED-TOOLS-001"
+    )
 
 
 def test_stack_reads_saved_provider_configuration_without_claiming_measured_precision():
@@ -103,6 +106,39 @@ def test_context_uses_actual_requests_one_and_first_tool_feedback_and_native_usa
     assert any(m["role"] == "assistant" for m in added)
     assert "usage.prompt_tokens" in receipt["input_tokens_source"]
     assert "estimate" in receipt["estimates_source"]
+
+
+def test_action_precedes_folded_exchange_identity_without_changing_response():
+    record = w.exact_record(ROOT, w.DEMO_RUN_ID)
+    first = copy.deepcopy(w.first_exchange(record))
+    rendered = p.exchange_html(ROOT, record)
+    assert rendered.index("python /task/reproduce.py") < rendered.index("<details")
+    assert "<details open" not in rendered
+    assert first["response"]["id"] in rendered
+    assert str(first["response"]["usage"]["cost"]) in rendered
+    assert w.first_exchange(record) == first
+
+
+def test_tool_feedback_precedes_next_request_and_keeps_native_context_counts():
+    record = w.exact_record(ROOT, w.DEMO_RUN_ID)
+    rows, messages, _ = p.context_demo(record, w.public_evidence(ROOT))
+    before = copy.deepcopy(messages)
+    rendered = p.feedback_html(ROOT, rows, messages)
+    assert rendered.index("Tool result summary") < rendered.index("Next request")
+    assert "exit code 1" in rendered
+    assert "Request 2 carries 5 messages" in rendered
+    assert "9891 output tokens remain" in rendered
+    assert rows["Provider-reported input tokens"].tolist() == [2923, 3118]
+    assert messages == before
+
+
+def test_missing_tool_feedback_does_not_invent_a_next_request():
+    import pandas as pd
+
+    rendered = p.feedback_html(ROOT, pd.DataFrame(), [])
+    assert "No tool result is available" in rendered
+    assert "No subsequent request" in rendered
+    assert "Request 2 carries" not in rendered
 
 
 def test_context_missing_usage_remains_unknown_instead_of_becoming_estimates(

@@ -111,6 +111,8 @@ def main():
             PYTHONDONTWRITEBYTECODE="1",
             IPYTHONDIR=str(Path(temp) / "ipython"),
             MPLCONFIGDIR=str(Path(temp) / "matplotlib"),
+            INFERENCE_ECONOMICS_MODE="replay",
+            PUBLIC_NO_INFERENCE="1",
         )
         completed = subprocess.run(
             [sys.executable, str(staged / "notebooks/render_replay.py"), "--worker"],

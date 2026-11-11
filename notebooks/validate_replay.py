@@ -93,6 +93,12 @@ def worker():
     )
     ns = shell.user_ns
     assert ns["MODE"] == "replay" and ns["CONFIRM_PAID_EXECUTION"] is False
+    assert ns["RUN_DEVELOPMENT"] is False and ns["RUN_HELD_OUT"] is False
+    assert len(ns["development_plan"]) == 5
+    assert len(ns["heldout_plan"]) == 40
+    assert sum(row["group"] == "initial" for row in ns["heldout_plan"]) == 4
+    assert sum(row["group"] == "repeated" for row in ns["heldout_plan"]) == 36
+    assert "development_live_results" not in ns and "heldout_live_results" not in ns
     assert ns["heldout_counts"] == {
         "held_out_two": 4,
         "held_out_six": 36,
@@ -170,6 +176,9 @@ def worker():
                     "known_operational_spend_usd"
                 ],
                 "source_specs_validated": 13,
+                "development_live_plan_attempts": len(ns["development_plan"]),
+                "heldout_live_plan_attempts": len(ns["heldout_plan"]),
+                "live_batches_disabled": True,
                 "original_launcher_study_gates_checked": len(study_catalog),
                 "execute_gates_checked": 13,
                 "source_network_opt_in_gates_checked": 13,
@@ -196,6 +205,9 @@ def main():
             public,
             ignore=shutil.ignore_patterns(
                 ".venv",
+                "runs",
+                ".git",
+                ".state",
                 ".notebook-venv",
                 ".local",
                 "__pycache__",
@@ -217,6 +229,8 @@ def main():
             PYTHONDONTWRITEBYTECODE="1",
             IPYTHONDIR=str(Path(temp) / "ipython"),
             MPLCONFIGDIR=str(Path(temp) / "matplotlib"),
+            INFERENCE_ECONOMICS_MODE="replay",
+            PUBLIC_NO_INFERENCE="1",
         )
         completed = subprocess.run(
             [sys.executable, str(public / "notebooks/validate_replay.py"), "--worker"],

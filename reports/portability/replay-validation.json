@@ -28,6 +28,9 @@
   "heldout_launches": 40,
   "known_operational_spend_usd": "2.76420370",
   "source_specs_validated": 13,
+  "development_live_plan_attempts": 5,
+  "heldout_live_plan_attempts": 40,
+  "live_batches_disabled": true,
   "original_launcher_study_gates_checked": 38,
   "execute_gates_checked": 13,
   "source_network_opt_in_gates_checked": 13,
@@ -42,7 +45,7 @@
   "model_requests": 0,
   "private_project_reads": 0,
   "relocated": true,
-  "read_input_files": 204,
-  "saved_notebook_sha256": "ffb9eb2351936d35827f60b7fc28bd6c0c86558c9beec7dddd152200dcad48ea",
+  "read_input_files": 208,
+  "saved_notebook_sha256": "0a98d92af1a4058d7da488a27932a49a34daad723d7bd3e568ae91d9845ffcd4",
   "saved_first_execution_unchanged_by_validation": true
 }

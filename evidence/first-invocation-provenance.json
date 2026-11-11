@@ -1,0 +1,12 @@
+{
+  "run_id": "annotated-tools-workspace-v2-minimax-attempt-001/LC-ANNOTATED-TOOLS-001__4SxgJND",
+  "trace_sha256": "3f36de240f16ee6a43bbfe5f3d50d715482afeefc85579ac2965866a09fe5198",
+  "first_request_at": "2026-10-21T22:04:51.656290+00:00",
+  "first_response_at": "2026-10-21T22:04:55.353490+00:00",
+  "first_response_sha256": "61de46604f67fbac3328b081e409119e5f4607a428f6b4b9709c1d5966fb146b",
+  "first_response_matches_original_trace": true,
+  "model_requests_in_original_run": 21,
+  "model_requests_during_validation": 0,
+  "displayed_outputs": "Earlier live run; not measurements from this editing session.",
+  "public_request_display": "Author-written summary; exact source-bearing request remains outside distributed files."
+}

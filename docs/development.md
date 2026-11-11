@@ -1,6 +1,6 @@
 # Code map and developer checks
 
-[Back to README](../README.md) · [Setup guide](setup.md)
+[Back to README](../README.md) · [Setup guide](../setup.md)
 
 Run commands in this guide from the repository root. This document covers implementation navigation, validation and preparing files for publication.
 
@@ -43,7 +43,7 @@ Evidence manifests are under `evidence/` and `notebooks/evidence/`. Report and n
 
 Downloaded upstream source, reconstructed acceptance suites, expanded prompts, environments and generated runs are ignored. Setup obtains upstream material locally and verifies the recorded hashes.
 
-Before committing a notebook used for Execute, restore `MODE="replay"` and `CONFIRM_PAID_EXECUTION=False`, then run:
+Keep the notebook default `MODE="live"` and set `CONFIRM_PAID_EXECUTION=False` before publication. Review generated request and patch outputs for excluded upstream material. Use explicit offline validation without changing the default:
 
 ```sh
 

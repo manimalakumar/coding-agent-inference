@@ -51,7 +51,7 @@ Together, the held-out stages contain **40 attempts across eight tasks**. Only t
 | Docker | Isolates task commands and verifier checks |
 | Project code | Prepares tasks, enforces budgets, captures work and analyzes results |
 
-## Quick start: analyze recorded results
+## Quick start
 
 Use Python 3.14 and [uv](https://docs.astral.sh/uv/getting-started/installation/). From the repository root:
 
@@ -64,7 +64,9 @@ uv pip install --python .notebook-venv/bin/python -r notebooks/requirements.txt
 
 `.venv` holds execution dependencies; `.notebook-venv` holds tutorial and visualization dependencies.
 
-The notebook defaults to `MODE="replay"`. After installation, analysis requires **no Docker, credentials, network access or model calls**. Tables and charts regenerate from reviewed evidence. Historical request displays are labelled summaries; Replay does not rerun the agents.
+The notebook defaults to `MODE="live"`. Its opening follows annotated-tools from issue and preparation through the model request, bash action, tool feedback, patch, checks and cost. Other tasks remain available in sections 2 and 4. The displayed outputs retain real results from the earlier live walkthrough; no new requests were made to recover them. Live execution uses validated public resources and requires explicit confirmation and a new attempt ID. The completed study comparisons remain separate from each new attempt.
+
+For analysis without Docker, credentials or inference, launch with `INFERENCE_ECONOMICS_MODE=replay .notebook-venv/bin/python -m jupyterlab main.ipynb`. Request displays excluded from publication remain clearly labelled summaries.
 
 ## Run a fresh attempt
 
@@ -74,16 +76,18 @@ Prepare one task with zero model calls:
 
 ```sh
 .venv/bin/python -m experiments.portable_prepare doctor
-.venv/bin/python -m experiments.portable_prepare prepare LC-INT-TEMPERATURE-001 --allow-setup-network --controls
+.venv/bin/python -m experiments.portable_prepare prepare LC-ANNOTATED-TOOLS-001 --allow-setup-network --controls
 ```
 
-Then configure credentials and select the task, model and a unique attempt ID in the notebook. Inference starts only when you explicitly set `MODE="execute"` and `CONFIRM_PAID_EXECUTION=True`.
+Select the Live kernel described in [setup.md](setup.md), configure credentials and select the task, model and a unique attempt ID in the notebook. Inference starts only when you explicitly set `MODE="live"` and `CONFIRM_PAID_EXECUTION=True`.
+
+Sections 2 and 4 include preparation commands and runnable development/held-out launch loops using the OpenAI-compatible API callable in section 1.5. Their batch switches remain off for inspection; enabling a batch requires separate confirmation and a new batch ID.
 
 The workflow permits **30 requests, 10,000 total output tokens, up to 6,000 per response and 20 agent minutes**. The final workspace is evaluated after submission, budget exhaustion or error. Submission and acceptance are separate metrics.
 
 **All 13 tasks passed the recorded clean-setup controls on the validated platform.** Your local resources must pass readiness checks too. Fresh runs use versioned public evaluators and remain separate from historical results.
 
-See [the setup guide](docs/setup.md) for all task preparation commands, execution settings, controls and troubleshooting. **Installation, Replay and preparation make no inference calls; explicitly launching an agent incurs API charges.**
+See [the setup guide](setup.md) for all task preparation commands, execution settings, controls and troubleshooting. **Installation, offline analysis and preparation make no inference calls; explicitly launching an agent incurs API charges.**
 
 ## Evidence and limitations
 

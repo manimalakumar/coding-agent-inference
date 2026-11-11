@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "changed_notebook_cells": [
+    17
+  ],
+  "check_results_and_outcomes_unchanged": true,
+  "all_other_notebook_cells_unchanged": true,
+  "offline_analysis_cells": 19,
+  "model_requests": 0,
+  "notebook_sha256": "85cb8c6fd3e4896645ee3e70a51a7079af0101a3fc09fc50d2fdabe445e01beb"
+}

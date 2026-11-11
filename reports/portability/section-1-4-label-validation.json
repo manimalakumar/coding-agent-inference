@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "changed_notebook_cells": [
+    9
+  ],
+  "all_other_notebook_cells_unchanged": true,
+  "first_response_cell_unchanged": true,
+  "label": "Request summary",
+  "offline_analysis_cells": 19,
+  "model_requests": 0,
+  "notebook_sha256": "46d968f1db7d82a24b6b0396244f8c8898c5d73e05e2a36eec2bdd262ebd99f5"
+}
