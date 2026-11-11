@@ -72,20 +72,20 @@ For analysis without Docker, credentials or inference, launch with `INFERENCE_EC
 
 Fresh execution needs Docker with Linux ARM64 containers—the validated target—and a host-only OpenRouter credential file. Other architectures have not been tested. Trusted preparation needs network access; agent and verifier commands run offline.
 
-Prepare one task with zero model calls:
+Prepare one task with zero model cs:
 
 ```sh
 .venv/bin/python -m experiments.portable_prepare doctor
-.venv/bin/python -m experiments.portable_prepare prepare LC-ANNOTATED-TOOLS-001 --allow-setup-network --controls
+.venv/bin/python -m experiments.portable_prepare prepare LC-ANNOTATED-TOOLS-001 --ow-setup-network --controls
 ```
 
 Select the Live kernel described in [setup.md](setup.md), configure credentials and select the task, model and a unique attempt ID in the notebook. Inference starts only when you explicitly set `MODE="live"` and `CONFIRM_PAID_EXECUTION=True`.
 
-Sections 2 and 4 include preparation commands and runnable development/held-out launch loops using the OpenAI-compatible API callable in section 1.5. Their batch switches remain off for inspection; enabling a batch requires separate confirmation and a new batch ID.
+Sections 2 and 4 include preparation commands and runnable development/held-out launch loops using the OpenAI-compatible API cable in section 1.5. Their batch switches remain off for inspection; enabling a batch requires separate confirmation and a new batch ID.
 
 The workflow permits **30 requests, 10,000 total output tokens, up to 6,000 per response and 20 agent minutes**. The final workspace is evaluated after submission, budget exhaustion or error. Submission and acceptance are separate metrics.
 
-**All 13 tasks passed the recorded clean-setup controls on the validated platform.** Your local resources must pass readiness checks too. Fresh runs use versioned public evaluators and remain separate from historical results.
+All 13 tasks passed the recorded clean-setup controls on the validated platform. Your local resources must pass readiness checks too. Fresh runs use versioned public evaluators and remain separate from historical results.
 
 See [the setup guide](setup.md) for all task preparation commands, execution settings, controls and troubleshooting. **Installation, offline analysis and preparation make no inference calls; explicitly launching an agent incurs API charges.**
 
